@@ -1,4 +1,4 @@
 interface:
-  display_name: "SIMAI SF4 Builder"
-  short_description: "Safe SIMAI SF4 project build and modernization workflows."
+  display_name: "SIMAI Framework 4"
+  short_description: "Safe SIMAI Framework 4 project build and modernization workflows."
   default_prompt: "Build or modernize SIMAI Framework 4 projects using update-safe simai.data overrides, grid/view/block composition, component integration, config inheritance, and wizard workflows."
