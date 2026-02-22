@@ -114,7 +114,7 @@ Important:
    `python3 skills/sf4/scripts/sf4_project_audit.py --site-root <project_root> --site-dir <site_dir>`
 2. Choose route (grid/block/view/config/data/wizard).
 3. Change project layer only (`simai.data`) by default.
-4. Validate syntax/runtime and clear cache.
+4. Validate syntax/runtime, review audit hygiene warnings, and clear cache.
 5. For update/data tasks, prepare artifacts from `skills/sf4/references/artifacts/`:
    - `migration-notes.md` (always)
    - `upgrade-notes.md`

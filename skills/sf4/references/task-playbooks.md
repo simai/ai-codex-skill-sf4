@@ -178,3 +178,22 @@ Steps:
    - `references/artifacts/regression-checklist.md`, and optionally
    - `references/artifacts/qa-report.md`
 7. Mark residual risks and required follow-up tests.
+
+## 12) Harden Project Hygiene And Secret Handling
+
+Goal:
+
+- Remove risky artifacts and configuration smells from `simai.data` without breaking runtime behavior.
+
+Steps:
+
+1. Read `references/hygiene-and-secrets.md`.
+2. Run project audit and collect hygiene warnings.
+3. Classify findings:
+   - archive/cache/vendor artifact in block dirs,
+   - duplicate property keys,
+   - secret-like literals in `.site.property.php`.
+4. Apply cleanup in controlled batches (small, reviewable diffs).
+5. Re-run audit to confirm warning reduction.
+6. Run focused smoke/regression on affected pages/widgets.
+7. Document what was removed, relocated, or accepted as an intentional exception.

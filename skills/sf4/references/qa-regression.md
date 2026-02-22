@@ -39,6 +39,7 @@ Suggested quick checks before runtime validation:
 - `php -l <changed_file.php>` for each changed PHP file
 - `rg -n "var_dump|print_r\\(|die\\(|exit\\(|TODO"` in touched directories
 - Verify no accidental system-layer edits (`/simai`, `/bitrix/templates/simai.framework`, `/bitrix/components/simai`) unless explicitly requested
+- Run `scripts/sf4_project_audit.py` and review hygiene warnings (duplicate keys, secret-like literals, archive/cache artifacts)
 
 ## Output Artifacts
 

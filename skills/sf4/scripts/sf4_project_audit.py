@@ -6,6 +6,7 @@ Validate:
 - simai.data discovery
 - key config/template files
 - grid_view_* mapping to existing view templates
+- basic data hygiene checks in project layer
 """
 
 from __future__ import annotations
@@ -34,6 +35,21 @@ GRID_VIEW_PATHS = {
 BLOCK_SECTION_PATTERN = re.compile(r"""['"]BLOCK_SECTION['"]\s*=>\s*['"]([^'"]+)['"]""")
 AREA_TEMPLATE_PATTERN = re.compile(
     r"""['"]ROW_\d+_COL_\d+_AREA_\d+_TEMPLATE['"]\s*=>\s*['"]([^'"]+)['"]"""
+)
+PROPERTY_KEY_PATTERN = re.compile(r"""'([^']+)'\s*=>""")
+PROPERTY_STRING_PATTERN = re.compile(r"""'([^']+)'\s*=>\s*'([^']*)'""")
+SECRET_KEY_PATTERN = re.compile(
+    r"""(secret|token|password|passwd|private[_-]?key|api[_-]?.*secret)""",
+    re.IGNORECASE,
+)
+
+ARCHIVE_PATTERNS = ("*.zip", "*.tar", "*.tar.gz", "*.tgz", "*.rar", "*.7z")
+MANIFEST_NAMES = (
+    "composer.json",
+    "package.json",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
 )
 
 
@@ -151,6 +167,12 @@ def rel_from_root(path: Path, root: Path) -> str:
         return str(path)
 
 
+def sample_paths(paths: List[Path], root: Path, limit: int = 5) -> str:
+    if not paths:
+        return "-"
+    return ", ".join(rel_from_root(p, root) for p in paths[:limit])
+
+
 def required_paths(data_dir: Path) -> Iterable[Tuple[str, Path]]:
     return [
         ("site_property", data_dir / ".site.property.php"),
@@ -176,6 +198,111 @@ def recommended_paths(data_dir: Path) -> Iterable[Tuple[str, Path]]:
             data_dir / "template" / "area" / "main" / "bottom" / "template.php",
         ),
     ]
+
+
+def check_data_hygiene(data_dir: Path, root: Path) -> List[Check]:
+    checks: List[Check] = []
+
+    site_property = data_dir / ".site.property.php"
+    if site_property.exists():
+        text = site_property.read_text(encoding="utf-8", errors="ignore")
+
+        key_hits: Dict[str, int] = {}
+        for key in PROPERTY_KEY_PATTERN.findall(text):
+            key_hits[key] = key_hits.get(key, 0) + 1
+        duplicates = sorted((k, c) for k, c in key_hits.items() if c > 1)
+        if duplicates:
+            sample = ", ".join(f"{k}x{c}" for k, c in duplicates[:8])
+            checks.append(
+                Check(
+                    key="site_property_duplicates",
+                    ok=False,
+                    detail=f"duplicate keys in .site.property.php: {sample}",
+                    required=False,
+                )
+            )
+        else:
+            checks.append(
+                Check(
+                    key="site_property_duplicates",
+                    ok=True,
+                    detail="no duplicate keys detected in .site.property.php",
+                    required=False,
+                )
+            )
+
+        secret_like_non_empty: List[str] = []
+        for key, value in PROPERTY_STRING_PATTERN.findall(text):
+            if SECRET_KEY_PATTERN.search(key) and value.strip():
+                if value.strip().lower() not in {"<secret>", "<redacted>", "***"}:
+                    secret_like_non_empty.append(key)
+        if secret_like_non_empty:
+            unique_keys = sorted(set(secret_like_non_empty))
+            sample = ", ".join(unique_keys[:8])
+            checks.append(
+                Check(
+                    key="site_property_secret_like",
+                    ok=False,
+                    detail=(
+                        "secret-like keys with non-empty literal values in .site.property.php: "
+                        f"{sample}"
+                    ),
+                    required=False,
+                )
+            )
+        else:
+            checks.append(
+                Check(
+                    key="site_property_secret_like",
+                    ok=True,
+                    detail="no non-empty literal values detected for secret-like keys in .site.property.php",
+                    required=False,
+                )
+            )
+
+    block_root = data_dir / "grid" / "block"
+    if block_root.exists():
+        archives: List[Path] = []
+        for pattern in ARCHIVE_PATTERNS:
+            archives.extend(sorted(block_root.rglob(pattern)))
+        cache_dirs = sorted([p for p in block_root.rglob("cache") if p.is_dir()])
+        manifests: List[Path] = []
+        for name in MANIFEST_NAMES:
+            manifests.extend(sorted(block_root.rglob(name)))
+
+        if archives or cache_dirs or manifests:
+            details: List[str] = []
+            if archives:
+                details.append(
+                    f"archives={len(archives)} sample: {sample_paths(archives, root)}"
+                )
+            if cache_dirs:
+                details.append(
+                    f"cache_dirs={len(cache_dirs)} sample: {sample_paths(cache_dirs, root)}"
+                )
+            if manifests:
+                details.append(
+                    f"manifests={len(manifests)} sample: {sample_paths(manifests, root)}"
+                )
+            checks.append(
+                Check(
+                    key="block_hygiene",
+                    ok=False,
+                    detail="block dir hygiene warnings: " + " | ".join(details),
+                    required=False,
+                )
+            )
+        else:
+            checks.append(
+                Check(
+                    key="block_hygiene",
+                    ok=True,
+                    detail="no archives/cache dirs/vendor manifests detected under grid/block",
+                    required=False,
+                )
+            )
+
+    return checks
 
 
 def check_view_block_links(data_dir: Path, root: Path) -> Tuple[List[Check], List[LinkRecord]]:
@@ -325,6 +452,8 @@ def evaluate_data_dir(
                 required=False,
             )
         )
+
+    checks.extend(check_data_hygiene(data_dir, root))
 
     site_property = data_dir / ".site.property.php"
     if not site_property.exists():

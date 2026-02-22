@@ -11,12 +11,14 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 2. Read `references/project-layout.md` for path conventions and layer boundaries.
 3. Choose a task route:
    - Grid, layout, block, or view task: read `references/grid-and-block-workflow.md`.
+   - Production-like composition patterns: read `references/production-patterns.md`.
    - Settings, config, or property task: read `references/config-and-data.md`.
    - Component, iblock, or HL-block task: read `references/components-catalog.md`.
    - Iblock/HL creation standard: read `references/iblock-hl-standard.md`.
    - Wizard install/update/import task: read `references/wizard-actions.md`.
    - Missing `view -> block` bindings remediation: read `references/linkage-remediation.md`.
    - QA/regression verification: read `references/qa-regression.md`.
+   - Data hygiene and secret handling: read `references/hygiene-and-secrets.md`.
    - Update and migration artifacts: read `references/update-artifacts.md`.
    - Ready-made execution recipes: read `references/task-playbooks.md`.
    - Debugging and recovery: read `references/troubleshooting.md`.
@@ -31,6 +33,8 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Keep `grid_view_*` values aligned with real folders in `simai.data/grid/view/.../<code>/`.
 - Keep row/column/area parameter naming consistent with SF4 grid patterns.
 - Check file permissions for `simai.data` when changes do not persist.
+- Do not commit archives/cache/vendor artifacts inside `simai.data/grid/block`.
+- Keep secret-like values out of `.site.property.php` when possible; prefer environment-backed storage.
 - For schema/data/update tasks, always prepare migration notes and rollback plan (explicitly state "no changes" when applicable).
 - For non-trivial tasks, keep smoke/regression evidence in a checklist or QA report.
 
@@ -56,6 +60,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Grid, View, Block, and Template Areas
 
 - Read `references/grid-and-block-workflow.md`.
+- Read `references/production-patterns.md` for real-world area/view/block conventions.
 - For step-by-step execution, read `references/task-playbooks.md` sections 1, 2, and 9.
 - Use area templates in `simai.data/template/area/.../template.php` to select active view by property.
 - Build pages by composing rows/columns/areas in view `template.php` files.
@@ -98,8 +103,9 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Quality and Regression
 
 - Read `references/qa-regression.md`.
+- Read `references/hygiene-and-secrets.md`.
 - Read `references/update-artifacts.md`.
-- For step-by-step execution, read `references/task-playbooks.md` section 11.
+- For step-by-step execution, read `references/task-playbooks.md` sections 11 and 12.
 - Use templates in `references/artifacts/` for migration notes, upgrade notes, regression checklist, and QA report.
 - Keep risk and evidence explicit in every verification summary.
 

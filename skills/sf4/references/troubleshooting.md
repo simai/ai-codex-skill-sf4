@@ -62,3 +62,12 @@ Checklist:
    - project template includes,
    - and/or system asset registry.
 
+## Audit Shows Hygiene Warnings
+
+Checklist:
+
+1. Open `references/hygiene-and-secrets.md`.
+2. Remove archive/cache/vendor artifacts from `grid/block` unless explicitly required.
+3. Review duplicate keys in `.site.property.php` and keep only intended values.
+4. Move secret-like literals out of tracked property files where possible.
+5. Re-run `scripts/sf4_project_audit.py` and confirm warning reduction.
