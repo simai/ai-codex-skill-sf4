@@ -11,6 +11,7 @@ Repository layout:
 - `SKILL.md`
 - `agents/`
 - `references/`
+- `references/artifacts/`
 - `scripts/`
 
 Install target:
@@ -113,6 +114,11 @@ Important:
 2. Choose route (grid/block/view/config/data/wizard).
 3. Change project layer only (`simai.data`) by default.
 4. Validate syntax/runtime and clear cache.
+5. For update/data tasks, prepare artifacts from `references/artifacts/`:
+   - `migration-notes.md` (always)
+   - `upgrade-notes.md`
+   - `regression-checklist.md`
+   - `qa-report.md` (for high-risk scope)
 
 ## 8) Update and rollback
 

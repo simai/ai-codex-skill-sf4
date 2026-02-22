@@ -16,6 +16,8 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - Iblock/HL creation standard: read `references/iblock-hl-standard.md`.
    - Wizard install/update/import task: read `references/wizard-actions.md`.
    - Missing `view -> block` bindings remediation: read `references/linkage-remediation.md`.
+   - QA/regression verification: read `references/qa-regression.md`.
+   - Update and migration artifacts: read `references/update-artifacts.md`.
    - Ready-made execution recipes: read `references/task-playbooks.md`.
    - Debugging and recovery: read `references/troubleshooting.md`.
 4. Apply changes in project layer first. Edit system layer only when user explicitly asks.
@@ -29,6 +31,8 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Keep `grid_view_*` values aligned with real folders in `simai.data/grid/view/.../<code>/`.
 - Keep row/column/area parameter naming consistent with SF4 grid patterns.
 - Check file permissions for `simai.data` when changes do not persist.
+- For schema/data/update tasks, always prepare migration notes and rollback plan (explicitly state "no changes" when applicable).
+- For non-trivial tasks, keep smoke/regression evidence in a checklist or QA report.
 
 ## Execution Workflow
 
@@ -44,6 +48,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - PHP syntax for touched files.
    - Presence of required files (`template.php`, `.parameters.php`, `.description.php`, `lang`).
    - Runtime behavior on target pages.
+   - Smoke/regression status with evidence for touched risk areas.
 5. Clear relevant cache and retest.
 
 ## Task Routing
@@ -84,10 +89,19 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Wizard Actions and Deployment
 
 - Read `references/wizard-actions.md`.
-- For step-by-step execution, read `references/task-playbooks.md` section 7.
+- Read `references/update-artifacts.md` for mandatory update outputs.
+- For step-by-step execution, read `references/task-playbooks.md` sections 7 and 10.
 - Ensure action code matches action folder name.
 - Keep install/update chains reproducible and file-safe.
 - Stop and ask user when expected wizard config is missing.
+
+### Quality and Regression
+
+- Read `references/qa-regression.md`.
+- Read `references/update-artifacts.md`.
+- For step-by-step execution, read `references/task-playbooks.md` section 11.
+- Use templates in `references/artifacts/` for migration notes, upgrade notes, regression checklist, and QA report.
+- Keep risk and evidence explicit in every verification summary.
 
 ## Scripts
 

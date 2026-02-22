@@ -140,3 +140,41 @@ Steps:
 5. Replace generated placeholders with real template and parameter logic.
 6. Re-run audit and confirm missing count drops.
 7. Repeat in small batches until target is met.
+
+## 10) Deliver Update With Migration/Upgrade Artifacts
+
+Goal:
+
+- Ship SF4 updates with explicit migration, rollback, and post-update guidance.
+
+Steps:
+
+1. Read `references/update-artifacts.md`.
+2. Collect diff and classify impact (layout/config/data/wizard).
+3. Confirm whether schema/data changes exist. Do not assume "none".
+4. Execute change and run smoke/regression checks.
+5. Fill artifacts using templates:
+   - `references/artifacts/migration-notes.md` (always)
+   - `references/artifacts/upgrade-notes.md`
+   - `references/artifacts/regression-checklist.md`
+   - `references/artifacts/qa-report.md` (for high-risk scope)
+6. Ensure rollback and idempotency statements are explicit.
+7. Include artifact summary in final delivery.
+
+## 11) Run SF4 QA and Regression Pass
+
+Goal:
+
+- Verify changed SF4 scope with repeatable checks and evidence model.
+
+Steps:
+
+1. Read `references/qa-regression.md`.
+2. Define smoke checks for changed pages/areas.
+3. Define focused regression around adjacent risk zones.
+4. Run static safety checks (`php -l`, debug artifact scan, layer-boundary check).
+5. Run runtime checks and capture evidence.
+6. Record results using:
+   - `references/artifacts/regression-checklist.md`, and optionally
+   - `references/artifacts/qa-report.md`
+7. Mark residual risks and required follow-up tests.
