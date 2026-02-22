@@ -8,11 +8,12 @@ Skill for Codex to work with projects on SIMAI Framework 4 (SF4):
 - remediate missing `view -> block` bindings
 
 Repository layout:
-- `SKILL.md`
-- `agents/`
-- `references/`
-- `references/artifacts/`
-- `scripts/`
+- `skills/simai-sf4/SKILL.md`
+- `skills/simai-sf4/agents/`
+- `skills/simai-sf4/references/`
+- `skills/simai-sf4/references/artifacts/`
+- `skills/simai-sf4/scripts/`
+- repository-level files in root (`README.md`, `.gitignore`, `.gitattributes`, `.git/`)
 
 Install target:
 - macOS/Linux: `~/.codex/skills/simai-sf4`
@@ -23,7 +24,7 @@ Install target:
 Copy:
 
 ```bash
-SRC="/path/to/ai-codex-sf4skill"
+SRC="/path/to/ai-codex-skill-sf4/skills/simai-sf4"
 DST="$HOME/.codex/skills/simai-sf4"
 mkdir -p "$HOME/.codex/skills"
 rm -rf "$DST"
@@ -33,7 +34,7 @@ cp -R "$SRC" "$DST"
 Symlink (recommended for active development):
 
 ```bash
-SRC="/path/to/ai-codex-sf4skill"
+SRC="/path/to/ai-codex-skill-sf4/skills/simai-sf4"
 DST="$HOME/.codex/skills/simai-sf4"
 mkdir -p "$HOME/.codex/skills"
 rm -rf "$DST"
@@ -45,7 +46,7 @@ ln -s "$SRC" "$DST"
 Copy:
 
 ```powershell
-$src = "C:\path\to\ai-codex-sf4skill"
+$src = "C:\path\to\ai-codex-skill-sf4\skills\simai-sf4"
 $dstRoot = "$env:USERPROFILE\.codex\skills"
 $dst = "$dstRoot\simai-sf4"
 New-Item -ItemType Directory -Force $dstRoot | Out-Null
@@ -56,7 +57,7 @@ Copy-Item -Recurse -Force $src $dst
 Symlink (recommended for active development, may require admin/developer mode):
 
 ```powershell
-$src = "C:\path\to\ai-codex-sf4skill"
+$src = "C:\path\to\ai-codex-skill-sf4\skills\simai-sf4"
 $dstRoot = "$env:USERPROFILE\.codex\skills"
 $dst = "$dstRoot\simai-sf4"
 New-Item -ItemType Directory -Force $dstRoot | Out-Null
@@ -109,12 +110,12 @@ Important:
 
 ## 7) Typical SF4 flow
 
-1. Run audit:
-   `python3 scripts/sf4_project_audit.py --site-root <project_root> --site-dir <site_dir>`
+1. Run audit (from repository root):
+   `python3 skills/simai-sf4/scripts/sf4_project_audit.py --site-root <project_root> --site-dir <site_dir>`
 2. Choose route (grid/block/view/config/data/wizard).
 3. Change project layer only (`simai.data`) by default.
 4. Validate syntax/runtime and clear cache.
-5. For update/data tasks, prepare artifacts from `references/artifacts/`:
+5. For update/data tasks, prepare artifacts from `skills/simai-sf4/references/artifacts/`:
    - `migration-notes.md` (always)
    - `upgrade-notes.md`
    - `regression-checklist.md`
