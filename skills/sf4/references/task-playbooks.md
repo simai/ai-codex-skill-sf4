@@ -83,6 +83,11 @@ Steps:
 4. Verify form loads in admin/public editor entrypoints.
 5. Validate save cycle and expected property persistence.
 
+If task is component rendering (not editor schema), switch to:
+
+- `references/components-catalog.md` (`simai:sf.iblock.list` / `simai:sf.iblock.detail` deep sections),
+- then apply mapping/tuning in component params (`AREA`, `AREA_ORDER`, `SOURCE_*`, `MODIFIER_*`).
+
 ## 6) HL-Block Data Flow
 
 Goal:

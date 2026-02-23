@@ -166,6 +166,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Read `references/component-template-resolution.md` when page output is built by `IncludeComponent(...)` orchestration.
 - Read `references/iblock-hl-standard.md` before creating new entities.
 - For step-by-step execution, read `references/task-playbooks.md` sections 5 and 6.
+- For `simai:sf.iblock.list`/`simai:sf.iblock.detail` on `.default`, use the deep sections in `references/components-catalog.md` first (runtime pipeline, `AREA`/`SOURCE_*` mapping, template parameter groups).
 - Reuse `simai:sf.grid`, `simai:sf.iblock.*`, `simai:sf.highloadblock.grid`, `simai:sf.wizard`.
 - Configure iblock edit forms with `.iblock.config.php` and `.iblock.section.config.php`.
 - Use wizard import/export flows for package-style iblock/HL migration.
