@@ -1,5 +1,9 @@
 # Config, Property, and Data Rules
 
+For full runtime behavior of `simai.data` (multisite placement, template merge chain, admin/public editors, area-view-grid-block resolution), read:
+
+- `references/simai-data-settings-runtime.md`
+
 ## Config Schemas
 
 Primary schema files:
@@ -23,9 +27,13 @@ Language labels:
 - Session/user overrides:
   - merged in runtime by SF4 property service
 
-Precedence:
+Merge order:
 
-- user > page > section > site
+- site -> section -> page -> user -> optional global runtime overrides
+
+Effective winner:
+
+- the latest merged level.
 
 ## Runtime Merge Point
 
@@ -40,6 +48,7 @@ This file merges:
 - page property
 - user/session property
 - optional global property overrides
+- and computes derived layout keys used by template assembly (`layout_pagewrap`, `layout_container`, `layout_container_size`, `main_width`).
 
 ## Iblock and Section Editor Schemas
 
@@ -74,4 +83,3 @@ Treat project `simai.data/config/.asset.config.php` as optional and verify actua
 3. Ensure related view/block folders exist when changing `grid_view_*`.
 4. Verify permissions allow writing in `simai.data`.
 5. Clear relevant cache and retest.
-

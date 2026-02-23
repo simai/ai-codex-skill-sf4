@@ -61,11 +61,13 @@ Goal:
 
 Steps:
 
-1. Add schema entry in `.site.config.php` or `.structure.config.php`.
-2. Add localization entries under `config/lang/<lang>/`.
-3. Set value in `.site.property.php` or `/.property.php`.
-4. Read setting in template/view/block runtime code via `Property::getValue(...)`.
-5. Verify UI visibility, conditions, and runtime behavior.
+1. Read `references/simai-data-settings-runtime.md` before changing schema or value storage rules.
+2. Add schema entry in `.site.config.php` or `.structure.config.php`.
+3. Add localization entries under `config/lang/<lang>/`.
+4. Set value in `.site.property.php` or `/.property.php`.
+5. Read setting in template/view/block runtime code via `Property::getValue(...)`.
+6. Verify merge behavior in `simai.data/template/property.php` (site -> section -> page -> user).
+7. Verify UI visibility, conditions, and runtime behavior.
 
 ## 5) Configure Iblock Editor Forms
 
@@ -356,3 +358,25 @@ Steps:
    - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --top 80`
    - `python3 scripts/sf4_interactive_audit.py --site-root <root> --site-dir <site_dir> --top 80`
 11. Clear cache and run smoke/regression on target and neighboring pages.
+
+## 18) Diagnose Settings Override Or Template Assembly Drift
+
+Goal:
+
+- Find why effective page/site behavior differs from expected schema/property values.
+
+Steps:
+
+1. Read `references/simai-data-settings-runtime.md`.
+2. Confirm active site context (`SITE_DIR`) and target `simai.data` folder.
+3. Check schema file ownership:
+   - `.site.config.php` for site scope,
+   - `.structure.config.php` for section/page scope.
+4. Check actual value files:
+   - `simai.data/.site.property.php`,
+   - section/page `/.property.php`.
+5. Check user-level overrides (demo/session) and reset if needed.
+6. Inspect `simai.data/template/property.php` merge and derived keys.
+7. Inspect target area template (`template/area/.../template.php`) and resolved `grid_view_*`.
+8. Confirm view file exists and referenced blocks resolve (site override first, framework fallback second).
+9. Validate behavior as admin and non-admin, then clear cache and retest.

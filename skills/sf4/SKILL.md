@@ -31,6 +31,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - `sf.grid` editor behavior and safety notes: read `references/sfgrid-editor-features.md`.
    - Critical backend anti-regression guides: read `references/backend-critical-guides.md`.
    - Settings, config, or property task: read `references/config-and-data.md`.
+   - Deep `simai.data` runtime model (template merge, admin/public save flow, multisite rules): read `references/simai-data-settings-runtime.md`.
    - Component, iblock, or HL-block task: read `references/components-catalog.md`.
    - Iblock/HL creation standard: read `references/iblock-hl-standard.md`.
    - Wizard install/update/import task: read `references/wizard-actions.md`.
@@ -151,11 +152,12 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Settings and Inheritance
 
 - Read `references/config-and-data.md`.
+- Read `references/simai-data-settings-runtime.md`.
 - Read `references/property-editor-playbook.md` when task includes `simai:sf.property.edit` schemas or save cycle behavior.
-- For step-by-step execution, read `references/task-playbooks.md` sections 3 and 4.
+- For step-by-step execution, read `references/task-playbooks.md` sections 3, 4, and 18.
 - Edit schema files in `simai.data/config/*.config.php`.
 - Edit values in `simai.data/.site.property.php` and section/page `/.property.php`.
-- Respect precedence: user > page > section > site.
+- Respect precedence: site -> section -> page -> user -> optional global overrides (effective winner is the latest merged level).
 
 ### Components, Iblocks, and HL-Blocks
 
