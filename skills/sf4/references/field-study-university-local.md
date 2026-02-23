@@ -150,6 +150,7 @@ Use this field study when task text implies:
 This reference should be read together with:
 
 - `references/project-layout.md`
+- `references/system-layer-simai.md`
 - `references/grid-and-block-workflow.md`
 - `references/production-patterns.md`
 - `references/page-map-and-modernization.md`
@@ -172,3 +173,7 @@ Sample component-template mapping artifacts:
 
 - `references/artifacts/university-ru-component-template-map.md`
 - `references/artifacts/university-ru-component-template-map.json`
+
+Sample system-layer study artifact:
+
+- `references/artifacts/university-simai-layer-notes.md`

@@ -103,9 +103,41 @@ Steps:
 
 1. Locate wizard entry script and actual config file.
 2. Verify `.wizard.config.php` exists before editing action chain.
-3. Add/adjust actions with explicit inputs/outputs/conditions.
-4. Confirm action code equals folder name in `/simai/wizard/action/<code>/`.
-5. Run dry validation in controlled environment.
+3. Verify runtime payload strategy:
+   - static `master/<wizard>/data/*` in source, or
+   - installer-assembled `master/<wizard>/data/*` at deployment time.
+4. Add/adjust actions with explicit inputs/outputs/conditions.
+5. Confirm action code equals folder name in `/simai/wizard/action/<code>/`.
+6. Confirm action resolution order is acceptable:
+   - wizard-local override first,
+   - global action fallback second.
+7. Run dry validation in controlled environment.
+
+## 17) Inspect Or Patch System Layer (`/simai`) Safely
+
+Goal:
+
+- Analyze or update framework-level `/simai` internals with explicit risk control.
+
+Steps:
+
+1. Read `references/system-layer-simai.md`.
+2. Confirm task explicitly requires system-layer change (not solvable in `simai.data`/override layer).
+3. Classify change surface:
+   - `simai/config` (asset/font/framework registries),
+   - `simai/property` (universal property type templates),
+   - `simai/block` (system default blocks),
+   - `simai/wizard` (actions/master packages),
+   - `simai/admin` bridge endpoints.
+4. Snapshot current state and check for drift:
+   - config->filesystem package consistency,
+   - action folder/code consistency,
+   - expected wizard config file presence.
+5. Apply minimal patch and keep backward compatibility.
+6. Validate:
+   - `php -l` for touched files,
+   - smoke run on affected editors/pages/wizard stages.
+7. Record migration/rollback and residual risks in artifact notes.
 
 ## 8) Create New Iblock or HL-Block By Standard
 

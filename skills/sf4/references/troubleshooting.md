@@ -45,11 +45,41 @@ Checklist:
 
 Checklist:
 
-1. Confirm wizard config file path exists and is readable.
-2. Confirm action folder exists for every action code.
-3. Confirm action input/output data codes are valid.
-4. Confirm import archives/files exist and are readable.
-5. Confirm required modules (iblock/highloadblock) are installed.
+1. Confirm runtime entry path:
+   - wrapper wizard redirect (if used) points to `/simai/wizard/master/<wizard_code>/`,
+   - master `index.php` points to valid `WIZARD_CONFIG_FILE`.
+2. Confirm wizard config file path exists and is readable.
+3. Confirm action folder/file exists for every action code.
+4. Confirm action input/output data codes are valid and consistent across chain.
+5. Confirm installer-generated `data/*` payload exists in runtime master directory.
+6. Confirm import archives/files exist and are readable.
+7. Confirm required modules (iblock/highloadblock) are installed.
+8. Confirm required PHP extensions for archive/XML actions:
+   - `XMLReader`,
+   - `ZipArchive`,
+   - `DOMDocument`.
+9. Confirm stage status transition logic reaches `SUCCESS` (not stuck at `WORK`).
+10. If stage uses AJAX import, check its handler request keys and final success flag logic.
+
+## Wizard Opens But Next Is Disabled
+
+Checklist:
+
+1. Confirm current action really sets `STAGE.STATUS = SUCCESS`.
+2. Confirm no forced `ERROR` overwrite at end of custom action.
+3. For selector-style actions, verify AJAX handler stores expected output array.
+4. Confirm `data_output_code` matches actual key used by next stage.
+5. Confirm browser-side JS receives success response from action AJAX endpoint.
+
+## Wizard Import Runs Partially And Stops
+
+Checklist:
+
+1. Confirm stage is designed for chunked execution (`AJAX_TIME_STEP` / `AJAX_TIME_INTERVAL`).
+2. Confirm import action persists progress between calls (saved in wizard property state).
+3. Confirm large archive entries exist and are readable.
+4. Confirm no PHP fatal/timeout in action AJAX endpoint.
+5. Confirm final AJAX call marks stage `SUCCESS`, not only intermediate chunks.
 
 ## Asset Loading Issues
 

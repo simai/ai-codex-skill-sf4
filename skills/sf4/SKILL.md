@@ -13,6 +13,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - Grid, layout, block, or view task: read `references/grid-and-block-workflow.md`.
    - Production-like composition patterns: read `references/production-patterns.md`.
    - Full-site baseline patterns from real project study: read `references/field-study-university-local.md`.
+   - System-layer map for `/simai` internals: read `references/system-layer-simai.md`.
    - Page route map + modernization template for large sites: read `references/page-map-and-modernization.md`.
    - Real page modernization cases by route type: read `references/page-modernization-cases.md`.
    - Component template resolution and override rules: read `references/component-template-resolution.md`.
@@ -87,6 +88,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Grid, View, Block, and Template Areas
 
 - Read `references/grid-and-block-workflow.md`.
+- Read `references/system-layer-simai.md` when task needs framework-level block/property/wizard context from `/simai`.
 - Read `references/production-patterns.md` for real-world area/view/block conventions.
 - Read `references/field-study-university-local.md` when task targets a full existing SF4 site, not an isolated template.
 - Read `references/page-map-and-modernization.md` to classify page route type before changing large/legacy sites.
@@ -169,8 +171,12 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Wizard Actions and Deployment
 
 - Read `references/wizard-actions.md`.
+- Read `references/system-layer-simai.md` for action/master folder conventions and fallback action resolution.
 - Read `references/update-artifacts.md` for mandatory update outputs.
 - For step-by-step execution, read `references/task-playbooks.md` sections 7 and 10.
+- In `references/wizard-actions.md`, always verify:
+  - runtime execution model (entry -> master -> stage -> action -> property storage),
+  - installer payload assembly for `master/<wizard>/data/*`.
 - Ensure action code matches action folder name.
 - Keep install/update chains reproducible and file-safe.
 - Stop and ask user when expected wizard config is missing.
