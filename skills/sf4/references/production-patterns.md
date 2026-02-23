@@ -4,6 +4,10 @@
 
 Capture real-world SF4 patterns observed on live project templates so implementation choices match production usage.
 
+Companion field-study baseline:
+
+- `references/field-study-university-local.md`
+
 ## Extended Template Areas
 
 Beyond basic header/footer/main/sidebar selectors, production projects often include:
@@ -62,3 +66,15 @@ Before changing production-like views/blocks:
 1. Snapshot current `grid/view` and `grid/block` references.
 2. Validate all referenced templates exist.
 3. Keep functional behavior equivalent before any structural cleanup.
+
+## Full-Site Baseline Signals
+
+In full SF4 sites with large `simai.data` trees, expect:
+
+- heavy `simai:sf.grid` composition in multiple areas (header/home/main/footer/sidebar),
+- large block catalog with historical variants and partial overlap,
+- service/admin template areas that influence runtime behavior,
+- occasional hygiene issues in block folders (archives/cache remnants),
+- incomplete legacy view-to-block linkage in non-active or old view variants.
+
+Treat modernization as incremental and audit-driven, not big-bang rewrites.

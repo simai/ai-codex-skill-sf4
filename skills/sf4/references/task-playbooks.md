@@ -26,16 +26,17 @@ Goal:
 Steps:
 
 1. Determine active area and `grid_view_*` code.
-2. Open `{site_dir}/simai.data/grid/view/<area>/<code>/template.php`.
-3. Modify:
+2. If this is a full legacy site, read `references/field-study-university-local.md` first.
+3. Open `{site_dir}/simai.data/grid/view/<area>/<code>/template.php`.
+4. Modify:
    - row count/order
    - column widths and adaptivity
    - area template assignments
    - row conditions by property keys
-4. Ensure every referenced block exists in project or system layer.
-5. Run audit:
+5. Ensure every referenced block exists in project or system layer.
+6. Run audit:
    - `python3 scripts/sf4_project_audit.py --site-root <root> --site-dir <site_dir>`
-6. Clear cache and verify rendering.
+7. Clear cache and verify rendering.
 
 ## 3) Add New Page Variant By Properties
 
@@ -197,3 +198,125 @@ Steps:
 5. Re-run audit to confirm warning reduction.
 6. Run focused smoke/regression on affected pages/widgets.
 7. Document what was removed, relocated, or accepted as an intentional exception.
+
+## 13) Build Or Refactor Frontend Markup By SF4 UI Catalog
+
+Goal:
+
+- Implement or modernize SF4 markup using validated `/ru/ui` patterns while preserving project behavior.
+
+Steps:
+
+1. Read:
+   - `references/ui-catalog.md`
+   - `references/ui-source-map.md`
+   - `references/ui-class-cheatsheet.md`
+   - `references/ui-markup-recipes.md`
+2. For large existing projects, add `references/field-study-university-local.md`.
+3. Inspect current project class baseline:
+   - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --top 80`
+4. Select the target pattern source:
+   - layout, component, utility, decor, content, action, or snippet.
+5. Confirm target implementation layer:
+   - page composition in `grid/view/.../template.php`, or
+   - block markup in `grid/block/.../template.php`.
+6. Port minimal markup skeleton from closest SF4 UI example.
+7. Bind dynamic data/params and keep class naming aligned with SF4 conventions.
+8. Avoid introducing new classes unless project CSS already defines them.
+9. Validate:
+   - desktop/mobile breakpoints,
+   - interaction states (focus/open/hover/validation where relevant),
+   - text/content overflow with real data.
+10. Run `sf4_project_audit.py` and smoke checks, then clear cache and retest pages.
+11. Re-run class inventory and compare hotspots for unexpected class drift:
+   - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --class sf-form-control --class theme-dark`
+
+## 14) Add Or Refactor Interactive UI Safely
+
+Goal:
+
+- Implement interactive SF4 frontend behavior with explicit dependency mapping, clean asset policy, and baseline accessibility.
+
+Steps:
+
+1. Read:
+   - `references/ui-interactive-dependencies.md`
+   - `references/ui-interaction-attributes.md`
+   - `references/ui-a11y-checklist.md`
+   - `references/ui-asset-policy.md`
+2. Run baseline interactive audit:
+   - `python3 scripts/sf4_interactive_audit.py --site-root <root> --site-dir <site_dir> --top 80`
+3. Choose target interaction pattern:
+   - modal/dropdown/tooltip/popover/swiper/form-mask/fancybox.
+4. Implement or update markup attributes in block/view templates.
+5. Connect required JS/CSS dependencies in project layer.
+6. Ensure no docs-only assets are introduced into production templates.
+7. Run accessibility checklist for changed controls.
+8. Validate runtime:
+   - open/close/toggle behavior,
+   - keyboard and focus flow,
+   - mobile and desktop behavior,
+   - no console errors.
+9. Re-run interactive audit with focused marker checks:
+   - `python3 scripts/sf4_interactive_audit.py --site-root <root> --site-dir <site_dir> --marker sf_modal_attr --marker dropdown_toggle --marker inputmask_attr`
+10. Clear cache and rerun smoke checks on affected pages.
+
+## 15) Implement Backend Data/Settings By `/ru/bx` Patterns
+
+Goal:
+
+- Build or modernize SF4 backend logic using `simai.storage`, universal properties, and anti-regression guide rules from `/ru/bx`.
+
+Steps:
+
+1. Read:
+   - `references/bx-backend-source-map.md`
+   - `references/storage-api-playbook.md`
+   - `references/property-editor-playbook.md`
+   - `references/sfgrid-editor-features.md`
+   - `references/backend-critical-guides.md`
+2. For full existing projects, add `references/field-study-university-local.md` as baseline context.
+3. Identify target backend scope:
+   - storage CRUD/events/search,
+   - property editor schema/persistence,
+   - `sf.grid` editor behavior,
+   - package update safety patterns.
+4. Implement changes in project layer/config while preserving update-safe boundaries.
+5. For `simai.storage` writes, ensure sort/search updates and access constraints are handled.
+6. For property schemas, validate field types, conditions, include/entity parameters, and save cycle.
+7. For `sf.grid` editor changes, verify `COMPONENT_ID`, edit mode boundaries, and persistence behavior.
+8. Run backend risk scan:
+   - `python3 scripts/sf4_backend_risk_scan.py --site-root <root> --site-dir <site_dir>`
+9. Resolve or explicitly justify findings for:
+   - `IBLOCK_TYPE`/`IBLOCK_CODE` + `SITE_ID` concatenation,
+   - `DOMContentLoaded` misuse in dynamic templates,
+   - `Block\Edit::add*Area` without `position-relative`,
+   - inconsistent asset loading strategy.
+10. Run smoke/regression checks and clear cache.
+11. Record migration/rollback notes for any schema or data-impacting changes.
+
+## 16) Modernize One Existing Page In A Full SF4 Site
+
+Goal:
+
+- Safely modernize a real page with route-aware edits and minimal regressions.
+
+Steps:
+
+1. Read `references/page-map-and-modernization.md`.
+2. Read `references/page-modernization-cases.md`.
+3. Build route map snapshot:
+   - `python3 scripts/sf4_site_map.py --site-root <root> --site-dir <site_dir> --json-out <map.json> --json`
+4. Classify target page type:
+   - template-driven area/view/block route,
+   - direct `simai:sf.grid` page,
+   - component-heavy section page.
+5. Identify exact files for minimal change surface.
+6. Implement layout/markup/logic changes in project layer.
+7. Validate:
+   - `php -l` for touched files,
+   - `python3 scripts/sf4_project_audit.py --site-root <root> --site-dir <site_dir>`.
+8. If UI changed, run:
+   - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --top 80`
+   - `python3 scripts/sf4_interactive_audit.py --site-root <root> --site-dir <site_dir> --top 80`
+9. Clear cache and run smoke/regression on target and neighboring pages.

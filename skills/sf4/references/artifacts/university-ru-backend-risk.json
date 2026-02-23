@@ -1,0 +1,108 @@
+{
+  "site_root": "<project_root>",
+  "site_dir": "/ru",
+  "simai_data": "<project_root>/ru/simai.data",
+  "scanned_files_count": 873,
+  "checks": [
+    {
+      "check": "iblock_siteid_concat",
+      "count": 128,
+      "files": 62,
+      "lines": [
+        "ru/simai.data/config/.structure.config.php:610: \"IBLOCK_CODE\" => \"sf-\" . SITE_ID . \"-document\",",
+        "ru/simai.data/config/.structure.config.php:623: \"IBLOCK_CODE\" => \"sf-\" . SITE_ID . \"-photo\",",
+        "ru/simai.data/config/.structure.config.php:636: \"IBLOCK_CODE\" => \"sf-\" . SITE_ID . \"-video\",",
+        "ru/simai.data/config/.structure.config.php:649: \"IBLOCK_CODE\" => \"sf-\" . SITE_ID . \"-news\",",
+        "ru/simai.data/config/.structure.config.php:662: \"IBLOCK_CODE\" => \"sf-\" . SITE_ID . \"-event\",",
+        "ru/simai.data/config/.structure.config.php:675: \"IBLOCK_CODE\" => \"sf-\" . SITE_ID . \"-announce\",",
+        "ru/simai.data/grid/block/footer/banner.single/template.php:10: $typeIblock = \"sf_\".SITE_ID.\"_banner\";",
+        "ru/simai.data/grid/block/footer/banner.single/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-section\";",
+        "ru/simai.data/grid/block/footer/feedback.error/template.php:13: $typeIblock = \"sf_\" . SITE_ID . \"_form\";",
+        "ru/simai.data/grid/block/footer/feedback.error/template.php:14: $codeIblock = \"sf-\" . SITE_ID . \"-form-error-content\";",
+        "ru/simai.data/grid/block/header/banner.main/template.php:9: $typeIblock = \"sf_\".SITE_ID.\"_banner\";",
+        "ru/simai.data/grid/block/header/banner.main/template.php:10: $codeIblock = \"sf-\" . SITE_ID . \"-banner-main\";",
+        "ru/simai.data/grid/block/header/banner.single/template.php:10: $typeIblock = \"sf_\".SITE_ID.\"_banner\";",
+        "ru/simai.data/grid/block/header/banner.single/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-section\";",
+        "ru/simai.data/grid/block/header/bg.banner/template.php:10: $typeIblock = \"sf_\" . SITE_ID . \"_banner\";",
+        "ru/simai.data/grid/block/header/bg.banner/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-main\";",
+        "ru/simai.data/grid/block/header/link.navigation/template.php:8: $typeIblock = \"sf_\" . SITE_ID . \"_org\";",
+        "ru/simai.data/grid/block/header/link.navigation/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-navigation\";",
+        "ru/simai.data/grid/block/home/announce.card/template.php:9: $typeIblock = \"sf_\".SITE_ID.\"_content\";",
+        "ru/simai.data/grid/block/home/announce.card/template.php:10: $codeIblock = \"sf-\" . SITE_ID . \"-announce\";",
+        "ru/simai.data/grid/block/home/announce.list/template.php:8: $typeIblock = \"sf_\".SITE_ID.\"_content\";",
+        "ru/simai.data/grid/block/home/announce.list/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-announce\";",
+        "ru/simai.data/grid/block/home/banner.list/template.php:10: $typeIblock = \"sf_\".SITE_ID.\"_banner\";",
+        "ru/simai.data/grid/block/home/banner.list/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-section\";",
+        "ru/simai.data/grid/block/home/banner.main/template.php:10: $typeIblock = \"sf_\" . SITE_ID . \"_banner\";",
+        "ru/simai.data/grid/block/home/banner.main/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-main\";",
+        "ru/simai.data/grid/block/home/banner.main.fullscreen/template.php:10: $typeIblock = \"sf_\" . SITE_ID . \"_banner\";",
+        "ru/simai.data/grid/block/home/banner.main.fullscreen/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-main\";",
+        "ru/simai.data/grid/block/home/banner.slider/template.php:10: $typeIblock = \"sf_\".SITE_ID.\"_banner\";",
+        "ru/simai.data/grid/block/home/banner.slider/template.php:11: $codeIblock = \"sf-\" . SITE_ID . \"-banner-section\";",
+        "ru/simai.data/grid/block/home/banner.slider.multi/template.php:8: $typeIblock = \"sf_\".SITE_ID.\"_banner\";",
+        "ru/simai.data/grid/block/home/banner.slider.multi/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-banner-section\";",
+        "ru/simai.data/grid/block/home/branch.card/template.php:8: $typeIblock = \"sf_\".SITE_ID.\"_org\";",
+        "ru/simai.data/grid/block/home/branch.card/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-branch\";",
+        "ru/simai.data/grid/block/home/event.calendar/template.php:8: $typeIblock = \"sf_\" . SITE_ID . \"_content\";",
+        "ru/simai.data/grid/block/home/event.calendar/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-event\";",
+        "ru/simai.data/grid/block/home/event.card/template.php:8: $typeIblock = \"sf_\" . SITE_ID . \"_content\";",
+        "ru/simai.data/grid/block/home/event.card/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-event\";",
+        "ru/simai.data/grid/block/home/nav.link.card/template.php:8: $typeIblock = \"sf_\".SITE_ID.\"_link\";",
+        "ru/simai.data/grid/block/home/nav.link.card/template.php:9: $codeIblock = \"sf-\" . SITE_ID . \"-navigation\";"
+      ]
+    },
+    {
+      "check": "domcontentloaded",
+      "count": 3,
+      "files": 3,
+      "lines": [
+        "ru/simai.data/grid/block/footer/org.social/template.php:133: document.addEventListener(\"DOMContentLoaded\", function() {",
+        "ru/simai.data/grid/block/header/display.reader/template.php:205: document.addEventListener('DOMContentLoaded', () => {",
+        "ru/simai.data/grid/block/header/org.social/template.php:133: document.addEventListener(\"DOMContentLoaded\", function() {"
+      ]
+    },
+    {
+      "check": "block_edit_without_position_relative",
+      "count": 0,
+      "files": 0,
+      "lines": []
+    },
+    {
+      "check": "asset_addjs_addcss",
+      "count": 11,
+      "files": 5,
+      "lines": [
+        "ru/simai.data/grid/block/header/translate.google/template.php:286: <?Bitrix\\Main\\Page\\Asset::getInstance()->addJs(Path::getLocal(__DIR__) . \"/script.js\");?>",
+        "ru/simai.data/grid/block/header/translate.google/template.php:287: <?Bitrix\\Main\\Page\\Asset::getInstance()->addJs(Path::getLocal(__DIR__) . \"/google.translate.js\");?>",
+        "ru/simai.data/grid/block/header/translate.yandex/template.php:82: <? Bitrix\\Main\\Page\\Asset::getInstance()->addJs(Path::getLocal(__DIR__) . \"/yatranslate.js\"); ?>",
+        "ru/simai.data/grid/block/header/translate.yandex/template.php:83: <?Bitrix\\Main\\Page\\Asset::getInstance()->addCss(Path::getLocal(__DIR__) . \"/yatranslate.css\");?>",
+        "ru/simai.data/grid/block/home/social.widget/template.php:10: Asset::getInstance()->addCss($path . \"/style.css\");",
+        "ru/simai.data/grid/block/home/social.widget/template.php:11: Asset::getInstance()->addJs($path . \"/script.js\");",
+        "ru/simai.data/grid/block/home/social.widget/template.php:12: //Asset::getInstance()->addJs($path .'/script_vk.js');",
+        "ru/simai.data/grid/block/home/social.widget/widget_tw.php:12: //Asset::getInstance()->addJs('/ru/simai.data/template/grid/mainpage/sidebar/social/script_tw.js');",
+        "ru/simai.data/template/area/service/top/panel.admin/template.php:15: Asset::getInstance()->addJs(\"/bitrix/js/main/utils.js\");",
+        "ru/simai.data/template/area/service/top/panel.admin/template.php:16: Asset::getInstance()->addJs(\"/bitrix/js/main/sidepanel/manager.min.js\");",
+        "ru/simai.data/template/area/service/top/panel.admin/template.php:17: Asset::getInstance()->addCss(\"/bitrix/themes/.default/pubstyles.css\");"
+      ]
+    },
+    {
+      "check": "asset_load",
+      "count": 12,
+      "files": 3,
+      "lines": [
+        "ru/simai.data/grid/block/home/publication.card/include.epilog.php:9: SIMAI\\Main\\Page\\Asset::getInstance()->load(\"dflip\");",
+        "ru/simai.data/grid/block/service-about/images/images.php:3: \\SIMAI\\Main\\Page\\Asset::getInstance()->load(\"swiper\");",
+        "ru/simai.data/template/style.php:12: Asset::getInstance()->load(\"lazysizes\");",
+        "ru/simai.data/template/style.php:13: Asset::getInstance()->load(\"jquery\");",
+        "ru/simai.data/template/style.php:14: Asset::getInstance()->load(\"popper\");",
+        "ru/simai.data/template/style.php:15: Asset::getInstance()->load(\"simai.framework\");",
+        "ru/simai.data/template/style.php:16: Asset::getInstance()->load(\"simai.bx-panel\");",
+        "ru/simai.data/template/style.php:17: Asset::getInstance()->load(\"font-awesome\");",
+        "ru/simai.data/template/style.php:18: Asset::getInstance()->load(\"fancybox\");",
+        "ru/simai.data/template/style.php:19: Asset::getInstance()->load(\"swiper\");",
+        "ru/simai.data/template/style.php:20: Asset::getInstance()->load(\"simai.special\");",
+        "ru/simai.data/template/style.php:24: Asset::getInstance()->load(\"animate\");"
+      ]
+    }
+  ]
+}

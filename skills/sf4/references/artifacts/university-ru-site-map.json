@@ -1,0 +1,603 @@
+{
+  "site_root": "<project_root>",
+  "site_dir": "/ru",
+  "simai_data": "ru/simai.data",
+  "active_views": {
+    "grid_view_header": "005",
+    "grid_view_footer": "default",
+    "grid_view_home": "default",
+    "grid_view_main_top": "default",
+    "grid_view_main_bottom": "default",
+    "grid_view_sidebar_left": "default",
+    "grid_view_sidebar_right": "default"
+  },
+  "active_view_templates": [
+    {
+      "property": "grid_view_header",
+      "code": "005",
+      "template_path": "ru/simai.data/grid/view/header/005/template.php",
+      "exists": true,
+      "block_section": "header",
+      "key_blocks": [
+        "banner.single",
+        "custom.include.file",
+        "custom.text",
+        "display.special",
+        "menu.header",
+        "menu.main",
+        "nav.breadcrumb",
+        "org.address",
+        "org.email",
+        "org.logo",
+        "org.name",
+        "org.phone",
+        "org.social",
+        "page.title",
+        "search",
+        "social.share",
+        "translate.google",
+        "user.auth"
+      ],
+      "key_blocks_count": 18
+    },
+    {
+      "property": "grid_view_footer",
+      "code": "default",
+      "template_path": "ru/simai.data/grid/view/footer/default/template.php",
+      "exists": true,
+      "block_section": "footer",
+      "key_blocks": [
+        "banner.single",
+        "custom.include.file",
+        "custom.text",
+        "feedback.error",
+        "informer.sputnik",
+        "menu.footer",
+        "org.address",
+        "org.contact",
+        "org.copyright",
+        "org.email",
+        "org.phone",
+        "org.social",
+        "other.composite",
+        "simai.solution"
+      ],
+      "key_blocks_count": 14
+    },
+    {
+      "property": "grid_view_home",
+      "code": "default",
+      "template_path": "ru/simai.data/grid/view/home/default/template.php",
+      "exists": true,
+      "block_section": "home",
+      "key_blocks": [
+        "activity",
+        "announce.card",
+        "announce.list",
+        "banner.list",
+        "banner.main",
+        "banner.slider",
+        "banner.slider.multi",
+        "branch.card",
+        "chief",
+        "custom.include.file",
+        "custom.section.title",
+        "event.calendar",
+        "event.card",
+        "milestone.counter",
+        "nav.link.icon",
+        "news.card",
+        "news.slider",
+        "org.chief",
+        "org.contact",
+        "org.map",
+        "photo.list",
+        "shedule",
+        "social",
+        "video",
+        "video.card",
+        "weather",
+        "welcome"
+      ],
+      "key_blocks_count": 27
+    },
+    {
+      "property": "grid_view_main_top",
+      "code": "default",
+      "template_path": "ru/simai.data/grid/view/main/top/default/template.php",
+      "exists": true,
+      "block_section": "main",
+      "key_blocks": [
+        "banner.single",
+        "include.top.file",
+        "include.top.section",
+        "page.title"
+      ],
+      "key_blocks_count": 4
+    },
+    {
+      "property": "grid_view_main_bottom",
+      "code": "default",
+      "template_path": "ru/simai.data/grid/view/main/bottom/default/template.php",
+      "exists": true,
+      "block_section": "main",
+      "key_blocks": [
+        "banner.single",
+        "doc.list",
+        "include.bottom.file",
+        "include.bottom.section",
+        "relation.announce",
+        "relation.doc",
+        "relation.event",
+        "relation.news",
+        "relation.photo",
+        "relation.video"
+      ],
+      "key_blocks_count": 10
+    },
+    {
+      "property": "grid_view_sidebar_left",
+      "code": "default",
+      "template_path": "ru/simai.data/grid/view/sidebar/left/default/template.php",
+      "exists": true,
+      "block_section": "sidebar",
+      "key_blocks": [
+        "banner.list",
+        "include.left.file",
+        "include.left.section",
+        "menu.sidebar"
+      ],
+      "key_blocks_count": 4
+    },
+    {
+      "property": "grid_view_sidebar_right",
+      "code": "default",
+      "template_path": "ru/simai.data/grid/view/sidebar/right/default/template.php",
+      "exists": true,
+      "block_section": "sidebar",
+      "key_blocks": [
+        "banner.list",
+        "include.left.file",
+        "include.left.section",
+        "menu.sidebar"
+      ],
+      "key_blocks_count": 4
+    }
+  ],
+  "property_overrides": [
+    {
+      "file": "ru/.property.php",
+      "values": {
+        "sidebar_show": "none",
+        "show_title": "N",
+        "show_breadcrumb": "N"
+      }
+    },
+    {
+      "file": "ru/404/.property.php",
+      "values": {
+        "grid_view_header": "empty",
+        "grid_view_footer": "empty",
+        "grid_view_main_top": "empty",
+        "grid_view_main_bottom": "empty",
+        "grid_view_sidebar_left": "empty",
+        "grid_view_sidebar_right": "empty",
+        "sidebar_show": "none"
+      }
+    },
+    {
+      "file": "ru/abitur/.property.php",
+      "values": {
+        "sidebar_show": "none"
+      }
+    },
+    {
+      "file": "ru/auth/.property.php",
+      "values": {
+        "grid_view_header": "empty",
+        "grid_view_footer": "empty",
+        "grid_view_main_top": "empty",
+        "grid_view_main_bottom": "empty",
+        "grid_view_sidebar_left": "empty",
+        "grid_view_sidebar_right": "empty",
+        "sidebar_show": "none"
+      }
+    },
+    {
+      "file": "ru/personal/learn/courses/.property.php",
+      "values": {
+        "sidebar_show": "left"
+      }
+    },
+    {
+      "file": "ru/press-center/presentation/.property.php",
+      "values": {
+        "show_title": "Y"
+      }
+    },
+    {
+      "file": "ru/press-center/video/add/.property.php",
+      "values": {
+        "show_title": "Y",
+        "show_breadcrumb": "Y"
+      }
+    },
+    {
+      "file": "ru/students/service/.property.php",
+      "values": {
+        "sidebar_show": "none",
+        "show_title": "N",
+        "show_breadcrumb": "N"
+      }
+    },
+    {
+      "file": "ru/tenders/.property.php",
+      "values": {
+        "show_title": "N"
+      }
+    }
+  ],
+  "top_level_indexes": [
+    {
+      "file": "ru/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/404/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/abitur/index.php",
+      "components": [
+        "simai:sf.iblock.section",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.section",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/about/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/announcing/index.php",
+      "components": [
+        "bitrix:news"
+      ],
+      "sf_components": [],
+      "bitrix_components": [
+        "bitrix:news"
+      ]
+    },
+    {
+      "file": "ru/anti-corruption/index.php",
+      "components": [
+        "simai:sf.iblock.section"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.section"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/antiterrorist/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/appeal/index.php",
+      "components": [
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/auth/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/contacts/index.php",
+      "components": [
+        "bitrix:main.include",
+        "bitrix:map.yandex.view",
+        "simai:sf.iblock.list",
+        "simai:sf.feedback"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.feedback"
+      ],
+      "bitrix_components": [
+        "bitrix:main.include",
+        "bitrix:map.yandex.view"
+      ]
+    },
+    {
+      "file": "ru/control/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/departments/index.php",
+      "components": [
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/faculty/index.php",
+      "components": [
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/forms/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/graduate/index.php",
+      "components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/information-security/index.php",
+      "components": [
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/learning/index.php",
+      "components": [
+        "bitrix:learning.course.list"
+      ],
+      "sf_components": [],
+      "bitrix_components": [
+        "bitrix:learning.course.list"
+      ]
+    },
+    {
+      "file": "ru/life/index.php",
+      "components": [
+        "bitrix:main.include",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": [
+        "bitrix:main.include"
+      ]
+    },
+    {
+      "file": "ru/national-projects/index.php",
+      "components": [
+        "simai:sf.iblock.list",
+        "bitrix:main.include",
+        "simai:sf.iblock.list",
+        "bitrix:main.include",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": [
+        "bitrix:main.include",
+        "bitrix:main.include"
+      ]
+    },
+    {
+      "file": "ru/natsionalnyy-proekt-nauka-i-universitety/index.php",
+      "components": [
+        "simai:sf.iblock.list",
+        "bitrix:main.include",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "bitrix:main.include",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": [
+        "bitrix:main.include",
+        "bitrix:main.include"
+      ]
+    },
+    {
+      "file": "ru/news/index.php",
+      "components": [
+        "bitrix:news"
+      ],
+      "sf_components": [],
+      "bitrix_components": [
+        "bitrix:news"
+      ]
+    },
+    {
+      "file": "ru/noko/index.php",
+      "components": [
+        "simai:sf.feedback.vote"
+      ],
+      "sf_components": [
+        "simai:sf.feedback.vote"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/personal/index.php",
+      "components": [
+        "bitrix:main.profile"
+      ],
+      "sf_components": [],
+      "bitrix_components": [
+        "bitrix:main.profile"
+      ]
+    },
+    {
+      "file": "ru/press-center/index.php",
+      "components": [
+        "bitrix:main.include",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": [
+        "bitrix:main.include"
+      ]
+    },
+    {
+      "file": "ru/schedule/index.php",
+      "components": [
+        "bitrix:catalog"
+      ],
+      "sf_components": [],
+      "bitrix_components": [
+        "bitrix:catalog"
+      ]
+    },
+    {
+      "file": "ru/search/index.php",
+      "components": [
+        "bitrix:search.page"
+      ],
+      "sf_components": [],
+      "bitrix_components": [
+        "bitrix:search.page"
+      ]
+    },
+    {
+      "file": "ru/security/index.php",
+      "components": [
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/students/index.php",
+      "components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/sveden/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/teachers/index.php",
+      "components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.list",
+        "simai:sf.iblock.list"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/tenders/index.php",
+      "components": [
+        "simai:sf.iblock.table"
+      ],
+      "sf_components": [
+        "simai:sf.iblock.table"
+      ],
+      "bitrix_components": []
+    },
+    {
+      "file": "ru/worldskills-russia/index.php",
+      "components": [],
+      "sf_components": [],
+      "bitrix_components": []
+    }
+  ],
+  "top_level_component_counters": {
+    "sf": {
+      "simai:sf.iblock.list": 27,
+      "simai:sf.iblock.section": 2,
+      "simai:sf.feedback": 1,
+      "simai:sf.feedback.vote": 1,
+      "simai:sf.iblock.table": 1
+    },
+    "bitrix": {
+      "bitrix:main.include": 7,
+      "bitrix:news": 2,
+      "bitrix:map.yandex.view": 1,
+      "bitrix:learning.course.list": 1,
+      "bitrix:main.profile": 1,
+      "bitrix:catalog": 1,
+      "bitrix:search.page": 1
+    }
+  },
+  "direct_sf_grid_pages": [
+    "ru/students/service/detail.php"
+  ],
+  "stats": {
+    "top_level_indexes_count": 32,
+    "property_overrides_count": 9,
+    "direct_sf_grid_pages_count": 1
+  }
+}

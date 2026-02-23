@@ -1,0 +1,481 @@
+{
+  "site_root": "<project_root>",
+  "site_dir": "/ru",
+  "simai_data": "<project_root>/ru/simai.data",
+  "scanned_files": [
+    "ru/simai.data/grid/block/feedback/complex_field/template.php",
+    "ru/simai.data/grid/block/feedback/field/template.php",
+    "ru/simai.data/grid/block/feedback/name/template.php",
+    "ru/simai.data/grid/block/feedback/text/template.php",
+    "ru/simai.data/grid/block/feedback/type/template.php",
+    "ru/simai.data/grid/block/footer/banner.single/template.php",
+    "ru/simai.data/grid/block/footer/button/template.php",
+    "ru/simai.data/grid/block/footer/custom.include.file/template.php",
+    "ru/simai.data/grid/block/footer/custom.link/template.php",
+    "ru/simai.data/grid/block/footer/custom.text/template.php",
+    "ru/simai.data/grid/block/footer/display.print/lang/ru/template.php",
+    "ru/simai.data/grid/block/footer/display.print/template.php",
+    "ru/simai.data/grid/block/footer/display.special/lang/ru/template.php",
+    "ru/simai.data/grid/block/footer/display.special/template.php",
+    "ru/simai.data/grid/block/footer/feedback.error/lang/ru/template.php",
+    "ru/simai.data/grid/block/footer/feedback.error/template.php",
+    "ru/simai.data/grid/block/footer/include.bottom.file/template.php",
+    "ru/simai.data/grid/block/footer/include.bottom.section/template.php",
+    "ru/simai.data/grid/block/footer/informer.sputnik/template.php",
+    "ru/simai.data/grid/block/footer/menu.footer/template.php",
+    "ru/simai.data/grid/block/footer/menu.footer.multy/template.php",
+    "ru/simai.data/grid/block/footer/org.address/template.php",
+    "ru/simai.data/grid/block/footer/org.copyright/template.php",
+    "ru/simai.data/grid/block/footer/org.email/template.php",
+    "ru/simai.data/grid/block/footer/org.logo/template.php",
+    "ru/simai.data/grid/block/footer/org.name/template.php",
+    "ru/simai.data/grid/block/footer/org.phone/template.php",
+    "ru/simai.data/grid/block/footer/org.social/lang/ru/template.php",
+    "ru/simai.data/grid/block/footer/org.social/template.php",
+    "ru/simai.data/grid/block/footer/other.composite/template.php",
+    "ru/simai.data/grid/block/footer/simai.solution/lang/ru/template.php",
+    "ru/simai.data/grid/block/footer/simai.solution/template.php",
+    "ru/simai.data/grid/block/footer/simai.studio/lang/ru/template.php",
+    "ru/simai.data/grid/block/footer/simai.studio/template.php",
+    "ru/simai.data/grid/block/footer/subscribe/template.php",
+    "ru/simai.data/grid/block/footer/subscribe.button/template.php",
+    "ru/simai.data/grid/block/footer/subscribe.light/template.php",
+    "ru/simai.data/grid/block/header/banner.main/template.php",
+    "ru/simai.data/grid/block/header/banner.single/template.php",
+    "ru/simai.data/grid/block/header/bg.banner/template.php",
+    "ru/simai.data/grid/block/header/bg.image/template.php",
+    "ru/simai.data/grid/block/header/custom.button/template.php",
+    "ru/simai.data/grid/block/header/custom.include.file/template.php",
+    "ru/simai.data/grid/block/header/custom.link/template.php",
+    "ru/simai.data/grid/block/header/custom.text/template.php",
+    "ru/simai.data/grid/block/header/display.print/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/display.print/template.php",
+    "ru/simai.data/grid/block/header/display.reader/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/display.reader/template.php",
+    "ru/simai.data/grid/block/header/display.search.icon/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/display.search.icon/template.php",
+    "ru/simai.data/grid/block/header/display.special/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/display.special/template.php",
+    "ru/simai.data/grid/block/header/display.special.icon/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/display.special.icon/template.php",
+    "ru/simai.data/grid/block/header/include.top.file/template.php",
+    "ru/simai.data/grid/block/header/include.top.section/template.php",
+    "ru/simai.data/grid/block/header/link.navigation/template.php",
+    "ru/simai.data/grid/block/header/menu.header/template.php",
+    "ru/simai.data/grid/block/header/menu.main/template.php",
+    "ru/simai.data/grid/block/header/nav.breadcrumb/template.php",
+    "ru/simai.data/grid/block/header/org.address/template.php",
+    "ru/simai.data/grid/block/header/org.email/template.php",
+    "ru/simai.data/grid/block/header/org.logo/template.php",
+    "ru/simai.data/grid/block/header/org.name/template.php",
+    "ru/simai.data/grid/block/header/org.parent.logo/template.php",
+    "ru/simai.data/grid/block/header/org.parent.name/template.php",
+    "ru/simai.data/grid/block/header/org.phone/template.php",
+    "ru/simai.data/grid/block/header/org.social/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/org.social/template.php",
+    "ru/simai.data/grid/block/header/page.title/template.php",
+    "ru/simai.data/grid/block/header/search/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/search/template.php",
+    "ru/simai.data/grid/block/header/search.title/template.php",
+    "ru/simai.data/grid/block/header/social.share/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/social.share/template.php",
+    "ru/simai.data/grid/block/header/translate.google/template.php",
+    "ru/simai.data/grid/block/header/translate.yandex/template.php",
+    "ru/simai.data/grid/block/header/user.auth/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/user.auth/template.php",
+    "ru/simai.data/grid/block/header/user.auth.icon/lang/ru/template.php",
+    "ru/simai.data/grid/block/header/user.auth.icon/template.php",
+    "ru/simai.data/grid/block/header/widget.navigation/template.php",
+    "ru/simai.data/grid/block/home/announce.card/template.php",
+    "ru/simai.data/grid/block/home/announce.list/template.php",
+    "ru/simai.data/grid/block/home/banner.list/template.php",
+    "ru/simai.data/grid/block/home/banner.main/template.php",
+    "ru/simai.data/grid/block/home/banner.main.fullscreen/template.php",
+    "ru/simai.data/grid/block/home/banner.slider/template.php",
+    "ru/simai.data/grid/block/home/banner.slider.multi/template.php",
+    "ru/simai.data/grid/block/home/banner.slider.multi.rss/template.php",
+    "ru/simai.data/grid/block/home/branch.card/template.php",
+    "ru/simai.data/grid/block/home/custom.include.file/template.php",
+    "ru/simai.data/grid/block/home/custom.section.title/template.php",
+    "ru/simai.data/grid/block/home/doc.list/template.php",
+    "ru/simai.data/grid/block/home/event.calendar/template.php",
+    "ru/simai.data/grid/block/home/event.card/template.php",
+    "ru/simai.data/grid/block/home/menu.sidebar/template.php",
+    "ru/simai.data/grid/block/home/milestone.counter/template.php",
+    "ru/simai.data/grid/block/home/nav.link.card/template.php",
+    "ru/simai.data/grid/block/home/nav.link.icon/template.php",
+    "ru/simai.data/grid/block/home/news.card/template.php",
+    "ru/simai.data/grid/block/home/news.card.rss/template.php",
+    "ru/simai.data/grid/block/home/news.slider/template.php",
+    "ru/simai.data/grid/block/home/news.slider.in/lang/ru/template.php",
+    "ru/simai.data/grid/block/home/news.slider.in/template.php",
+    "ru/simai.data/grid/block/home/org.chief/lang/ru/template.php",
+    "ru/simai.data/grid/block/home/org.chief/template.php",
+    "ru/simai.data/grid/block/home/org.contact/template.php",
+    "ru/simai.data/grid/block/home/org.map/template.php",
+    "ru/simai.data/grid/block/home/org.social/lang/ru/template.php",
+    "ru/simai.data/grid/block/home/org.social/template.php",
+    "ru/simai.data/grid/block/home/photo.list/template.php",
+    "ru/simai.data/grid/block/home/photo.section.slider/template.php",
+    "ru/simai.data/grid/block/home/photo.slider.in/template.php",
+    "ru/simai.data/grid/block/home/publication.card/template.php",
+    "ru/simai.data/grid/block/home/service.card/template.php",
+    "ru/simai.data/grid/block/home/social.widget/inwidget/template.php",
+    "ru/simai.data/grid/block/home/social.widget/template.php",
+    "ru/simai.data/grid/block/home/source.slider.multi/template.php",
+    "ru/simai.data/grid/block/home/specialty.card/template.php",
+    "ru/simai.data/grid/block/home/video.card/template.php",
+    "ru/simai.data/grid/block/home/video.slider.in/template.php",
+    "ru/simai.data/grid/block/home/vote/template.php",
+    "ru/simai.data/grid/block/home/weather/template.php",
+    "ru/simai.data/grid/block/main/banner.single/template.php",
+    "ru/simai.data/grid/block/main/include.bottom.file/template.php",
+    "ru/simai.data/grid/block/main/include.bottom.section/template.php",
+    "ru/simai.data/grid/block/main/include.top.file/template.php",
+    "ru/simai.data/grid/block/main/include.top.section/template.php",
+    "ru/simai.data/grid/block/main/nav.breadcrumb/template.php",
+    "ru/simai.data/grid/block/main/page.title/template.php",
+    "ru/simai.data/grid/block/main/relation.announce/template.php",
+    "ru/simai.data/grid/block/main/relation.doc/template.php",
+    "ru/simai.data/grid/block/main/relation.event/template.php",
+    "ru/simai.data/grid/block/main/relation.news/template.php",
+    "ru/simai.data/grid/block/main/relation.photo/template.php",
+    "ru/simai.data/grid/block/main/relation.video/template.php",
+    "ru/simai.data/grid/block/main/social.share/lang/ru/template.php",
+    "ru/simai.data/grid/block/main/social.share/template.php",
+    "ru/simai.data/grid/block/service-about/banner/template.php",
+    "ru/simai.data/grid/block/service-about/banner-no-button/template.php",
+    "ru/simai.data/grid/block/service-about/basket/template.php",
+    "ru/simai.data/grid/block/service-about/benefit/template.php",
+    "ru/simai.data/grid/block/service-about/branch/template.php",
+    "ru/simai.data/grid/block/service-about/contranditions/template.php",
+    "ru/simai.data/grid/block/service-about/department/template.php",
+    "ru/simai.data/grid/block/service-about/description/template.php",
+    "ru/simai.data/grid/block/service-about/docs/template.php",
+    "ru/simai.data/grid/block/service-about/faq/template.php",
+    "ru/simai.data/grid/block/service-about/feedback/template.php",
+    "ru/simai.data/grid/block/service-about/images/template.php",
+    "ru/simai.data/grid/block/service-about/map/template.php",
+    "ru/simai.data/grid/block/service-about/price/template.php",
+    "ru/simai.data/grid/block/service-about/priceEducation/template.php",
+    "ru/simai.data/grid/block/service-about/reviews/template.php",
+    "ru/simai.data/grid/block/service-about/specialist/template.php",
+    "ru/simai.data/grid/block/service-about/testimony/template.php",
+    "ru/simai.data/grid/block/sidebar/banner.list/template.php",
+    "ru/simai.data/grid/block/sidebar/include.left.file/template.php",
+    "ru/simai.data/grid/block/sidebar/include.left.section/template.php",
+    "ru/simai.data/grid/block/sidebar/include.right.file/template.php",
+    "ru/simai.data/grid/block/sidebar/include.right.section/template.php",
+    "ru/simai.data/grid/block/sidebar/menu.sidebar/template.php",
+    "ru/simai.data/grid/block/sidebar/widget.sidebar/template.php",
+    "ru/simai.data/grid/block/sidebar/widget.sidebar.right/template.php",
+    "ru/simai.data/grid/view/footer/010/template.php",
+    "ru/simai.data/grid/view/footer/020/template.php",
+    "ru/simai.data/grid/view/footer/030/template.php",
+    "ru/simai.data/grid/view/footer/default/template.php",
+    "ru/simai.data/grid/view/footer/empty/template.php",
+    "ru/simai.data/grid/view/header/005/template.php",
+    "ru/simai.data/grid/view/header/010/template.php",
+    "ru/simai.data/grid/view/header/020/template.php",
+    "ru/simai.data/grid/view/header/030/template.php",
+    "ru/simai.data/grid/view/header/040/template.php",
+    "ru/simai.data/grid/view/header/default/template.php",
+    "ru/simai.data/grid/view/header/empty/template.php",
+    "ru/simai.data/grid/view/header/test/template.php",
+    "ru/simai.data/grid/view/home/01/template.php",
+    "ru/simai.data/grid/view/home/010/template.php",
+    "ru/simai.data/grid/view/home/02/template.php",
+    "ru/simai.data/grid/view/home/020/template.php",
+    "ru/simai.data/grid/view/home/03/template.php",
+    "ru/simai.data/grid/view/home/030/template.php",
+    "ru/simai.data/grid/view/home/04/template.php",
+    "ru/simai.data/grid/view/home/040/template.php",
+    "ru/simai.data/grid/view/home/DEV/template.php",
+    "ru/simai.data/grid/view/home/default/template.php",
+    "ru/simai.data/grid/view/home/empty/template.php",
+    "ru/simai.data/grid/view/main/bottom/01/template.php",
+    "ru/simai.data/grid/view/main/bottom/DEV/template.php",
+    "ru/simai.data/grid/view/main/bottom/default/template.php",
+    "ru/simai.data/grid/view/main/bottom/empty/template.php",
+    "ru/simai.data/grid/view/main/top/01/template.php",
+    "ru/simai.data/grid/view/main/top/DEV/template.php",
+    "ru/simai.data/grid/view/main/top/default/template.php",
+    "ru/simai.data/grid/view/main/top/empty/template.php",
+    "ru/simai.data/grid/view/sidebar/left/default/template.php",
+    "ru/simai.data/grid/view/sidebar/left/empty/template.php",
+    "ru/simai.data/grid/view/sidebar/right/default/template.php",
+    "ru/simai.data/grid/view/sidebar/right/empty/template.php",
+    "ru/simai.data/template/area/button/template.php",
+    "ru/simai.data/template/area/footer/template.php",
+    "ru/simai.data/template/area/header/template.php",
+    "ru/simai.data/template/area/main/bottom/template.php",
+    "ru/simai.data/template/area/main/top/template.php",
+    "ru/simai.data/template/area/notification/template.php",
+    "ru/simai.data/template/area/script/bottom/template.php",
+    "ru/simai.data/template/area/script/top/template.php",
+    "ru/simai.data/template/area/service/bottom/button.up/template.php",
+    "ru/simai.data/template/area/service/bottom/feedback.simai/template.php",
+    "ru/simai.data/template/area/service/bottom/template.php",
+    "ru/simai.data/template/area/service/top/panel.admin/lang/ru/template.php",
+    "ru/simai.data/template/area/service/top/panel.admin/template.php",
+    "ru/simai.data/template/area/service/top/panel.demo/lang/ru/template.php",
+    "ru/simai.data/template/area/service/top/panel.demo/template.php",
+    "ru/simai.data/template/area/service/top/template.php",
+    "ru/simai.data/template/area/sidebar/left/template.php",
+    "ru/simai.data/template/area/sidebar/right/template.php"
+  ],
+  "metrics": {
+    "file_count": 220,
+    "class_attribute_count": 298,
+    "class_token_count": 468,
+    "unique_class_count": 170,
+    "skipped_dynamic_tokens": 187
+  },
+  "top_classes": [
+    {
+      "class": "far",
+      "count": 26,
+      "files": 6
+    },
+    {
+      "class": "btn",
+      "count": 23,
+      "files": 8
+    },
+    {
+      "class": "fas",
+      "count": 20,
+      "files": 7
+    },
+    {
+      "class": "btn-icon",
+      "count": 12,
+      "files": 2
+    },
+    {
+      "class": "form-control",
+      "count": 11,
+      "files": 3
+    },
+    {
+      "class": "btn-theme",
+      "count": 11,
+      "files": 1
+    },
+    {
+      "class": "col-md-4",
+      "count": 10,
+      "files": 2
+    },
+    {
+      "class": "mb-1",
+      "count": 10,
+      "files": 3
+    },
+    {
+      "class": "btn-primary",
+      "count": 10,
+      "files": 3
+    },
+    {
+      "class": "fa-angle-down",
+      "count": 10,
+      "files": 3
+    },
+    {
+      "class": "t-bold",
+      "count": 9,
+      "files": 3
+    },
+    {
+      "class": "ml-2",
+      "count": 9,
+      "files": 1
+    },
+    {
+      "class": "l-inherit",
+      "count": 9,
+      "files": 7
+    },
+    {
+      "class": "transition",
+      "count": 8,
+      "files": 2
+    },
+    {
+      "class": "t-center",
+      "count": 7,
+      "files": 2
+    },
+    {
+      "class": "t-1",
+      "count": 7,
+      "files": 4
+    },
+    {
+      "class": "c-white",
+      "count": 6,
+      "files": 4
+    },
+    {
+      "class": "fa-lg",
+      "count": 6,
+      "files": 3
+    },
+    {
+      "class": "fa-li",
+      "count": 6,
+      "files": 2
+    },
+    {
+      "class": "tRotate--90",
+      "count": 6,
+      "files": 2
+    },
+    {
+      "class": "row",
+      "count": 5,
+      "files": 3
+    },
+    {
+      "class": "fab",
+      "count": 5,
+      "files": 4
+    },
+    {
+      "class": "d-flex",
+      "count": 5,
+      "files": 4
+    },
+    {
+      "class": "p-3",
+      "count": 5,
+      "files": 2
+    },
+    {
+      "class": "c-primary",
+      "count": 5,
+      "files": 3
+    },
+    {
+      "class": "mb-2",
+      "count": 4,
+      "files": 2
+    },
+    {
+      "class": "p-4",
+      "count": 4,
+      "files": 4
+    },
+    {
+      "class": "d-inline-block",
+      "count": 4,
+      "files": 2
+    },
+    {
+      "class": "mr-2",
+      "count": 4,
+      "files": 4
+    },
+    {
+      "class": "bg-theme-1",
+      "count": 4,
+      "files": 3
+    },
+    {
+      "class": "l-hover-underline-none",
+      "count": 4,
+      "files": 3
+    },
+    {
+      "class": "l-underline-none",
+      "count": 3,
+      "files": 3
+    },
+    {
+      "class": "float-right",
+      "count": 3,
+      "files": 2
+    },
+    {
+      "class": "d-none",
+      "count": 3,
+      "files": 3
+    },
+    {
+      "class": "sf-title",
+      "count": 3,
+      "files": 3
+    },
+    {
+      "class": "h-100",
+      "count": 3,
+      "files": 2
+    },
+    {
+      "class": "t-list",
+      "count": 3,
+      "files": 3
+    },
+    {
+      "class": "pl-0",
+      "count": 3,
+      "files": 3
+    },
+    {
+      "class": "fa-ellipsis-v",
+      "count": 3,
+      "files": 3
+    },
+    {
+      "class": "fa-bars",
+      "count": 3,
+      "files": 3
+    }
+  ],
+  "group_counts": [
+    {
+      "group": "other",
+      "count": 285
+    },
+    {
+      "group": "utility",
+      "count": 94
+    },
+    {
+      "group": "typography",
+      "count": 31
+    },
+    {
+      "group": "grid",
+      "count": 22
+    },
+    {
+      "group": "color",
+      "count": 17
+    },
+    {
+      "group": "sf",
+      "count": 17
+    },
+    {
+      "group": "theme",
+      "count": 2
+    }
+  ],
+  "class_lookup": {
+    "sf-title": [
+      "ru/simai.data/grid/block/header/page.title/template.php",
+      "ru/simai.data/grid/block/main/page.title/template.php",
+      "ru/simai.data/grid/block/service-about/price/template.php"
+    ],
+    "sf-tab": [
+      "ru/simai.data/grid/block/home/social.widget/template.php"
+    ],
+    "btn-primary": [
+      "ru/simai.data/grid/block/feedback/complex_field/template.php",
+      "ru/simai.data/grid/block/home/org.chief/template.php",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php"
+    ]
+  }
+}

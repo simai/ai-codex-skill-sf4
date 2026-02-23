@@ -7,6 +7,7 @@
 - Project data layer: `<site_root>/<site_dir>/simai.data`
 - Project template entrypoint: `<site_root>/<site_dir>/simai.data/template/template.php`
 - System template loader: `<site_root>/local/templates/simai.framework/header.php` and `<site_root>/local/templates/simai.framework/footer.php`
+- Compatibility note: `<site_root>/bitrix/templates/simai.framework` can be an alias/shortcut instead of a physical directory in some deployments.
 - Framework module: `<site_root>/local/modules/simai.framework`
 - System block library: `<site_root>/simai/block`
 - Wizard actions: `<site_root>/simai/wizard/action`

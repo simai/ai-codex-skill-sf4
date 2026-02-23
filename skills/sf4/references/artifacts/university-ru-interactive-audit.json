@@ -1,0 +1,121 @@
+{
+  "site_root": "<project_root>",
+  "site_dir": "/ru",
+  "simai_data": "<project_root>/ru/simai.data",
+  "scanned_files_count": 220,
+  "markers": [
+    {
+      "marker": "aria_attr",
+      "count": 43,
+      "files": 29
+    },
+    {
+      "marker": "dropdown_toggle",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "fancybox",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "include_component",
+      "count": 112,
+      "files": 112
+    },
+    {
+      "marker": "inputmask_attr",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "inputmask_init",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "modal_toggle",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "popover_toggle",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "role_group",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "sf_modal_attr",
+      "count": 13,
+      "files": 4
+    },
+    {
+      "marker": "sf_src_attr",
+      "count": 7,
+      "files": 4
+    },
+    {
+      "marker": "sr_only",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "swiper_container",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "swiper_init",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "tabindex",
+      "count": 0,
+      "files": 0
+    },
+    {
+      "marker": "tooltip_toggle",
+      "count": 0,
+      "files": 0
+    }
+  ],
+  "asset_load": [],
+  "asset_addjs": [
+    {
+      "path": "/bitrix/js/main/utils.js",
+      "count": 1
+    },
+    {
+      "path": "/bitrix/js/main/sidepanel/manager.min.js",
+      "count": 1
+    }
+  ],
+  "asset_addcss": [
+    {
+      "path": "/bitrix/themes/.default/pubstyles.css",
+      "count": 1
+    }
+  ],
+  "marker_lines": {
+    "sf_modal_attr": [
+      "ru/simai.data/grid/block/footer/subscribe.button/template.php:11: <a href=\"#\" sf-modal=\"\" sf-content-modifier=\"p-0 h-100 d-flex align-items-start\" sf-src=\"<?=SITE_ID?>simai.data/modal/subscribe.php\" sf-close-modifier=\"sf-close-left t-3 theme-d...",
+      "ru/simai.data/grid/block/home/org.chief/template.php:41: <a href=\"#\" class=\"btn btn-primary btn-md\" sf-modal sf-blur sf-src = \"<?=SF_DATA_DIR?>/modal/welcome.php\"><?=Loc::getMessage(\"TEMPLATE_GRID_CHIEF__APPEAL\")?></a>",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:70: sf-modal",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:74: sf-modal-modifier = \"fixed-right wr-7\"",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:83: sf-modal",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:87: sf-modal-modifier = \"fixed-right wr-7\"",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:95: sf-modal",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:99: sf-modal-modifier = \"fixed-right wr-7\"",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:107: sf-modal",
+      "ru/simai.data/template/area/service/top/panel.admin/template.php:111: sf-modal-modifier = \"fixed-right wr-7\"",
+      "ru/simai.data/template/area/service/top/panel.demo/template.php:59: sf-modal",
+      "ru/simai.data/template/area/service/top/panel.demo/template.php:63: sf-modal-modifier = \"fixed-right wr-7\""
+    ]
+  }
+}

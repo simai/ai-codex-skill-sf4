@@ -4,6 +4,10 @@ Skill for Codex to work with projects on SIMAI Framework 4 (SF4):
 - audit SF4 project structure and links
 - create and override blocks/views
 - compose page grids from blocks
+- build/refactor frontend markup by SF4 UI catalog patterns (`/ru/ui`)
+- inventory and verify real CSS class usage in `simai.data` templates
+- audit interactive frontend markers/assets and apply baseline a11y checks
+- implement backend data/settings flows using `/ru/bx` patterns (`simai.storage`, `sf.property`, `sf.grid`)
 - work with config, properties, iblock/highloadblock flows
 - remediate missing `view -> block` bindings
 
@@ -96,6 +100,10 @@ Call explicitly:
 $sf4 Audit project <project_root> for <site_dir>
 $sf4 Create block: section=home code=hero.banner
 $sf4 Create view: area=home code=modern
+$sf4 Refactor block markup using SF4 UI catalog patterns from /ru/ui/component/card.php
+$sf4 Inventory markup classes for /ru and show where sf-form-control is used
+$sf4 Audit interactive dependencies for /ru and show modal/dropdown markers
+$sf4 Build storage/property backend flow by /ru/bx guides and run backend risk scan
 $sf4 Build view->block report and remediate missing blocks in batches
 ```
 
@@ -113,8 +121,24 @@ Important:
 1. Run audit (from repository root):
    `python3 skills/sf4/scripts/sf4_project_audit.py --site-root <project_root> --site-dir <site_dir>`
 2. Choose route (grid/block/view/config/data/wizard).
+   - for frontend tasks, use `skills/sf4/references/ui-catalog.md`.
+   - for fast UI routing, use `skills/sf4/references/ui-source-map.md`.
+   - for class shortlist, use `skills/sf4/references/ui-class-cheatsheet.md`.
+   - for quick block starters, use `skills/sf4/references/ui-markup-recipes.md`.
+   - for interactive behavior mapping, use `skills/sf4/references/ui-interactive-dependencies.md`.
+   - for interaction attributes, use `skills/sf4/references/ui-interaction-attributes.md`.
+   - for a11y baseline checks, use `skills/sf4/references/ui-a11y-checklist.md`.
+   - for demo/prod asset split, use `skills/sf4/references/ui-asset-policy.md`.
+   - for backend source routing, use `skills/sf4/references/bx-backend-source-map.md`.
+   - for storage API patterns, use `skills/sf4/references/storage-api-playbook.md`.
+   - for universal property editor patterns, use `skills/sf4/references/property-editor-playbook.md`.
+   - for sf.grid editor internals, use `skills/sf4/references/sfgrid-editor-features.md`.
+   - for critical backend anti-regression rules, use `skills/sf4/references/backend-critical-guides.md`.
 3. Change project layer only (`simai.data`) by default.
 4. Validate syntax/runtime, review audit hygiene warnings, and clear cache.
+   - for markup refactor, run `python3 skills/sf4/scripts/sf4_markup_inventory.py --site-root <project_root> --site-dir <site_dir> --top 80`.
+   - for interactive audit, run `python3 skills/sf4/scripts/sf4_interactive_audit.py --site-root <project_root> --site-dir <site_dir> --top 80`.
+   - for backend guide-level checks, run `python3 skills/sf4/scripts/sf4_backend_risk_scan.py --site-root <project_root> --site-dir <site_dir>`.
 5. For update/data tasks, prepare artifacts from `skills/sf4/references/artifacts/`:
    - `migration-notes.md` (always)
    - `upgrade-notes.md`
