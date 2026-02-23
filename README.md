@@ -105,6 +105,7 @@ $sf4 Inventory markup classes for /ru and show where sf-form-control is used
 $sf4 Audit interactive dependencies for /ru and show modal/dropdown markers
 $sf4 Build storage/property backend flow by /ru/bx guides and run backend risk scan
 $sf4 Build view->block report and remediate missing blocks in batches
+$sf4 Map component template sources for /ru and show where to edit markup safely
 ```
 
 ## 6) Codex in VS Code
@@ -130,6 +131,7 @@ Important:
    - for a11y baseline checks, use `skills/sf4/references/ui-a11y-checklist.md`.
    - for demo/prod asset split, use `skills/sf4/references/ui-asset-policy.md`.
    - for backend source routing, use `skills/sf4/references/bx-backend-source-map.md`.
+   - for component-heavy pages, use `skills/sf4/references/component-template-resolution.md`.
    - for storage API patterns, use `skills/sf4/references/storage-api-playbook.md`.
    - for universal property editor patterns, use `skills/sf4/references/property-editor-playbook.md`.
    - for sf.grid editor internals, use `skills/sf4/references/sfgrid-editor-features.md`.
@@ -139,6 +141,7 @@ Important:
    - for markup refactor, run `python3 skills/sf4/scripts/sf4_markup_inventory.py --site-root <project_root> --site-dir <site_dir> --top 80`.
    - for interactive audit, run `python3 skills/sf4/scripts/sf4_interactive_audit.py --site-root <project_root> --site-dir <site_dir> --top 80`.
    - for backend guide-level checks, run `python3 skills/sf4/scripts/sf4_backend_risk_scan.py --site-root <project_root> --site-dir <site_dir>`.
+   - for component template resolution map, run `python3 skills/sf4/scripts/sf4_component_template_map.py --site-root <project_root> --site-dir <site_dir>`.
 5. For update/data tasks, prepare artifacts from `skills/sf4/references/artifacts/`:
    - `migration-notes.md` (always)
    - `upgrade-notes.md`

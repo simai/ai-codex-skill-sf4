@@ -154,6 +154,7 @@ This reference should be read together with:
 - `references/production-patterns.md`
 - `references/page-map-and-modernization.md`
 - `references/page-modernization-cases.md`
+- `references/component-template-resolution.md`
 - `references/config-and-data.md`
 - `references/task-playbooks.md`
 
@@ -166,3 +167,8 @@ python3 scripts/sf4_site_map.py --site-root <site_root> --site-dir <site_dir>
 Sample E2E checklist artifact for Type A/B/C route verification:
 
 - `references/artifacts/e2e-university-ru-type-abc.md`
+
+Sample component-template mapping artifacts:
+
+- `references/artifacts/university-ru-component-template-map.md`
+- `references/artifacts/university-ru-component-template-map.json`

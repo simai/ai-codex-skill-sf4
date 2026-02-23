@@ -16,6 +16,7 @@ This file complements:
 
 - `references/page-map-and-modernization.md`
 - `references/field-study-university-local.md`
+- `references/component-template-resolution.md`
 - `references/task-playbooks.md` section 16
 
 ## 2) Case A: Template-driven page
@@ -100,6 +101,7 @@ Route characteristics:
 
 - Page is mostly orchestration of `simai:sf.*` + `bitrix:*` components.
 - Modernization impact often spans both page file and component templates.
+- Actual template source can be local override, local component source, or bitrix component source.
 
 Useful related template paths from baseline:
 
@@ -116,8 +118,9 @@ Safe change strategy:
 
 1. Start from page-level component params (lowest-risk, high-impact changes).
 2. Move to component-template markup only for confirmed UI requirements.
-3. Preserve edit overlays and frame mode behavior in templates.
-4. Recheck dynamic pieces (maps, tabs, feedback forms) after markup updates.
+3. Resolve source first with `sf4_component_template_map.py` before editing template files.
+4. Preserve edit overlays and frame mode behavior in templates.
+5. Recheck dynamic pieces (maps, tabs, feedback forms) after markup updates.
 
 ## 5) Shared Anti-Regression Checks
 

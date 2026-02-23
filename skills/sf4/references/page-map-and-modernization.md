@@ -22,6 +22,7 @@ Use a repeatable method to map real SF4 pages to:
 Then modernize pages safely with minimal regressions.
 
 For concrete route-specific examples, also read `references/page-modernization-cases.md`.
+For component-heavy pages, also read `references/component-template-resolution.md`.
 
 ## 2) Build Page Map Automatically
 
@@ -113,6 +114,7 @@ Change surface:
 - section `index.php`
 - component templates under `local/templates/simai.framework/components/...`
 - section/page properties
+- before editing templates, resolve actual source with `sf4_component_template_map.py`
 
 ## 5) Practical Modernization Template
 

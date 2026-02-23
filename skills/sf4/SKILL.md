@@ -15,6 +15,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - Full-site baseline patterns from real project study: read `references/field-study-university-local.md`.
    - Page route map + modernization template for large sites: read `references/page-map-and-modernization.md`.
    - Real page modernization cases by route type: read `references/page-modernization-cases.md`.
+   - Component template resolution and override rules: read `references/component-template-resolution.md`.
    - Frontend markup/class pattern task: read `references/ui-catalog.md`.
    - UI intent-to-page routing: read `references/ui-source-map.md`.
    - SF4 class shortlist and composition rules: read `references/ui-class-cheatsheet.md`.
@@ -103,6 +104,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Read `references/ui-source-map.md`.
 - Read `references/ui-class-cheatsheet.md`.
 - Read `references/ui-markup-recipes.md`.
+- Read `references/component-template-resolution.md` for component-heavy pages and template source resolution.
 - For step-by-step execution, read `references/task-playbooks.md` section 13.
 - Use `/ru/ui` catalog pages as the primary source for class combinations and markup structure.
 - Keep markup adjustments inside project-layer blocks/views unless task explicitly asks to modify system templates.
@@ -157,6 +159,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 
 - Read `references/components-catalog.md`.
 - Read `references/storage-api-playbook.md` when project uses `simai.storage` data model.
+- Read `references/component-template-resolution.md` when page output is built by `IncludeComponent(...)` orchestration.
 - Read `references/iblock-hl-standard.md` before creating new entities.
 - For step-by-step execution, read `references/task-playbooks.md` sections 5 and 6.
 - Reuse `simai:sf.grid`, `simai:sf.iblock.*`, `simai:sf.highloadblock.grid`, `simai:sf.wizard`.
@@ -219,6 +222,10 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
   - `python3 scripts/sf4_site_map.py --site-root <project_root> --site-dir <site_dir>`
 - Export page route map to JSON:
   - `python3 scripts/sf4_site_map.py --site-root <project_root> --site-dir <site_dir> --json-out <path.json> --json`
+- Map page component templates and resolve source paths:
+  - `python3 scripts/sf4_component_template_map.py --site-root <project_root> --site-dir <site_dir>`
+- Export component-template map to JSON:
+  - `python3 scripts/sf4_component_template_map.py --site-root <project_root> --site-dir <site_dir> --json-out <path.json>`
 
 ## When To Ask User
 

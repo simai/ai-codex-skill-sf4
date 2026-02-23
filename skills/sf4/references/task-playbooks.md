@@ -212,6 +212,7 @@ Steps:
    - `references/ui-source-map.md`
    - `references/ui-class-cheatsheet.md`
    - `references/ui-markup-recipes.md`
+   - `references/component-template-resolution.md` (when page is component-heavy)
 2. For large existing projects, add `references/field-study-university-local.md`.
 3. Inspect current project class baseline:
    - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --top 80`
@@ -305,18 +306,21 @@ Steps:
 
 1. Read `references/page-map-and-modernization.md`.
 2. Read `references/page-modernization-cases.md`.
-3. Build route map snapshot:
+3. For component-heavy route (Type C), read `references/component-template-resolution.md`.
+4. Build route map snapshot:
    - `python3 scripts/sf4_site_map.py --site-root <root> --site-dir <site_dir> --json-out <map.json> --json`
-4. Classify target page type:
+5. Classify target page type:
    - template-driven area/view/block route,
    - direct `simai:sf.grid` page,
    - component-heavy section page.
-5. Identify exact files for minimal change surface.
-6. Implement layout/markup/logic changes in project layer.
-7. Validate:
+6. Identify exact files for minimal change surface.
+7. For Type C route, map actual template resolution:
+   - `python3 scripts/sf4_component_template_map.py --site-root <root> --site-dir <site_dir> --component simai:sf.iblock.list --component bitrix:main.include`
+8. Implement layout/markup/logic changes in project layer.
+9. Validate:
    - `php -l` for touched files,
    - `python3 scripts/sf4_project_audit.py --site-root <root> --site-dir <site_dir>`.
-8. If UI changed, run:
+10. If UI changed, run:
    - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --top 80`
    - `python3 scripts/sf4_interactive_audit.py --site-root <root> --site-dir <site_dir> --top 80`
-9. Clear cache and run smoke/regression on target and neighboring pages.
+11. Clear cache and run smoke/regression on target and neighboring pages.
