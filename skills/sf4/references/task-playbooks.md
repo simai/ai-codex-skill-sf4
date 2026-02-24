@@ -250,6 +250,7 @@ Steps:
    - `references/ui-catalog.md`
    - `references/ui-source-map.md`
    - `references/ui-class-cheatsheet.md`
+   - `references/ui-modifier-strategy.md`
    - `references/ui-markup-recipes.md`
    - `references/component-template-resolution.md` (when page is component-heavy)
 2. For large existing projects, add `references/field-study-university-local.md`.
@@ -262,13 +263,14 @@ Steps:
    - block markup in `grid/block/.../template.php`.
 6. Port minimal markup skeleton from closest SF4 UI example.
 7. Bind dynamic data/params and keep class naming aligned with SF4 conventions.
-8. Avoid introducing new classes unless project CSS already defines them.
-9. Validate:
+8. Apply one-off typography/spacing/alignment fixes with SF4 utility modifiers first (for example `my-1 ml-2`, `t--2`, `c-text-secondary`) instead of creating new CSS classes.
+9. Avoid introducing new classes unless project CSS already defines them or reuse need is clear.
+10. Validate:
    - desktop/mobile breakpoints,
    - interaction states (focus/open/hover/validation where relevant),
    - text/content overflow with real data.
-10. Run `sf4_project_audit.py` and smoke checks, then clear cache and retest pages.
-11. Re-run class inventory and compare hotspots for unexpected class drift:
+11. Run `sf4_project_audit.py` and smoke checks, then clear cache and retest pages.
+12. Re-run class inventory and compare hotspots for unexpected class drift:
    - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --class sf-form-control --class theme-dark`
 
 ## 14) Add Or Refactor Interactive UI Safely

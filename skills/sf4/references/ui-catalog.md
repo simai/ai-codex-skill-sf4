@@ -12,6 +12,7 @@ Companion references:
 
 - `references/ui-source-map.md`
 - `references/ui-class-cheatsheet.md`
+- `references/ui-modifier-strategy.md`
 - `references/ui-markup-recipes.md`
 - `references/ui-interactive-dependencies.md`
 - `references/ui-interaction-attributes.md`
@@ -50,6 +51,8 @@ Companion references:
 4. Do not invent new class names unless project stylesheet explicitly defines them.
 5. For form elements, start from `component/form/*` examples and preserve label/input/help/error structure.
 6. For cards/lists/navigation, start from component examples and only then adapt content bindings.
+7. For one-off spacing/typography/alignment changes, use utility/modifier classes first (`ml-*`, `mt-*`, `t-*`, `c-text-*`, `d-*`).
+8. Add new custom classes only for repeated/reusable behavior, not for single-node tweaks.
 
 ## Implementation Workflow
 

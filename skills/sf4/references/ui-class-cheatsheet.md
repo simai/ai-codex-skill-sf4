@@ -36,6 +36,7 @@ Typical classes:
 
 - `t-1`, `t-2`, `t-3`, `t-4`, `t-5`
 - `t--2`
+- `t-bold`, `t-regular`
 - `t-center`
 
 Use for:
@@ -80,6 +81,7 @@ Use for:
 
 - `p-2`, `p-3`, `p-4`, `p-5`
 - `m-4`
+- directional spacing: `ml-*`, `mr-*`, `mt-*`, `mb-*`, `mx-*`, `my-*`
 - `d-flex`, `d-inline-block`
 - `align-items-center`, `align-center`
 
@@ -99,6 +101,25 @@ Use for:
 
 - local sizing, background, and utility-level visual adjustments.
 
+## Modifier-First Quick Map
+
+Use this order before creating a new class:
+
+1. Typography tweak:
+   - `t-*`, `t--*`, `t-bold`, `t-regular`, `c-text-*`.
+2. Spacing tweak:
+   - `ml-*`, `mt-*`, `mb-*`, `mx-*`, `my-*`, `p-*`.
+3. Alignment/layout tweak:
+   - `d-*`, `justify-content-*`, `align-items-*`, `float-*`.
+4. New class:
+   - only when behavior repeats and cannot be expressed by utilities.
+
+Example (preferred for local heading indent):
+
+```html
+<div class="my-1 ml-2 investmap-filter-prop-title">Целевая аудитория</div>
+```
+
 ## Recommended Composition Order
 
 1. Base semantic class (`sf-*`).
@@ -109,6 +130,7 @@ Use for:
 ## Anti-Patterns
 
 - Adding custom class names before trying existing SF4 class combinations.
+- Adding custom class names for one-off spacing/typography tweaks already covered by utilities.
 - Mixing unrelated component classes on one node without a structural reason.
 - Building new form markup without checking `component/form/*` examples first.
 - Breaking responsive structure by replacing `col-*` logic with ad-hoc wrappers.

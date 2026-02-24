@@ -20,6 +20,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - Frontend markup/class pattern task: read `references/ui-catalog.md`.
    - UI intent-to-page routing: read `references/ui-source-map.md`.
    - SF4 class shortlist and composition rules: read `references/ui-class-cheatsheet.md`.
+   - Utility/modifier-first strategy for typography and spacing tweaks: read `references/ui-modifier-strategy.md`.
    - Ready markup starters for common blocks: read `references/ui-markup-recipes.md`.
    - Interactive dependency mapping: read `references/ui-interactive-dependencies.md`.
    - Interaction attributes for SF4/Bootstrap-like widgets: read `references/ui-interaction-attributes.md`.
@@ -55,6 +56,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Do not commit archives/cache/vendor artifacts inside `simai.data/grid/block`.
 - Keep secret-like values out of `.site.property.php` when possible; prefer environment-backed storage.
 - For markup tasks, prefer classes and structures validated by SF4 UI catalog (`/ru/ui`) or project CSS; avoid introducing unknown class names blindly.
+- For one-off visual tweaks, prefer existing SF4 utility/modifier classes (`ml-*`, `mt-*`, `t-*`, `c-text-*`, `d-*`) before adding new custom CSS classes.
 - Before introducing new frontend classes, inspect current project usage with `scripts/sf4_markup_inventory.py`.
 - Before shipping interactive changes, inspect project markers/assets with `scripts/sf4_interactive_audit.py`.
 - Do not move docs-only frontend assets (`highlight`, `bootstrap-docs`, `clipboard`) into production templates by default.
@@ -106,10 +108,12 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Read `references/ui-catalog.md`.
 - Read `references/ui-source-map.md`.
 - Read `references/ui-class-cheatsheet.md`.
+- Read `references/ui-modifier-strategy.md`.
 - Read `references/ui-markup-recipes.md`.
 - Read `references/component-template-resolution.md` for component-heavy pages and template source resolution.
 - For step-by-step execution, read `references/task-playbooks.md` section 13.
 - Use `/ru/ui` catalog pages as the primary source for class combinations and markup structure.
+- Use utility/modifier classes first for local typography/spacing/alignment fixes; add custom classes only when behavior is reusable.
 - Keep markup adjustments inside project-layer blocks/views unless task explicitly asks to modify system templates.
 - Run class inventory when refactor touches multiple blocks/views:
   - `python3 scripts/sf4_markup_inventory.py --site-root <project_root> --site-dir <site_dir> --top 80`
