@@ -57,12 +57,14 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Keep secret-like values out of `.site.property.php` when possible; prefer environment-backed storage.
 - For markup tasks, prefer classes and structures validated by SF4 UI catalog (`/ru/ui`) or project CSS; avoid introducing unknown class names blindly.
 - For one-off visual tweaks, prefer existing SF4 utility/modifier classes (`ml-*`, `mt-*`, `t-*`, `c-text-*`, `d-*`) before adding new custom CSS classes.
+- Keep utility-first refactors pragmatic: do not replace stable custom classes that control pseudo-elements, third-party widget skins (calendar/slider), or component-specific JS hooks.
 - Before introducing new frontend classes, inspect current project usage with `scripts/sf4_markup_inventory.py`.
 - Before shipping interactive changes, inspect project markers/assets with `scripts/sf4_interactive_audit.py`.
 - Do not move docs-only frontend assets (`highlight`, `bootstrap-docs`, `clipboard`) into production templates by default.
 - Keep accessibility support attributes (`aria-*`, `tabindex`, `.sr-only`) intact during refactor.
 - In package/source templates, do not concatenate `SITE_ID` for `IBLOCK_TYPE`/`IBLOCK_CODE` where replacement flow expects canonical placeholders.
 - Avoid `DOMContentLoaded` wrappers in dynamically loaded component templates; use explicit init calls and/or event delegation.
+- For interactive bugfixes, identify JS source of truth first (`template.php` inline script vs template `script.js` vs other included asset) and edit only source files, never generated `/bitrix/cache/js/*`.
 - If template outputs `Block\\Edit::add*Area(...)`, wrapper must keep `position-relative`.
 - Prefer `SIMAI\\Main\\Page\\Asset::load()` for framework package assets instead of scattered direct `addJs/addCss`.
 - Before release on backend-heavy tasks, run `scripts/sf4_backend_risk_scan.py` and resolve critical findings.
@@ -85,6 +87,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
    - Runtime behavior on target pages.
    - Smoke/regression status with evidence for touched risk areas.
 5. Clear relevant cache and retest.
+6. If the project uses both module source and deployed site copy, sync touched template assets to both locations and retest on the target site.
 
 ## Task Routing
 
@@ -129,6 +132,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Inventory project interactive markers and dependency signals:
   - `python3 scripts/sf4_interactive_audit.py --site-root <project_root> --site-dir <site_dir> --top 80`
 - Validate keyboard, focus, and accessibility semantics for changed interactive widgets.
+- For expandable filter UIs, explicitly choose behavior mode (single-open accordion or multi-open panels) and keep `Set*Block`, `Handle*Switcher`, and `Normalize*Panels` logic consistent with that mode.
 
 ### Backend Data, Property, and API Patterns
 
