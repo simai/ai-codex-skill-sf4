@@ -63,6 +63,11 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Do not move docs-only frontend assets (`highlight`, `bootstrap-docs`, `clipboard`) into production templates by default.
 - Keep accessibility support attributes (`aria-*`, `tabindex`, `.sr-only`) intact during refactor.
 - In package/source templates, do not concatenate `SITE_ID` for `IBLOCK_TYPE`/`IBLOCK_CODE` where replacement flow expects canonical placeholders.
+- For module installers and installable demo payloads (where real entities are created at install time), build site-aware codes from target site id:
+  - data iblock type: `sf_<site_code>_map_data`
+  - reference iblock type: `sf_<site_code>_map_ref`
+  - iblock code: `sf-<site_code>-<suffix>`
+  - keep component params aligned with resolved codes, including dynamic keys like `SOURCE_*_<iblock_code>`.
 - Avoid `DOMContentLoaded` wrappers in dynamically loaded component templates; use explicit init calls and/or event delegation.
 - For interactive bugfixes, identify JS source of truth first (`template.php` inline script vs template `script.js` vs other included asset) and edit only source files, never generated `/bitrix/cache/js/*`.
 - If template outputs `Block\\Edit::add*Area(...)`, wrapper must keep `position-relative`.
