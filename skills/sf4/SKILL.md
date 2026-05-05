@@ -49,6 +49,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 
 - Keep `/simai`, `/bitrix/templates/simai.framework`, and `/bitrix/components/simai` immutable by default.
 - Place project customizations in `{site_dir}/simai.data`.
+- In portal projects, `simai.portal` replaces `simai.framework`. Do not require or include `simai.framework` in portal modules or portal demo payloads.
 - Keep block metadata and params near block code: `.description.php`, `.parameters.php`, `lang/<lang>/`.
 - Keep `grid_view_*` values aligned with real folders in `simai.data/grid/view/.../<code>/`.
 - Keep row/column/area parameter naming consistent with SF4 grid patterns.
