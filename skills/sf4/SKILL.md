@@ -114,6 +114,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 ### Frontend Markup, Utilities, and UI Components
 
 - Read `references/ui-catalog.md`.
+- Read `references/ux-implementation-contract.md` when a `$ux` screen spec or UX handoff exists, or when the task starts from interface design.
 - Read `references/ui-source-map.md`.
 - Read `references/ui-class-cheatsheet.md`.
 - Read `references/ui-modifier-strategy.md`.
@@ -126,6 +127,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Run class inventory when refactor touches multiple blocks/views:
   - `python3 scripts/sf4_markup_inventory.py --site-root <project_root> --site-dir <site_dir> --top 80`
 - Verify desktop/mobile rendering and state behavior (hover, focus, validation, dropdown/modal states where applicable).
+- If `$ux` supplied a handoff, map it explicitly to SF4 area/view/block/component structure before editing markup.
 
 ### Frontend Interaction, Assets, and Accessibility
 
