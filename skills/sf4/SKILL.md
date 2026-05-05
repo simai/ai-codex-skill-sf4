@@ -76,6 +76,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 - Before release on backend-heavy tasks, run `scripts/sf4_backend_risk_scan.py` and resolve critical findings.
 - For schema/data/update tasks, always prepare migration notes and rollback plan (explicitly state "no changes" when applicable).
 - For non-trivial tasks, keep smoke/regression evidence in a checklist or QA report.
+- When implementing an SEO Contract from `$seo`, do not redesign SEO decisions inside `$sf4`. Implement the contract through SF4-owned surfaces: grids, views, blocks, `simai.data`, template areas, page/section properties, `simai:sf.*` components, visible content blocks, headings, breadcrumbs, internal links, media/alt, and public route behavior. If SF4 constraints conflict with the contract, report a blocker back to `$seo` instead of silently changing URL/canonical/meta/content decisions.
 
 ## Execution Workflow
 
