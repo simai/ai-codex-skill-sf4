@@ -26,9 +26,17 @@ actions, SF4 migration/update workflows, and safe project-layer overrides.
 - Use `$seo` and `$ux` as contract owners for public/search and UI changes.
 - Use `$tester` for smoke/regression evidence and `$ops` for runtime issues.
 - Use `$docs` for substantial documentation structure and content.
+- For SF4 -> SF5 or other reference-adaptive checks, `$sf4` owns the source
+  behavior: `simai.data`, grid/view/block, template area, component/property,
+  iblock/HL, wizard, and project-layer source-of-truth facts. `$tester` owns
+  invariant evidence; `$sf5` or another target skill owns target adaptation.
 
 ## Handoff
 
 Return affected SF4 routes, `simai.data` paths, grid/view/block bindings,
 template areas, component/property changes, project-layer constraints, evidence,
 blockers, and the companion skill expected to review.
+
+For reference-adaptive handoff, also return reference behavior, mandatory
+invariants, allowed target adaptations, source-of-truth notes, and regression
+risks that must remain visible.
