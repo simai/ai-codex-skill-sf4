@@ -95,3 +95,8 @@ For each new entity, define:
 3. Editor forms render and save expected fields.
 4. Wizard import/export passes in test environment.
 5. Cache cleared and frontend reflects updated data.
+6. For HL-backed navigation or page structures that are projected into cached
+   runtime arrays, validate the projection itself: parent-child order, sibling
+   order by `SORT`, page/section links, and cache refresh. Do not accept a
+   portal/menu fix based only on the HL rows existing or the page returning
+   `200`.
