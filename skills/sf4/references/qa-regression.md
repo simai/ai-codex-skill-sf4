@@ -22,6 +22,11 @@ For each check record:
 5. Changed editor parameters and `lang` labels are visible where expected.
 6. Cache is cleared and behavior is re-checked.
 
+For portal/host-mode solution pages, this minimum smoke is not final
+acceptance. Load `portal-runtime-source-of-truth.md` and also verify required
+page-class blocks, meaningful content markers, current tenant/source
+selection, host-mode include paths, and editor/admin context where applicable.
+
 ## Regression Minimum
 
 Run focused regression around touched scope:
@@ -31,6 +36,9 @@ Run focused regression around touched scope:
 3. Existing block params still map to template keys.
 4. If iblock/HL logic changed: list/query/edit flow still works.
 5. If wizard/update flow changed: install/update chain remains reproducible.
+6. If portal/shared `simai.data` runtime is touched: sibling solution sentinel
+   pages still render from their own source and do not pick up the changed
+   solution's blocks, menus, banners, or root sections.
 
 ## Static Safety Checks
 

@@ -29,6 +29,7 @@ Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rule
    - Frontend accessibility baseline: read `references/ui-a11y-checklist.md`.
    - Demo-vs-production asset policy: read `references/ui-asset-policy.md`.
    - Backend knowledge map from `/ru/bx`: read `references/bx-backend-source-map.md`.
+   - Portal runtime/source-of-truth QA: read `references/portal-runtime-source-of-truth.md`.
    - `simai.storage` implementation patterns: read `references/storage-api-playbook.md`.
    - Universal property editor patterns: read `references/property-editor-playbook.md`.
    - `sf.grid` editor behavior and safety notes: read `references/sfgrid-editor-features.md`.
@@ -78,6 +79,10 @@ Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rule
 - Before release on backend-heavy tasks, run `scripts/sf4_backend_risk_scan.py` and resolve critical findings.
 - For schema/data/update tasks, always prepare migration notes and rollback plan (explicitly state "no changes" when applicable).
 - For non-trivial tasks, keep smoke/regression evidence in a checklist or QA report.
+- In portal/host-mode runtime, do not accept `HTTP 200` as sufficient SF4 QA.
+  Use `references/portal-runtime-source-of-truth.md` to verify page class,
+  required blocks/content markers, current organization/source selection,
+  host-mode include paths, editor/admin context, and regression sentinels.
 - When implementing an SEO Contract from `$seo`, do not redesign SEO decisions inside `$sf4`. Implement the contract through SF4-owned surfaces: grids, views, blocks, `simai.data`, template areas, page/section properties, `simai:sf.*` components, visible content blocks, headings, breadcrumbs, internal links, media/alt, and public route behavior. If SF4 constraints conflict with the contract, report a blocker back to `$seo` instead of silently changing URL/canonical/meta/content decisions.
 
 ## Execution Workflow
@@ -172,6 +177,8 @@ Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rule
 
 - Read `references/config-and-data.md`.
 - Read `references/simai-data-settings-runtime.md`.
+- Read `references/portal-runtime-source-of-truth.md` when the page runs under
+  a portal/host-mode solution domain or tenant-specific content is involved.
 - Read `references/property-editor-playbook.md` when task includes `simai:sf.property.edit` schemas or save cycle behavior.
 - For step-by-step execution, read `references/task-playbooks.md` sections 3, 4, and 18.
 - Edit schema files in `simai.data/config/*.config.php`.

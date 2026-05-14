@@ -10,6 +10,8 @@ Skill for Codex to work with projects on SIMAI Framework 4 (SF4):
 - implement backend data/settings flows using `/ru/bx` patterns (`simai.storage`, `sf.property`, `sf.grid`)
 - work with config, properties, iblock/highloadblock flows
 - remediate missing `view -> block` bindings
+- validate portal/host-mode SF4 runtime source-of-truth, page classes, required
+  blocks, and include/template paths
 
 Repository layout:
 - `skills/sf4/SKILL.md`
@@ -131,6 +133,7 @@ Important:
    - for a11y baseline checks, use `skills/sf4/references/ui-a11y-checklist.md`.
    - for demo/prod asset split, use `skills/sf4/references/ui-asset-policy.md`.
    - for backend source routing, use `skills/sf4/references/bx-backend-source-map.md`.
+   - for portal/host-mode runtime QA, use `skills/sf4/references/portal-runtime-source-of-truth.md`.
    - for component-heavy pages, use `skills/sf4/references/component-template-resolution.md`.
    - for storage API patterns, use `skills/sf4/references/storage-api-playbook.md`.
    - for universal property editor patterns, use `skills/sf4/references/property-editor-playbook.md`.
