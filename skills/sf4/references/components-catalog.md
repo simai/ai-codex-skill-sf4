@@ -101,6 +101,27 @@ It is intended for implementation and modernization tasks in SF4 projects, with 
   - include hooks (`INCLUDE_BEFORE`, `INCLUDE_AFTER`, `INCLUDE_PICTURE`, `INCLUDE_EPILOG`),
   - style hooks via many `MODIFIER_*` class parameters.
 
+### PHP 8 image ratio guard
+
+On legacy SF4 portals, `simai:sf.iblock.list` `.default` can fatal in
+`templates/.default/result_modifier.php` when `AREA` includes `image` and
+`IMAGE_ASPECT_RATIO` is the literal string `property`. The modifier derives
+ratio digits from the string and then divides them, so PHP 8 raises:
+
+```text
+Unsupported operand types: string / string
+```
+
+Do not patch the shared component first. Fix the project/solution layer that
+passes the bad parameter, using one of the component-supported values:
+
+- `original`;
+- `manual` with explicit `IMAGE_MAX_WIDTH` / `IMAGE_MAX_HEIGHT`;
+- `aspect-ratio-NxM`, for example `aspect-ratio-3x2`.
+
+After the change, run `php -l` for touched public/grid files and smoke the page
+that includes real image items. Pages with no image items may hide this defect.
+
 ### Available list templates
 
 - `.default`
