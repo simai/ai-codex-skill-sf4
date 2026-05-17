@@ -184,6 +184,13 @@ Acceptance:
 
 - the region is selected through `grid_view_header` or `grid_view_footer`;
 - new view/block lives in the project layer, not in the solution core;
+- the main route of an adapted solution must keep the shared SF4 shell unless
+  the user explicitly approves a standalone prototype. Do not ship `/ru/` or
+  another primary route through `prolog_before` + custom standalone HTML when
+  the task is to adapt the existing solution. Use `bitrix/header.php`,
+  `bitrix/footer.php`, site settings and the relevant `grid_view_*` areas so
+  header, footer, service areas, SEO/meta, scripts and future settings continue
+  to work as one solution;
 - menu content remains editable through Bitrix menu or the existing data source;
 - dropdown markers in the design map to real second-level menu behavior and
   editable child menu sources;
