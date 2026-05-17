@@ -36,6 +36,7 @@ Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rule
    - Critical backend anti-regression guides: read `references/backend-critical-guides.md`.
    - Settings, config, or property task: read `references/config-and-data.md`.
    - Deep `simai.data` runtime model (template merge, admin/public save flow, multisite rules): read `references/simai-data-settings-runtime.md`.
+   - Existing SF4 solution customization from client design: read `references/solution-customization-technology.md`.
    - Component, iblock, or HL-block task: read `references/components-catalog.md`.
    - Iblock/HL creation standard: read `references/iblock-hl-standard.md`.
    - Wizard install/update/import task: read `references/wizard-actions.md`.
@@ -84,6 +85,11 @@ Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rule
   required blocks/content markers, current organization/source selection,
   host-mode include paths, editor/admin context, and regression sentinels.
 - When implementing an SEO Contract from `$seo`, do not redesign SEO decisions inside `$sf4`. Implement the contract through SF4-owned surfaces: grids, views, blocks, `simai.data`, template areas, page/section properties, `simai:sf.*` components, visible content blocks, headings, breadcrumbs, internal links, media/alt, and public route behavior. If SF4 constraints conflict with the contract, report a blocker back to `$seo` instead of silently changing URL/canonical/meta/content decisions.
+- For existing SF4 solution customization, do not start from an ad-hoc route or
+  standalone page. First pass the Solution Technology Acceptance chain:
+  site settings baseline, section/page properties, view/block mapping, dynamic
+  data analogy, then functional gap/module decision. A page that works by smoke
+  but bypasses this chain is only a technical prototype.
 
 ## Execution Workflow
 
@@ -177,6 +183,8 @@ Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rule
 
 - Read `references/config-and-data.md`.
 - Read `references/simai-data-settings-runtime.md`.
+- Read `references/solution-customization-technology.md` when settings are the
+  first step of adapting an existing solution to a client design.
 - Read `references/portal-runtime-source-of-truth.md` when the page runs under
   a portal/host-mode solution domain or tenant-specific content is involved.
 - Read `references/property-editor-playbook.md` when task includes `simai:sf.property.edit` schemas or save cycle behavior.

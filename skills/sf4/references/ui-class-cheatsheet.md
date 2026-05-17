@@ -11,6 +11,9 @@ Provide a practical shortlist of high-signal class families used in SF4 UI catal
 Typical classes:
 
 - `sf-title`
+- `sf-title-underline-left`
+- `sf-title-underline-center`
+- `sf-title-underline-center-double`
 - `sf-code`
 - `sf-example`
 - `sf-form`
@@ -29,6 +32,16 @@ Typical classes:
 Use for:
 
 - primary component structure and SF4 UI semantics.
+
+Underline alignment rule:
+
+- use `sf-title-underline-center` when the title itself or its wrapper is
+  centered with `t-center`, `t-lgcenter`, `text-center`, or
+  `justify-content-center`;
+- use `sf-title-underline-left` only for left-aligned titles;
+- when a block appends a global title style such as
+  `title_homepage_style=sf-title-underline-left mb-3`, normalize it per block
+  if the block title is centered instead of changing the shared site property.
 
 ### `t-*` (typography scale/alignment)
 
