@@ -235,6 +235,15 @@ analogy: iblocks, highload blocks, storage tables, site settings, component
 params, or existing list/detail routes. Static markup is a temporary fallback
 only when explicitly labelled.
 
+When a client-design main page already exists as a large temporary view, do not
+rewrite it into a full new system in one pass. Decompose it section by section:
+create one narrow project-layer block under
+`simai.data/grid/block/<area>/<project-code>`, connect it through the current
+view via `simai:sf.grid`, preserve the existing dynamic data source or fallback,
+sync and smoke-test the page, then move to the next section. This keeps the
+runtime page working while gradually converting the prototype into a normal SF4
+assembly.
+
 ## BuddyDinner Lesson
 
 The `/ru/donate/` payment flow worked technically, but the first implementation
