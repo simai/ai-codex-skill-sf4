@@ -152,6 +152,14 @@ component with generic or awkward defaults. Define the missing interaction in
 the project style: hover/focus, keyboard escape, outside-click close, mobile
 open/close state, aria attributes, and a screenshot/browser acceptance check.
 
+When implementing visual container effects from design, such as translucent
+backgrounds, blur, glass panels, shadows, or rounded header shells, first verify
+the real HTML emitted by `sf.grid` and the selected view/block. Do not assume
+that a framework wrapper like `.navigation-container` exists in every assembly.
+Attach the effect to the actual stable project-layer element, keep any
+framework wrapper selector only as a fallback, and verify computed style plus a
+browser screenshot.
+
 Treat visible navigation affordances as requirements, not decoration. If the
 design shows dropdown markers near menu items, the SF4 implementation must
 support at least a second menu level through the project/Bitrix menu source:
@@ -169,6 +177,8 @@ Acceptance:
 - menu content remains editable through Bitrix menu or the existing data source;
 - dropdown markers in the design map to real second-level menu behavior and
   editable child menu sources;
+- translucent/blurred visual containers are applied to real emitted wrappers
+  and verified in browser, not only to expected framework wrappers;
 - logo/brand assets come from SF4 settings;
 - cookie notification settings are part of the first site-settings baseline:
   remove demo domains/texts, set client/project-safe copy and links, and choose
