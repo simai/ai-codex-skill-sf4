@@ -121,14 +121,28 @@ Use the SF4 button contract before adding project CSS:
 - base: `btn`
 - semantic type: `btn-primary`, `btn-secondary`, `btn-success`,
   `btn-info`, `btn-warning`, `btn-danger`, `btn-link`
+- size: default button, large `btn-1`
 - shape/style: `btn-rounded`, `btn-square`, `btn-outline`,
   `btn-rounded btn-outline`, `btn-square btn-outline`
+- icon-only: `btn-icon`
 - feedback: `waves-effect`, `waves-light`
 
 Do not create a project class only to set button color, radius, padding, or
 standard hover behavior when these modifiers cover the case. Project classes on
 buttons are allowed for scope hooks, layout placement, missing interaction, or a
 documented visual gap only.
+
+When implementing a Figma design on SF4, do not chase pixel-perfect button
+geometry with custom CSS if a close framework variant exists. Choose the closest
+standard option:
+
+- if the design button is about 50px tall and SF4 has default ~38px and large
+  ~51px variants, use `btn-1`;
+- use default component radius when the design has normal rounded corners;
+- use `btn-rounded` only for full/pill rounded buttons;
+- use `btn-icon` for icon-only action buttons, including search buttons; combine
+  it with the closest size modifier such as `btn-1` when the design expects a
+  large square action.
 
 ## Modifier-First Quick Map
 

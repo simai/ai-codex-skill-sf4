@@ -163,9 +163,13 @@ Acceptance:
   spacing, display and alignment utilities;
 - when SF4 has a component or modifier for the element, use it before writing a
   project class. Buttons must use the SF4 button contract (`btn`,
-  `btn-primary`/`btn-secondary`, `btn-rounded`/`btn-square`/`btn-outline`,
+  `btn-primary`/`btn-secondary`, size modifiers such as `btn-1`,
+  icon-only `btn-icon`, `btn-rounded`/`btn-square`/`btn-outline`,
   `waves-effect`/`waves-light`) unless a documented framework gap requires a
-  small project-layer extension;
+  small project-layer extension. Pick the closest standard SF4 variant instead
+  of reproducing the Figma pixels with custom CSS: for a ~50px design button use
+  the large `btn-1` variant, use the default radius for normal rounded corners,
+  and reserve `btn-rounded` for full/pill buttons;
 - custom CSS/classes are limited to project scope, state hooks, missing
   interactions, icons, exact asset sizing or proven framework gaps; they must
   not become a parallel visual framework;
