@@ -170,6 +170,14 @@ design, choose a simple project-style interaction: hover/focus and first-click
 open on desktop, Escape/outside-click close, visible focus states, and a mobile
 fallback that keeps child links reachable.
 
+For mobile header menus, do not dump all submenu levels open by default when the
+desktop design implies dropdown navigation. Use a vertical accordion pattern:
+top-level links remain reachable, submenu toggles are separate buttons with
+`aria-expanded`, child lists are collapsed by default, and closing the mobile
+panel resets open submenu state. Verify that the mobile panel creates a real
+overlay layer with its own background and sufficient `z-index`; page content
+must not visually overlap menu text.
+
 Acceptance:
 
 - the region is selected through `grid_view_header` or `grid_view_footer`;
@@ -177,6 +185,8 @@ Acceptance:
 - menu content remains editable through Bitrix menu or the existing data source;
 - dropdown markers in the design map to real second-level menu behavior and
   editable child menu sources;
+- mobile navigation uses collapsed accordion behavior for child levels and is
+  checked as an overlay, not just as visible links;
 - translucent/blurred visual containers are applied to real emitted wrappers
   and verified in browser, not only to expected framework wrappers;
 - logo/brand assets come from SF4 settings;
