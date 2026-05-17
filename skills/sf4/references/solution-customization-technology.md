@@ -158,6 +158,9 @@ Acceptance:
 - new view/block lives in the project layer, not in the solution core;
 - menu content remains editable through Bitrix menu or the existing data source;
 - logo/brand assets come from SF4 settings;
+- cookie notification settings are part of the first site-settings baseline:
+  remove demo domains/texts, set client/project-safe copy and links, and choose
+  a position/width that does not visually conflict with the header/search;
 - project-layer markup uses SF4 UI catalog, components and utility classes
   first: `sf-*`, `t-*`, `theme-*`, `c-*`, `btn`, `form-control`, layout,
   spacing, display and alignment utilities;
