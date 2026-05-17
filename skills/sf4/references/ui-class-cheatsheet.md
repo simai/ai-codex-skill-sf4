@@ -114,6 +114,22 @@ Use for:
 
 - local sizing, background, and utility-level visual adjustments.
 
+### Button component
+
+Use the SF4 button contract before adding project CSS:
+
+- base: `btn`
+- semantic type: `btn-primary`, `btn-secondary`, `btn-success`,
+  `btn-info`, `btn-warning`, `btn-danger`, `btn-link`
+- shape/style: `btn-rounded`, `btn-square`, `btn-outline`,
+  `btn-rounded btn-outline`, `btn-square btn-outline`
+- feedback: `waves-effect`, `waves-light`
+
+Do not create a project class only to set button color, radius, padding, or
+standard hover behavior when these modifiers cover the case. Project classes on
+buttons are allowed for scope hooks, layout placement, missing interaction, or a
+documented visual gap only.
+
 ## Modifier-First Quick Map
 
 Use this order before creating a new class:

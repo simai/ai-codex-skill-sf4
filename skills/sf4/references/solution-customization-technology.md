@@ -161,6 +161,11 @@ Acceptance:
 - project-layer markup uses SF4 UI catalog, components and utility classes
   first: `sf-*`, `t-*`, `theme-*`, `c-*`, `btn`, `form-control`, layout,
   spacing, display and alignment utilities;
+- when SF4 has a component or modifier for the element, use it before writing a
+  project class. Buttons must use the SF4 button contract (`btn`,
+  `btn-primary`/`btn-secondary`, `btn-rounded`/`btn-square`/`btn-outline`,
+  `waves-effect`/`waves-light`) unless a documented framework gap requires a
+  small project-layer extension;
 - custom CSS/classes are limited to project scope, state hooks, missing
   interactions, icons, exact asset sizing or proven framework gaps; they must
   not become a parallel visual framework;
