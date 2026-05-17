@@ -152,11 +152,23 @@ component with generic or awkward defaults. Define the missing interaction in
 the project style: hover/focus, keyboard escape, outside-click close, mobile
 open/close state, aria attributes, and a screenshot/browser acceptance check.
 
+Treat visible navigation affordances as requirements, not decoration. If the
+design shows dropdown markers near menu items, the SF4 implementation must
+support at least a second menu level through the project/Bitrix menu source:
+child `.menu.php` files, existing menu component data, or another editable
+source of truth. A chevron without child items and open/close behavior is not an
+acceptable implementation. When the dropdown layout is not specified in the
+design, choose a simple project-style interaction: hover/focus and first-click
+open on desktop, Escape/outside-click close, visible focus states, and a mobile
+fallback that keeps child links reachable.
+
 Acceptance:
 
 - the region is selected through `grid_view_header` or `grid_view_footer`;
 - new view/block lives in the project layer, not in the solution core;
 - menu content remains editable through Bitrix menu or the existing data source;
+- dropdown markers in the design map to real second-level menu behavior and
+  editable child menu sources;
 - logo/brand assets come from SF4 settings;
 - cookie notification settings are part of the first site-settings baseline:
   remove demo domains/texts, set client/project-safe copy and links, and choose
