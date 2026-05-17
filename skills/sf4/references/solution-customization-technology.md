@@ -176,7 +176,9 @@ top-level links remain reachable, submenu toggles are separate buttons with
 `aria-expanded`, child lists are collapsed by default, and closing the mobile
 panel resets open submenu state. Verify that the mobile panel creates a real
 overlay layer with its own background and sufficient `z-index`; page content
-must not visually overlap menu text.
+must not visually overlap menu text. The mobile panel should align to the same
+outer visual bounds as the header shell/container unless the design explicitly
+shows a full-bleed menu.
 
 Acceptance:
 
