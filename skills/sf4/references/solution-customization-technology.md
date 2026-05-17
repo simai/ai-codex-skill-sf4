@@ -212,8 +212,11 @@ Acceptance:
   not become a parallel visual framework;
 - expandable header search must keep a safe responsive boundary: do not let the
   open field overlap the brand/logo or visually glue to it on wide screens.
-  Prefer a viewport-based width with a reserved left gutter/brand gap, and
-  verify the open state by screenshot on the target desktop width;
+  Prefer geometry-based sizing from the emitted header elements
+  (`brand.right + gap` to the search/form edge) when the header has flexible
+  columns, glass containers, or project-specific padding. Viewport-only formulas
+  are fragile after layout changes. Verify the open state by computed rects and
+  screenshot on the target desktop width;
 - desktop, mobile and relevant interaction states are checked with
   browser/screenshot evidence;
 - obsolete demo panels, widgets and unrelated menu items are removed.
