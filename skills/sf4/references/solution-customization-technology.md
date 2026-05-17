@@ -173,6 +173,10 @@ Acceptance:
 - custom CSS/classes are limited to project scope, state hooks, missing
   interactions, icons, exact asset sizing or proven framework gaps; they must
   not become a parallel visual framework;
+- expandable header search must keep a safe responsive boundary: do not let the
+  open field overlap the brand/logo or visually glue to it on wide screens.
+  Prefer a viewport-based width with a reserved left gutter/brand gap, and
+  verify the open state by screenshot on the target desktop width;
 - desktop, mobile and relevant interaction states are checked with
   browser/screenshot evidence;
 - obsolete demo panels, widgets and unrelated menu items are removed.
