@@ -244,6 +244,15 @@ sync and smoke-test the page, then move to the next section. This keeps the
 runtime page working while gradually converting the prototype into a normal SF4
 assembly.
 
+For iblock-backed lists and detail pages, first try the universal SF4
+components before creating custom readers: `simai:sf.iblock.list` for lists and
+`simai:sf.iblock.detail` for details. Their `.default` templates support many
+`SOURCE_*` mappings, modifiers, buttons, images, properties, include areas and
+layout options. A project block may wrap these components to provide a section
+heading, tuned params, modifiers or item include snippets, but it should not
+replace the component with a manual `CIBlockElement` loop unless the standard
+component path is proven insufficient and the reason is documented.
+
 ## BuddyDinner Lesson
 
 The `/ru/donate/` payment flow worked technically, but the first implementation
