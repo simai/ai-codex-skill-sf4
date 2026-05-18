@@ -40,6 +40,18 @@ Guidelines:
 - Use semantic singular/plural consistently per project policy.
 - Prefer code-based references (`IBLOCK_CODE`) for migration safety.
 
+HL/user field naming:
+
+- HL-block class/code names should use the stable SF prefix without separators
+  when the target Bitrix API expects a PHP-like class identifier (for example
+  `SFPortalStructure`). Do not force `_` or `-` into HL class names.
+- HL table names should be lowercase and stable, with separators between site,
+  project, and entity parts where the target table naming policy allows them
+  (for example `sf_portal_structure` or a stricter project-specific variant).
+- User field codes for SF-owned HL entities should use the `UF_SF_` prefix.
+- Treat older portal course examples as naming source maps, not as a reason to
+  override a stricter current project convention.
+
 ## Creation Checklist For New Iblock
 
 1. Define purpose and usage surface:
@@ -56,10 +68,12 @@ Guidelines:
 ## Creation Checklist For New HL-Block
 
 1. Define table purpose and field model.
-2. Create HL-block and UF fields.
-3. Expose read model via `simai:sf.highloadblock.grid` when table UI is needed.
-4. Configure linked HL/user field mappings in component parameters.
-5. Validate filters/sorts/pagination and link rendering.
+2. Define HL class/code, table name, and `UF_SF_` field codes before creating
+   the entity.
+3. Create HL-block and UF fields.
+4. Expose read model via `simai:sf.highloadblock.grid` when table UI is needed.
+5. Configure linked HL/user field mappings in component parameters.
+6. Validate filters/sorts/pagination and link rendering.
 
 ## Migration and Packaging Standard
 
