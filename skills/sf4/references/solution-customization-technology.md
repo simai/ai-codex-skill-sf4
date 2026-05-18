@@ -212,6 +212,13 @@ Acceptance:
 - different header backgrounds are handled by parameters/context modifiers on
   the shared header view/block, not by creating separate header copies for
   home, dark hero and inner pages;
+- project views that include `simai:sf.grid` must preserve the grid editor
+  hooks: never hardcode `HIDE_ICONS => "Y"` for active editable grids. Follow
+  the standard SF4 pattern and switch icons by `grid_edit_mode`, for example
+  `Property::getValue(SF_SITE_DIR, "grid_edit_mode") == "Y" ? "N" : "Y"`.
+  Also do not hide normal solution areas from active page CSS/JS with broad
+  `display:none!important`; standalone reset code is allowed only in an
+  isolated fallback wrapper, not in the normal `bitrix/header.php` flow;
 - logo/brand assets come from SF4 settings;
 - cookie notification settings are part of the first site-settings baseline:
   remove demo domains/texts, set client/project-safe copy and links, and choose
