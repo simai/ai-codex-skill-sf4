@@ -160,6 +160,17 @@ Attach the effect to the actual stable project-layer element, keep any
 framework wrapper selector only as a fallback, and verify computed style plus a
 browser screenshot.
 
+Do not duplicate header views or blocks only because the header appears on
+different backgrounds. Model the difference as a page/header context contract:
+for example `mode=static|over-hero`,
+`background=white|mint|dark|transparent`,
+`surface=glass|white|plain`, `contrast=dark|light`, and
+`width=default|wide|full`. The page or hero scene chooses the context before
+the shared `grid_view_header` renders, while the single project-layer header
+block converts context into modifier classes. Pages without a hero must still
+work through a safe static default such as `static + white background + dark
+contrast`; the header must not depend on a hero area being present.
+
 Treat visible navigation affordances as requirements, not decoration. If the
 design shows dropdown markers near menu items, the SF4 implementation must
 support at least a second menu level through the project/Bitrix menu source:
@@ -198,6 +209,9 @@ Acceptance:
   checked as an overlay, not just as visible links;
 - translucent/blurred visual containers are applied to real emitted wrappers
   and verified in browser, not only to expected framework wrappers;
+- different header backgrounds are handled by parameters/context modifiers on
+  the shared header view/block, not by creating separate header copies for
+  home, dark hero and inner pages;
 - logo/brand assets come from SF4 settings;
 - cookie notification settings are part of the first site-settings baseline:
   remove demo domains/texts, set client/project-safe copy and links, and choose
