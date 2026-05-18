@@ -219,6 +219,15 @@ Acceptance:
   Also do not hide normal solution areas from active page CSS/JS with broad
   `display:none!important`; standalone reset code is allowed only in an
   isolated fallback wrapper, not in the normal `bitrix/header.php` flow;
+- custom header/menu layers must not block Bitrix public editing controls. If a
+  project header needs high `z-index` in public mode, add an explicit
+  `grid_edit_mode` class/condition that lowers project `z-index` and restores
+  Bitrix component toolbar clickability in edit mode;
+- after changing a file that contains an editable `IncludeComponent`, reload
+  the public page before testing the component editor. Bitrix stores `src_line`
+  in the generated toolbar at page render time; if the file was edited and the
+  component moved from that line, `component_props.php` can return an empty
+  popup body and the UI may stay on "Загрузка..." indefinitely;
 - logo/brand assets come from SF4 settings;
 - cookie notification settings are part of the first site-settings baseline:
   remove demo domains/texts, set client/project-safe copy and links, and choose
