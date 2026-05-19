@@ -70,6 +70,15 @@ It is intended for implementation and modernization tasks in SF4 projects, with 
 
 ### `simai:sf.iblock.list`
 
+Use `simai:sf.iblock.list` as the first-choice renderer for repeated editable
+content in SF4 projects: cards, banners, process steps, projects, reviews,
+news, media lists, people, partners, shelters, products, services, reports and
+similar lists. If the design requires a custom section shell, create a project
+grid block that wraps `simai:sf.iblock.list` and configures its source mapping,
+modifiers, include hooks and count. Do not replace editable list content with
+static arrays or manual `CIBlockElement` loops unless the standard component
+cannot satisfy the scenario and the exception is documented.
+
 ### Runtime pipeline
 
 1. `component.php`
@@ -193,6 +202,18 @@ that includes real image items. Pages with no image items may hide this defect.
    - override via template path priority (`local/templates/.../components/...`) before editing component source.
 5. For detail pages with related content blocks, validate `RELATION_DATA` include files and user property side effects.
 6. Re-test as admin and non-admin because cache/edit-mode branches differ.
+7. When a project wrapper uses `simai:sf.iblock.list` `.default` for a custom
+   Figma-like grid, remember that the component still renders Bootstrap column
+   wrappers around each item. If `MODIFIER_ROW_AREA` switches the row to CSS
+   grid or another custom layout, scope CSS to the component wrapper and reset
+   direct child columns there (`max-width`, `flex`, `padding`, `margin`) instead
+   of replacing the component with a manual loop.
+8. `MODIFIER_ITEM_AREA` styles the inner item node, while title, description,
+   include, and property zones are usually inside `.iblock-list-item-text`.
+   For compact list rows or leaderboard layouts, either pass the appropriate
+   text-area modifier if the template supports it, or scope project CSS to the
+   text wrapper. Do not assume layout rules on the item node will affect its
+   nested text areas.
 
 ## Data Layer Alignment
 

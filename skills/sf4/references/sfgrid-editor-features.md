@@ -33,6 +33,11 @@ Security note:
 
 - block metadata can include `CATEGORY` in `.description.php`.
 - if missing, fallback may use folder/section convention.
+- custom project blocks must make `.description.php` return an array. The
+  public component editor builds the block selector through
+  `SIMAI\Main\Block\Section::getNameList()`, so files that only assign
+  `$arTemplateDescription` and return `1` can break `component_props.php` with
+  `Cannot use a scalar value as an array`.
 
 ### 4) Custom Block Selector + Preview
 

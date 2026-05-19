@@ -16,6 +16,24 @@ dynamic source should own this change?
 
 Only create new code after those primitives are mapped.
 
+When translating a Figma design into an SF4 solution, do not treat the picture
+as only a layout specification. First translate the visible design into a
+functional data model:
+
+- what entities are visible on the screen;
+- which existing solution entities already represent them;
+- where each entity should be stored: site settings, include file, iblock,
+  highload block, custom table/module, or external integration;
+- which fields and properties are required;
+- how entities are related to each other;
+- which list/detail routes, filters, actions, permissions and editor surfaces
+  are needed.
+
+Only after this source-of-truth map is clear, choose the visual representation:
+grid rows, include files, `simai:sf.iblock.*` components, component templates,
+or project-layer blocks. This prevents static replicas of Figma screens and
+keeps the result editable, reusable and compatible with solution updates.
+
 ## Gate 1: Site Settings Baseline
 
 Before changing templates or routes, bring the site as close as possible to the
@@ -228,6 +246,21 @@ Acceptance:
   in the generated toolbar at page render time; if the file was edited and the
   component moved from that line, `component_props.php` can return an empty
   popup body and the UI may stay on "Загрузка..." indefinitely;
+- when the public component editor stays on "Загрузка...", verify the exact
+  dialog request, not only the direct settings URL. The real Bitrix popup uses
+  `component_props.php?...&bxsender=core_window_cdialog` with `Bx-Ajax: true`
+  and the current admin session. A direct `200` without AJAX headers is not
+  sufficient evidence. If the AJAX request returns an auth script or `500`,
+  refresh/re-authenticate the admin session first; if the same authenticated
+  request returns a full `publicComponentDialogManager` payload, the component
+  source is parseable and the remaining issue is the browser session/dialog
+  state, not the SF4 view itself;
+- project grid block `.description.php` files must `return` an array with at
+  least `NAME`. Do not only assign `$arTemplateDescription`: `sf.grid`
+  parameter loading calls `SIMAI\Main\Block\Section::getNameList()`, requires
+  the description file, and then indexes the result as an array. A scalar return
+  can make `component_props.php` answer `500` and leave the public editor stuck
+  on "Загрузка...";
 - logo/brand assets come from SF4 settings;
 - cookie notification settings are part of the first site-settings baseline:
   remove demo domains/texts, set client/project-safe copy and links, and choose
@@ -265,6 +298,26 @@ analogy: iblocks, highload blocks, storage tables, site settings, component
 params, or existing list/detail routes. Static markup is a temporary fallback
 only when explicitly labelled.
 
+For client-facing SF4 solution adaptation, treat editability as a delivery
+requirement, not an enhancement. The finished site must be maintainable by the
+client/content manager through Bitrix/SF4 editing surfaces. Therefore:
+
+- do not keep real page content only in PHP arrays, static HTML, or template
+  literals except as an explicitly temporary scaffold;
+- place repeated or content-managed data in existing suitable iblocks whenever
+  the source solution already has the right entity;
+- if the source solution has no suitable entity, create a new iblock by analogy
+  using SF4 naming (`sf_<SITE_ID>_<domain>` for type and
+  `sf-<SITE_ID>-<entity>` for iblock code);
+- expose fields through SF4/Bitrix editor forms and project config schemas so
+  the client can edit content without changing code;
+- use standard SF4 components first: `simai:sf.iblock.list` for lists,
+  `simai:sf.iblock.detail` for detail pages, and related `simai:sf.iblock.*`
+  components for sections, filters, tables or calendars;
+- custom blocks may wrap these components and tune parameters/modifiers, but
+  should not replace them with manual readers unless the standard component path
+  is proven insufficient and the reason is documented.
+
 When a client-design main page already exists as a large temporary view, do not
 rewrite it into a full new system in one pass. Decompose it section by section:
 create one narrow project-layer block under
@@ -274,6 +327,33 @@ sync and smoke-test the page, then move to the next section. This keeps the
 runtime page working while gradually converting the prototype into a normal SF4
 assembly.
 
+During that staged conversion, the final structure for each area should still be
+one active view with one root `simai:sf.grid`; the design sections become grid
+rows/areas inside it. Avoid leaving several sibling `simai:sf.grid` calls in the
+same `home`/`main` view after the section has been stabilized. Multiple
+independent grids in one area are acceptable only as a short-lived migration
+scaffold and must be collapsed before the area is considered ready for editor
+handoff.
+
+For static or semi-static section wrappers, prefer the standard include block
+before creating a project block. Put editable fragments under
+`simai.data/include/<area-or-page>/...`, connect them through the existing
+`custom.include.file` grid block, and keep the root area assembled by
+`simai:sf.grid`. The include file may contain plain markup, section headings,
+or calls to standard SF4 components such as `simai:sf.iblock.list`. Create a
+new `simai.data/grid/block/<area>/<project-code>` only when the section needs a
+reusable parameterized grid block, custom block metadata, or behavior that the
+standard include block cannot represent cleanly. This keeps simple Figma
+sections editable and avoids one-off blocks that only output static HTML.
+
+If a Figma fragment visually groups several dynamic lists into one shared
+background panel, keep the group as one grid row/include file and render each
+list inside it through its own standard component call. Do not create several
+independent rows only to approximate the visual group, because the page editor
+will expose a misleading structure and future maintainers will tune spacing in
+the wrong place. Use one wrapper include for the shared surface, then separate
+iblock-backed component calls for each editable data set inside the wrapper.
+
 For iblock-backed lists and detail pages, first try the universal SF4
 components before creating custom readers: `simai:sf.iblock.list` for lists and
 `simai:sf.iblock.detail` for details. Their `.default` templates support many
@@ -282,6 +362,107 @@ layout options. A project block may wrap these components to provide a section
 heading, tuned params, modifiers or item include snippets, but it should not
 replace the component with a manual `CIBlockElement` loop unless the standard
 component path is proven insufficient and the reason is documented.
+
+For list filters from client designs, avoid decorative-only controls. Define a
+simple URL contract first, usually `tag=<semantic-filter>` and `q=<search>`,
+then map each UI chip/search field to an iblock filter consumed by
+`simai:sf.iblock.list` through `FILTER` or `FILTER_NAME`. Store the filterable
+flags in iblock properties such as `VERIFIED`, `URGENT`, `NEED_VOLUNTEERS`, not
+in PHP-only arrays. Put shared filter rendering and filter-building helpers in a
+project include such as `simai.data/include/<entity>/filter.php`, then reuse it
+on the landing section and on the full catalog page. This gives a universal
+pattern: teaser section links to a canonical catalog URL, catalog applies the
+same parameters to the editable iblock list, and an AJAX version can be added
+later without changing the data contract.
+
+If the design has two filter levels, keep them separate in both UX and data:
+category chips should represent semantic tags or a multiple list property
+(`HELP_CATEGORY`, `AUDIENCE`, `SERVICE_TYPE`), while select/dropdown facets
+represent orthogonal properties such as city, type, size, status or date. The
+full catalog page owns the actual filtering; landing blocks should link to that
+catalog with the same URL contract instead of running a disconnected local
+filter. For list properties, do not assume that filtering by visible text or
+XML_ID will always work in every Bitrix context; resolve enum IDs when needed
+and test each public URL (`tag`, facet and `q`) against rendered item counts.
+
+For tabbed landing sections where each tab changes the visible content, do not
+hardcode the tabs as static markup unless they are truly decorative. Model each
+tab as an active iblock element with stable `CODE`, sort, title/tab label,
+description, image and button/link properties. Build the tab list from the same
+iblock, choose the active element through a small URL contract such as
+`project=<code>` or `type=<code>`, pass the selected code to
+`simai:sf.iblock.list` through `FILTER_NAME`, and keep the section in an
+editable include file. This keeps the page editable, makes deep links possible,
+and avoids disconnected duplicated content between tabs and cards.
+
+If the standard `.default` template can fetch the data but cannot reproduce a
+critical card anatomy from the client design, create a narrow project component
+template override under
+`local/templates/<site-template>/components/simai/sf.iblock.list/<template>/`.
+Keep the data source, sorting, filtering and edit actions in
+`simai:sf.iblock.list`; customize only the item markup needed for the card. The
+template must preserve Bitrix edit area hooks, use existing SF4 button/grid
+classes where possible, and place custom CSS in the project view/block stylesheet
+instead of modifying `/bitrix/components` or the base `simai.framework`
+template.
+
+Before adding such an override, check where the active site template physically
+lives. If the active template is `/bitrix/templates/simai.framework` and the
+project adds files under `/local/templates/simai.framework/components/...`,
+Bitrix may resolve `SITE_TEMPLATE_PATH` to the new local folder. That local
+folder then shadows the base template. In this case the project must either
+copy/manage the full template intentionally, or add delegating
+`local/templates/simai.framework/header.php` and `footer.php` that include the
+base `/bitrix/templates/simai.framework/header.php` and `footer.php`. Never
+leave a partial local template folder with only `components/`: the public page
+can render without `<html>`, `<head>`, template assets, header and footer.
+Acceptance for component-template overrides must include `curl`/browser checks
+that the page still contains `<!DOCTYPE html>`, `<head>`, the project header,
+main content and footer, not only the customized component markup.
+
+For page-level views that need project CSS, register assets before the template
+prints `ShowHead()`. If a page needs a custom view stylesheet, prefer the Bitrix
+sequence `prolog_before -> SetTitle/SetPageProperty/addCss -> prolog_after ->
+view content -> epilog`. Do not rely on `Asset::addCss()` from inside a view
+that is included after `/bitrix/header.php`: depending on buffering and cache it
+can miss the head output or force temporary body-level workarounds.
+
+When converting a prototype that already has `data.php` arrays, keep those
+arrays only as safe fallback while moving the real editable content into
+iblocks. Add an idempotent seed/update script near the view or project tooling
+that creates missing iblocks/properties, upserts starter elements, deactivates
+obsolete demo elements, and can be rerun after sync. After conversion, verify
+both the public markers and the Bitrix entities so the page does not silently
+fall back to static data.
+
+After a seed/update script changes the element set used by cached components
+such as `simai:sf.iblock.list`, clear Bitrix component/managed cache before
+browser acceptance. Do not trust the seed output alone: check the iblock
+entities and then the rendered public HTML. A common failure mode is that the
+iblock already contains the new active elements, while the public page still
+shows the previous item count because the component cache was not refreshed.
+If the site uses Bitrix composite HTML cache, also clear
+`\Bitrix\Main\Composite\Page::getInstance()->deleteAll()` or verify with a
+fresh URL that bypasses the static HTML cache. Component cache, managed cache
+and composite cache are separate acceptance concerns.
+
+When passing project block parameters through `simai:sf.grid`, use the exact
+SF4 parameter naming convention:
+
+```text
+ROW_<row>_COL_<col>_AREA_<area>__<BLOCK_CODE_WITH_DOTS_REPLACED_BY_UNDERSCORES>__<PARAM>
+```
+
+Example:
+
+```php
+"ROW_4_COL_0_AREA_0__BUDDYDINNER_STORIES__TITLE" => "Выберите способ помощи",
+```
+
+Do not pass block params as
+`ROW_4_COL_0_AREA_0_BUDDYDINNER.STORIES__TITLE` or
+`ROW_4_COL_0_AREA_0__BUDDYDINNER.STORIES__TITLE`: those keys are ignored and
+the block silently falls back to `.parameters.php` defaults.
 
 ## BuddyDinner Lesson
 

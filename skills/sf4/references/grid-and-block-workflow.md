@@ -38,6 +38,14 @@ The call stores full page composition:
 - areas (`ROW_<r>_COL_<c>_AREA_<a>_*`)
 - optional row conditions (`ROW_<r>_USE_CONDITION`, comparison/value)
 
+For a normal SF4 area/view, keep one root `simai:sf.grid` call per view.
+Represent page sections as multiple `ROW_*` entries inside that grid. Do not
+chain several independent `simai:sf.grid` calls in one main view as a final
+solution: it fragments editor state, makes row ordering harder to maintain, and
+creates extra failure points for the public grid editor. A temporary staged
+migration may use multiple grids only if it is explicitly marked as temporary
+and is collapsed back into one root grid before handoff.
+
 ## Block Structure
 
 Expected files for a reusable block:

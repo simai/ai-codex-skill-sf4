@@ -27,6 +27,14 @@ Observed SF4 patterns in this workspace:
 - Iblock type: `sf_<SITE_ID>_<domain>` (example: `sf_s1_content`, `sf_s1_catalog`).
 - Iblock code: `sf-<SITE_ID>-<entity>` (example: `sf-s1-news`, `sf-s1-service`).
 
+For new editable project content in an SF4 site, use the same convention unless
+the source solution already has a stricter domain convention:
+
+- Iblock type: `sf_<SITE_ID>_<domain>` where `<domain>` describes the content
+  family (`content`, `home`, `help`, `catalog`, `org`, etc.).
+- Iblock code: `sf-<SITE_ID>-<entity>` where `<entity>` describes the rendered
+  object (`hero`, `process-step`, `shelter`, `review`, `news`, etc.).
+
 For multisite map modules, keep two separated type domains:
 
 - Object data type: `sf_<SITE_ID>_map_data`.
@@ -56,14 +64,20 @@ HL/user field naming:
 
 1. Define purpose and usage surface:
    - list/detail/section/table/calendar/filter.
-2. Define type and code using project naming pattern.
-3. Define required fields/properties.
-4. Add/edit editor schema:
+2. Check existing solution iblock types and iblocks first. Reuse or extend an
+   existing matching entity when it already represents the same content family.
+3. If no suitable entity exists, define a new type and code using the SF4
+   project naming pattern.
+4. Define required fields/properties.
+5. Add/edit editor schema:
    - `{site_dir}/simai.data/config/.iblock.config.php`
    - `{site_dir}/simai.data/config/.iblock.section.config.php`
-5. Add localization keys in config language files.
-6. Bind in SF4 blocks/components via `IBLOCK_TYPE` + `IBLOCK_CODE`.
-7. Validate in target pages and editor forms.
+6. Add localization keys in config language files.
+7. Bind in SF4 blocks/components via `IBLOCK_TYPE` + `IBLOCK_CODE`.
+8. Prefer standard SF4 rendering components (`simai:sf.iblock.list`,
+   `simai:sf.iblock.detail`, `simai:sf.iblock.section`, filters/tables) before
+   writing custom `CIBlockElement` loops.
+9. Validate in target pages and editor forms.
 
 ## Creation Checklist For New HL-Block
 
