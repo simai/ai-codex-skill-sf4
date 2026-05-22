@@ -117,6 +117,24 @@ Use this for page-specific:
 - `show_banner_*`;
 - layout/sidebar settings.
 
+When moving a standalone/list/detail prototype into the normal SF4 shell, verify
+the inherited page geometry before tuning the component template. A page can
+render the correct header and footer but still be visually wrong because the
+standard template keeps inherited sidebars or a constrained `main_width`, for
+example `sf-main-area col-md-8`. First set the section/page properties that
+describe the route contract:
+
+- `sidebar_show => none` when the design has no left/right sidebars;
+- `use_page_container => N` when the project view already owns its own
+  containers and section widths;
+- `show_title`, `show_breadcrumb`, `show_banner_main` according to the design;
+- `main_modifier` only for ordering/link-theme classes that the shell needs.
+
+Then verify in the browser that the target page content lives under the shared
+SF4 header/footer, the main area has the expected column width such as
+`col-md-12`, and no old standalone wrapper or broad reset CSS hides normal SF4
+areas.
+
 ## Gate 3: View/Block Mapping
 
 After settings and properties, map the target route to the SF4 assembly chain:
@@ -345,6 +363,11 @@ new `simai.data/grid/block/<area>/<project-code>` only when the section needs a
 reusable parameterized grid block, custom block metadata, or behavior that the
 standard include block cannot represent cleanly. This keeps simple Figma
 sections editable and avoids one-off blocks that only output static HTML.
+The include block must preserve the public editor contract: in normal mode it
+may hide icons, but in `grid_edit_mode` it must pass `HIDE_ICONS => "N"` to
+`bitrix:main.include` or the corresponding component. Otherwise the page looks
+grid-based in code but the content manager cannot open the include/component
+settings from the public editing surface.
 
 If a Figma fragment visually groups several dynamic lists into one shared
 background panel, keep the group as one grid row/include file and render each
@@ -362,6 +385,87 @@ layout options. A project block may wrap these components to provide a section
 heading, tuned params, modifiers or item include snippets, but it should not
 replace the component with a manual `CIBlockElement` loop unless the standard
 component path is proven insufficient and the reason is documented.
+
+For detail pages derived from a client design, do not treat the screenshot as a
+set of independent visual blocks. First build the detail data contract: primary
+entity, route key, editable fields, statistics, media/gallery, child collections,
+related lists, actions, and future module boundaries. Store repeated detail
+sections in iblocks or existing solution entities by analogy, for example
+`<entity>-gallery`, `<entity>-report`, `<entity>-need`, or existing news/photo
+iblocks with a relation property. Render the page from that contract and keep a
+temporary fallback only for bootstrapping. The acceptance check must include the
+admin/editability path for the new fields, not only the public screenshot.
+
+Classify each visible value before creating a property:
+
+- own attribute of the primary element: store on the primary element, for
+  example city, address, phone, email, verification status, short description,
+  direct contact data or a directly configured weekly target;
+- taxonomy/filter facet: use sections, list properties or reference entities,
+  for example help category, city, pet type, shelter size and verification
+  status used by list filters;
+- child entity: create a related iblock/module entity and link it back to the
+  primary element, for example pets, volunteers, needs, photo albums, reviews,
+  reports, deliveries, orders or donations;
+- derived aggregate: compute from child entities or from an explicitly
+  documented aggregate source, for example pet count, dogs/cats split, found
+  home count, volunteer count, collected amount for the last 7 days and progress
+  percent.
+
+Do not create manual string/number properties for derived values only because
+they appear in the design. If the design reveals a real registry behind a
+number, model that registry first and derive the number from it. If a temporary
+editorial aggregate is needed for a demo, mark it as a temporary display source
+and document the future source of truth.
+
+Prefer real Bitrix element bindings (`E`) or another explicit relation contract
+for child entities. A string field like `SHELTER_CODE` is acceptable only as a
+temporary dev/demo bridge and must be called out in the architecture notes,
+because administrators can mistype it and cannot select the related element
+through the normal Bitrix UI.
+
+For an iblock element detail page, preserve the Bitrix/SF4 detail contract:
+the public URL is a CNC route such as `/ru/<section>/<element-code>/`, the real
+entry point is the section-level `detail.php`, and the main rendering component
+is usually `simai:sf.iblock.detail` with a project template under
+`local/templates/.default/components/` or the active site template. Do not create
+physical per-element pages such as `/ru/shelters/laska/index.php`; if routing
+does not reach Bitrix, fix the front-controller/routing configuration instead
+of turning elements into static pages.
+
+The detail template can visually look like a landing page. That does not mean it
+must be implemented as a grid. Use a customized `sf.iblock.detail` template when
+the page is fundamentally one element plus related data. Use a grid only for
+true page/area assembly where the site editor is expected to rearrange rows as a
+page layout. The implementation choice follows the data contract and editing
+model, not the absence of a sidebar.
+
+Page-specific content belongs to the central element by default. Section
+headings, explanatory copy, CTA text, contact intro, hero text, current goal
+copy, and other data that describes this exact item must be stored in that
+item's fields/properties or in child entities related to that item. Do not leave
+such content as literals inside include files or templates. Keep templates as
+rendering and component wiring only. Independent sections such as "other items",
+generic news, or a site-wide CTA may read from their own source because they are
+not owned by the central element.
+
+When reading a design, infer the data model before implementing markup. A number
+shown as a simple counter may be either a stored stat element or an aggregate
+from real related entities; decide by product meaning and expected maintenance.
+If the same concept appears elsewhere as cards, filters, statuses, or histories,
+model the underlying entities instead of copying the number. Examples:
+
+- pet counters may come from a pet registry with type and status
+  (`in_shelter`, `found_home`) related to a shelter;
+- weekly collection numbers may come from contribution/order records filtered by
+  shelter, collected item, and date range;
+- "what is needed" should usually be a need/request entity related to shelter
+  and to a catalog of collected goods;
+- shelter life photos should usually be linked photo-album sections or gallery
+  entities, not loose images in template markup;
+- reviews should be review elements related to the shelter;
+- related shelters and generic news are independent lists, not central element
+  properties.
 
 For list filters from client designs, avoid decorative-only controls. Define a
 simple URL contract first, usually `tag=<semantic-filter>` and `q=<search>`,
