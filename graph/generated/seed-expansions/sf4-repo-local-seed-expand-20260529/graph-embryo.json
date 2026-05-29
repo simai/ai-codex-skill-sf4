@@ -1,0 +1,1129 @@
+{
+  "schema_version": "1.0.0",
+  "id": "graph-embryo.sf4-repo-local-seed-expand-20260529",
+  "created_at": "2026-05-29T19:43:58.175242+00:00",
+  "operation_id": "graph.seed-expand",
+  "seed_ref": "graph/source/growgraph/seeds/sf4-repo-local-seed-20260529.json",
+  "target_graph_id": "skill.sf4.growgraph",
+  "target_profile": "profile.skill_graph",
+  "target_mode": "pilot",
+  "canonical_state_ref": "sha256:a29f6efa731728fc877856267e5760e95cee578ba2a42f48f49bed1cda10fe6f",
+  "candidate_objects": [
+    {
+      "id": "object.simai-framework-4.2c91f44b",
+      "kind": "knowledge",
+      "title": "SIMAI Framework 4",
+      "reason": "Candidate object extracted from source heading: SIMAI Framework 4",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.quick-start.455083ca",
+      "kind": "knowledge",
+      "title": "Quick Start",
+      "reason": "Candidate object extracted from source heading: Quick Start",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.non-negotiable-rules.a44127d6",
+      "kind": "knowledge",
+      "title": "Non-Negotiable Rules",
+      "reason": "Candidate object extracted from source heading: Non-Negotiable Rules",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.execution-workflow.9f61a1b4",
+      "kind": "knowledge",
+      "title": "Execution Workflow",
+      "reason": "Candidate object extracted from source heading: Execution Workflow",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.task-routing.aaae5b01",
+      "kind": "knowledge",
+      "title": "Task Routing",
+      "reason": "Candidate object extracted from source heading: Task Routing",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.grid-view-block-and-template-areas.99a5b312",
+      "kind": "knowledge",
+      "title": "Grid, View, Block, and Template Areas",
+      "reason": "Candidate object extracted from source heading: Grid, View, Block, and Template Areas",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.frontend-markup-utilities-and-ui-components.b7ee9b48",
+      "kind": "knowledge",
+      "title": "Frontend Markup, Utilities, and UI Components",
+      "reason": "Candidate object extracted from source heading: Frontend Markup, Utilities, and UI Components",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.frontend-interaction-assets-and-accessibility.9fe9b64f",
+      "kind": "knowledge",
+      "title": "Frontend Interaction, Assets, and Accessibility",
+      "reason": "Candidate object extracted from source heading: Frontend Interaction, Assets, and Accessibility",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.backend-data-property-and-api-patterns.ef5d5af0",
+      "kind": "operation",
+      "title": "Backend Data, Property, and API Patterns",
+      "reason": "Candidate object extracted from source heading: Backend Data, Property, and API Patterns",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "heading",
+        "operation-keyword"
+      ]
+    },
+    {
+      "id": "object.linkage-remediation.bae0f45a",
+      "kind": "knowledge",
+      "title": "Linkage Remediation",
+      "reason": "Candidate object extracted from source heading: Linkage Remediation",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.settings-and-inheritance.03901d4b",
+      "kind": "knowledge",
+      "title": "Settings and Inheritance",
+      "reason": "Candidate object extracted from source heading: Settings and Inheritance",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.components-iblocks-and-hl-blocks.c7be1e44",
+      "kind": "knowledge",
+      "title": "Components, Iblocks, and HL-Blocks",
+      "reason": "Candidate object extracted from source heading: Components, Iblocks, and HL-Blocks",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.wizard-actions-and-deployment.05b436ff",
+      "kind": "knowledge",
+      "title": "Wizard Actions and Deployment",
+      "reason": "Candidate object extracted from source heading: Wizard Actions and Deployment",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.quality-and-regression.e4fe3aae",
+      "kind": "knowledge",
+      "title": "Quality and Regression",
+      "reason": "Candidate object extracted from source heading: Quality and Regression",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.scripts.381e3298",
+      "kind": "knowledge",
+      "title": "Scripts",
+      "reason": "Candidate object extracted from source heading: Scripts",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.when-to-ask-user.a958f5b5",
+      "kind": "knowledge",
+      "title": "When To Ask User",
+      "reason": "Candidate object extracted from source heading: When To Ask User",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.skill-mesh-balance.20a52bfd",
+      "kind": "skill",
+      "title": "Skill Mesh Balance",
+      "reason": "Candidate object extracted from source heading: Skill Mesh Balance",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.66,
+      "confidence_signals": [
+        "heading",
+        "domain-unit-keyword"
+      ]
+    },
+    {
+      "id": "object.does-not-own.9533744f",
+      "kind": "knowledge",
+      "title": "Does Not Own",
+      "reason": "Candidate object extracted from source heading: Does Not Own",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.companion-contracts.8181dfe2",
+      "kind": "knowledge",
+      "title": "Companion Contracts",
+      "reason": "Candidate object extracted from source heading: Companion Contracts",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.handoff.09496b01",
+      "kind": "knowledge",
+      "title": "Handoff",
+      "reason": "Candidate object extracted from source heading: Handoff",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "kind": "knowledge",
+      "title": "E2E Validation: SF4 Type A/B/C Cases (`/ru`)",
+      "reason": "Candidate object extracted from source heading: E2E Validation: SF4 Type A/B/C Cases (`/ru`)",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.56,
+      "confidence_signals": [
+        "heading",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.1-route-classification-check.b9374470",
+      "kind": "knowledge",
+      "title": "1) Route Classification Check",
+      "reason": "Candidate object extracted from source heading: 1) Route Classification Check",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.2-syntax-check-php-l.ec918913",
+      "kind": "knowledge",
+      "title": "2) Syntax Check (`php -l`)",
+      "reason": "Candidate object extracted from source heading: 2) Syntax Check (`php -l`)",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.56,
+      "confidence_signals": [
+        "heading",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.3-route-structure-audit-baseline.b2c5712a",
+      "kind": "knowledge",
+      "title": "3) Route/Structure Audit Baseline",
+      "reason": "Candidate object extracted from source heading: 3) Route/Structure Audit Baseline",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.56,
+      "confidence_signals": [
+        "heading",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.4-frontend-baseline-audit.5be34e53",
+      "kind": "knowledge",
+      "title": "4) Frontend Baseline Audit",
+      "reason": "Candidate object extracted from source heading: 4) Frontend Baseline Audit",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.5-backend-risk-baseline.2b35ef9b",
+      "kind": "risk",
+      "title": "5) Backend Risk Baseline",
+      "reason": "Candidate object extracted from source heading: 5) Backend Risk Baseline",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.6,
+      "confidence_signals": [
+        "heading",
+        "risk-keyword"
+      ]
+    },
+    {
+      "id": "object.6-e2e-verdict-for-skill-usage.da0fccd2",
+      "kind": "skill",
+      "title": "6) E2E Verdict For Skill Usage",
+      "reason": "Candidate object extracted from source heading: 6) E2E Verdict For Skill Usage",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.66,
+      "confidence_signals": [
+        "heading",
+        "domain-unit-keyword"
+      ]
+    },
+    {
+      "id": "object.7-skill-routing-consistency-check-sf4.f51bb01f",
+      "kind": "skill",
+      "title": "7) Skill Routing Consistency Check (`$sf4`)",
+      "reason": "Candidate object extracted from source heading: 7) Skill Routing Consistency Check (`$sf4`)",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.72,
+      "confidence_signals": [
+        "heading",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.migration-notes.10d6077c",
+      "kind": "knowledge",
+      "title": "Migration Notes",
+      "reason": "Candidate object extracted from source heading: Migration Notes",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.context.cc11b3a2",
+      "kind": "knowledge",
+      "title": "Context",
+      "reason": "Candidate object extracted from source heading: Context",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.schema-changes.78a055d1",
+      "kind": "knowledge",
+      "title": "Schema Changes",
+      "reason": "Candidate object extracted from source heading: Schema Changes",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.data-changes.8182c396",
+      "kind": "knowledge",
+      "title": "Data Changes",
+      "reason": "Candidate object extracted from source heading: Data Changes",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.idempotency.1864ba6e",
+      "kind": "knowledge",
+      "title": "Idempotency",
+      "reason": "Candidate object extracted from source heading: Idempotency",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.rollback.f28daee2",
+      "kind": "knowledge",
+      "title": "Rollback",
+      "reason": "Candidate object extracted from source heading: Rollback",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.verification.03128bed",
+      "kind": "knowledge",
+      "title": "Verification",
+      "reason": "Candidate object extracted from source heading: Verification",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.qa-report.8ee64164",
+      "kind": "knowledge",
+      "title": "QA Report",
+      "reason": "Candidate object extracted from source heading: QA Report",
+      "source_refs": [
+        "skills/sf4/references/artifacts/qa-report.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    }
+  ],
+  "candidate_relations": [
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "relates_to",
+      "to": "object.quick-start.455083ca",
+      "reason": "Low-confidence relation inferred only from nearby source order; review before accepting.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.32
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.quick-start.455083ca",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.non-negotiable-rules.a44127d6",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.execution-workflow.9f61a1b4",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.task-routing.aaae5b01",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.grid-view-block-and-template-areas.99a5b312",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.frontend-markup-utilities-and-ui-components.b7ee9b48",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.frontend-interaction-assets-and-accessibility.9fe9b64f",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.backend-data-property-and-api-patterns.ef5d5af0",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.linkage-remediation.bae0f45a",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.settings-and-inheritance.03901d4b",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.components-iblocks-and-hl-blocks.c7be1e44",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.wizard-actions-and-deployment.05b436ff",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.quality-and-regression.e4fe3aae",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.scripts.381e3298",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.simai-framework-4.2c91f44b",
+      "type": "source_related_to",
+      "to": "object.when-to-ask-user.a958f5b5",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/SKILL.md.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.1-route-classification-check.b9374470",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.2-syntax-check-php-l.ec918913",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.3-route-structure-audit-baseline.b2c5712a",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.4-frontend-baseline-audit.5be34e53",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.5-backend-risk-baseline.2b35ef9b",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.6-e2e-verdict-for-skill-usage.da0fccd2",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+      "type": "source_related_to",
+      "to": "object.7-skill-routing-consistency-check-sf4.f51bb01f",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/e2e-university-ru-type-abc.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.migration-notes.10d6077c",
+      "type": "source_related_to",
+      "to": "object.context.cc11b3a2",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/migration-notes.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.migration-notes.10d6077c",
+      "type": "source_related_to",
+      "to": "object.schema-changes.78a055d1",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/migration-notes.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.migration-notes.10d6077c",
+      "type": "source_related_to",
+      "to": "object.data-changes.8182c396",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/migration-notes.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.migration-notes.10d6077c",
+      "type": "source_related_to",
+      "to": "object.idempotency.1864ba6e",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/migration-notes.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.migration-notes.10d6077c",
+      "type": "source_related_to",
+      "to": "object.rollback.f28daee2",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/migration-notes.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.migration-notes.10d6077c",
+      "type": "source_related_to",
+      "to": "object.verification.03128bed",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/references/artifacts/migration-notes.md.",
+      "source_refs": [
+        "skills/sf4/references/artifacts/migration-notes.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.skill-mesh-balance.20a52bfd",
+      "type": "source_related_to",
+      "to": "object.does-not-own.9533744f",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/rules/skill-mesh-balance.md.",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.skill-mesh-balance.20a52bfd",
+      "type": "source_related_to",
+      "to": "object.companion-contracts.8181dfe2",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/rules/skill-mesh-balance.md.",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.skill-mesh-balance.20a52bfd",
+      "type": "source_related_to",
+      "to": "object.handoff.09496b01",
+      "reason": "Candidates appear in the same seed expansion source group: skills/sf4/rules/skill-mesh-balance.md.",
+      "source_refs": [
+        "skills/sf4/rules/skill-mesh-balance.md"
+      ],
+      "confidence": 0.45
+    }
+  ],
+  "quality_summary": {
+    "candidate_object_count": 36,
+    "candidate_relation_count": 32,
+    "source_file_count": 8,
+    "by_kind": {
+      "knowledge": 31,
+      "operation": 1,
+      "risk": 1,
+      "skill": 3
+    },
+    "top_sources": {
+      "skills/sf4/SKILL.md": 16,
+      "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md": 8,
+      "skills/sf4/references/artifacts/migration-notes.md": 7,
+      "skills/sf4/rules/skill-mesh-balance.md": 4,
+      "skills/sf4/references/artifacts/qa-report.md": 1
+    },
+    "average_confidence": 0.527,
+    "high_confidence_count": 0,
+    "medium_confidence_count": 36,
+    "low_confidence_count": 0,
+    "duplicate_candidate_count": 0,
+    "duplicate_group_count": 0,
+    "review_group_count": 9
+  },
+  "review_groups": [
+    {
+      "group_id": "kind.knowledge",
+      "group_type": "kind",
+      "title": "knowledge",
+      "candidate_count": 31,
+      "candidate_ids": [
+        "object.simai-framework-4.2c91f44b",
+        "object.quick-start.455083ca",
+        "object.non-negotiable-rules.a44127d6",
+        "object.execution-workflow.9f61a1b4",
+        "object.task-routing.aaae5b01",
+        "object.grid-view-block-and-template-areas.99a5b312",
+        "object.frontend-markup-utilities-and-ui-components.b7ee9b48",
+        "object.frontend-interaction-assets-and-accessibility.9fe9b64f",
+        "object.linkage-remediation.bae0f45a",
+        "object.settings-and-inheritance.03901d4b",
+        "object.components-iblocks-and-hl-blocks.c7be1e44",
+        "object.wizard-actions-and-deployment.05b436ff",
+        "object.quality-and-regression.e4fe3aae",
+        "object.scripts.381e3298",
+        "object.when-to-ask-user.a958f5b5",
+        "object.does-not-own.9533744f",
+        "object.companion-contracts.8181dfe2",
+        "object.handoff.09496b01",
+        "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+        "object.1-route-classification-check.b9374470"
+      ]
+    },
+    {
+      "group_id": "kind.skill",
+      "group_type": "kind",
+      "title": "skill",
+      "candidate_count": 3,
+      "candidate_ids": [
+        "object.skill-mesh-balance.20a52bfd",
+        "object.6-e2e-verdict-for-skill-usage.da0fccd2",
+        "object.7-skill-routing-consistency-check-sf4.f51bb01f"
+      ]
+    },
+    {
+      "group_id": "kind.operation",
+      "group_type": "kind",
+      "title": "operation",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "object.backend-data-property-and-api-patterns.ef5d5af0"
+      ]
+    },
+    {
+      "group_id": "kind.risk",
+      "group_type": "kind",
+      "title": "risk",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "object.5-backend-risk-baseline.2b35ef9b"
+      ]
+    },
+    {
+      "group_id": "source.skills-sf4-skill-md",
+      "group_type": "source",
+      "title": "skills/sf4/SKILL.md",
+      "candidate_count": 16,
+      "candidate_ids": [
+        "object.simai-framework-4.2c91f44b",
+        "object.quick-start.455083ca",
+        "object.non-negotiable-rules.a44127d6",
+        "object.execution-workflow.9f61a1b4",
+        "object.task-routing.aaae5b01",
+        "object.grid-view-block-and-template-areas.99a5b312",
+        "object.frontend-markup-utilities-and-ui-components.b7ee9b48",
+        "object.frontend-interaction-assets-and-accessibility.9fe9b64f",
+        "object.backend-data-property-and-api-patterns.ef5d5af0",
+        "object.linkage-remediation.bae0f45a",
+        "object.settings-and-inheritance.03901d4b",
+        "object.components-iblocks-and-hl-blocks.c7be1e44",
+        "object.wizard-actions-and-deployment.05b436ff",
+        "object.quality-and-regression.e4fe3aae",
+        "object.scripts.381e3298",
+        "object.when-to-ask-user.a958f5b5"
+      ]
+    },
+    {
+      "group_id": "source.skills-sf4-references-artifacts-e2e-university-ru-type-abc-md",
+      "group_type": "source",
+      "title": "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md",
+      "candidate_count": 8,
+      "candidate_ids": [
+        "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+        "object.1-route-classification-check.b9374470",
+        "object.2-syntax-check-php-l.ec918913",
+        "object.3-route-structure-audit-baseline.b2c5712a",
+        "object.4-frontend-baseline-audit.5be34e53",
+        "object.5-backend-risk-baseline.2b35ef9b",
+        "object.6-e2e-verdict-for-skill-usage.da0fccd2",
+        "object.7-skill-routing-consistency-check-sf4.f51bb01f"
+      ]
+    },
+    {
+      "group_id": "source.skills-sf4-references-artifacts-migration-notes-md",
+      "group_type": "source",
+      "title": "skills/sf4/references/artifacts/migration-notes.md",
+      "candidate_count": 7,
+      "candidate_ids": [
+        "object.migration-notes.10d6077c",
+        "object.context.cc11b3a2",
+        "object.schema-changes.78a055d1",
+        "object.data-changes.8182c396",
+        "object.idempotency.1864ba6e",
+        "object.rollback.f28daee2",
+        "object.verification.03128bed"
+      ]
+    },
+    {
+      "group_id": "source.skills-sf4-rules-skill-mesh-balance-md",
+      "group_type": "source",
+      "title": "skills/sf4/rules/skill-mesh-balance.md",
+      "candidate_count": 4,
+      "candidate_ids": [
+        "object.skill-mesh-balance.20a52bfd",
+        "object.does-not-own.9533744f",
+        "object.companion-contracts.8181dfe2",
+        "object.handoff.09496b01"
+      ]
+    },
+    {
+      "group_id": "source.skills-sf4-references-artifacts-qa-report-md",
+      "group_type": "source",
+      "title": "skills/sf4/references/artifacts/qa-report.md",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "object.qa-report.8ee64164"
+      ]
+    }
+  ],
+  "duplicate_candidates": [],
+  "uncertain_items": [],
+  "missing_evidence": [
+    "candidates are source-aware but still require semantic review before canonical write",
+    "source-group relations are weak signals and must be accepted, rejected or replaced by explicit domain relations"
+  ],
+  "review_questions": [
+    "Which candidates have a real lifecycle, owner, relation or future usage?",
+    "Which candidates should be merged, renamed or rejected before canonical acceptance?",
+    "Does the parent graph DNA need to be updated before accepting these candidates?",
+    "Are confidence signals sufficient, or should a domain skill review semantic meaning?"
+  ],
+  "source_inventory": [
+    {
+      "source_ref": "skills/sf4/SKILL.md",
+      "bytes_read": 20224,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/rules/skill-mesh-balance.md",
+      "bytes_read": 1920,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md",
+      "bytes_read": 3330,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/migration-notes.md",
+      "bytes_read": 514,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/qa-report.md",
+      "bytes_read": 734,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/regression-checklist.md",
+      "bytes_read": 789,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/university-ru-backend-risk.json",
+      "bytes_read": 8768,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/university-ru-component-template-map.json",
+      "bytes_read": 23721,
+      "truncated": true
+    }
+  ],
+  "dna_candidates": [
+    {
+      "candidate_id": "dna.graph-purpose-and-evolution-vector.6a54bed2",
+      "candidate_type": "dna",
+      "proposed_kind": "knowledge",
+      "proposed_subtype": "dna-candidate",
+      "title": "Graph purpose and evolution vector",
+      "summary": "Candidate DNA should be reviewed from extracted source themes before canonical graph DNA is changed.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/rules/skill-mesh-balance.md",
+        "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md",
+        "skills/sf4/references/artifacts/migration-notes.md",
+        "skills/sf4/references/artifacts/qa-report.md",
+        "skills/sf4/references/artifacts/regression-checklist.md",
+        "skills/sf4/references/artifacts/university-ru-backend-risk.json",
+        "skills/sf4/references/artifacts/university-ru-component-template-map.json"
+      ],
+      "confidence": 0.45,
+      "evidence_status": "extracted_by_ai",
+      "review_status": "pending",
+      "review_action": null,
+      "review_notes": [
+        "Generated as a placeholder DNA candidate because source material produced object candidates."
+      ]
+    }
+  ],
+  "projection_view_refs": [
+    "graph/generated/seed-expansions/sf4-repo-local-seed-expand-20260529/projection-view.json"
+  ],
+  "canonical_write_allowed": false
+}

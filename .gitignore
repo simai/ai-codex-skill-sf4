@@ -26,7 +26,7 @@ tmp/
 .env
 .env.*
 !.env.example
-source/
+/source/
 output/
 docs/
 site

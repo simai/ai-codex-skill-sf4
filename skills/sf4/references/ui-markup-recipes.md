@@ -20,7 +20,7 @@ Skeleton:
 ```php
 <div class="row g-3">
 \t<?foreach ($arResult["ITEMS"] as $item):?>
-\t\t<div class="col-sm-6 col-lg-4">
+\t\t<div class="col-sm-6 col-lg-4 d-flex">
 \t\t\t<article class="sf-example p-3 h-100 bg-white shadow">
 \t\t\t\t<h3 class="sf-title t-3 mb-2"><?=htmlspecialcharsbx($item["NAME"])?></h3>
 \t\t\t\t<div class="c-text-secondary">
@@ -31,6 +31,16 @@ Skeleton:
 \t<?endforeach;?>
 </div>
 ```
+
+Implementation notes:
+
+- If cards are placed in one visual row, their bottoms must align by the
+  tallest card in that row. Make the component column wrapper stretch
+  (`display:flex`/`d-flex`), make the card `width:100%` and `height:100%`
+  (`h-100`), and use an inner flex body when actions or meta need to sit on the
+  bottom edge.
+- Do not use masonry behavior when the design expects equal card heights and a
+  straight row baseline.
 
 ## Recipe 2: Split Hero (Text + Action)
 

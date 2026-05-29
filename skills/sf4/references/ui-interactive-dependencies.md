@@ -39,6 +39,16 @@ Examples found in catalog pages:
 - Markup pattern: `swiper-container` and navigation/pagination nodes.
 - Expected runtime: Swiper library + explicit init script (`new Swiper(...)`).
 - Validation: swipe, arrows, pagination, breakpoint settings, loop behavior.
+- When a slider is built from an SF4 grid/list template, do not leave the
+  `swiper-wrapper` controlled by grid layout. After Swiper initializes, the
+  wrapper must be `display:flex`, `flex-wrap:nowrap`, slides must not shrink,
+  and grid helpers that reset `margin` must not suppress Swiper spacing.
+- Check the actual Swiper version class in the rendered page. Some SF4 projects
+  add `swiper-container-horizontal` instead of `swiper-container-initialized`;
+  scope slider CSS to the class that is really present, not only to the newest
+  Swiper examples.
+- For multiple sliders on one page, bind navigation controls by unique IDs or a
+  scoped parent, not by shared global selectors like `.swiper-button-next`.
 
 ### Input Mask / Form Validation
 

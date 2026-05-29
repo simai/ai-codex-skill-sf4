@@ -34,6 +34,40 @@ grid rows, include files, `simai:sf.iblock.*` components, component templates,
 or project-layer blocks. This prevents static replicas of Figma screens and
 keeps the result editable, reusable and compatible with solution updates.
 
+When the design shows slider indicators, arrows, tabs that rotate one content
+area, or several alternative hero/banner states, treat that as an interactive
+dynamic slider unless proven otherwise. Do not draw static dots or arrows in an
+include file. First map the visible items to the correct source:
+
+- generic site/section hero banners -> existing banner iblock and
+  `simai:sf.banner.main`;
+- domain-specific featured materials such as news, projects, shelters, pets,
+  reports or reviews -> `simai:sf.iblock.list` over the owning iblock with a
+  project-layer Swiper/card template;
+- photos/albums -> gallery/photo iblock section or element components.
+
+Pagination bullets and navigation controls must be generated from the real
+item count and connected to the slider behavior. If the stock banner component
+does not match the content model or card anatomy, keep the data source dynamic
+and create a narrow project-layer component template instead of replacing the
+block with static markup.
+
+For wide hero or featured-content sliders, prefer a complete interaction
+pattern: clickable bullets, previous/next arrows that appear on hover and
+keyboard focus, and optional moderate autoplay. Autoplay must not be the only
+way to reach other slides; keep manual controls visible on interaction and
+disable or pause behavior if it conflicts with reading, forms, accessibility,
+or mobile usability.
+
+When one component template needs to show another editable dataset, prefer a
+nested component call over manual `CIBlockElement::GetList` rendering. For
+example, a shelter detail template can own the shelter hero and context, but
+photo albums should be rendered through `bitrix:catalog.section.list` or an
+SF4/Bitrix section-list component, and album photos through
+`simai:sf.iblock.list` or another list component. Manual arrays are acceptable
+only as a temporary prototype or for non-editable computed view models. The
+public editor must still see the real child section/element edit areas.
+
 ## Gate 1: Site Settings Baseline
 
 Before changing templates or routes, bring the site as close as possible to the
@@ -103,6 +137,14 @@ Inspect:
 - section subtree `/.property.php`;
 - page-specific property storage when used by the solution;
 - `simai.data/config/.structure.config.php`.
+
+For SF4 solution routes, section/page `.property.php` files must use the
+solution property format consumed by `SIMAI\Main\Configuration\Section` and
+`Page`, for example `return ['section' => [...], 'page' => [...]]`. Do not rely
+on the legacy Bitrix `$arDirProperties` array when the SF4 shell must disable
+sidebars, containers, title, breadcrumbs, banners, or change grid views: the
+page may still render, but the SF4 property merge can ignore those values and
+keep inherited left/right areas.
 
 Use this for page-specific:
 
@@ -206,6 +248,14 @@ the shared `grid_view_header` renders, while the single project-layer header
 block converts context into modifier classes. Pages without a hero must still
 work through a safe static default such as `static + white background + dark
 contrast`; the header must not depend on a hero area being present.
+
+When the header background is meant to visually continue the hero background,
+do not stop at matching colors. Also eliminate the SF4 shell gap between the
+`header` area and the first hero block. Model this as an explicit header/page
+context flag such as `flush_bottom=Y`, make the header view remove
+`.header-area` bottom margin for that flag, and verify geometry in the browser:
+`headerArea.bottom == hero.top` and `headerShell.bottom == hero.top`. A
+computed color match with a non-zero vertical gap still fails the design.
 
 Treat visible navigation affordances as requirements, not decoration. If the
 design shows dropdown markers near menu items, the SF4 implementation must
@@ -363,6 +413,15 @@ new `simai.data/grid/block/<area>/<project-code>` only when the section needs a
 reusable parameterized grid block, custom block metadata, or behavior that the
 standard include block cannot represent cleanly. This keeps simple Figma
 sections editable and avoids one-off blocks that only output static HTML.
+
+Do not use include files as storage for repeated content. If a fragment contains
+several cards, videos, reviews, stories, partners, steps, files, albums, tabs or
+other user-managed records, first model it as an iblock/entity/form source and
+render it through a component such as `simai:sf.iblock.list`. An include file may
+wrap the section and call components, but it must not contain PHP arrays that act
+as a hidden mini-database. Include files are acceptable for one-off editable
+copy, CTA wrappers, explanatory text and layout glue.
+
 The include block must preserve the public editor contract: in normal mode it
 may hide icons, but in `grid_edit_mode` it must pass `HIDE_ICONS => "N"` to
 `bitrix:main.include` or the corresponding component. Otherwise the page looks
@@ -461,8 +520,15 @@ model the underlying entities instead of copying the number. Examples:
   shelter, collected item, and date range;
 - "what is needed" should usually be a need/request entity related to shelter
   and to a catalog of collected goods;
-- shelter life photos should usually be linked photo-album sections or gallery
-  entities, not loose images in template markup;
+- shelter life photos should usually be linked photo-album sections, for
+  example a multiple `simai_ib_section` property pointing to the solution photo
+  iblock. The detail template then renders photos from the linked album
+  sections instead of storing loose image paths or gallery arrays in PHP;
+- help history should come from confirmed delivery/contribution records related
+  to the central entity, not from editorial report arrays. Store date, result
+  label or collected amount, volunteer/order relation, target shelter and proof
+  media in the delivery entity, then render only confirmed records on the detail
+  page;
 - reviews should be review elements related to the shelter;
 - related shelters and generic news are independent lists, not central element
   properties.
@@ -510,6 +576,30 @@ classes where possible, and place custom CSS in the project view/block styleshee
 instead of modifying `/bitrix/components` or the base `simai.framework`
 template.
 
+When matching a designed list card, compare the card anatomy, not only the
+content fields: image crop and corner ownership, body background, title/date
+relationship, whether a date or status is plain text or a badge, body padding,
+button size, and equal height across cards in the same row. Do not turn plain
+dates into pills or generic chips unless the design shows that state. Keep the
+card body flexible so action buttons align consistently at the bottom while
+titles and descriptions can wrap naturally.
+
+For finite card sections with a fixed grid, choose the visible item count as a
+multiple of the desktop column count. For example, a three-column news block
+should show 3, 6, 9, or 12 items, not 10, so the final row does not look like an
+accidental leftover. If there are more items, show a deliberate "more" action
+or pagination after the complete rows.
+
+If the designed action is "show more", treat it as a progressive pagination
+pattern, not as a decorative link. The first render should show one complete
+batch, and the button should load the next complete batch with the same item
+count, append it to the existing grid, preserve the active filters/search
+context, and disappear when no further items are available.
+When the visual rule requires complete rows, do not append a short final
+remainder that creates an accidental orphan row; keep the button hidden unless
+the next complete batch is available, or use a different archive/pagination
+pattern for the full unbounded list.
+
 Before adding such an override, check where the active site template physically
 lives. If the active template is `/bitrix/templates/simai.framework` and the
 project adds files under `/local/templates/simai.framework/components/...`,
@@ -550,6 +640,159 @@ If the site uses Bitrix composite HTML cache, also clear
 fresh URL that bypasses the static HTML cache. Component cache, managed cache
 and composite cache are separate acceptance concerns.
 
+## Iblock Property Semantics
+
+When a design implies a boolean `Y`/`N` value in an editable Bitrix iblock
+property, do not create a plain text field that forces the editor to type
+`Y` or `N`. In SF4 projects with SIMAI property extensions, use the
+`SIMAI: Чекбокс` user type (`USER_TYPE=simai_checkbox`) for these flags.
+
+Typical examples:
+
+- `VERIFIED`;
+- `URGENT`;
+- `NEED_VOLUNTEERS`;
+- `CAN_TRANSFER`;
+- feature toggles and availability flags.
+
+The seed/update script must update existing properties as well as create new
+ones, because a prototype may already have text properties with the same codes.
+After migration, verify the real iblock property metadata, not only rendered
+HTML.
+
+Separate central element data from template copy before adding properties:
+
+- store item-specific facts in the central element or related child entities:
+  title, description, address, phone, status, media links, relations, metrics,
+  needs, reports, reviews;
+- store repeated section headings, labels, empty-state text, button captions
+  and CTA copy that is identical for all elements of the same component
+  template in the component template language files;
+- do not add `DETAIL_*` iblock properties just to make every heading editable
+  per element when the wording is a template-level contract.
+
+This keeps the Bitrix edit form focused on business data and keeps reusable
+page text localizable through the template.
+
+Before adding a visible number as an iblock property, classify it as either a
+source fact or a calculated indicator. Do not store operational indicators as
+magic text values in the central element just because they are shown in Figma.
+
+For calculated indicators, model the source facts first:
+
+- "number of pets" comes from pet elements linked to the shelter;
+- "dogs", "cats", "found a home" come from pet type and status;
+- "volunteers" comes from volunteer records linked to the shelter, often with
+  a multiple shelter relation;
+- "weekly goal" comes from the weekly needs of linked pets or linked shelter
+  needs;
+- "collected" comes from dated intake/order/delivery records;
+- "left" and "progress" are formulas over those facts.
+
+If the real source does not exist yet, create or plan the missing related
+iblock/module entity instead of adding a manual field such as `PETS`,
+`GOAL`, `COLLECTED`, `LEFT_VALUE` or `PROGRESS` to the central element. A
+temporary aggregate is allowed only when it is explicitly marked as temporary
+and has a migration path to operational data.
+
+## Related Media And History Routes
+
+When a detail-page design shows photo albums, model them as albums, not as a
+flat list of individual photos. In Bitrix/SF4 this usually means:
+
+- photo entities live in the existing photo iblock;
+- album entities are iblock sections, organized as an editor-friendly tree,
+  for example `Gallery -> Entity type -> Entity -> Albums`;
+- the central entity, for example a shelter, stores a multiple
+  `simai_ib_section` relation to the relevant photo-album sections;
+- the detail template renders album cards using section name, section
+  description, first active photo as cover, and photo count;
+- the layout changes by album count: one album can use a full-width card, two
+  albums a two-column layout, three albums the designed 1+2 composition, and
+  more than three albums should show the first set plus a link to the complete
+  gallery route.
+
+Album cards must be actionable. Either open the photos on the current page or
+link to a working album route that uses the same gallery data source. Do not
+leave album cards as decorative static blocks.
+
+The same rule applies to histories, reports, deliveries and other related
+records. If the design shows a "history" card, the card should normally link to
+a list/detail route for the underlying record. The record must be linked to the
+central element through a real relation such as `SHELTER_REF`, not only by
+duplicated text.
+
+For production detail pages, render related editable sections through nested
+components, not through prebuilt arrays in the parent template. Typical
+examples:
+
+- "current needs" -> `simai:sf.iblock.list` over the need/request iblock,
+  filtered by the central entity relation;
+- "help history" -> `simai:sf.iblock.list` over intake/delivery/report
+  records, filtered by the central entity and public/confirmed status;
+- "reviews" -> `simai:sf.iblock.list` over review records, filtered by the
+  central entity when the section is entity-specific.
+- reusable process/checklist steps -> `simai:sf.iblock.list` over the process
+  or instruction iblock, without central-entity filter when the process is
+  shared across all detail pages.
+
+Add small project helpers for resolving the current central entity id/code and
+building the relation filter, then keep visual markup in narrow component
+templates. This keeps Bitrix edit actions attached to the actual child
+elements and lets editors update needs, reports, deliveries, photos, and
+reviews from public edit mode.
+
+When a nested `IncludeComponent(...)` is called from inside a component
+template or an include file loaded by that template, pass the current
+`$component` as the parent component instead of `false`:
+`isset($component) ? $component : false`. The child list/section template must
+also call `AddEditAction`/`AddDeleteAction` and put
+`id="<?=$this->GetEditAreaId($item["ID"])?>"` (or the section id) on the real
+visual wrapper. For `catalog.section.list` templates, add an admin-link
+fallback such as `CIBlock::GetAdminSectionEditLink(...)` when `EDIT_LINK` is
+not present in `$arResult["SECTIONS"]`. Otherwise public edit mode can show the
+parent detail component but fail to expose linked records or album sections.
+
+Validate detail templates on several central elements, not only on the first
+demo item. Related data can have different cardinality: no albums, one album,
+three albums, many albums, no reviews, or many reports. Spacing, section
+padding and responsive composition must stay stable for every valid data shape.
+If a page has uneven spacing only when a related section has one item, fix the
+component template or shared CSS, not the individual element content.
+
+Prefer generic public route names for reusable content surfaces. Use
+`/gallery/` rather than a narrow name such as `/shelter-gallery/` when the same
+section can later contain different kinds of albums. Before linking to an
+existing solution route such as `press-center/photo/`, verify that the route is
+reachable in the current local/runtime environment. If it is not reachable,
+either fix the rewrite/server configuration or create a small project-level
+route that reuses the existing iblock/module data. Do not ship dead links just
+because the original solution contains a similar section.
+
+When adding a new public list/detail route in a project-layer repository, treat
+deployment plumbing as part of the route contract, not as an afterthought.
+Update and verify all of these together:
+
+- section files and component templates in the project source;
+- `.section.php` and SF4-format `.property.php` so sidebars, title,
+  breadcrumbs, banners and containers match the page design;
+- project sync/deploy scripts so the new route is copied to the dev site;
+- Bitrix `urlrewrite.php` entries for element detail CNC URLs;
+- local web-server rewrite rules when the dev server bypasses Bitrix
+  `urlrewrite.php` for pretty URLs;
+- browser smoke on the deployed dev URL, not only on repository files.
+
+If repository code looks correct but the dev site still shows a default
+component, old sidebar, or fallback page, first check the sync and rewrite
+contract before changing the component template.
+
+On ServBay/Caddy-based dev sites, do not assume Apache `.htaccess` rewrites are
+active. If a clean detail URL such as `/news/<code>/` redirects to the home page
+while direct `/news/detail.php?ELEMENT_CODE=<code>` works, verify the local
+Caddy matcher/rewrite before changing Bitrix components. Keep the repository
+`urlrewrite.php` rule for deployment, but mirror the route in the local web
+server when that server bypasses Bitrix front-controller routing.
+
 When passing project block parameters through `simai:sf.grid`, use the exact
 SF4 parameter naming convention:
 
@@ -567,6 +810,23 @@ Do not pass block params as
 `ROW_4_COL_0_AREA_0_BUDDYDINNER.STORIES__TITLE` or
 `ROW_4_COL_0_AREA_0__BUDDYDINNER.STORIES__TITLE`: those keys are ignored and
 the block silently falls back to `.parameters.php` defaults.
+
+When a custom component template emits a `row` wrapper but the intended layout
+is CSS Grid, explicitly protect the project grid against the framework row
+styles. Use a narrow selector such as `.project-card-grid.row` or
+`.project-card-grid` with `display:grid!important`, `margin:0!important`, and
+reset direct item widths/padding. Then verify computed `display`, column count,
+card rectangles and mobile overflow in browser smoke. Otherwise Bootstrap/SF4
+`.row` can silently turn a 2/3-column design into a stacked flex layout.
+
+When a Figma block shows slider controls, pagination dots, or carousel arrows,
+implement it as a real dynamic slider, not as a static grid with decorative
+icons. Keep the data source dynamic through the relevant component/infoblock,
+load the existing SF4/project slider dependency when available, and make the
+visible item count match the design per viewport. Verify in browser smoke that
+the arrow changes the active slide, the media aspect ratio matches the design,
+and the fallback still renders a readable grid if the slider script does not
+initialize.
 
 ## BuddyDinner Lesson
 

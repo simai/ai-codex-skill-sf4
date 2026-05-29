@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0.0",
+  "graph_id": "growgraph.skill-sf4",
+  "exported_at": "2026-05-29T19:43:59.328245+00:00",
+  "freshness_hash": "sha256:7f83540380dca871d0391618264e1c3777f1a539de616246b59ced0729fc0dd1",
+  "manifest": {
+    "graph_id": "growgraph.skill-sf4",
+    "title": "GrowGraph federation export for skill:sf4",
+    "graph_type": "growgraph_skill_pilot",
+    "owner": "sf4",
+    "source_of_truth": "generated_growgraph_pilot_artifacts",
+    "audience": "internal",
+    "canonical_write_allowed": false
+  },
+  "graph_contracts": [
+    {
+      "name": "growgraph-adoption-report",
+      "schema_ref": "schemas/core/growgraph-adoption-report.schema.json"
+    },
+    {
+      "name": "semantic-preservation-verdict",
+      "schema_ref": "schemas/core/semantic-preservation-verdict.schema.json"
+    },
+    {
+      "name": "effectiveness-report",
+      "schema_ref": "schemas/core/effectiveness-report.schema.json"
+    },
+    {
+      "name": "control-dashboard",
+      "schema_ref": "schemas/core/control-dashboard.schema.json"
+    },
+    {
+      "name": "graph-embryo",
+      "schema_ref": "schemas/core/graph-embryo.schema.json"
+    }
+  ],
+  "object_index_summary": {
+    "object_count": 36,
+    "total_object_count": 36,
+    "kinds": {
+      "knowledge": 31,
+      "operation": 1,
+      "risk": 1,
+      "skill": 3
+    },
+    "excluded_by_policy_count": 0
+  },
+  "relation_endpoint_summary": {
+    "relation_count": 32,
+    "relation_types": {
+      "relates_to": 1,
+      "source_related_to": 31
+    },
+    "top_endpoints": [
+      {
+        "object_id": "object.simai-framework-4.2c91f44b",
+        "degree": 16
+      },
+      {
+        "object_id": "object.e2e-validation-sf4-type-a-b-c-cases-ru.2e61d106",
+        "degree": 7
+      },
+      {
+        "object_id": "object.migration-notes.10d6077c",
+        "degree": 6
+      },
+      {
+        "object_id": "object.skill-mesh-balance.20a52bfd",
+        "degree": 3
+      },
+      {
+        "object_id": "object.quick-start.455083ca",
+        "degree": 2
+      },
+      {
+        "object_id": "object.1-route-classification-check.b9374470",
+        "degree": 1
+      },
+      {
+        "object_id": "object.2-syntax-check-php-l.ec918913",
+        "degree": 1
+      },
+      {
+        "object_id": "object.3-route-structure-audit-baseline.b2c5712a",
+        "degree": 1
+      },
+      {
+        "object_id": "object.4-frontend-baseline-audit.5be34e53",
+        "degree": 1
+      },
+      {
+        "object_id": "object.5-backend-risk-baseline.2b35ef9b",
+        "degree": 1
+      },
+      {
+        "object_id": "object.6-e2e-verdict-for-skill-usage.da0fccd2",
+        "degree": 1
+      },
+      {
+        "object_id": "object.7-skill-routing-consistency-check-sf4.f51bb01f",
+        "degree": 1
+      },
+      {
+        "object_id": "object.backend-data-property-and-api-patterns.ef5d5af0",
+        "degree": 1
+      },
+      {
+        "object_id": "object.companion-contracts.8181dfe2",
+        "degree": 1
+      },
+      {
+        "object_id": "object.components-iblocks-and-hl-blocks.c7be1e44",
+        "degree": 1
+      },
+      {
+        "object_id": "object.context.cc11b3a2",
+        "degree": 1
+      },
+      {
+        "object_id": "object.data-changes.8182c396",
+        "degree": 1
+      },
+      {
+        "object_id": "object.does-not-own.9533744f",
+        "degree": 1
+      },
+      {
+        "object_id": "object.execution-workflow.9f61a1b4",
+        "degree": 1
+      },
+      {
+        "object_id": "object.frontend-interaction-assets-and-accessibility.9fe9b64f",
+        "degree": 1
+      },
+      {
+        "object_id": "object.frontend-markup-utilities-and-ui-components.b7ee9b48",
+        "degree": 1
+      },
+      {
+        "object_id": "object.grid-view-block-and-template-areas.99a5b312",
+        "degree": 1
+      },
+      {
+        "object_id": "object.handoff.09496b01",
+        "degree": 1
+      },
+      {
+        "object_id": "object.idempotency.1864ba6e",
+        "degree": 1
+      },
+      {
+        "object_id": "object.linkage-remediation.bae0f45a",
+        "degree": 1
+      }
+    ]
+  },
+  "readiness_summary": {
+    "adoption_level": 7,
+    "adoption_level_name": "effectiveness_checked",
+    "grs_score": null,
+    "semantic_verdict": "pass_with_notes",
+    "effectiveness_verdict": "improved"
+  },
+  "evidence_status_summary": {
+    "candidate": 36
+  },
+  "unresolved_links": [],
+  "migration_status": "federation_ready",
+  "compatibility": {
+    "kernel_version": "0.1.1",
+    "schema_version": "1.0.0",
+    "operation_model_version": "0.1.0",
+    "runtime_contract_version": "0.1.1",
+    "consumer_minimum_protocol": "1.0.0"
+  },
+  "growgraph_adoption": {
+    "target_ref": "skill:sf4",
+    "owner_skill": "sf4",
+    "adoption_level": 7,
+    "adoption_level_name": "effectiveness_checked",
+    "semantic_verdict": "pass_with_notes",
+    "effectiveness_verdict": "improved",
+    "source_refs": [
+      "graph/generated/growgraph/adoption-reports/sf4-repo-local-adoption-gga8-20260529/growgraph-adoption-report.json",
+      "graph/generated/control-dashboards/sf4-repo-local-control-dashboard-20260529/control-dashboard.json",
+      "graph/generated/growgraph/semantic-preservation/sf4-repo-local-semantic-review-20260529/semantic-preservation-verdict.json",
+      "graph/generated/growgraph/effectiveness-reports/sf4-repo-local-effectiveness-20260529/effectiveness-report.json",
+      "graph/generated/seed-expansions/sf4-repo-local-seed-expand-20260529/graph-embryo.json"
+    ]
+  },
+  "privacy_filter": {
+    "audience": "internal",
+    "include_private": false
+  },
+  "next_actions": [
+    "update adoption report with federation export",
+    "review AGENTS.md and hooks integration before GGA9"
+  ],
+  "canonical_write_allowed": false
+}

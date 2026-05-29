@@ -143,6 +143,16 @@ standard option:
 - use `btn-icon` for icon-only action buttons, including search buttons; combine
   it with the closest size modifier such as `btn-1` when the design expects a
   large square action.
+- for theme-controlled text buttons, prefer the standard SF4 composition
+  `btn btn-theme` before adding project CSS;
+- when Figma explicitly defines a non-standard detail button with a custom icon,
+  fixed opacity background, and radius, keep the SF4 base `btn`, but isolate the
+  exact visual contract in one reusable project class instead of scattering
+  padding, radius, icon, and color overrides across cards.
+- if one visual button has several contextual sizes, keep the same base visual
+  class and change only dimensions through context/modifier selectors. For
+  example, a hero button may be 52px high while card buttons stay 40px high,
+  with the same font size, icon, color, opacity, and radius.
 
 ## Modifier-First Quick Map
 

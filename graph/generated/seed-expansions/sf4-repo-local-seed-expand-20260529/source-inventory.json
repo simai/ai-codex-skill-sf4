@@ -1,0 +1,45 @@
+{
+  "source_inventory": [
+    {
+      "source_ref": "skills/sf4/SKILL.md",
+      "bytes_read": 20224,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/rules/skill-mesh-balance.md",
+      "bytes_read": 1920,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/e2e-university-ru-type-abc.md",
+      "bytes_read": 3330,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/migration-notes.md",
+      "bytes_read": 514,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/qa-report.md",
+      "bytes_read": 734,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/regression-checklist.md",
+      "bytes_read": 789,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/university-ru-backend-risk.json",
+      "bytes_read": 8768,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/sf4/references/artifacts/university-ru-component-template-map.json",
+      "bytes_read": 23721,
+      "truncated": true
+    }
+  ],
+  "warnings": []
+}
