@@ -44,3 +44,7 @@
   controls and dots in design require a real dynamic slider with browser-checked
   navigation, media ratio and grid fallback, not decorative arrows on a static
   list.
+- Added a Figma node verification gate for SF4 solution customization: before
+  coding a page, record the exact node id, target URL, page type, repeated
+  groups, dynamic sources, and reusable solution primitives; a structurally
+  wrong page is failed even when browser smoke passes.

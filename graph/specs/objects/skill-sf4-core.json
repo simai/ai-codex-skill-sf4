@@ -1,0 +1,26 @@
+{
+  "id": "skill.sf4.core",
+  "schema_version": "1.0.0",
+  "kind": "skill",
+  "title": "SF4 skill core",
+  "summary": "Owns SIMAI Framework 4 on Bitrix: simai.data, grid/view/block page assembly, components, iblock/HL setup, wizard actions and modernization workflows.",
+  "owner": "sf4",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.88,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/sf4/SKILL.md"
+  ],
+  "evidence_refs": [],
+  "tags": [
+    "skill",
+    "growgraph-runtime",
+    "capability-profile",
+    "sf4",
+    "skill",
+    "core"
+  ],
+  "subtype": "skill_core"
+}

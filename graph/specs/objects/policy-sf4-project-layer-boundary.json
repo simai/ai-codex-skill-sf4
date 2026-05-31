@@ -1,0 +1,28 @@
+{
+  "id": "policy.sf4.project-layer-boundary",
+  "schema_version": "1.0.0",
+  "kind": "policy",
+  "title": "SF4 project-layer boundary",
+  "summary": "Prefer safe project-layer overrides and preserve source-of-truth/current-organization assumptions.",
+  "owner": "sf4",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.88,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/references/project-layout.md",
+    "skills/sf4/references/portal-runtime-source-of-truth.md"
+  ],
+  "evidence_refs": [],
+  "tags": [
+    "skill",
+    "growgraph-runtime",
+    "capability-profile",
+    "sf4",
+    "policy",
+    "policy"
+  ],
+  "subtype": "skill_policy"
+}

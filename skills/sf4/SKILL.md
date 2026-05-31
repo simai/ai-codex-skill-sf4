@@ -7,6 +7,10 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 
 Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md) when SF4 work crosses Bitrix, SF5, Larena, OrgPortal, docs, UX, SEO, QA, runtime, or repository-delivery ownership.
 
+## GrowGraph Runtime Entry
+
+For substantial `sf4` tasks, use repo-local `graph/specs` and the latest GrowGraph runtime context as the first machine-readable index for capability selection, routing, readiness, companion contracts and scenario evidence. The graph layer may choose the owner boundary, required gates, related skills and raw-source fallback path for SIMAI Framework 4 page assembly, Bitrix/SF4 data structure and template/component decisions. Raw `sf4` sources remain authoritative for detailed methodology, judgement, longform playbooks, sensitive rules, reporting format and final domain verdicts. Sensitive/runtime/security and safe-write decisions require raw-source fallback and the relevant owner gate. Platform-specific playbooks stay in the owner skill; the central graph may point to them but must not absorb them. This is GrowGraph Hybrid SOT, not graph-only runtime.
+
 ## Quick Start
 
 1. Run `python3 scripts/sf4_project_audit.py --site-root <project_root>` to detect `simai.data`, validate critical files, and verify `grid_view_*` mappings.

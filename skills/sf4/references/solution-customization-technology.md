@@ -34,6 +34,23 @@ grid rows, include files, `simai:sf.iblock.*` components, component templates,
 or project-layer blocks. This prevents static replicas of Figma screens and
 keeps the result editable, reusable and compatible with solution updates.
 
+Before implementing any concrete page, verify the exact Figma node and page
+type. Do not reuse a nearby design frame, previous page pattern, or similar
+section by assumption. Capture these facts in the project workflow before
+coding:
+
+- exact Figma URL and node id;
+- page name from the design;
+- current target URL in the SF4 site;
+- whether the screen is a list page, detail page, form page, landing section, or
+  mixed page;
+- all visible repeated groups and their intended dynamic sources;
+- which existing solution blocks/components can be reused.
+
+If the rendered result differs structurally from the Figma page, stop and
+re-open the exact node instead of patching the wrong composition. A wrong page
+route that passes smoke is still a failed SF4 customization.
+
 When the design shows slider indicators, arrows, tabs that rotate one content
 area, or several alternative hero/banner states, treat that as an interactive
 dynamic slider unless proven otherwise. Do not draw static dots or arrows in an

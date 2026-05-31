@@ -1,0 +1,29 @@
+{
+  "id": "capability.sf4.config-data",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "title": "SF4 config and data",
+  "summary": "Work with site/section/page properties, iblock/highloadblock setup, storage API and simai.data runtime settings.",
+  "owner": "sf4",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.88,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/references/config-and-data.md",
+    "skills/sf4/references/iblock-hl-standard.md",
+    "skills/sf4/references/storage-api-playbook.md"
+  ],
+  "evidence_refs": [],
+  "tags": [
+    "skill",
+    "growgraph-runtime",
+    "capability-profile",
+    "sf4",
+    "capability",
+    "capability"
+  ],
+  "subtype": "skill_capability"
+}

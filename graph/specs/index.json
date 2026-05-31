@@ -1,17 +1,43 @@
 {
   "schema_version": "1.0.0",
-  "graph_id": "example.graph",
-  "title": "Example Graph",
-  "description": "Template graph index.",
+  "graph_id": "ai-codex-skill-sf4.graph",
+  "title": "SF4 Skill Graph",
+  "description": "GrowGraph runtime capability profile for ai-codex-skill-sf4.",
   "type_descriptor_files": [
     "type-descriptors/core.json"
   ],
   "object_files": [
-    "objects/example-capability.json",
-    "objects/example-policy.json"
+    "objects/skill-sf4-core.json",
+    "objects/capability-sf4-page-assembly.json",
+    "objects/capability-sf4-config-data.json",
+    "objects/capability-sf4-ui-modernization.json",
+    "objects/capability-sf4-wizard-actions.json",
+    "objects/capability-sf4-qa-regression.json",
+    "objects/policy-sf4-project-layer-boundary.json",
+    "objects/policy-sf4-backend-risk-gate.json",
+    "objects/gate-sf4-regression-readiness.json"
   ],
   "relation_files": [
-    "relations/example-relation.json"
+    "relations/relation-skill-sf4-core-implements-capability-sf4-page-assembly.json",
+    "relations/relation-skill-sf4-core-implements-capability-sf4-config-data.json",
+    "relations/relation-skill-sf4-core-implements-capability-sf4-ui-modernization.json",
+    "relations/relation-skill-sf4-core-implements-capability-sf4-wizard-actions.json",
+    "relations/relation-skill-sf4-core-implements-capability-sf4-qa-regression.json",
+    "relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-project-layer-boundary.json",
+    "relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-backend-risk-gate.json",
+    "relations/relation-capability-sf4-config-data-governed-by-policy-sf4-project-layer-boundary.json",
+    "relations/relation-capability-sf4-config-data-governed-by-policy-sf4-backend-risk-gate.json",
+    "relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-project-layer-boundary.json",
+    "relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate.json",
+    "relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-project-layer-boundary.json",
+    "relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-backend-risk-gate.json",
+    "relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-project-layer-boundary.json",
+    "relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-backend-risk-gate.json",
+    "relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-page-assembly.json",
+    "relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-config-data.json",
+    "relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-ui-modernization.json",
+    "relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-wizard-actions.json",
+    "relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression.json"
   ],
   "evolution_track_files": [
     "evolution-tracks/example-track.json"

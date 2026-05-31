@@ -1,0 +1,28 @@
+{
+  "id": "capability.sf4.qa-regression",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "title": "SF4 QA regression",
+  "summary": "Prepare regression, link, component-template and backend-risk evidence for SF4 changes.",
+  "owner": "sf4",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.88,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/references/qa-regression.md",
+    "skills/sf4/references/backend-critical-guides.md"
+  ],
+  "evidence_refs": [],
+  "tags": [
+    "skill",
+    "growgraph-runtime",
+    "capability-profile",
+    "sf4",
+    "capability",
+    "capability"
+  ],
+  "subtype": "skill_capability"
+}

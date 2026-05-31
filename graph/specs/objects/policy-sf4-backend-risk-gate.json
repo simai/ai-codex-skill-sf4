@@ -1,0 +1,28 @@
+{
+  "id": "policy.sf4.backend-risk-gate",
+  "schema_version": "1.0.0",
+  "kind": "policy",
+  "title": "SF4 backend risk gate",
+  "summary": "Backend/template changes require risk scan, regression evidence and no silent platform-wide changes.",
+  "owner": "sf4",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.88,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/references/backend-critical-guides.md",
+    "skills/sf4/references/qa-regression.md"
+  ],
+  "evidence_refs": [],
+  "tags": [
+    "skill",
+    "growgraph-runtime",
+    "capability-profile",
+    "sf4",
+    "policy",
+    "policy"
+  ],
+  "subtype": "skill_policy"
+}

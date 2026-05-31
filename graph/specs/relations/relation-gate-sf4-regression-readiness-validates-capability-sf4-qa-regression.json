@@ -1,0 +1,18 @@
+{
+  "id": "relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "gate.sf4.regression-readiness",
+  "to": "capability.sf4.qa-regression",
+  "relation_type": "validates",
+  "status": "accepted",
+  "confidence": 0.86,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "impact": "medium",
+  "owner": "graph",
+  "source_refs": [
+    "skills/sf4/SKILL.md"
+  ],
+  "evidence_refs": []
+}

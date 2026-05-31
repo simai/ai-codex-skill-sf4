@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.readiness-score",
+  "score_id": "sf4-gga10-grs-backfill-20260530",
+  "created_at": "2026-05-30T10:19:56.321263+00:00",
+  "target_repo": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4",
+  "target_graph": "skill:sf4",
+  "target_mode": "pilot",
+  "score": 80,
+  "band": "G4_controlled_runtime_candidate",
+  "dimension_scores": {
+    "canonical_structure": {
+      "score": 18,
+      "max": 20,
+      "summary": "Seed and embryo are available for pilot review.",
+      "evidence_refs": [
+        "graph/source/growgraph/seeds/sf4-repo-local-seed-20260529.json",
+        "graph/generated/seed-expansions/sf4-repo-local-seed-expand-20260529/graph-embryo.json"
+      ]
+    },
+    "evidence_contracts": {
+      "score": 16,
+      "max": 20,
+      "summary": "Control dashboard and proposal queue are available.",
+      "evidence_refs": [
+        "graph/generated/control-dashboards/sf4-repo-local-control-dashboard-20260529/control-dashboard.json",
+        "graph/generated/embryo-proposals/sf4-repo-local-embryo-proposals-20260529/action-proposals.json"
+      ]
+    },
+    "context_benchmark": {
+      "score": 18,
+      "max": 20,
+      "summary": "Effectiveness gate passed.",
+      "evidence_refs": [
+        "graph/generated/growgraph/effectiveness-reports/sf4-repo-local-effectiveness-20260529/effectiveness-report.json"
+      ]
+    },
+    "semantic_domain_safety": {
+      "score": 23,
+      "max": 25,
+      "summary": "Semantic preservation gate passed.",
+      "evidence_refs": [
+        "graph/generated/growgraph/semantic-preservation/sf4-repo-local-semantic-review-20260529/semantic-preservation-verdict.json"
+      ]
+    },
+    "runtime_operational": {
+      "score": 5,
+      "max": 15,
+      "summary": "Runtime gate is not required for GrowGraph pilot scoring.",
+      "evidence_refs": []
+    }
+  },
+  "caps_applied": [],
+  "evidence_refs": [
+    "graph/generated/control-dashboards/sf4-repo-local-control-dashboard-20260529/control-dashboard.json",
+    "graph/generated/growgraph/semantic-preservation/sf4-repo-local-semantic-review-20260529/semantic-preservation-verdict.json",
+    "graph/generated/growgraph/effectiveness-reports/sf4-repo-local-effectiveness-20260529/effectiveness-report.json"
+  ],
+  "interpretation": "GrowGraph pilot score for skill adoption gates; this is not runtime approval.",
+  "next_actions": [
+    "update GrowGraph adoption report",
+    "do not claim federation migration until semantic and effectiveness gates pass"
+  ],
+  "canonical_write_allowed": false,
+  "owner_skill": "sf4",
+  "projection_view_count": 1
+}

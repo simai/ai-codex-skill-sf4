@@ -1,0 +1,18 @@
+{
+  "id": "relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "capability.sf4.ui-modernization",
+  "to": "policy.sf4.backend-risk-gate",
+  "relation_type": "governed_by",
+  "status": "accepted",
+  "confidence": 0.86,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "impact": "medium",
+  "owner": "graph",
+  "source_refs": [
+    "skills/sf4/SKILL.md"
+  ],
+  "evidence_refs": []
+}
