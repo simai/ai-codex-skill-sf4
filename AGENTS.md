@@ -7,14 +7,14 @@
 Этот репозиторий содержит SIMAI skill. Domain skill остаётся владельцем своего
 предметного смысла, source files, правил, references и acceptance gates.
 
-`GrowGraph` используется как companion layer для структуры, связей,
+`Mirai Graph` используется как companion layer для структуры, связей,
 adoption/readiness, semantic preservation, effectiveness и federation
 contracts. Он не заменяет `SKILL.md`, `kernel/`, `rules/`, `activities/`,
 `specialists/`, `knowledge-packs`, `references/` и `quality/`.
 
-## GrowGraph Rules
+## Mirai Graph Rules
 
-- Не считать repo-local GrowGraph migration успешной только из-за валидного JSON.
+- Не считать repo-local Mirai Graph migration успешной только из-за валидного JSON.
 - Не переписывать skill source files массово из generated artifacts.
 - Generated candidates из `graph/generated/` не являются canonical truth.
 - Domain ownership stays with the local skill; `$graph` owns graph structure and gates only.
@@ -23,15 +23,15 @@ contracts. Он не заменяет `SKILL.md`, `kernel/`, `rules/`, `activiti
 
 ## Required Gate
 
-Before claiming GrowGraph integration for this repository, run:
+Before claiming Mirai Graph integration for this repository, run:
 
 ```bash
-python3 scripts/growgraph_contract_gate.py
+python3 scripts/mirai_graph_contract_gate.py
 ```
 
 The GitHub workflow also runs this gate after ordinary repository checks.
 
-## Current Repo-Local GrowGraph Scope
+## Current Repo-Local Mirai Graph Scope
 
 Current migration scope:
 

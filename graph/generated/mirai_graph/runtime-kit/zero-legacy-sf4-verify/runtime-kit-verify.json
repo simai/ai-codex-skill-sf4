@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "id": "mirai-graph-skill-runtime-verify.zero-legacy-sf4-verify",
+  "operation_id": "mirai_graph.skill-runtime.verify",
+  "created_at": "2026-06-03T19:24:47.277038+00:00",
+  "skill": "sf4",
+  "repo": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4",
+  "object_count": 9,
+  "relation_count": 20,
+  "required_files": {
+    "contract_gate": "scripts/mirai_graph_contract_gate.py",
+    "agents": "AGENTS.md",
+    "hook_doc": "graph/federation/hooks/mirai-graph-contract-gate.md"
+  },
+  "missing_required": [],
+  "warnings": [],
+  "blockers": [],
+  "canonical_write_allowed": false
+}
