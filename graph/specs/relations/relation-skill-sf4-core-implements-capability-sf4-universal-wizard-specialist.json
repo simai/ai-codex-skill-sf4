@@ -1,0 +1,21 @@
+{
+  "id": "relation-skill-sf4-core-implements-capability-sf4-universal-wizard-specialist",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "skill.sf4.core",
+  "to": "capability.sf4.universal-wizard-specialist",
+  "relation_type": "implements",
+  "status": "accepted",
+  "confidence": 0.82,
+  "confidence_method": "source_corpus_and_human_requested_specialist",
+  "evidence_status": "validated",
+  "impact": "high",
+  "owner": "graph",
+  "source_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/specialists/universal-wizard.md"
+  ],
+  "evidence_refs": [
+    "source/workflow/2026-06-06-sf4-universal-wizard-specialist-graph.md"
+  ]
+}

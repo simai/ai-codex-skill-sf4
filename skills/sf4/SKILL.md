@@ -43,7 +43,7 @@ For substantial `sf4` tasks, use repo-local `graph/specs` and the latest Mirai G
    - Existing SF4 solution customization from client design: read `references/solution-customization-technology.md`.
    - Component, iblock, or HL-block task: read `references/components-catalog.md`.
    - Iblock/HL creation standard: read `references/iblock-hl-standard.md`.
-   - Wizard install/update/import task: read `references/wizard-actions.md`.
+   - Wizard install/update/import task: read `references/wizard-actions.md`; for universal master creation, packaging, visualization or audit also read `specialists/universal-wizard.md`.
    - Missing `view -> block` bindings remediation: read `references/linkage-remediation.md`.
    - QA/regression verification: read `references/qa-regression.md`.
    - Data hygiene and secret handling: read `references/hygiene-and-secrets.md`.
@@ -212,6 +212,7 @@ For substantial `sf4` tasks, use repo-local `graph/specs` and the latest Mirai G
 ### Wizard Actions and Deployment
 
 - Read `references/wizard-actions.md`.
+- Read `specialists/universal-wizard.md` when the task involves universal master creation, master package data, action contract changes, iblock/HL archive export/import, visual wizard configuration or read-only wizard audit.
 - Read `references/system-layer-simai.md` for action/master folder conventions and fallback action resolution.
 - Read `references/update-artifacts.md` for mandatory update outputs.
 - For step-by-step execution, read `references/task-playbooks.md` sections 7 and 10.

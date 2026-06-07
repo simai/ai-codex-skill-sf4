@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-06-06T09:28:08.397453+00:00",
+  "skill": "sf4",
+  "repo": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4",
+  "detector_report_ref": "/var/folders/5h/9qj7mywd5170nxnv1v7_72pc0000gn/T/tmpjli055gk.json",
+  "changed_files": [
+    {
+      "path": "skills/sf4/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": ""
+    },
+    {
+      "path": "skills/sf4/references/wizard-actions.md",
+      "source_path": "references/wizard-actions.md",
+      "change_types": [
+        "methodology"
+      ],
+      "routing_impact": false,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": ""
+    },
+    {
+      "path": "skills/sf4/specialists/universal-wizard.md",
+      "source_path": "specialists/universal-wizard.md",
+      "change_types": [
+        "methodology",
+        "new-specialist",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "??",
+      "old_path": ""
+    }
+  ],
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "new-specialist",
+    "routing-impact"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/references/wizard-actions.md",
+    "skills/sf4/specialists/universal-wizard.md"
+  ],
+  "canonical_write_allowed": false
+}

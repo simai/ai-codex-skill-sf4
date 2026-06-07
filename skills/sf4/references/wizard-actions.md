@@ -1,5 +1,13 @@
 # Wizard Actions and Deployment Flows
 
+## Universal Wizard Specialist
+
+For universal master creation, modification, packaging, visualization, iblock/HL archive export/import or read-only wizard audit, use:
+
+- `skills/sf4/specialists/universal-wizard.md`
+
+This reference keeps the shared runtime/action rules concise. The specialist owns the detailed action contract discipline, package matrix, visual contract, audit workflow and graph integration boundary.
+
 ## Wizard Entry Pattern
 
 Typical wizard entry script:

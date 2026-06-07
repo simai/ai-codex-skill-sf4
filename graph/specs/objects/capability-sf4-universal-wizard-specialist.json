@@ -1,0 +1,39 @@
+{
+  "id": "capability.sf4.universal-wizard-specialist",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "title": "SF4 universal wizard specialist",
+  "summary": "Create, modify, package, visualize and audit SF4 universal master flows, including action contracts, iblock/highload archive import/export, payload assembly and wizard visual configuration.",
+  "owner": "sf4",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.82,
+  "confidence_method": "source_corpus_and_human_requested_specialist",
+  "evidence_status": "validated",
+  "source_refs": [
+    "skills/sf4/specialists/universal-wizard.md",
+    "skills/sf4/references/wizard-actions.md",
+    "skills/sf4/references/system-layer-simai.md",
+    "source/wizard/action-contracts.md",
+    "source/wizard/packaging-matrix.md",
+    "source/wizard/export-packaging-data.md",
+    "source/wizard/master-blueprint.md",
+    "source/wizard/visual-contract.md",
+    "source/wizard/validator-spec.md",
+    "source/wizard/specialist-apply-plan.md"
+  ],
+  "evidence_refs": [
+    "source/workflow/2026-06-06-sf4-universal-wizard-specialist-graph.md",
+    "source/output/action-gates/action-gate-report-20260606092330.json"
+  ],
+  "tags": [
+    "skill",
+    "mirai-graph-runtime",
+    "capability-profile",
+    "sf4",
+    "wizard",
+    "universal-master",
+    "specialist"
+  ],
+  "subtype": "skill_specialist_capability"
+}

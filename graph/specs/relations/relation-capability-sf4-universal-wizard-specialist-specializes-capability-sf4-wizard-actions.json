@@ -1,0 +1,21 @@
+{
+  "id": "relation-capability-sf4-universal-wizard-specialist-specializes-capability-sf4-wizard-actions",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "capability.sf4.universal-wizard-specialist",
+  "to": "capability.sf4.wizard-actions",
+  "relation_type": "specializes",
+  "status": "accepted",
+  "confidence": 0.82,
+  "confidence_method": "source_corpus_and_human_requested_specialist",
+  "evidence_status": "validated",
+  "impact": "medium",
+  "owner": "graph",
+  "source_refs": [
+    "skills/sf4/specialists/universal-wizard.md",
+    "skills/sf4/references/wizard-actions.md"
+  ],
+  "evidence_refs": [
+    "source/workflow/2026-06-06-sf4-universal-wizard-specialist-graph.md"
+  ]
+}
