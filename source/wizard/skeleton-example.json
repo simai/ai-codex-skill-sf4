@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.skeleton.example",
+  "command": [
+    "python3",
+    "scripts/sf4_wizard_skeleton.py",
+    "--code",
+    "simai.example",
+    "--name",
+    "SIMAI Example",
+    "--profile",
+    "config",
+    "--wrapper",
+    "--force"
+  ],
+  "audit_command": [
+    "python3",
+    "scripts/sf4_wizard_audit.py",
+    "--site-root",
+    "/Users/rim/Sites/sf4.test",
+    "--master",
+    "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example",
+    "--json",
+    "source/output/wizard-skeleton/simai.example/audit.json"
+  ],
+  "expected": {
+    "generator_exit_code": 0,
+    "audit_exit_code": 0,
+    "audit_status": "ready",
+    "writes": "source/output only"
+  }
+}

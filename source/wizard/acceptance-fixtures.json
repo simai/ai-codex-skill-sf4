@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.acceptance.fixtures",
+  "mode": {
+    "read_only": true,
+    "executes_php": false,
+    "executes_wizard_actions": false,
+    "writes": "json_reports_only"
+  },
+  "scenarios": [
+    {
+      "id": "simai-sveden-ready-runtime-master",
+      "description": "Complete runtime universal master with visual assets and action chain.",
+      "audit_args": {
+        "site_root": "/Users/rim/Sites/sf4.test",
+        "master": "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden"
+      },
+      "expected": {
+        "exit_code": 0,
+        "status": "ready",
+        "summary": {
+          "actions": 19,
+          "findings": 0,
+          "errors": 0,
+          "warnings": 0,
+          "missing_actions": 0,
+          "missing_payloads": 0,
+          "high_risk_side_effects": 16
+        },
+        "master_checks": {
+          "index_exists": true,
+          "config_exists": true,
+          "data_exists": true,
+          "image_dir_exists": true
+        },
+        "description": {
+          "code": "simai_sveden",
+          "stage_renew": "Y",
+          "background_color": "#134A5B",
+          "primary_color": "#F34E3F",
+          "secondary_color": "#134A5B",
+          "logo_resolution": "deterministic",
+          "background_image_resolution": "deterministic"
+        },
+        "action_codes_contains": [
+          "site.choice.sveden",
+          "file.copy",
+          "iblockconfig.import.data",
+          "replace.code",
+          "iblock.import.archive",
+          "iblock.import.archive.sveden",
+          "info"
+        ],
+        "finding_codes": []
+      }
+    },
+    {
+      "id": "simai-sf4university-missing-config",
+      "description": "Runtime master shell where .wizard.config.php is absent and must block wizard work.",
+      "audit_args": {
+        "site_root": "/Users/rim/Sites/university.test",
+        "master": "/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university"
+      },
+      "expected": {
+        "exit_code": 2,
+        "status": "blocked",
+        "summary": {
+          "actions": 0,
+          "findings": 2,
+          "errors": 2,
+          "warnings": 0,
+          "missing_actions": 0,
+          "missing_payloads": 0,
+          "high_risk_side_effects": 0
+        },
+        "master_checks": {
+          "index_exists": true,
+          "config_exists": false,
+          "data_exists": true
+        },
+        "finding_codes": [
+          "missing_config",
+          "missing_master_config"
+        ]
+      }
+    },
+    {
+      "id": "simai-sf4biblio-module-bridge",
+      "description": "Module installer with prebuilt install/wizard/data bridge and archive signals.",
+      "audit_args": {
+        "module_root": "/Users/rim/Sites/test.test/bitrix/modules/simai.sf4biblio"
+      },
+      "expected": {
+        "exit_code": 0,
+        "status": "ready",
+        "summary": {
+          "actions": 0,
+          "findings": 0,
+          "errors": 0,
+          "warnings": 0,
+          "missing_actions": 0,
+          "missing_payloads": 0,
+          "high_risk_side_effects": 0
+        },
+        "installer_bridge_signals": {
+          "copy_dir_files": true,
+          "runtime_master_data": true,
+          "install_wizard_data": true,
+          "install_bitrix": true,
+          "config_zip": true,
+          "medialibrary_zip": true,
+          "module_zip": true,
+          "wrapper_wizard_copy": true,
+          "master_redirect": true
+        },
+        "finding_codes": []
+      }
+    },
+    {
+      "id": "simai-sf4med-module-bridge",
+      "description": "Module installer with prebuilt install/wizard/data bridge and wrapper redirect.",
+      "audit_args": {
+        "module_root": "/Users/rim/Sites/test.test/bitrix/modules/simai.sf4med"
+      },
+      "expected": {
+        "exit_code": 0,
+        "status": "ready",
+        "summary": {
+          "actions": 0,
+          "findings": 0,
+          "errors": 0,
+          "warnings": 0,
+          "missing_actions": 0,
+          "missing_payloads": 0,
+          "high_risk_side_effects": 0
+        },
+        "installer_bridge_signals": {
+          "copy_dir_files": true,
+          "runtime_master_data": true,
+          "install_wizard_data": true,
+          "install_bitrix": true,
+          "wrapper_wizard_copy": true,
+          "master_redirect": true
+        },
+        "finding_codes": []
+      }
+    },
+    {
+      "id": "simai-sf4university-assembled-module-bridge",
+      "description": "Module installer with assembled config, iblock, php_interface, root and site payloads.",
+      "audit_args": {
+        "module_root": "/Users/rim/Sites/test.test/bitrix/modules/simai.sf4university"
+      },
+      "expected": {
+        "exit_code": 0,
+        "status": "ready",
+        "summary": {
+          "actions": 0,
+          "findings": 0,
+          "errors": 0,
+          "warnings": 0,
+          "missing_actions": 0,
+          "missing_payloads": 0,
+          "high_risk_side_effects": 0
+        },
+        "installer_bridge_signals": {
+          "copy_dir_files": true,
+          "runtime_master_data": true,
+          "install_bitrix": true,
+          "install_ru_config": true,
+          "install_iblock": true,
+          "install_php_interface": true,
+          "install_ru_root": true,
+          "install_ru_site": true,
+          "wrapper_wizard_copy": true,
+          "master_redirect": true
+        },
+        "finding_codes": []
+      }
+    }
+  ]
+}

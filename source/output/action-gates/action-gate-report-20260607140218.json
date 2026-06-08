@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.federation.gate_exec",
+  "created_at": "2026-06-07T14:02:18.504978+00:00",
+  "task": "сделать acceptance package для SF4 Universal Wizard Specialist и sf4_wizard_audit.py fixtures",
+  "repo": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4",
+  "command_provided": false,
+  "diff_provided": false,
+  "phase": "preflight",
+  "fix_safe": false,
+  "profile": "admin",
+  "route": {
+    "primary_skill": "sf4",
+    "companion_skills": [
+      "bitrix",
+      "tester"
+    ],
+    "required_gates": [
+      "platform_contract"
+    ],
+    "action_gates": [
+      "env_policy_gate",
+      "repo_hygiene_gate",
+      "source_policy_gate"
+    ],
+    "confidence": "high",
+    "blockers": []
+  },
+  "action_gate_count": 3,
+  "gate_results": [
+    {
+      "gate": "env_policy_gate",
+      "status": "success",
+      "blocking": true,
+      "owner_skill": "dev",
+      "actions": [],
+      "findings": []
+    },
+    {
+      "gate": "repo_hygiene_gate",
+      "status": "success",
+      "blocking": true,
+      "owner_skill": "dev",
+      "actions": [],
+      "findings": []
+    },
+    {
+      "gate": "source_policy_gate",
+      "status": "success",
+      "blocking": true,
+      "owner_skill": "dev",
+      "actions": [],
+      "findings": []
+    }
+  ],
+  "destructive_safety_status": "not_applicable",
+  "risk_level": "low",
+  "required_companions": [],
+  "safe_alternative": null,
+  "actions": [],
+  "warnings": [],
+  "blockers": [],
+  "status": "success"
+}

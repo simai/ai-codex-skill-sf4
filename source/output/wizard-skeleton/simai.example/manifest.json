@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.skeleton",
+  "mode": {
+    "propose_only": true,
+    "read_only_runtime": true,
+    "writes": "source_output_only",
+    "executes_php": false,
+    "executes_wizard_actions": false
+  },
+  "code": "simai.example",
+  "storage_code": "simai_example",
+  "name": "SIMAI Example",
+  "profile": "config",
+  "package_root": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example",
+  "master": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example",
+  "config": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/.wizard.config.php",
+  "wrapper": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/module/install/wizard/simai.example",
+  "audit_hint": {
+    "command": [
+      "python3",
+      "scripts/sf4_wizard_audit.py",
+      "--site-root",
+      "/Users/rim/Sites/sf4.test",
+      "--master",
+      "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example",
+      "--json",
+      "source/output/wizard-skeleton/simai.example/audit.json"
+    ]
+  },
+  "next_required_human_work": [
+    "replace placeholder visual assets",
+    "fill real config/data payloads",
+    "choose exact action chain and branch conditions",
+    "define backup/rollback per side effect",
+    "audit in controlled environment before execution"
+  ]
+}

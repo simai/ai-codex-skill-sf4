@@ -1,0 +1,385 @@
+{
+  "iblocks": [
+    "form-appeal-common",
+    "sf-ru-announce",
+    "sf-ru-anti-cor-docs",
+    "sf-ru-banner-main",
+    "sf-ru-banner-promo",
+    "sf-ru-banner-section",
+    "sf-ru-books",
+    "sf-ru-calendar-famous-date",
+    "sf-ru-category",
+    "sf-ru-document",
+    "sf-ru-ebook",
+    "sf-ru-event",
+    "sf-ru-extension-book",
+    "sf-ru-famous-people",
+    "sf-ru-faq",
+    "sf-ru-form-appeal",
+    "sf-ru-form-appeal-common",
+    "sf-ru-form-error-content",
+    "sf-ru-form-feedback",
+    "sf-ru-form-rating",
+    "sf-ru-form-vacancy",
+    "sf-ru-gos",
+    "sf-ru-green-page",
+    "sf-ru-info-main",
+    "sf-ru-lawmap",
+    "sf-ru-library",
+    "sf-ru-link-resource",
+    "sf-ru-literature-map",
+    "sf-ru-navigation",
+    "sf-ru-news",
+    "sf-ru-page-document",
+    "sf-ru-partner",
+    "sf-ru-photo",
+    "sf-ru-presentation",
+    "sf-ru-procurement",
+    "sf-ru-project",
+    "sf-ru-registration-biblio",
+    "sf-ru-review",
+    "sf-ru-room",
+    "sf-ru-service",
+    "sf-ru-sights",
+    "sf-ru-structure",
+    "sf-ru-vacancy",
+    "sf-ru-video"
+  ],
+  "iblock_entries": [
+    {
+      "code": "form-appeal-common",
+      "source": "archive",
+      "archive": "iblock/form-appeal-common.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-announce",
+      "source": "archive",
+      "archive": "iblock/sf-ru-announce.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-anti-cor-docs",
+      "source": "archive",
+      "archive": "iblock/sf-ru-anti-cor-docs.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-banner-main",
+      "source": "archive",
+      "archive": "iblock/sf-ru-banner-main.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-banner-promo",
+      "source": "archive",
+      "archive": "iblock/sf-ru-banner-promo.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-banner-section",
+      "source": "archive",
+      "archive": "iblock/sf-ru-banner-section.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-books",
+      "source": "archive",
+      "archive": "iblock/sf-ru-books.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-calendar-famous-date",
+      "source": "archive",
+      "archive": "iblock/sf-ru-calendar-famous-date.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-category",
+      "source": "archive",
+      "archive": "iblock/sf-ru-category.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-document",
+      "source": "archive",
+      "archive": "iblock/sf-ru-document.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-ebook",
+      "source": "archive",
+      "archive": "iblock/sf-ru-ebook.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-event",
+      "source": "archive",
+      "archive": "iblock/sf-ru-event.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-extension-book",
+      "source": "archive",
+      "archive": "iblock/sf-ru-extension-book.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-famous-people",
+      "source": "archive",
+      "archive": "iblock/sf-ru-famous-people.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-faq",
+      "source": "archive",
+      "archive": "iblock/sf-ru-faq.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-form-appeal-common",
+      "source": "archive",
+      "archive": "iblock/sf-ru-form-appeal-common.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-form-appeal",
+      "source": "archive",
+      "archive": "iblock/sf-ru-form-appeal.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-form-error-content",
+      "source": "archive",
+      "archive": "iblock/sf-ru-form-error-content.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-form-feedback",
+      "source": "archive",
+      "archive": "iblock/sf-ru-form-feedback.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-form-rating",
+      "source": "archive",
+      "archive": "iblock/sf-ru-form-rating.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-form-vacancy",
+      "source": "archive",
+      "archive": "iblock/sf-ru-form-vacancy.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-gos",
+      "source": "archive",
+      "archive": "iblock/sf-ru-gos.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-green-page",
+      "source": "archive",
+      "archive": "iblock/sf-ru-green-page.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-info-main",
+      "source": "archive",
+      "archive": "iblock/sf-ru-info-main.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-lawmap",
+      "source": "archive",
+      "archive": "iblock/sf-ru-lawmap.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-library",
+      "source": "archive",
+      "archive": "iblock/sf-ru-library.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-link-resource",
+      "source": "archive",
+      "archive": "iblock/sf-ru-link-resource.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-literature-map",
+      "source": "archive",
+      "archive": "iblock/sf-ru-literature-map.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-navigation",
+      "source": "archive",
+      "archive": "iblock/sf-ru-navigation.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-news",
+      "source": "archive",
+      "archive": "iblock/sf-ru-news.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-page-document",
+      "source": "archive",
+      "archive": "iblock/sf-ru-page-document.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-partner",
+      "source": "archive",
+      "archive": "iblock/sf-ru-partner.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-photo",
+      "source": "archive",
+      "archive": "iblock/sf-ru-photo.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-presentation",
+      "source": "archive",
+      "archive": "iblock/sf-ru-presentation.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-procurement",
+      "source": "archive",
+      "archive": "iblock/sf-ru-procurement.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-project",
+      "source": "archive",
+      "archive": "iblock/sf-ru-project.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-registration-biblio",
+      "source": "archive",
+      "archive": "iblock/sf-ru-registration-biblio.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-review",
+      "source": "archive",
+      "archive": "iblock/sf-ru-review.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-room",
+      "source": "archive",
+      "archive": "iblock/sf-ru-room.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-service",
+      "source": "archive",
+      "archive": "iblock/sf-ru-service.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-sights",
+      "source": "archive",
+      "archive": "iblock/sf-ru-sights.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-structure",
+      "source": "archive",
+      "archive": "iblock/sf-ru-structure.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-vacancy",
+      "source": "archive",
+      "archive": "iblock/sf-ru-vacancy.zip",
+      "has_export_xml": true
+    },
+    {
+      "code": "sf-ru-video",
+      "source": "archive",
+      "archive": "iblock/sf-ru-video.zip",
+      "has_export_xml": true
+    }
+  ],
+  "highload_entries": [],
+  "config_only_codes": [
+    "announce",
+    "anti-cor-docs",
+    "appeal",
+    "article",
+    "banner-main",
+    "banner-section",
+    "books",
+    "branch",
+    "calendar-famous-date",
+    "classrooms",
+    "company",
+    "course",
+    "department",
+    "dissertation",
+    "dissertation-counsil",
+    "dissertation-news",
+    "document",
+    "ebook",
+    "educational",
+    "eduprogram",
+    "eduservice",
+    "event",
+    "faculty",
+    "famous-people",
+    "faq",
+    "form-event",
+    "form-vacancy",
+    "gos",
+    "green-page",
+    "greeting",
+    "group",
+    "info-main",
+    "invalid",
+    "laboratory",
+    "lawmap",
+    "library",
+    "link-resource",
+    "literature-map",
+    "navigation",
+    "news",
+    "objects",
+    "page-document",
+    "partner",
+    "photo",
+    "presentation",
+    "press",
+    "price",
+    "print-product",
+    "procurement",
+    "production",
+    "program-course",
+    "project",
+    "review",
+    "room",
+    "service",
+    "shedule",
+    "sights",
+    "source",
+    "specialty",
+    "structure",
+    "vacancy",
+    "vacant",
+    "video"
+  ],
+  "review_notes": [
+    "iblocks is an explicit allowlist draft for sf4_wizard_export_builder.py",
+    "config_only_codes are not added to iblocks automatically; confirm matching real iblock codes first",
+    "highload_entries require a dedicated export/import action path or iblock archive support confirmation"
+  ]
+}

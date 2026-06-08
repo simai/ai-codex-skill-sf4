@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.acceptance",
+  "manifest": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/wizard/acceptance-fixtures.json",
+  "mode": {
+    "read_only": true,
+    "executes_php": false,
+    "executes_wizard_actions": false,
+    "writes": "json_reports_only"
+  },
+  "summary": {
+    "scenarios": 5,
+    "success": 5,
+    "failed": 0
+  },
+  "status": "success",
+  "results": [
+    {
+      "id": "simai-sveden-ready-runtime-master",
+      "status": "success",
+      "audit_report": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sveden-ready-runtime-master.json",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/scripts/sf4_wizard_audit.py",
+        "--json",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sveden-ready-runtime-master.json",
+        "--quiet",
+        "--site-root",
+        "/Users/rim/Sites/sf4.test",
+        "--master",
+        "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden"
+      ],
+      "exit_code": 0,
+      "failures": [],
+      "stderr": ""
+    },
+    {
+      "id": "simai-sf4university-missing-config",
+      "status": "success",
+      "audit_report": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4university-missing-config.json",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/scripts/sf4_wizard_audit.py",
+        "--json",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4university-missing-config.json",
+        "--quiet",
+        "--site-root",
+        "/Users/rim/Sites/university.test",
+        "--master",
+        "/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university"
+      ],
+      "exit_code": 2,
+      "failures": [],
+      "stderr": ""
+    },
+    {
+      "id": "simai-sf4biblio-module-bridge",
+      "status": "success",
+      "audit_report": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4biblio-module-bridge.json",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/scripts/sf4_wizard_audit.py",
+        "--json",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4biblio-module-bridge.json",
+        "--quiet",
+        "--module-root",
+        "/Users/rim/Sites/test.test/bitrix/modules/simai.sf4biblio"
+      ],
+      "exit_code": 0,
+      "failures": [],
+      "stderr": ""
+    },
+    {
+      "id": "simai-sf4med-module-bridge",
+      "status": "success",
+      "audit_report": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4med-module-bridge.json",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/scripts/sf4_wizard_audit.py",
+        "--json",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4med-module-bridge.json",
+        "--quiet",
+        "--module-root",
+        "/Users/rim/Sites/test.test/bitrix/modules/simai.sf4med"
+      ],
+      "exit_code": 0,
+      "failures": [],
+      "stderr": ""
+    },
+    {
+      "id": "simai-sf4university-assembled-module-bridge",
+      "status": "success",
+      "audit_report": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4university-assembled-module-bridge.json",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/scripts/sf4_wizard_audit.py",
+        "--json",
+        "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-acceptance/audit/simai-sf4university-assembled-module-bridge.json",
+        "--quiet",
+        "--module-root",
+        "/Users/rim/Sites/test.test/bitrix/modules/simai.sf4university"
+      ],
+      "exit_code": 0,
+      "failures": [],
+      "stderr": ""
+    }
+  ]
+}

@@ -236,6 +236,20 @@ For substantial `sf4` tasks, use repo-local `graph/specs` and the latest Mirai G
 
 - Audit current project:
   - `python3 scripts/sf4_project_audit.py --site-root <project_root> --site-dir <site_dir>`
+- Audit a universal wizard master/package without executing it:
+  - `python3 scripts/sf4_wizard_audit.py --master <master_path> --site-root <site_root> --json <report.json>`
+- Generate a propose-only universal wizard skeleton under `source/output`:
+  - `python3 scripts/sf4_wizard_skeleton.py --code <wizard_code> --name "<name>" --profile config --wrapper`
+- Generate a propose-only `wizard.export`-style solution packaging master from manifest:
+  - `python3 scripts/sf4_wizard_export_builder.py --manifest <manifest.json> --force`
+- Draft an export-builder manifest from a local SF4/Bitrix source site:
+  - `python3 scripts/sf4_wizard_export_inventory.py --site-root <site_root> --solution-code <code> --site-dir /ru --run-builder`
+- Draft explicit iblock/HL allowlist entries from archive/config/legacy wizard data:
+  - `python3 scripts/sf4_wizard_iblock_manifest.py --source <wizard_data_or_legacy_iblock_data_dir> --label <label> --base-manifest <manifest.json>`
+- Build a pre-execution readiness review board from audit JSON:
+  - `python3 scripts/sf4_wizard_readiness.py --audit <audit.json> --json <readiness.json> --markdown <readiness.md>`
+- Generate or check a rollback plan from readiness JSON:
+  - `python3 scripts/sf4_wizard_rollback_plan.py --readiness <readiness.json> --template-json <plan.json> --check-json <check.json>`
 - Export full `view -> block` linkage report:
   - `python3 scripts/sf4_project_audit.py --site-root <project_root> --site-dir <site_dir> --link-report-json <path.json> --link-report-csv <path.csv>`
 - Scaffold new block:

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.audit",
+  "site_root": "/Users/rim/Sites/university.test",
+  "master": "/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university",
+  "config": "/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university/.wizard.config.php",
+  "module_root": null,
+  "mode": {
+    "read_only": true,
+    "executes_php": false,
+    "executes_wizard_actions": false,
+    "writes": "json_report_only",
+    "strict_live": false
+  },
+  "master_checks": {
+    "index_exists": true,
+    "config_exists": false,
+    "data_exists": true,
+    "image_dir_exists": false,
+    "action_dir_exists": false
+  },
+  "description": {},
+  "actions": [],
+  "installer_bridge": {
+    "provided": false
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "code": "missing_config",
+      "message": "Wizard config file not found",
+      "path": "/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university/.wizard.config.php"
+    },
+    {
+      "severity": "error",
+      "code": "missing_master_config",
+      "message": "Master .wizard.config.php not found",
+      "path": "/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university/.wizard.config.php"
+    }
+  ],
+  "summary": {
+    "actions": 0,
+    "findings": 2,
+    "errors": 2,
+    "warnings": 0,
+    "missing_actions": 0,
+    "missing_payloads": 0,
+    "high_risk_side_effects": 0
+  },
+  "status": "blocked"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.export_builder",
+  "mode": {
+    "propose_only": true,
+    "writes": "source_output_only",
+    "executes_php": false,
+    "executes_bitrix": false,
+    "executes_wizard_actions": false,
+    "exports_data": false
+  },
+  "solution_code": "simai.sf4university.export",
+  "solution_name": "SIMAI SF4 University Export",
+  "source_site_root": "/Users/rim/Sites/university.test",
+  "package_root": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-export-inventory/simai.sf4university.export/builder/simai.sf4university.export",
+  "master": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-export-inventory/simai.sf4university.export/builder/simai.sf4university.export/master/simai.sf4university.export",
+  "config": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-export-inventory/simai.sf4university.export/builder/simai.sf4university.export/master/simai.sf4university.export/.wizard.config.php",
+  "action_count": 14,
+  "audit_hint": {
+    "command": [
+      "python3",
+      "scripts/sf4_wizard_audit.py",
+      "--site-root",
+      "/Users/rim/Sites/university.test",
+      "--master",
+      "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-export-inventory/simai.sf4university.export/builder/simai.sf4university.export/master/simai.sf4university.export",
+      "--json",
+      "source/output/wizard-export-builder/simai.sf4university.export/audit.json"
+    ]
+  },
+  "readiness_hint": {
+    "command": [
+      "python3",
+      "scripts/sf4_wizard_readiness.py",
+      "--audit",
+      "source/output/wizard-export-builder/simai.sf4university.export/audit.json",
+      "--label",
+      "simai.sf4university.export",
+      "--json",
+      "source/output/wizard-export-builder/simai.sf4university.export/readiness.json"
+    ]
+  },
+  "stop_conditions": [
+    "do not run generated master on live/staging without explicit scope",
+    "do not enable cleanup until generated export tree is verified",
+    "do not use broad iblock export for product packages without allowlist review",
+    "stop if audit/readiness reports are stale or blocked"
+  ]
+}

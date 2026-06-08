@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0.0",
+  "request": {
+    "task": "Sync raw source changes for sf4: capability, federation-impact, methodology, routing-impact, runtime, specialist-update",
+    "skill": "sf4",
+    "repo": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4",
+    "mode": "mirai_graph_skill_runtime_context"
+  },
+  "included_objects": [
+    {
+      "object_id": "capability.sf4.wizard-actions",
+      "score": 0.9,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 wizard actions",
+      "summary": "Plan and implement wizard actions, migration notes and update artifacts for SF4 projects.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/wizard-actions.md",
+        "skills/sf4/references/update-artifacts.md"
+      ]
+    },
+    {
+      "object_id": "capability.sf4.qa-regression",
+      "score": 0.9,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 QA regression",
+      "summary": "Prepare regression, link, component-template and backend-risk evidence for SF4 changes.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/qa-regression.md",
+        "skills/sf4/references/backend-critical-guides.md"
+      ]
+    },
+    {
+      "object_id": "policy.sf4.project-layer-boundary",
+      "score": 0.87,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 project-layer boundary",
+      "summary": "Prefer safe project-layer overrides and preserve source-of-truth/current-organization assumptions.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/project-layout.md",
+        "skills/sf4/references/portal-runtime-source-of-truth.md"
+      ]
+    },
+    {
+      "object_id": "policy.sf4.backend-risk-gate",
+      "score": 0.87,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 backend risk gate",
+      "summary": "Backend/template changes require risk scan, regression evidence and no silent platform-wide changes.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/backend-critical-guides.md",
+        "skills/sf4/references/qa-regression.md"
+      ]
+    },
+    {
+      "object_id": "gate.sf4.regression-readiness",
+      "score": 0.87,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 regression readiness gate",
+      "summary": "Blocks completion until SF4 page/component changes have component map, regression and runtime evidence.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/artifacts/regression-checklist.md",
+        "skills/sf4/references/qa-regression.md"
+      ]
+    },
+    {
+      "object_id": "capability.sf4.universal-wizard-specialist",
+      "score": 0.72,
+      "reason": "keyword match",
+      "confidence": 0.82,
+      "evidence_status": "validated",
+      "title": "SF4 universal wizard specialist",
+      "summary": "Create, modify, package, visualize and audit SF4 universal master flows, including action contracts, iblock/highload archive import/export, payload assembly and wizard visual configuration.",
+      "source_refs": [
+        "skills/sf4/specialists/universal-wizard.md",
+        "skills/sf4/references/wizard-actions.md",
+        "skills/sf4/references/system-layer-simai.md",
+        "source/wizard/action-contracts.md",
+        "source/wizard/packaging-matrix.md",
+        "source/wizard/export-packaging-data.md",
+        "source/wizard/master-blueprint.md",
+        "source/wizard/visual-contract.md",
+        "source/wizard/validator-spec.md",
+        "source/wizard/specialist-apply-plan.md",
+        "source/wizard/acceptance-matrix.md",
+        "source/wizard/acceptance-fixtures.json",
+        "source/wizard/skeleton-generator.md",
+        "source/wizard/skeleton-example.json",
+        "source/wizard/readiness-runner.md",
+        "scripts/sf4_wizard_audit.py",
+        "scripts/sf4_wizard_acceptance.py",
+        "scripts/sf4_wizard_skeleton.py",
+        "scripts/sf4_wizard_readiness.py"
+      ]
+    },
+    {
+      "object_id": "skill.sf4.core",
+      "score": 0.69,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 skill core",
+      "summary": "Owns SIMAI Framework 4 on Bitrix: simai.data, grid/view/block page assembly, components, iblock/HL setup, wizard actions and modernization workflows.",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "object_id": "capability.sf4.page-assembly",
+      "score": 0.54,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 page assembly",
+      "summary": "Build SF4 pages through simai.data, grid/view/block composition and component templates.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/grid-and-block-workflow.md",
+        "skills/sf4/references/components-catalog.md"
+      ]
+    },
+    {
+      "object_id": "capability.sf4.config-data",
+      "score": 0.54,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 config and data",
+      "summary": "Work with site/section/page properties, iblock/highloadblock setup, storage API and simai.data runtime settings.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/config-and-data.md",
+        "skills/sf4/references/iblock-hl-standard.md",
+        "skills/sf4/references/storage-api-playbook.md"
+      ]
+    },
+    {
+      "object_id": "capability.sf4.ui-modernization",
+      "score": 0.54,
+      "reason": "keyword match",
+      "confidence": 0.88,
+      "evidence_status": "asserted_by_human",
+      "title": "SF4 UI modernization",
+      "summary": "Modernize markup, UI classes, interactive attributes, accessibility and asset policy within SF4 constraints.",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/references/ui-source-map.md",
+        "skills/sf4/references/ui-markup-recipes.md",
+        "skills/sf4/references/ui-a11y-checklist.md"
+      ]
+    }
+  ],
+  "excluded_objects": [],
+  "warnings": [],
+  "source_refs": [
+    "skills/sf4/SKILL.md",
+    "skills/sf4/references/wizard-actions.md",
+    "skills/sf4/references/update-artifacts.md",
+    "skills/sf4/references/qa-regression.md",
+    "skills/sf4/references/backend-critical-guides.md",
+    "skills/sf4/references/project-layout.md",
+    "skills/sf4/references/portal-runtime-source-of-truth.md",
+    "skills/sf4/references/artifacts/regression-checklist.md",
+    "skills/sf4/specialists/universal-wizard.md",
+    "skills/sf4/references/system-layer-simai.md",
+    "source/wizard/action-contracts.md",
+    "source/wizard/packaging-matrix.md",
+    "source/wizard/export-packaging-data.md",
+    "source/wizard/master-blueprint.md",
+    "source/wizard/visual-contract.md",
+    "source/wizard/validator-spec.md",
+    "source/wizard/specialist-apply-plan.md",
+    "source/wizard/acceptance-matrix.md",
+    "source/wizard/acceptance-fixtures.json",
+    "source/wizard/skeleton-generator.md",
+    "source/wizard/skeleton-example.json",
+    "source/wizard/readiness-runner.md",
+    "scripts/sf4_wizard_audit.py",
+    "scripts/sf4_wizard_acceptance.py",
+    "scripts/sf4_wizard_skeleton.py",
+    "scripts/sf4_wizard_readiness.py",
+    "skills/sf4/references/grid-and-block-workflow.md",
+    "skills/sf4/references/components-catalog.md",
+    "skills/sf4/references/config-and-data.md",
+    "skills/sf4/references/iblock-hl-standard.md",
+    "skills/sf4/references/storage-api-playbook.md",
+    "skills/sf4/references/ui-source-map.md",
+    "skills/sf4/references/ui-markup-recipes.md",
+    "skills/sf4/references/ui-a11y-checklist.md"
+  ],
+  "related_relations": [
+    {
+      "id": "relation-skill-sf4-core-implements-capability-sf4-page-assembly",
+      "from": "skill.sf4.core",
+      "to": "capability.sf4.page-assembly",
+      "relation_type": "implements",
+      "impact": "high",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-skill-sf4-core-implements-capability-sf4-config-data",
+      "from": "skill.sf4.core",
+      "to": "capability.sf4.config-data",
+      "relation_type": "implements",
+      "impact": "high",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-skill-sf4-core-implements-capability-sf4-ui-modernization",
+      "from": "skill.sf4.core",
+      "to": "capability.sf4.ui-modernization",
+      "relation_type": "implements",
+      "impact": "high",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-skill-sf4-core-implements-capability-sf4-wizard-actions",
+      "from": "skill.sf4.core",
+      "to": "capability.sf4.wizard-actions",
+      "relation_type": "implements",
+      "impact": "high",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-skill-sf4-core-implements-capability-sf4-universal-wizard-specialist",
+      "from": "skill.sf4.core",
+      "to": "capability.sf4.universal-wizard-specialist",
+      "relation_type": "implements",
+      "impact": "high",
+      "source_refs": [
+        "skills/sf4/SKILL.md",
+        "skills/sf4/specialists/universal-wizard.md"
+      ]
+    },
+    {
+      "id": "relation-skill-sf4-core-implements-capability-sf4-qa-regression",
+      "from": "skill.sf4.core",
+      "to": "capability.sf4.qa-regression",
+      "relation_type": "implements",
+      "impact": "high",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-universal-wizard-specialist-specializes-capability-sf4-wizard-actions",
+      "from": "capability.sf4.universal-wizard-specialist",
+      "to": "capability.sf4.wizard-actions",
+      "relation_type": "specializes",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/specialists/universal-wizard.md",
+        "skills/sf4/references/wizard-actions.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-page-assembly-governed-by-policy-sf4-project-layer-boundary",
+      "from": "capability.sf4.page-assembly",
+      "to": "policy.sf4.project-layer-boundary",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-page-assembly-governed-by-policy-sf4-backend-risk-gate",
+      "from": "capability.sf4.page-assembly",
+      "to": "policy.sf4.backend-risk-gate",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-config-data-governed-by-policy-sf4-project-layer-boundary",
+      "from": "capability.sf4.config-data",
+      "to": "policy.sf4.project-layer-boundary",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-config-data-governed-by-policy-sf4-backend-risk-gate",
+      "from": "capability.sf4.config-data",
+      "to": "policy.sf4.backend-risk-gate",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-ui-modernization-governed-by-policy-sf4-project-layer-boundary",
+      "from": "capability.sf4.ui-modernization",
+      "to": "policy.sf4.project-layer-boundary",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate",
+      "from": "capability.sf4.ui-modernization",
+      "to": "policy.sf4.backend-risk-gate",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-wizard-actions-governed-by-policy-sf4-project-layer-boundary",
+      "from": "capability.sf4.wizard-actions",
+      "to": "policy.sf4.project-layer-boundary",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-wizard-actions-governed-by-policy-sf4-backend-risk-gate",
+      "from": "capability.sf4.wizard-actions",
+      "to": "policy.sf4.backend-risk-gate",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-qa-regression-governed-by-policy-sf4-project-layer-boundary",
+      "from": "capability.sf4.qa-regression",
+      "to": "policy.sf4.project-layer-boundary",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-capability-sf4-qa-regression-governed-by-policy-sf4-backend-risk-gate",
+      "from": "capability.sf4.qa-regression",
+      "to": "policy.sf4.backend-risk-gate",
+      "relation_type": "governed_by",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-gate-sf4-regression-readiness-validates-capability-sf4-page-assembly",
+      "from": "gate.sf4.regression-readiness",
+      "to": "capability.sf4.page-assembly",
+      "relation_type": "validates",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-gate-sf4-regression-readiness-validates-capability-sf4-config-data",
+      "from": "gate.sf4.regression-readiness",
+      "to": "capability.sf4.config-data",
+      "relation_type": "validates",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-gate-sf4-regression-readiness-validates-capability-sf4-ui-modernization",
+      "from": "gate.sf4.regression-readiness",
+      "to": "capability.sf4.ui-modernization",
+      "relation_type": "validates",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-gate-sf4-regression-readiness-validates-capability-sf4-wizard-actions",
+      "from": "gate.sf4.regression-readiness",
+      "to": "capability.sf4.wizard-actions",
+      "relation_type": "validates",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    },
+    {
+      "id": "relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression",
+      "from": "gate.sf4.regression-readiness",
+      "to": "capability.sf4.qa-regression",
+      "relation_type": "validates",
+      "impact": "medium",
+      "source_refs": [
+        "skills/sf4/SKILL.md"
+      ]
+    }
+  ],
+  "runtime_contract": {
+    "graph_first_scope": "routing/capability/policy orientation",
+    "raw_source_authoritative": true,
+    "canonical_write_allowed": false
+  }
+}

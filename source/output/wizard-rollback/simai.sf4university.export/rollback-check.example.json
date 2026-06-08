@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.rollback_plan.check",
+  "plan": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-rollback/simai.sf4university.export/rollback-plan.example.json",
+  "label": "simai.sf4university.export",
+  "plan_status": "rollback_plan_ready",
+  "execution_approval": false,
+  "evidence_mode": "example_only_not_execution_evidence",
+  "summary": {
+    "items": 8,
+    "ready_items": 8,
+    "incomplete_items": 0,
+    "missing_field_count": 0,
+    "review_missing_count": 0
+  },
+  "review_missing_fields": [],
+  "items": [
+    {
+      "id": "01-file.copy-filesystem",
+      "action": "file.copy",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "06-file.copy-filesystem",
+      "action": "file.copy",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "08-data.export.file-filesystem",
+      "action": "data.export.file",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "09-data.export.file-filesystem",
+      "action": "data.export.file",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "10-data.export.file-filesystem",
+      "action": "data.export.file",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "11-data.export.file-filesystem",
+      "action": "data.export.file",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "12-file.create-filesystem",
+      "action": "file.create",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    },
+    {
+      "id": "13-file.encode.win1251-filesystem",
+      "action": "file.encode.win1251",
+      "risk": "filesystem_write",
+      "status": "ready",
+      "missing_fields": []
+    }
+  ],
+  "stop_conditions": [
+    "This checker does not approve live execution.",
+    "Real backup artifacts must exist and be reviewed by ops/tester before controlled execution.",
+    "If target scope changes, regenerate readiness and rollback plan."
+  ]
+}

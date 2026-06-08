@@ -1,0 +1,903 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.audit",
+  "site_root": "/Users/rim/Sites/university.test",
+  "master": "/Users/rim/Downloads/wizard.export/wizard.export",
+  "config": "/Users/rim/Downloads/wizard.export/wizard.export/.wizard.config.php",
+  "module_root": null,
+  "mode": {
+    "read_only": true,
+    "executes_php": false,
+    "executes_wizard_actions": false,
+    "writes": "json_report_only",
+    "strict_live": false
+  },
+  "master_checks": {
+    "index_exists": true,
+    "config_exists": true,
+    "data_exists": false,
+    "image_dir_exists": true,
+    "action_dir_exists": false
+  },
+  "description": {
+    "name": "Мастер упаковки",
+    "code": "wizard_export",
+    "stage_renew": "Y",
+    "logo_expr": "Wizard::getLocal(__DIR__) . \"/image/bg_space.jpg\"",
+    "background_image_expr": "Wizard::getLocal(__DIR__) . \"/image/city_bg.jpg\"",
+    "background_color": "#263238",
+    "primary_color": "#E53935",
+    "secondary_color": "#2196F3",
+    "modifier_keys": [
+      "page_body",
+      "wizard_area",
+      "wizard_copyright",
+      "wizard_nav",
+      "wizard_wrap"
+    ],
+    "exists": true,
+    "logo_path": "/Users/rim/Downloads/wizard.export/wizard.export/image/bg_space.jpg",
+    "logo_resolution": "deterministic",
+    "background_image_path": "/Users/rim/Downloads/wizard.export/wizard.export/image/city_bg.jpg",
+    "background_image_resolution": "deterministic"
+  },
+  "actions": [
+    {
+      "index": 1,
+      "code": "file.copy",
+      "name": "Копируем файлы",
+      "data_input_code": null,
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.sf4conf\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.framework\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.framework\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/components/simai\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.framework/install/bitrix/components/simai\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/templates/simai.framework\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.framework/install/bitrix/templates/simai.framework\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/templates/.default\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/templates/.default\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.backup\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.backup\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.bxeditor\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.bxeditor\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.filebackup\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.filebackup\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.property4iblock\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.property4iblock\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.property\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.property\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/upload/medialibrary/\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/ru/root/upload/medialibrary/\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/wizards/simai/simai.sf4conf/\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/wizard/simai.sf4conf/\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/file.copy/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/file.copy/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/file.copy/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.sf4conf\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.sf4conf",
+          "exists": false
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.framework\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.framework",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.framework\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.framework",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/components/simai\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/components/simai",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.framework/install/bitrix/components/simai\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.framework/install/bitrix/components/simai",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/templates/simai.framework\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/templates/simai.framework",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.framework/install/bitrix/templates/simai.framework\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.framework/install/bitrix/templates/simai.framework",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/templates/.default\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/templates/.default",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/templates/.default\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/templates/.default",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.backup\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.backup",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.backup\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.backup",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.bxeditor\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.bxeditor",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.bxeditor\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.bxeditor",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.filebackup\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.filebackup",
+          "exists": false
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.filebackup\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.filebackup",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.property4iblock\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.property4iblock",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.property4iblock\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.property4iblock",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/modules/simai.property\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.property",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/bitrix/modules/simai.property\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/bitrix/modules/simai.property",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/upload/medialibrary/\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/upload/medialibrary",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/ru/root/upload/medialibrary/\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/root/upload/medialibrary",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/bitrix/wizards/simai/simai.sf4conf/\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/bitrix/wizards/simai/simai.sf4conf",
+          "exists": false
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/wizard/simai.sf4conf/\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/wizard/simai.sf4conf",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "code": "site.export.data",
+      "name": "Получаем данные настроек сайтов и записываем в хранилище",
+      "data_input_code": null,
+      "data_output_code": "site",
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/site.export.data/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/site.export.data/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/site.export.data/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 3,
+      "code": "mail.export.data",
+      "name": "Получаем данные почтовых событий и записываем в хранилище",
+      "data_input_code": null,
+      "data_output_code": "mail",
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/mail.export.data/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/mail.export.data/action.php",
+        "resolved": null,
+        "source": null
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 4,
+      "code": "mail-templates.export.data",
+      "name": "Получаем данные почтовых шаблонов и записываем в хранилище",
+      "data_input_code": null,
+      "data_output_code": "mail-templates",
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/mail-templates.export.data/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/mail-templates.export.data/action.php",
+        "resolved": null,
+        "source": null
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 5,
+      "code": "usergroup.export.data",
+      "name": "Получаем значение настроек групп пользователей и сохраняем в хранилище",
+      "data_input_code": null,
+      "data_output_code": "usergroup",
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/usergroup.export.data/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/usergroup.export.data/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/usergroup.export.data/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 6,
+      "code": "iblocktype.export.data",
+      "name": "Получает данные типов инфоблоков и сохраняем в хранилище",
+      "data_input_code": null,
+      "data_output_code": "iblocktype",
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/iblocktype.export.data/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/iblocktype.export.data/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/iblocktype.export.data/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework",
+        "iblock"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 7,
+      "code": "option.export.data",
+      "name": "Получаем значение настроек модулей битрикс и сохранем в хранилище",
+      "data_input_code": null,
+      "data_output_code": "option",
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/option.export.data/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/option.export.data/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/option.export.data/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 8,
+      "code": "file.copy",
+      "name": "Копируем файлы публичной части",
+      "data_input_code": null,
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "source",
+          "expr": "\"/ru\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/ru/site/\""
+        },
+        {
+          "key": "source",
+          "expr": "\"/urlrewrite.php\""
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/ru/config/urlrewrite.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/file.copy/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/file.copy/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/file.copy/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "source",
+          "expr": "\"/ru\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/ru",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/ru/site/\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/site",
+          "exists": false
+        },
+        {
+          "key": "source",
+          "expr": "\"/urlrewrite.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/urlrewrite.php",
+          "exists": true
+        },
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/ru/config/urlrewrite.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/urlrewrite.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "code": "iblock.export.archive",
+      "name": "Запаковка инфоблоков",
+      "data_input_code": null,
+      "data_output_code": "iblock_pack",
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/iblock\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/iblock.export.archive/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/iblock.export.archive/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/iblock.export.archive/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework",
+        "iblock",
+        "XMLReader",
+        "ZipArchive"
+      ],
+      "path_checks": [
+        {
+          "key": "destination",
+          "expr": "\"/.last_version/install/iblock\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/iblock",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "code": "data.export.file",
+      "name": "Записываем данные настроек сайта из хранилища в файл",
+      "data_input_code": "site",
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.site.config.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/data.export.file/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.site.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/.site.config.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "code": "data.export.file",
+      "name": "Записываем данные почтовых событий из хранилища в файл",
+      "data_input_code": "mail",
+      "data_output_code": null,
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/mail.config.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/data.export.file/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/mail.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/mail.config.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "code": "data.export.file",
+      "name": "Записываем данные почтовых шаблонов из хранилища в файл",
+      "data_input_code": "mail-templates",
+      "data_output_code": null,
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/mail-templates.config.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/data.export.file/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/mail-templates.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/mail-templates.config.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "code": "data.export.file",
+      "name": "Записываем данные настроек групп пользователей из хранилища в файл",
+      "data_input_code": "usergroup",
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.usergroup.config.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/data.export.file/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.usergroup.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/.usergroup.config.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "code": "data.export.file",
+      "name": "Записываем данные настроек модулей битрикс из хранилища в файл",
+      "data_input_code": "option",
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.option.config.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/data.export.file/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.option.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/.option.config.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "code": "data.export.file",
+      "name": "Записываем данные типов инфоблоков из хранилища в файл",
+      "data_input_code": "iblocktype",
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.iblocktype.config.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/data.export.file/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/data.export.file/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "\"/.last_version/install/ru/config/.iblocktype.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Sites/university.test/.last_version/install/ru/config/.iblocktype.config.php",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "code": "file.create",
+      "name": "Создаём файлы php_interface",
+      "data_input_code": null,
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/file.create/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/file.create/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/file.create/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 17,
+      "code": "file.encode.win1251",
+      "name": "Меняем кодировку у языковых файлов модуля",
+      "data_input_code": null,
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/file.encode.win1251/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/file.encode.win1251/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/file.encode.win1251/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 18,
+      "code": "info",
+      "name": "Завершение упаковки",
+      "data_input_code": null,
+      "data_output_code": null,
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Downloads/wizard.export/wizard.export/action/info/action.php",
+        "global": "/Users/rim/Sites/university.test/simai/wizard/action/info/action.php",
+        "resolved": "/Users/rim/Sites/university.test/simai/wizard/action/info/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    }
+  ],
+  "installer_bridge": {
+    "provided": false
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "code": "missing_action_file",
+      "message": "Action 'mail-templates.export.data' does not resolve to master-local or global action.php",
+      "action": "mail-templates.export.data"
+    },
+    {
+      "severity": "error",
+      "code": "missing_action_file",
+      "message": "Action 'mail.export.data' does not resolve to master-local or global action.php",
+      "action": "mail.export.data"
+    },
+    {
+      "severity": "error",
+      "code": "missing_payload",
+      "message": "Payload path for source does not exist",
+      "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.sf4conf",
+      "action": "file.copy"
+    },
+    {
+      "severity": "error",
+      "code": "missing_payload",
+      "message": "Payload path for source does not exist",
+      "path": "/Users/rim/Sites/university.test/bitrix/modules/simai.filebackup",
+      "action": "file.copy"
+    },
+    {
+      "severity": "error",
+      "code": "missing_payload",
+      "message": "Payload path for source does not exist",
+      "path": "/Users/rim/Sites/university.test/bitrix/wizards/simai/simai.sf4conf",
+      "action": "file.copy"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_master_data",
+      "message": "Master data/ directory not found",
+      "path": "/Users/rim/Downloads/wizard.export/wizard.export/data"
+    }
+  ],
+  "summary": {
+    "actions": 18,
+    "findings": 6,
+    "errors": 5,
+    "warnings": 1,
+    "missing_actions": 2,
+    "missing_payloads": 3,
+    "high_risk_side_effects": 10
+  },
+  "status": "blocked"
+}

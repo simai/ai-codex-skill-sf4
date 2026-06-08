@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Source corpus for preparing an SF4 Universal Wizard specialist.",
+  "created_at": "2026-06-05",
+  "sources": [
+    {
+      "id": "university_test_wizard",
+      "path": "/Users/rim/Sites/university.test/simai/wizard",
+      "role": "broad real-world action library plus master payload examples",
+      "masters": [
+        "simai.framework",
+        "simai.sf4university",
+        "simai.sveden"
+      ],
+      "action_count": 46,
+      "notes": [
+        "Contains the broadest action library: install, export, import, translation, site operations, file operations, iblock/HL operations.",
+        "simai.sf4university has a large payload under data but no .wizard.config.php found in the inspected master directory."
+      ]
+    },
+    {
+      "id": "sf4_test_wizard",
+      "path": "/Users/rim/Sites/sf4.test/simai/wizard",
+      "role": "compact current simai.sveden install/update case",
+      "masters": [
+        "simai.sveden"
+      ],
+      "action_count": 14,
+      "notes": [
+        "Contains compact sveden action set and complete .wizard.config.php.",
+        "Contains installed simai:sf.wizard and simai:sf.wizard.stage component source under master data."
+      ]
+    },
+    {
+      "id": "sf4_skill_reference_wizard_actions",
+      "path": "skills/sf4/references/wizard-actions.md",
+      "role": "current canonical SF4 wizard reference"
+    },
+    {
+      "id": "sf4_skill_reference_system_layer",
+      "path": "skills/sf4/references/system-layer-simai.md",
+      "role": "current canonical system-layer map for /simai/wizard"
+    },
+    {
+      "id": "module_solutions_legacy_wizards",
+      "path": "/Users/rim/Sites/test.test/bitrix/modules/{simai.fund,simai.educenter,simai.school}/install/wizards",
+      "role": "legacy Bitrix solution wizard examples for UI steps, template selection, site settings, public file copy and PHP-array demo data",
+      "examples": [
+        "simai.fund",
+        "simai.educenter",
+        "simai.school"
+      ],
+      "notes": [
+        "Use standard Bitrix wizard_sol classes and service scripts.",
+        "Demo data is stored as PHP arrays under site/services/iblock/data/ru.",
+        "fund and educenter include highload.php, highloadprops.php and highloadelems.php examples."
+      ]
+    },
+    {
+      "id": "module_solutions_sf4_wrapper_wizards",
+      "path": "/Users/rim/Sites/test.test/bitrix/modules/{simai.sf4biblio,simai.sf4med,simai.sf4university}/install/wizard",
+      "role": "newer SF4 module wizard wrappers and packaged master payload examples",
+      "examples": [
+        "simai.sf4biblio",
+        "simai.sf4med",
+        "simai.sf4university"
+      ],
+      "notes": [
+        "Wrapper wizard.php redirects to /simai/wizard/master/<module>/.",
+        "Module install/index.php copies framework, wizard wrapper and master data payload into runtime locations.",
+        "sf4biblio and sf4med package components, config.zip, iblock zip archives, modules, public files, templates and php_interface snippets."
+      ]
+    },
+    {
+      "id": "wizard_export_solution_packaging_sample",
+      "path": "/Users/rim/Downloads/wizard.export/wizard.export",
+      "role": "developer sample for packaging an existing SF4 solution through a universal export master into /.last_version/install",
+      "masters": [
+        "wizard_export"
+      ],
+      "action_count": 18,
+      "notes": [
+        "Standard simai:sf.wizard launcher with visual config and export action chain.",
+        "Copies module/framework/component/template/public/media/wizard files into /.last_version/install.",
+        "Exports site, mail, mail-template, user-group, iblock-type and option data into wizard storage, then writes generated install config files through data.export.file.",
+        "Exports iblock archives through iblock.export.archive.",
+        "Current read-only audit is blocked in this environment because mail export actions and several simai.sf4conf source paths are absent."
+      ]
+    },
+    {
+      "id": "priority_action_sources",
+      "path": "/Users/rim/Sites/university.test/simai/wizard/action/{iblock.import.archive,iblock.export.archive,iblockconfig.import.data,file.copy,replace.code}",
+      "role": "evidence for first action contract table",
+      "examples": [
+        "iblock.import.archive",
+        "iblock.export.archive",
+        "iblockconfig.import.data",
+        "file.copy",
+        "replace.code"
+      ],
+      "notes": [
+        "file.copy and replace.code use stage polling with ACTION.DATA.STEP_COPY.",
+        "iblock.import.archive and iblock.export.archive use action-local AJAX queues and final success writes.",
+        "iblockconfig.import.data merges target simai.data config files with wizard config payloads."
+      ]
+    }
+  ],
+  "key_runtime_files": [
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/index.php",
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/.wizard.config.php",
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/data/bitrix/components/simai/sf.wizard/component.php",
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/data/bitrix/components/simai/sf.wizard/templates/.default/template.php",
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/data/bitrix/components/simai/sf.wizard.stage/component.php",
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/data/bitrix/components/simai/sf.wizard.stage/templates/.default/template.php",
+    "/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden/data/bitrix/components/simai/sf.wizard.stage/templates/.default/component_epilog.php"
+  ],
+  "generated_corpus_files": [
+    "source/wizard/action-contracts.md",
+    "source/wizard/case-wizard-export-packaging.md",
+    "source/wizard/packaging-matrix.md",
+    "source/wizard/export-packaging-data.md",
+    "source/wizard/export-builder.md",
+    "source/wizard/export-builder-example.json",
+    "source/wizard/export-inventory-helper.md",
+    "source/wizard/iblock-manifest-assistant.md",
+    "source/wizard/master-blueprint.md",
+    "source/wizard/visual-contract.md",
+    "source/wizard/validator-spec.md",
+    "source/wizard/specialist-apply-plan.md",
+    "source/wizard/acceptance-matrix.md",
+    "source/wizard/acceptance-fixtures.json",
+    "source/wizard/skeleton-generator.md",
+    "source/wizard/skeleton-example.json",
+    "source/wizard/readiness-runner.md",
+    "source/wizard/rollback-plan-checker.md",
+    "scripts/sf4_wizard_export_builder.py",
+    "scripts/sf4_wizard_export_inventory.py",
+    "scripts/sf4_wizard_iblock_manifest.py",
+    "source/output/wizard-export-builder/simai.example.export/builder-report.json",
+    "source/output/wizard-export-builder/simai.example.export/audit.json",
+    "source/output/wizard-export-builder/simai.example.export/readiness.json",
+    "source/output/wizard-export-inventory/simai.sf4university.export/inventory.json",
+    "source/output/wizard-export-inventory/simai.sf4university.export/manifest.draft.json",
+    "source/output/wizard-export-inventory/simai.sf4university.export/run-report.json",
+    "source/output/wizard-export-inventory/simai.sf4university.export/audit.json",
+    "source/output/wizard-export-inventory/simai.sf4university.export/readiness.json",
+    "source/output/wizard-iblock-manifest/simai.sf4biblio/iblock-manifest.report.json",
+    "source/output/wizard-iblock-manifest/simai.fund.legacy/iblock-manifest.report.json"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.rollback_plan",
+  "label": "simai.example-filled-demo",
+  "mode": {
+    "read_only": true,
+    "creates_backups": false,
+    "executes_rollback": false,
+    "executes_wizard_actions": false,
+    "writes": "plan_json_or_markdown_only"
+  },
+  "readiness_report": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-readiness/simai.example.json",
+  "readiness_status": "needs_rollback_plan",
+  "controlled_execution_allowed_by_readiness": false,
+  "master": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example",
+  "config": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/.wizard.config.php",
+  "plan_status": "rollback_plan_ready",
+  "evidence_mode": "example_only_not_execution_evidence",
+  "items": [
+    {
+      "id": "02-iblockconfig.import.data-filesystem",
+      "action": "iblockconfig.import.data",
+      "action_index": 2,
+      "risk": "filesystem_write",
+      "scope": "filesystem",
+      "required_backup": "destination file/directory inventory and backup before action",
+      "required_rollback": "restore backup or remove copied/generated paths by inventory",
+      "target_scope": "Example target scope for iblockconfig.import.data action #2",
+      "backup_artifact": "source/output/wizard-rollback/example/02-iblockconfig.import.data-filesystem/backup-evidence.txt",
+      "backup_method": "Documented example backup method for filesystem",
+      "rollback_artifact": "source/output/wizard-rollback/example/02-iblockconfig.import.data-filesystem/rollback-plan.txt",
+      "rollback_method": "Documented example rollback method for filesystem",
+      "verification_method": "Re-run audit/readiness and compare expected status after rollback",
+      "owner": "example-owner",
+      "stop_condition": "Stop on any missing backup artifact, wider-than-approved scope or failed verification",
+      "notes": "Example-only filled item; not real runtime approval.",
+      "status": "ready"
+    },
+    {
+      "id": "03-urlrewrite.add-database",
+      "action": "urlrewrite.add",
+      "action_index": 3,
+      "risk": "db_write",
+      "scope": "database",
+      "required_backup": "DB backup or exact export of affected Bitrix entities/options before action",
+      "required_rollback": "restore DB backup or run reviewed cleanup/delete script for created entities",
+      "target_scope": "Example target scope for urlrewrite.add action #3",
+      "backup_artifact": "source/output/wizard-rollback/example/03-urlrewrite.add-database/backup-evidence.txt",
+      "backup_method": "Documented example backup method for database",
+      "rollback_artifact": "source/output/wizard-rollback/example/03-urlrewrite.add-database/rollback-plan.txt",
+      "rollback_method": "Documented example rollback method for database",
+      "verification_method": "Re-run audit/readiness and compare expected status after rollback",
+      "owner": "example-owner",
+      "stop_condition": "Stop on any missing backup artifact, wider-than-approved scope or failed verification",
+      "notes": "Example-only filled item; not real runtime approval.",
+      "status": "ready"
+    }
+  ],
+  "review": {
+    "ops_reviewer": "example-ops",
+    "tester_reviewer": "example-tester",
+    "approved_scope": "example-only scope, not live execution approval",
+    "review_date": "2026-06-07",
+    "approval_note": "Example-only plan used to prove checker behavior."
+  }
+}

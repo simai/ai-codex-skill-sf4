@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "sf4.wizard.audit",
+  "site_root": "/Users/rim/Sites/sf4.test",
+  "master": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example",
+  "config": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/.wizard.config.php",
+  "module_root": null,
+  "mode": {
+    "read_only": true,
+    "executes_php": false,
+    "executes_wizard_actions": false,
+    "writes": "json_report_only",
+    "strict_live": false
+  },
+  "master_checks": {
+    "index_exists": true,
+    "config_exists": true,
+    "data_exists": true,
+    "image_dir_exists": true,
+    "action_dir_exists": false
+  },
+  "description": {
+    "name": null,
+    "code": "simai_example",
+    "stage_renew": "Y",
+    "logo_expr": "Wizard::getLocal(__DIR__) . \"/image/logo.png\"",
+    "background_image_expr": "Wizard::getLocal(__DIR__) . \"/image/wizard_bg.jpg\"",
+    "background_color": "#134A5B",
+    "primary_color": "#F34E3F",
+    "secondary_color": "#134A5B",
+    "modifier_keys": [
+      "page_body",
+      "wizard_area",
+      "wizard_copyright",
+      "wizard_nav",
+      "wizard_wrap"
+    ],
+    "exists": true,
+    "logo_path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/image/logo.png",
+    "logo_resolution": "deterministic",
+    "background_image_path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/image/wizard_bg.jpg",
+    "background_image_resolution": "deterministic"
+  },
+  "actions": [
+    {
+      "index": 1,
+      "code": "site.choice.sveden",
+      "name": null,
+      "data_input_code": null,
+      "data_output_code": "site_config",
+      "autocomplete": null,
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/action/site.choice.sveden/action.php",
+        "global": "/Users/rim/Sites/sf4.test/simai/wizard/action/site.choice.sveden/action.php",
+        "resolved": "/Users/rim/Sites/sf4.test/simai/wizard/action/site.choice.sveden/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    },
+    {
+      "index": 2,
+      "code": "iblockconfig.import.data",
+      "name": null,
+      "data_input_code": "site_config",
+      "data_output_code": null,
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "file",
+          "expr": "array("
+        },
+        {
+          "key": "config",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/.iblock.config.php\""
+        },
+        {
+          "key": "lang",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/lang/ru/.iblock.config.php\""
+        },
+        {
+          "key": "config",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/.iblock.section.config.php\""
+        },
+        {
+          "key": "lang",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/lang/ru/.iblock.section.config.php\""
+        },
+        {
+          "key": "tmp",
+          "expr": "Wizard::getLocal(__DIR__) . \"/tmp/\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/action/iblockconfig.import.data/action.php",
+        "global": "/Users/rim/Sites/sf4.test/simai/wizard/action/iblockconfig.import.data/action.php",
+        "resolved": "/Users/rim/Sites/sf4.test/simai/wizard/action/iblockconfig.import.data/action.php",
+        "source": "global"
+      },
+      "risk": "filesystem_write",
+      "requirements": [
+        "admin",
+        "simai.framework",
+        "iblock"
+      ],
+      "path_checks": [
+        {
+          "key": "file",
+          "expr": "array(",
+          "resolution": "unresolved_expression",
+          "path": null,
+          "exists": null
+        },
+        {
+          "key": "config",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/.iblock.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/data/config/.iblock.config.php",
+          "exists": true
+        },
+        {
+          "key": "lang",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/lang/ru/.iblock.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/data/config/lang/ru/.iblock.config.php",
+          "exists": true
+        },
+        {
+          "key": "config",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/.iblock.section.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/data/config/.iblock.section.config.php",
+          "exists": true
+        },
+        {
+          "key": "lang",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/lang/ru/.iblock.section.config.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/data/config/lang/ru/.iblock.section.config.php",
+          "exists": true
+        },
+        {
+          "key": "tmp",
+          "expr": "Wizard::getLocal(__DIR__) . \"/tmp/\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/tmp",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "code": "urlrewrite.add",
+      "name": null,
+      "data_input_code": "site_config",
+      "data_output_code": null,
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [
+        {
+          "key": "source",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/urlrewrite.php\""
+        }
+      ],
+      "resolution": {
+        "local": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/action/urlrewrite.add/action.php",
+        "global": "/Users/rim/Sites/sf4.test/simai/wizard/action/urlrewrite.add/action.php",
+        "resolved": "/Users/rim/Sites/sf4.test/simai/wizard/action/urlrewrite.add/action.php",
+        "source": "global"
+      },
+      "risk": "db_write",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": [
+        {
+          "key": "source",
+          "expr": "Wizard::getLocal(__DIR__) . \"/data/config/urlrewrite.php\"",
+          "resolution": "deterministic",
+          "path": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/data/config/urlrewrite.php",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "code": "info",
+      "name": null,
+      "data_input_code": null,
+      "data_output_code": null,
+      "autocomplete": "Y",
+      "has_condition": false,
+      "path_expressions": [],
+      "resolution": {
+        "local": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/source/output/wizard-skeleton/simai.example/master/simai.example/action/info/action.php",
+        "global": "/Users/rim/Sites/sf4.test/simai/wizard/action/info/action.php",
+        "resolved": "/Users/rim/Sites/sf4.test/simai/wizard/action/info/action.php",
+        "source": "global"
+      },
+      "risk": "read_only",
+      "requirements": [
+        "admin",
+        "simai.framework"
+      ],
+      "path_checks": []
+    }
+  ],
+  "installer_bridge": {
+    "provided": false
+  },
+  "findings": [],
+  "summary": {
+    "actions": 4,
+    "findings": 0,
+    "errors": 0,
+    "warnings": 0,
+    "missing_actions": 0,
+    "missing_payloads": 0,
+    "high_risk_side_effects": 2
+  },
+  "status": "ready"
+}
