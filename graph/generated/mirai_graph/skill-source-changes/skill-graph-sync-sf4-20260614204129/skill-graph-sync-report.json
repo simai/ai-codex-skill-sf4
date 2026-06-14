@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.report",
+  "created_at": "2026-06-14T20:41:30.581263+00:00",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "status": "success",
+  "source_change_evidence_ref": "graph/generated/mirai_graph/skill-source-changes/skill-graph-sync-sf4-20260614204129/skill-source-change-evidence.json",
+  "runtime_verify_ref": "graph/generated/mirai_graph/runtime-kit/skill-graph-sync-sf4-20260614204129-verify/runtime-kit-verify.json",
+  "runtime_context_ref": "graph/generated/mirai_graph/runtime-context/skill-graph-sync-sf4-20260614204129-context/context-pack.json",
+  "federation_change_proposal_ref": "graph/generated/mirai_graph/federation-change/skill-graph-sync-sf4-20260614204129-federation-proposal/federation-change-proposal.json",
+  "specialist_promotion_proposal_refs": [
+    "graph/generated/mirai_graph/specialist-promotion/skill-graph-sync-sf4-20260614204129-specialist-sf4-universal-wizard/specialist-promotion-proposal.json"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "blockers": [],
+  "canonical_write_allowed": false
+}

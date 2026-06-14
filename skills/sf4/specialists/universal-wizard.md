@@ -249,6 +249,37 @@ Check:
 - action `name` values are localized;
 - long action progress text eventually reaches persisted `SUCCESS`.
 
+## Standard Visual Master
+
+When creating a new universal master or bringing an old master to current
+standard, prefer the modern shell proven on `simai.sveden`:
+
+- light background asset, white rounded master card, top progress bar,
+  separated navigation row and footer;
+- default primary accent `#B4232E`, with project-specific overrides only when a
+  real brand palette is supplied;
+- copyright format `© SIMAI, 2026`, where `SIMAI` links to `https://simai.ru`;
+- finish screen with explicit success title, short explanatory text and a
+  primary CTA to the installed public section;
+- critical status icons as inline SVG, never as the only signal from an
+  icon-font package;
+- all visible user-facing text from `lang` files or config
+  `Loc::getMessage(...)`;
+- no empty terminal state: trailing `info` or service-only stages must render
+  explicit content or normalize to the standard finish screen.
+
+Navigation expectations:
+
+- the first site-selection step must not race between AJAX save and manual
+  "Next"; keep the button disabled until the selected site is persisted, or
+  submit the next step automatically after save success;
+- stage-polling actions must persist `STAGE.STATUS = SUCCESS` before the wizard
+  can advance;
+- action-local AJAX flows must either auto-advance after final success or show a
+  deliberate, enabled manual next action;
+- long-running actions must keep visible progress text and must not stop at a
+  success-like message without transition or CTA.
+
 Legacy Bitrix wizard visuals are separate:
 
 - `.description.php`;
