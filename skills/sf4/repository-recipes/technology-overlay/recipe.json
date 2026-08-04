@@ -1,0 +1,57 @@
+{
+  "$schema": "https://simai.io/schemas/federation/repository-recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "sf4.technology-overlay",
+  "version": "1.0.0",
+  "kind": "technology_overlay",
+  "owner": "sf4",
+  "title": "sf4 technology overlay",
+  "repository_family": "technology",
+  "repository_kind": "technology_repository",
+  "base_recipe": null,
+  "compatibility": {
+    "allowed_bases": [
+      "technology.repository"
+    ],
+    "allowed_overlays": [],
+    "incompatible_recipes": []
+  },
+  "required_inputs": [],
+  "source_contract": {
+    "entrypoints": [
+      "skills/sf4/SKILL.md"
+    ],
+    "processes": [
+      "graph/specs/index.json"
+    ],
+    "checks": [
+      "graph/specs/index.json"
+    ]
+  },
+  "file_manifest": [],
+  "technology": {
+    "task_scoped": true,
+    "may_override_federation_safety": false,
+    "may_authorize_write": false,
+    "raw_source_required": true
+  },
+  "availability": {
+    "policy": "local_skill_override",
+    "default_state": "available"
+  },
+  "migrations": [],
+  "materialization": {
+    "mode": "declarative_manifest",
+    "generator_contract": "repository_factory.manifest.v1",
+    "template_root": null,
+    "template_files": []
+  },
+  "validators": [
+    {
+      "id": "sf4.source-check.1",
+      "type": "owner_source",
+      "ref": "graph/specs/index.json",
+      "required": true
+    }
+  ]
+}

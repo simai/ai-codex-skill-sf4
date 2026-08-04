@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "recipe_id": "sf4.project",
+  "positive": [
+    {
+      "name": "declared-base",
+      "base_recipe": "bitrix.client_project",
+      "overlays": [
+        "sf4.technology-overlay"
+      ],
+      "expected": "compatible",
+      "expected_paths": [
+        "simai.data/",
+        "local/components/",
+        "local/templates/",
+        "docs/",
+        "tests/",
+        "source/",
+        "docs/sf4-project-contract.md"
+      ],
+      "expected_ownership": {
+        "simai.data/": "owner_template",
+        "local/components/": "owner_template",
+        "local/templates/": "owner_template",
+        "docs/": "owner_template",
+        "tests/": "owner_template",
+        "source/": "local_only",
+        "docs/sf4-project-contract.md": "owner_template"
+      }
+    }
+  ],
+  "negative": [
+    {
+      "name": "unknown-base",
+      "base_recipe": "unknown.repository",
+      "overlays": [],
+      "expected": "incompatible",
+      "expected_diagnostics": [
+        "unsupported_base_recipe"
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "name": "owner-overlay",
+      "base_recipe": "bitrix.client_project",
+      "primary_owner": "sf4",
+      "overlays": [
+        "sf4.technology-overlay"
+      ],
+      "expected": "compatible",
+      "expected_recipe_signature": "sf4.project@1.0.0"
+    }
+  ]
+}

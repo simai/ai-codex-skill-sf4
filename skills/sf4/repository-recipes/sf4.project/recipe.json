@@ -1,0 +1,128 @@
+{
+  "$schema": "https://simai.io/schemas/federation/repository-recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "sf4.project",
+  "version": "1.0.0",
+  "kind": "structural_recipe",
+  "owner": "sf4",
+  "title": "sf4.project",
+  "repository_family": "sf4",
+  "repository_kind": "project",
+  "base_recipe": "bitrix.client_project",
+  "compatibility": {
+    "allowed_bases": [
+      "bitrix.client_project"
+    ],
+    "allowed_overlays": [
+      "sf4.technology-overlay",
+      "docs.technology-overlay",
+      "tester.technology-overlay"
+    ],
+    "incompatible_recipes": [
+      "graph.domain_atlas",
+      "client.project",
+      "bitrix.module",
+      "larena.application",
+      "larena.package",
+      "sf5.project",
+      "orgportal.solution",
+      "docara.project"
+    ]
+  },
+  "required_inputs": [
+    {
+      "name": "repository_name",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "site_dir",
+      "required": true,
+      "type": "string"
+    }
+  ],
+  "source_contract": {
+    "entrypoints": [
+      "skills/sf4/SKILL.md",
+      "skills/sf4/references/grid-and-block-workflow.md"
+    ],
+    "processes": [
+      "graph/specs/index.json"
+    ],
+    "checks": [
+      "skills/sf4/scripts/sf4_project_audit.py"
+    ]
+  },
+  "file_manifest": [
+    {
+      "path": "simai.data/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "local/components/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "local/templates/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "docs/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "tests/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "source/",
+      "ownership": "local_only",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "docs/sf4-project-contract.md",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "template_file",
+      "source": "docs/owner-contract.md"
+    }
+  ],
+  "technology": {
+    "task_scoped": true,
+    "may_override_federation_safety": false,
+    "may_authorize_write": false,
+    "raw_source_required": true
+  },
+  "availability": {
+    "policy": "local_skill_override",
+    "default_state": "available"
+  },
+  "migrations": [],
+  "materialization": {
+    "mode": "declarative_manifest",
+    "generator_contract": "repository_factory.manifest.v1",
+    "template_root": "templates",
+    "template_files": [
+      "docs/owner-contract.md"
+    ]
+  },
+  "validators": [
+    {
+      "id": "sf4.source-check.1",
+      "type": "owner_source",
+      "ref": "skills/sf4/scripts/sf4_project_audit.py",
+      "required": true
+    }
+  ]
+}
