@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-08-04T17:58:54.545050+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "HEAD~1",
+  "base_commit": "e64b2a791efb1fd11fd38d38da6de80ecbf4180a",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 0,
+    "head": "afd63da"
+  },
+  "changed_files": [
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project/templates/docs/owner-contract.md",
+      "source_path": "repository-recipes/sf4.project/templates/docs/owner-contract.md",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b18a33e45dd6637150e0ed394337d0630fe7b7a16dd4b7c6156ffab3d9903cf3",
+      "source_bytes": 170,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project/templates/docs/owner-contract.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "2b2144e12a1bdcae1b27c104dddc0178c8deaf89d93f2fa518af5c21113586d4"
+}
