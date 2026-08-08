@@ -33,7 +33,9 @@
     {
       "name": "unknown-base",
       "base_recipe": "unknown.repository",
-      "overlays": [],
+      "overlays": [
+
+      ],
       "expected": "incompatible",
       "expected_diagnostics": [
         "unsupported_base_recipe"
@@ -49,7 +51,7 @@
         "sf4.technology-overlay"
       ],
       "expected": "compatible",
-      "expected_recipe_signature": "sf4.project@1.0.0"
+      "expected_recipe_signature": "sf4.project@2.0.0"
     }
   ]
 }

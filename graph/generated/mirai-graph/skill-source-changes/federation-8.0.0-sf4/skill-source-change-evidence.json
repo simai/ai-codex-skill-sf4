@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-08-08T07:50:46.448051+00:00",
+  "skill": "sf4",
+  "repo": "repo://ai-codex-skill-sf4",
+  "base": "origin/main",
+  "base_commit": "b1cca14be8d5ae7c8af3b7682085d3cffccfedd2",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "05003874f10c18ea1391c89145232fb50ed41b8d1a4dfd06c442c63b6901a50e",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/federation-8.0.0-sf4/detector-report.json",
+  "changed_files": [
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project/fixtures.json",
+      "source_path": "repository-recipes/sf4.project/fixtures.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "f456fa890ec2338749590e1c1106eaa3a4b54abe52dbff721aaec64ada1eecd1",
+      "source_bytes": 1345,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project/fixtures.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "17ba8720995cfcf4a632a24b1e49f8da2071effd8de5c374670041b476c94883",
+      "baseline_bytes": 1337
+    },
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project/recipe.json",
+      "source_path": "repository-recipes/sf4.project/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b5ee2547431360e12ba27228a5a7deb3a76c07b4d32731ffb2c12f8a93f016bf",
+      "source_bytes": 2959,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "21de1898e957ee3ee3928cdfc0771ccf5d184210b8e2c6aed6a4cb25dad7567c",
+      "baseline_bytes": 2977
+    },
+    {
+      "path": "skills/sf4/repository-recipes/technology-overlay/fixtures.json",
+      "source_path": "repository-recipes/technology-overlay/fixtures.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "e4f7876eb61a701cdc78c35e1608c01d781927e916ace0d34de453848c2ad44a",
+      "source_bytes": 1022,
+      "baseline_path": "skills/sf4/repository-recipes/technology-overlay/fixtures.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "43b232964964b713c053966217e09d7665ba3938786bbd070633c1e6d3442de5",
+      "baseline_bytes": 733
+    },
+    {
+      "path": "skills/sf4/repository-recipes/technology-overlay/recipe.json",
+      "source_path": "repository-recipes/technology-overlay/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "625f3843a9c60d01da3bbd93ea83b3a53c83fcebd9f9afdb9bc453883627991e",
+      "source_bytes": 1289,
+      "baseline_path": "skills/sf4/repository-recipes/technology-overlay/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "a76ca3a3ef5ddd67d6eac59993934a80aa00e4304e8baf4e4f820105dd44a256",
+      "baseline_bytes": 1362
+    }
+  ],
+  "change_types": [
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/sf4/repository-recipes/sf4.project/fixtures.json",
+    "skills/sf4/repository-recipes/sf4.project/recipe.json",
+    "skills/sf4/repository-recipes/technology-overlay/fixtures.json",
+    "skills/sf4/repository-recipes/technology-overlay/recipe.json"
+  ],
+  "canonical_write_allowed": false
+}

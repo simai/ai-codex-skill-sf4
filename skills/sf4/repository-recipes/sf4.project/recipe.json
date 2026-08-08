@@ -1,8 +1,8 @@
 {
   "$schema": "https://simai.io/schemas/federation/repository-recipe.schema.json",
-  "schema_version": "1.0.0",
+  "schema_version": "2.0.0",
   "id": "sf4.project",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "kind": "structural_recipe",
   "owner": "sf4",
   "title": "sf4.project",
@@ -29,6 +29,15 @@
       "docara.project"
     ]
   },
+  "capabilities": [
+    {
+      "id": "project_technology",
+      "activation": "optional"
+    }
+  ],
+  "requires_capabilities": [
+
+  ],
   "required_inputs": [
     {
       "name": "repository_name",
@@ -98,17 +107,19 @@
       "source": "docs/owner-contract.md"
     }
   ],
-  "technology": {
-    "task_scoped": true,
-    "may_override_federation_safety": false,
-    "may_authorize_write": false,
-    "raw_source_required": true
-  },
   "availability": {
     "policy": "local_skill_override",
     "default_state": "available"
   },
-  "migrations": [],
+  "migrations": [
+    {
+      "id": "sf4.project.v1-to-v2-project-technology-capability",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "operation": "declare_project_technology_capability",
+      "preserve_user_owned": true
+    }
+  ],
   "materialization": {
     "mode": "declarative_manifest",
     "generator_contract": "repository_factory.manifest.v1",
