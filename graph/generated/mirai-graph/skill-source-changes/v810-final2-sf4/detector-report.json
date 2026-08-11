@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-08-11T18:23:33.299121+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "origin/main",
+  "base_commit": "6f3d412215d87e5e8fc4129818120bc38328702a",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": true,
+    "ahead": 3,
+    "head": "cb1d44f"
+  },
+  "changed_files": [
+    {
+      "path": "scripts/mirai_graph_skill_runtime.py",
+      "source_path": "scripts/mirai_graph_skill_runtime.py",
+      "change_types": [
+        "runtime"
+      ],
+      "routing_impact": false,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "daaa9019fb86a79b1e5acc3fc12c703f8c1b6a928cdf56f5f337e6607a716893",
+      "source_bytes": 1636,
+      "baseline_path": "scripts/mirai_graph_skill_runtime.py",
+      "baseline_mode": "100644",
+      "baseline_sha256": "e015d7f2a803b7f5dcfd977c94215105f4a9f343f60eb787d2d3acf80546d262",
+      "baseline_bytes": 587
+    },
+    {
+      "path": "skills/sf4/quality/capability-map.json",
+      "source_path": "quality/capability-map.json",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "e6cfd5f3f8d01795082ac08318937ca90de1ad1105ea803c67c8cc247d86984c",
+      "source_bytes": 1008,
+      "baseline_path": "skills/sf4/quality/capability-map.json",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/sf4/quality/technology-contract-fixtures.json",
+      "source_path": "quality/technology-contract-fixtures.json",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "5cc8ef0df1298743bee3e95fdb57c20a30fc8b1202a749224fd8f4232a99132f",
+      "source_bytes": 1521,
+      "baseline_path": "skills/sf4/quality/technology-contract-fixtures.json",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "c76814102ac3f21d2515522619f9e757ef1472e978edfdaf77a9718c47a4f898"
+}
