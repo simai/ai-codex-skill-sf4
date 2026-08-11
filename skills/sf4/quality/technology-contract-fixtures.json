@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.owner_skill.technology_contract_fixture",
+  "skill": "sf4",
+  "positive_cases": [
+    {
+      "id": "sf4.paraphrase.ru",
+      "task": "Используй $sf4. Выполни основную проверяемую задачу владельца sf4 в синтетическом проекте.",
+      "expected_process_model_id": "sf4_project_layer_override"
+    },
+    {
+      "id": "sf4.paraphrase.en",
+      "task": "Use $sf4 to complete the owner's primary verifiable task in a synthetic project.",
+      "expected_process_model_id": "sf4_project_layer_override"
+    }
+  ],
+  "negative_cases": [
+    {
+      "id": "sf4.owner_boundary",
+      "task": "Не используй $sf4. Используй $dev для точечного backend bugfix.",
+      "expected_primary_skill": "dev"
+    }
+  ],
+  "outcome_cases": [
+    {
+      "id": "sf4.project_layer_override.outcome",
+      "capability_id": "sf4.project_layer_override",
+      "prompt_ru": "Используй $sf4. Выполни проверяемый синтетический сценарий sf4.project_layer_override и верни evidence без внешних или live-записей.",
+      "prompt_en": "Use $sf4. Complete the synthetic sf4.project_layer_override scenario and return evidence without external or live writes.",
+      "fixture_repository": "graph/benchmarks/owner-outcomes/fixtures/sf4/project_layer_override",
+      "rubric_ref": "graph/benchmarks/owner-outcomes/rubrics/sf4.json"
+    }
+  ]
+}
