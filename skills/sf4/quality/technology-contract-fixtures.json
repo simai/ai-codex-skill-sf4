@@ -5,19 +5,19 @@
   "positive_cases": [
     {
       "id": "sf4.paraphrase.ru",
-      "task": "Используй $sf4. Выполни основную проверяемую задачу владельца sf4 в синтетическом проекте.",
+      "task": "Используй $sf4. Выполни типовую задачу владельца sf4 в синтетическом проекте.",
       "expected_process_model_id": "sf4_project_layer_override"
     },
     {
       "id": "sf4.paraphrase.en",
-      "task": "Use $sf4 to complete the owner's primary verifiable task in a synthetic project.",
+      "task": "Use $sf4 to complete the owner's representative task in a synthetic project.",
       "expected_process_model_id": "sf4_project_layer_override"
     }
   ],
   "negative_cases": [
     {
       "id": "sf4.owner_boundary",
-      "task": "Не используй $sf4. Используй $dev для точечного backend bugfix.",
+      "task": "Используй $dev для точечного backend bugfix в существующем API.",
       "expected_primary_skill": "dev"
     }
   ],
