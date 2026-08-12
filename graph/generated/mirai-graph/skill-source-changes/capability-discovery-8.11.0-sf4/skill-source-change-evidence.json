@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-08-12T16:37:54.074293+00:00",
+  "skill": "sf4",
+  "repo": "repo://ai-codex-skill-sf4",
+  "base": "HEAD~1",
+  "base_commit": "7a644896be294a563e36a7f90e009d3c7e7414ed",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "67e4137cf72336a277fe144b439c8dd22331cde93037b08ebf0a601d7bf9763d",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/capability-discovery-8.11.0-sf4/detector-report.json",
+  "changed_files": [
+    {
+      "path": "skills/sf4/quality/capability-map.json",
+      "source_path": "quality/capability-map.json",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "95758fd0990b2bfd6d8faa5ac1019550797e0ad2b69850307af25ab781fba414",
+      "source_bytes": 2755,
+      "baseline_path": "skills/sf4/quality/capability-map.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "e6cfd5f3f8d01795082ac08318937ca90de1ad1105ea803c67c8cc247d86984c",
+      "baseline_bytes": 1008
+    }
+  ],
+  "change_types": [
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/sf4/quality/capability-map.json"
+  ],
+  "canonical_write_allowed": false
+}
