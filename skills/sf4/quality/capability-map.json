@@ -16,7 +16,12 @@
         "SKILL.md"
       ],
       "extension_points": [
-        "owner://sf4/existing-methodology"
+        {
+          "id": "sf4.project_layer_override.extension",
+          "kind": "extend",
+          "source_ref": "SKILL.md",
+          "validator_ref": "federation://owner-capability-map"
+        }
       ],
       "constraints": [
         "Use raw owner sources for methodology and judgement.",
@@ -28,6 +33,57 @@
       "validator_refs": [
         "federation://owner-capability-map",
         "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "SF4 override",
+          "project-layer",
+          "sf4.project_layer_override",
+          "Implement an SF4 change through the supported project-layer override without modifying framework ownership."
+        ],
+        "requirement_signals": [
+          "SF4 override",
+          "project-layer",
+          "sf4.project_layer_override",
+          "Implement an SF4 change through the supported project-layer override without modifying framework ownership."
+        ],
+        "project_signals": [
+          "sf4"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "sf4",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Implement an SF4 change through the supported project-layer override without modifying framework ownership."
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "sf4",
+        "access": "sf4",
+        "lifecycle": "sf4",
+        "interface": "sf4",
+        "runtime": "sf4"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
       ]
     }
   ]
