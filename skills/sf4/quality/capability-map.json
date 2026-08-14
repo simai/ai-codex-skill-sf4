@@ -13,7 +13,8 @@
       "user_outcome": "Implement an SF4 change through the supported project-layer override without modifying framework ownership.",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md"
+        "SKILL.md",
+        "quality/technology-contract-fixtures.json"
       ],
       "extension_points": [
         {
