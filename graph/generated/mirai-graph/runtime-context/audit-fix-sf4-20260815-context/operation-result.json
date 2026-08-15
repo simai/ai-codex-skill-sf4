@@ -1,0 +1,57 @@
+{
+  "operation_id": "mirai_graph.skill-runtime.context",
+  "status": "blocked",
+  "mode": "write_generated",
+  "changed_canonical_objects": [],
+  "changed_generated_artifacts": [
+    "graph/generated/mirai-graph/runtime-context/audit-fix-sf4-20260815-context/context-pack.json",
+    "graph/generated/mirai-graph/runtime-context/audit-fix-sf4-20260815-context/context-pack.md",
+    "graph/generated/mirai-graph/runtime-context/audit-fix-sf4-20260815-context/operation-result.json"
+  ],
+  "warnings": [
+    "missing runtime source ref: source/wizard/action-contracts.md",
+    "missing runtime source ref: source/wizard/case-wizard-export-packaging.md",
+    "missing runtime source ref: source/wizard/packaging-matrix.md",
+    "missing runtime source ref: source/wizard/export-packaging-data.md",
+    "missing runtime source ref: source/wizard/export-builder.md",
+    "missing runtime source ref: source/wizard/export-builder-example.json",
+    "missing runtime source ref: source/wizard/export-inventory-helper.md",
+    "missing runtime source ref: source/wizard/iblock-manifest-assistant.md",
+    "missing runtime source ref: source/wizard/master-blueprint.md",
+    "missing runtime source ref: source/wizard/visual-contract.md",
+    "missing runtime source ref: source/wizard/validator-spec.md",
+    "missing runtime source ref: source/wizard/specialist-apply-plan.md",
+    "missing runtime source ref: source/wizard/acceptance-matrix.md",
+    "missing runtime source ref: source/wizard/acceptance-fixtures.json",
+    "missing runtime source ref: source/wizard/skeleton-generator.md",
+    "missing runtime source ref: source/wizard/skeleton-example.json",
+    "missing runtime source ref: source/wizard/readiness-runner.md",
+    "missing runtime source ref: source/wizard/rollback-plan-checker.md"
+  ],
+  "next_suggested_operations": [
+    "load listed raw source refs",
+    "run repo-local mirai_graph gate"
+  ],
+  "blockers": [
+    "missing runtime source ref: source/wizard/action-contracts.md",
+    "missing runtime source ref: source/wizard/case-wizard-export-packaging.md",
+    "missing runtime source ref: source/wizard/packaging-matrix.md",
+    "missing runtime source ref: source/wizard/export-packaging-data.md",
+    "missing runtime source ref: source/wizard/export-builder.md",
+    "missing runtime source ref: source/wizard/export-builder-example.json",
+    "missing runtime source ref: source/wizard/export-inventory-helper.md",
+    "missing runtime source ref: source/wizard/iblock-manifest-assistant.md",
+    "missing runtime source ref: source/wizard/master-blueprint.md",
+    "missing runtime source ref: source/wizard/visual-contract.md",
+    "missing runtime source ref: source/wizard/validator-spec.md",
+    "missing runtime source ref: source/wizard/specialist-apply-plan.md",
+    "missing runtime source ref: source/wizard/acceptance-matrix.md",
+    "missing runtime source ref: source/wizard/acceptance-fixtures.json",
+    "missing runtime source ref: source/wizard/skeleton-generator.md",
+    "missing runtime source ref: source/wizard/skeleton-example.json",
+    "missing runtime source ref: source/wizard/readiness-runner.md",
+    "missing runtime source ref: source/wizard/rollback-plan-checker.md"
+  ],
+  "context_pack_ref": "graph/generated/mirai-graph/runtime-context/audit-fix-sf4-20260815-context/context-pack.json",
+  "canonical_write_allowed": false
+}

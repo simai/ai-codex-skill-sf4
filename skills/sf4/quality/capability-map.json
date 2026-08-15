@@ -13,14 +13,13 @@
       "user_outcome": "Implement an SF4 change through the supported project-layer override without modifying framework ownership.",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md",
-        "quality/technology-contract-fixtures.json"
+        "references/solution-customization-technology.md"
       ],
       "extension_points": [
         {
           "id": "sf4.project_layer_override.extension",
           "kind": "extend",
-          "source_ref": "SKILL.md",
+          "source_ref": "references/solution-customization-technology.md",
           "validator_ref": "federation://owner-capability-map"
         }
       ],
