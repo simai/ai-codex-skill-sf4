@@ -1,0 +1,22 @@
+{
+  "operation_id": "graph.skill-evolution.changed-source",
+  "status": "success",
+  "mode": "write_generated",
+  "changed_canonical_objects": [],
+  "changed_generated_artifacts": [
+    "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/skill-source-change-evidence.json",
+    "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/detector-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/skill-graph-sync-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/skill-graph-sync-report.md",
+    "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/operation-result.json"
+  ],
+  "warnings": [],
+  "blockers": [],
+  "next_suggested_operations": [],
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/skill-source-change-evidence.json",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/detector-report.json",
+  "detector_fingerprint": "3933f941a48bfeed811b5393922206e5eb15ed0739d0dfb5914936b826e11da3",
+  "skill_graph_sync_report_ref": "graph/generated/mirai-graph/skill-source-changes/federation-8.20.0-sf4-public-technology/skill-graph-sync-report.json",
+  "canonical_write_allowed": false,
+  "retention_class": "skill_graph_sync"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-08-17T13:15:27.733649+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "HEAD",
+  "base_commit": "eca16eae4801bfa17800e89751db4ef782c0db92",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": true,
+    "ahead": 0,
+    "head": "eca16ea"
+  },
+  "changed_files": [
+    {
+      "path": "scripts/mirai_graph_skill_runtime.py",
+      "source_path": "scripts/mirai_graph_skill_runtime.py",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "D",
+      "old_path": "",
+      "source_mode": "deleted",
+      "source_sha256": "deleted",
+      "source_bytes": 0,
+      "baseline_path": "scripts/mirai_graph_skill_runtime.py",
+      "baseline_mode": "100644",
+      "baseline_sha256": "daaa9019fb86a79b1e5acc3fc12c703f8c1b6a928cdf56f5f337e6607a716893",
+      "baseline_bytes": 1636
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "3933f941a48bfeed811b5393922206e5eb15ed0739d0dfb5914936b826e11da3"
+}

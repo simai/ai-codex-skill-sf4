@@ -34,3 +34,6 @@ site
 *.bak_*
 *.bak-*
 *.codex-bak-*
+
+# Mirai Graph local Project Technology state
+.mirai-graph/project-technology/

@@ -6,6 +6,12 @@
     "migration_status": "current"
   },
   "extensions": {
+    "mirai.project_technology": {
+      "context_policy": "task_scoped",
+      "contract_version": "1.0.0",
+      "enabled": true,
+      "source_boundary": "hybrid_sot"
+    },
     "simai.legacy": {
       "dna_path": "graph/dna"
     }
@@ -21,18 +27,52 @@
     "generated": [
       "graph/generated"
     ],
-    "objects": [],
+    "objects": [
+      "graph/specs/objects/skill-sf4-core.json",
+      "graph/specs/objects/capability-sf4-page-assembly.json",
+      "graph/specs/objects/capability-sf4-config-data.json",
+      "graph/specs/objects/capability-sf4-ui-modernization.json",
+      "graph/specs/objects/capability-sf4-wizard-actions.json",
+      "graph/specs/objects/capability-sf4-universal-wizard-specialist.json",
+      "graph/specs/objects/capability-sf4-qa-regression.json",
+      "graph/specs/objects/policy-sf4-project-layer-boundary.json",
+      "graph/specs/objects/policy-sf4-backend-risk-gate.json",
+      "graph/specs/objects/gate-sf4-regression-readiness.json"
+    ],
     "raw_sources": [
       "README.md",
       "graph/source"
     ],
-    "relations": [],
+    "relations": [
+      "graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-page-assembly.json",
+      "graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-config-data.json",
+      "graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-ui-modernization.json",
+      "graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-wizard-actions.json",
+      "graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-universal-wizard-specialist.json",
+      "graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-qa-regression.json",
+      "graph/specs/relations/relation-capability-sf4-universal-wizard-specialist-specializes-capability-sf4-wizard-actions.json",
+      "graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-project-layer-boundary.json",
+      "graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-backend-risk-gate.json",
+      "graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-project-layer-boundary.json",
+      "graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-backend-risk-gate.json",
+      "graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-project-layer-boundary.json",
+      "graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate.json",
+      "graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-project-layer-boundary.json",
+      "graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-backend-risk-gate.json",
+      "graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-project-layer-boundary.json",
+      "graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-backend-risk-gate.json",
+      "graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-page-assembly.json",
+      "graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-config-data.json",
+      "graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-ui-modernization.json",
+      "graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-wizard-actions.json",
+      "graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression.json"
+    ],
     "root": "graph",
     "schemas": [
       "graph/schemas"
     ],
     "source_of_truth": [
-      "graph/specs"
+      "graph/specs/index.json"
     ]
   },
   "id": "ai-codex-skill-sf4.graph",
@@ -40,7 +80,7 @@
   "kind": "skill",
   "owner": "sf4",
   "profiles": [
-    "skill"
+    "skill_runtime"
   ],
   "runtime": {
     "default_context_depth": 2,
