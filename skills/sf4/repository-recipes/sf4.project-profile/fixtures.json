@@ -1,0 +1,1 @@
+{"positive":[{"task":"add SF4 project files to a Bitrix-native mount","expected_recipe":"sf4.project-profile"}],"negative":[{"task":"create generic root simai.data outside the selected mount","forbidden_behavior":"unscoped_mount"}],"compatibility":[{"shape":"client.project-shape","compatible":true}]}

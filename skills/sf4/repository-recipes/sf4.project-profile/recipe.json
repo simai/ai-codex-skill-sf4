@@ -1,0 +1,8 @@
+{
+  "$schema":"https://simai.io/schemas/federation/repository-recipe.schema.json","schema_version":"3.0.0","id":"sf4.project-profile","version":"3.0.0","kind":"platform_profile","owner":"sf4","title":"SF4 Bitrix project layout","repository_family":"platform","repository_kind":"sf4_project","base_recipe":null,
+  "compatibility":{"allowed_bases":["client.project-shape","application.repository"],"allowed_overlays":[],"incompatible_recipes":[]},"capabilities":[],"requires_capabilities":[],"required_inputs":[],
+  "source_contract":{"entrypoints":["skills/sf4/SKILL.md"],"processes":["skills/sf4/references/project-layout.md"],"checks":["skills/sf4/references/hygiene-and-secrets.md"]},
+  "file_manifest":[],"materialization":{"mode":"declarative_manifest","generator_contract":"repository_factory.manifest.v1","template_root":null,"template_files":[]},
+  "validators":[{"id":"sf4.layout","type":"owner_source","ref":"skills/sf4/references/project-layout.md","required":true}],
+  "availability":{"policy":"local_skill_override","default_state":"available","disabled_state_behavior":"fail_closed"},"migrations":[]
+}
