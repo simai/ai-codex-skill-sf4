@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "capability.sf4.project_layer_override",
+  "id": "relation.capability-sf4-project-layer-override.governed-by.constraint-sf4-capability-map-boundary",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "governed_by",
+  "schema_version": "1.0.0",
+  "source": "capability.sf4.project_layer_override",
+  "source_refs": [
+    "skills/sf4/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "constraint.sf4.capability-map-boundary",
+  "to": "constraint.sf4.capability-map-boundary",
+  "type": "governed_by"
+}

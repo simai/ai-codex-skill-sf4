@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "SF4 override",
+    "project-layer"
+  ],
+  "applicability": {
+    "editions": [],
+    "platform": "sf4",
+    "required_modules": [],
+    "version_range": "exact-project-version-or-owner-contract"
+  },
+  "authority": "owner_capability_map",
+  "evidence": [],
+  "expansion_policy": "expandable",
+  "id": "capability.sf4.project_layer_override",
+  "kind": "capability",
+  "lifecycle": "accepted",
+  "negative_boundaries": [
+    "Do not create a parallel owner or duplicate an existing platform capability."
+  ],
+  "owner": "sf4",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/sf4/quality/capability-map.json",
+    "skills/sf4/references/solution-customization-technology.md"
+  ],
+  "subtype": "owner_capability_map_entry",
+  "summary": "Implement an SF4 change through the supported project-layer override without modifying framework ownership.",
+  "title": "Implement an SF4 change through the supported project-layer override without modifying framework ownership."
+}
