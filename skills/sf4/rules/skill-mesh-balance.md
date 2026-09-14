@@ -9,7 +9,7 @@ actions, SF4 migration/update workflows, and safe project-layer overrides.
 
 - Generic Bitrix platform facts and marketplace/module policy owned by
   `$bitrix`.
-- SF5/Larena implementation contracts owned by `$sf5` and `$larena`.
+- SIMAI Framework/Larena implementation contracts owned by `$framework` and `$larena`.
 - Portalization strategy owned by `$orgportal`.
 - Documentation methodology/content owned by `$docs`.
 - SEO Contract decisions owned by `$seo`.
@@ -26,10 +26,10 @@ actions, SF4 migration/update workflows, and safe project-layer overrides.
 - Use `$seo` and `$ux` as contract owners for public/search and UI changes.
 - Use `$tester` for smoke/regression evidence and `$ops` for runtime issues.
 - Use `$docs` for substantial documentation structure and content.
-- For SF4 -> SF5 or other reference-adaptive checks, `$sf4` owns the source
+- For SF4 -> SIMAI Framework or other reference-adaptive checks, `$sf4` owns the source
   behavior: `simai.data`, grid/view/block, template area, component/property,
   iblock/HL, wizard, and project-layer source-of-truth facts. `$tester` owns
-  invariant evidence; `$sf5` or another target skill owns target adaptation.
+  invariant evidence; `$framework` or another target skill owns target adaptation.
 
 ## Handoff
 

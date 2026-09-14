@@ -5,7 +5,7 @@ description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix 
 
 # SIMAI Framework 4
 
-Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md) when SF4 work crosses Bitrix, SF5, Larena, OrgPortal, docs, UX, SEO, QA, runtime, or repository-delivery ownership.
+Before choosing a task route, load and obey [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md) when SF4 work crosses Bitrix, SIMAI Framework, Larena, OrgPortal, docs, UX, SEO, QA, runtime, or repository-delivery ownership.
 
 ## Mirai Graph Runtime Entry
 
