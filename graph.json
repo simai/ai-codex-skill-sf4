@@ -26,6 +26,7 @@
   "format": "mirai-graph",
   "graph": {
     "generated": [
+      "graph/docs/project-context.md",
       "graph/generated"
     ],
     "objects": [
@@ -44,7 +45,8 @@
       "graph/specs/objects/gate-sf4-regression-readiness.json",
       "graph/specs/objects/policy-sf4-backend-risk-gate.json",
       "graph/specs/objects/policy-sf4-project-layer-boundary.json",
-      "graph/specs/objects/skill-sf4-core.json"
+      "graph/specs/objects/skill-sf4-core.json",
+      "graph/specs/project-continuity.json"
     ],
     "raw_sources": [
       "README.md",
@@ -84,6 +86,7 @@
       "graph/schemas"
     ],
     "source_of_truth": [
+      "graph/specs",
       "graph/specs/index.json"
     ]
   },
