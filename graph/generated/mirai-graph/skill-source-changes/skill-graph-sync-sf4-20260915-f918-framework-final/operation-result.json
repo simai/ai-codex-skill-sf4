@@ -1,0 +1,22 @@
+{
+  "operation_id": "graph.skill-evolution.changed-source",
+  "status": "success",
+  "mode": "write_generated",
+  "changed_canonical_objects": [],
+  "changed_generated_artifacts": [
+    "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/skill-source-change-evidence.json",
+    "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/detector-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/skill-graph-sync-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/skill-graph-sync-report.md",
+    "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/operation-result.json"
+  ],
+  "warnings": [],
+  "blockers": [],
+  "next_suggested_operations": [],
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/skill-source-change-evidence.json",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/detector-report.json",
+  "detector_fingerprint": "fb2a0139f9f71b84be125ebbcfe1aacc9fc83c1b643f49ea1751bf880477a713",
+  "skill_graph_sync_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260915-f918-framework-final/skill-graph-sync-report.json",
+  "canonical_write_allowed": false,
+  "retention_class": "skill_graph_sync"
+}

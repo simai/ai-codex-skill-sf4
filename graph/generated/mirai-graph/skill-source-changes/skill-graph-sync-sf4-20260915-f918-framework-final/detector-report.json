@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-09-14T21:17:40.163880+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "bce69bd855cf1bae408da273fdb33491c2316a4d",
+  "base_commit": "bce69bd855cf1bae408da273fdb33491c2316a4d",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 0,
+    "head": "15ca1a8"
+  },
+  "changed_files": [
+    {
+      "path": "skills/sf4/FULL_RUNTIME_PLAYBOOK.md",
+      "source_path": "FULL_RUNTIME_PLAYBOOK.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "ad004ca978caf2dae82baee85a716a0fdd0dc86db263cd32ff19851462758a50",
+      "source_bytes": 22808,
+      "baseline_path": "skills/sf4/FULL_RUNTIME_PLAYBOOK.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "2629079fe422500fb20887073cc32fd96c9b7b2242013dfe5782f06e3603aec7",
+      "baseline_bytes": 22796
+    },
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project/recipe.json",
+      "source_path": "repository-recipes/sf4.project/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b3a3713e27ecf9e79da12131b7d335dea20178d68b31eb03fd0f4ee1ee87688a",
+      "source_bytes": 3180,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "87e3f30ca6e526beedada526df5fc6162d695a911b3ca4cf1a51d13bdb24bcfd",
+      "baseline_bytes": 3174
+    },
+    {
+      "path": "skills/sf4/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "f8fb174145f62e51434173a33df5bcaa318289f3d1ca1ad0b241317fec06b1ac",
+      "source_bytes": 1956,
+      "baseline_path": "skills/sf4/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4914443d455e056e8a9997de519eb6de191ab39fd6d8bd3c03d1ae444182b17b",
+      "baseline_bytes": 1920
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "fb2a0139f9f71b84be125ebbcfe1aacc9fc83c1b643f49ea1751bf880477a713"
+}
