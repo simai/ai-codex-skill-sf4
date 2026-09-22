@@ -1,6 +1,6 @@
 ---
 name: sf4
-description: Implement and modernize SIMAI Framework 4 (SF4) projects on Bitrix using safe project-layer overrides. Use when tasks involve `simai.data` structure, grid/view/block page assembly, template areas, `simai:sf.*` components, site/section/page properties, iblock/highloadblock setup, wizard actions, or migration/update workflows in SF4.
+description: "SIMAI Framework 4 (SF4) на Bitrix: project-layer overrides, структура `simai.data`, сборка страниц grid/view/block, области шаблона, компоненты `simai:sf.*`, свойства раздела и страницы, инфоблоки, визард, обновления."
 ---
 
 # SIMAI Framework 4
