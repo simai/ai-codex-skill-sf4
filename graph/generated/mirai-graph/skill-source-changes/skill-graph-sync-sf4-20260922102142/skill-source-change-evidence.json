@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-09-22T10:21:42.794765+00:00",
+  "skill": "sf4",
+  "repo": "repo://ai-codex-skill-sf4",
+  "base": "bce69bd855cf1bae408da273fdb33491c2316a4d",
+  "base_commit": "bce69bd855cf1bae408da273fdb33491c2316a4d",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "b137c7b1b5fe9cccbf1ad604acf8b36303a2f2a4e69026e7e0c9dea80081596f",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260922102142/detector-report.json",
+  "changed_files": [
+    {
+      "path": "skills/sf4/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "7e2e7fdb0704650195495094d16b5fbbb90b8eee2c3ee3b9270c03c639ec6e40",
+      "source_bytes": 1932,
+      "baseline_path": "skills/sf4/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4914443d455e056e8a9997de519eb6de191ab39fd6d8bd3c03d1ae444182b17b",
+      "baseline_bytes": 1920
+    }
+  ],
+  "change_types": [
+    "methodology",
+    "routing-impact"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/sf4/rules/skill-mesh-balance.md"
+  ],
+  "canonical_write_allowed": false
+}
