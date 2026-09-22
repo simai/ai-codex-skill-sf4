@@ -1,0 +1,22 @@
+{
+  "operation_id": "graph.skill-evolution.changed-source",
+  "status": "success",
+  "mode": "write_generated",
+  "changed_canonical_objects": [],
+  "changed_generated_artifacts": [
+    "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/skill-source-change-evidence.json",
+    "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/detector-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/skill-graph-sync-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/skill-graph-sync-report.md",
+    "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/operation-result.json"
+  ],
+  "warnings": [],
+  "blockers": [],
+  "next_suggested_operations": [],
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/skill-source-change-evidence.json",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/detector-report.json",
+  "detector_fingerprint": "b87de086aa5427f1543a85c5e3943c6302998c6876a2a8037dec34b7d13a491c",
+  "skill_graph_sync_report_ref": "graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-sf4-20260825-release/skill-graph-sync-report.json",
+  "canonical_write_allowed": false,
+  "retention_class": "skill_graph_sync"
+}

@@ -1,0 +1,21 @@
+{
+  "evidence": [],
+  "expansion_policy": "terminal",
+  "id": "constraint.sf4.capability-map-boundary",
+  "kind": "constraint",
+  "lifecycle": "accepted",
+  "owner": "sf4",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "rules": [
+    "Do not create a parallel owner or duplicate an existing platform capability.",
+    "Fail closed when required owner or platform evidence is unavailable.",
+    "Use raw owner sources for methodology and judgement."
+  ],
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/sf4/quality/capability-map.json"
+  ],
+  "summary": "Owner-declared constraints and non-goals for task-scoped capability use.",
+  "title": "sf4 capability boundaries"
+}

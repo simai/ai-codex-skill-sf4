@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-08-25T08:31:52.685599+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "HEAD",
+  "base_commit": "b7f3dc98b4585a5d13ee57853f693d887cb72cc6",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": true,
+    "ahead": 0,
+    "head": "b7f3dc9"
+  },
+  "changed_files": [
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project-profile/fixtures.json",
+      "source_path": "repository-recipes/sf4.project-profile/fixtures.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "??",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "387775fa6e5638d3e7ea46ce10b02afc549485fd6376dafb8afdad17b9ffab0d",
+      "source_bytes": 302,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project-profile/fixtures.json",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project-profile/recipe.json",
+      "source_path": "repository-recipes/sf4.project-profile/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "??",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "6e5a4f516afa30c328f3afe46df114a18c3033609b563d46d4ba4e02020e3300",
+      "source_bytes": 1115,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project-profile/recipe.json",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "b87de086aa5427f1543a85c5e3943c6302998c6876a2a8037dec34b7d13a491c"
+}

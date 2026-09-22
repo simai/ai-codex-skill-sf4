@@ -1,0 +1,20 @@
+{
+  "evidence": [],
+  "expansion_policy": "terminal",
+  "id": "gate.sf4.capability-map-conformance",
+  "kind": "gate",
+  "lifecycle": "accepted",
+  "owner": "sf4",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/sf4/quality/capability-map.json"
+  ],
+  "summary": "Checks that selected owner capabilities use their declared sources and Federation validators.",
+  "title": "sf4 capability conformance",
+  "validator_refs": [
+    "federation://owner-capability-map",
+    "federation://technology-conformance"
+  ]
+}

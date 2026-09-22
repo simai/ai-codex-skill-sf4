@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "skill.sf4.core",
+  "id": "relation.skill-sf4-core.contains.capability-sf4-project-layer-override",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "contains",
+  "schema_version": "1.0.0",
+  "source": "skill.sf4.core",
+  "source_refs": [
+    "skills/sf4/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "capability.sf4.project_layer_override",
+  "to": "capability.sf4.project_layer_override",
+  "type": "contains"
+}

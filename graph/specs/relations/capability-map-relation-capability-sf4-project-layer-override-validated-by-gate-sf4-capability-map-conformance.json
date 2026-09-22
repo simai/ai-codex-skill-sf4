@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "capability.sf4.project_layer_override",
+  "id": "relation.capability-sf4-project-layer-override.validated-by.gate-sf4-capability-map-conformance",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "validated_by",
+  "schema_version": "1.0.0",
+  "source": "capability.sf4.project_layer_override",
+  "source_refs": [
+    "skills/sf4/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "gate.sf4.capability-map-conformance",
+  "to": "gate.sf4.capability-map-conformance",
+  "type": "validated_by"
+}
