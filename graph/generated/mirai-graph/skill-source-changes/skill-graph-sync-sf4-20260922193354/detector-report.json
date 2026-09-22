@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-09-22T19:33:54.132946+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "bce69bd855cf1bae408da273fdb33491c2316a4d",
+  "base_commit": "bce69bd855cf1bae408da273fdb33491c2316a4d",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 7,
+    "head": "217adec"
+  },
+  "changed_files": [
+    {
+      "path": "skills/sf4/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "f3e1797e3572207895200577973084f491bf83a5fdf6636db445ad2e6706774b",
+      "source_bytes": 3404,
+      "baseline_path": "skills/sf4/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "1a8aca19f3e1ac53cdb4c40862b09726fa7153162ec843351d80f5864fe976be",
+      "baseline_bytes": 3421
+    },
+    {
+      "path": "skills/sf4/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "7e2e7fdb0704650195495094d16b5fbbb90b8eee2c3ee3b9270c03c639ec6e40",
+      "source_bytes": 1932,
+      "baseline_path": "skills/sf4/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4914443d455e056e8a9997de519eb6de191ab39fd6d8bd3c03d1ae444182b17b",
+      "baseline_bytes": 1920
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "3b4ab17a38b309e670a5d09e4c9df5657f5193476e190a0476f0b59ee70608c0"
+}

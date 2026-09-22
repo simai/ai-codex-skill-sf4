@@ -2,6 +2,6 @@
 
 Status: success
 Required actions: evidence, federation-proposal, route-check, runtime-context
-Evidence: `graph/generated/mirai-graph/skill-source-changes/repository-factory-7.6.4-sf4-template/skill-source-change-evidence.json`
+Evidence: `graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20260922193354/skill-source-change-evidence.json`
 
 Canonical write allowed: false
