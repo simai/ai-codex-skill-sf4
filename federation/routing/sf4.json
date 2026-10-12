@@ -1,0 +1,43 @@
+{
+  "routing": {
+    "capabilities": [
+      "sf4",
+      "simai.data",
+      "grid",
+      "view",
+      "block"
+    ],
+    "companion_skills": [
+      "bitrix",
+      "tester"
+    ],
+    "evidence_refs": [
+      "graph/generated/mirai-graph/gga10-owner-approved-apply-plans/sf4-owner-approved-apply-plan-20260530/owner-approved-apply-plan.json",
+      "graph/generated/mirai-graph/gga10-apply-verdicts/sf4-owner-approved-gga10-apply-validated-20260530/apply-verdict.json"
+    ],
+    "gga_status": "GGA10",
+    "graph_context_ref": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/graph",
+    "keywords": [
+      "sf4",
+      "simai.data",
+      "grid",
+      "view",
+      "block"
+    ],
+    "owner_boundary": "sf4 owns its domain methodology and judgement; federation graph owns routing/contracts/readiness/evidence only.",
+    "raw_fallback_required": true,
+    "required_gates": [
+      "platform_contract"
+    ],
+    "skill": "sf4",
+    "task_types": [
+      "sf4",
+      "simai.data",
+      "grid",
+      "view",
+      "block"
+    ]
+  },
+  "schema": "simai.skill_routing.v1",
+  "skill": "sf4"
+}
