@@ -327,7 +327,7 @@ Skeleton generator:
 
 - `scripts/sf4_wizard_skeleton.py`.
 - Generates propose-only candidate masters under `source/output/wizard-skeleton/*`.
-- Does not write to live `/simai`, `/bitrix`, public roots or `/Users/rim/Sites/*`.
+- Does not write to live `/simai`, `/bitrix`, public roots or `~/Sites/*`.
 - Use it to draft structure and config; still require real payload fill, read-only audit, backup/rollback design and controlled-runtime approval before execution.
 
 Export package builder:
@@ -383,7 +383,7 @@ Example:
 
 ```bash
 python3 scripts/sf4_wizard_skeleton.py --code simai.example --name "SIMAI Example" --profile config --wrapper --force
-python3 scripts/sf4_wizard_audit.py --site-root /Users/rim/Sites/sf4.test --master /absolute/path/to/source/output/wizard-skeleton/simai.example/master/simai.example --json source/output/wizard-skeleton/simai.example/audit.json
+python3 scripts/sf4_wizard_audit.py --site-root ~/Sites/sf4.test --master /absolute/path/to/source/output/wizard-skeleton/simai.example/master/simai.example --json source/output/wizard-skeleton/simai.example/audit.json
 python3 scripts/sf4_wizard_readiness.py --audit source/output/wizard-skeleton/simai.example/audit.json --json source/output/wizard-readiness/simai.example.json --markdown source/output/wizard-readiness/simai.example.md
 python3 scripts/sf4_wizard_rollback_plan.py --readiness source/output/wizard-readiness/simai.example.json --template-json source/output/wizard-rollback/simai.example/template.json --check-json source/output/wizard-rollback/simai.example/check-empty.json
 ```
@@ -391,10 +391,10 @@ python3 scripts/sf4_wizard_rollback_plan.py --readiness source/output/wizard-rea
 Export builder example:
 
 ```bash
-python3 scripts/sf4_wizard_export_inventory.py --site-root /Users/rim/Sites/university.test --solution-code simai.sf4university.export --site-dir /ru --iblock sf-ru-doc-common --win1251 --run-builder
-python3 scripts/sf4_wizard_iblock_manifest.py --source /Users/rim/Sites/test.test/bitrix/modules/simai.sf4biblio/install/wizard/data --label simai.sf4biblio --base-manifest source/output/wizard-export-inventory/simai.sf4university.export/manifest.draft.json
+python3 scripts/sf4_wizard_export_inventory.py --site-root ~/Sites/university.test --solution-code simai.sf4university.export --site-dir /ru --iblock sf-ru-doc-common --win1251 --run-builder
+python3 scripts/sf4_wizard_iblock_manifest.py --source ~/Sites/test.test/bitrix/modules/simai.sf4biblio/install/wizard/data --label simai.sf4biblio --base-manifest source/output/wizard-export-inventory/simai.sf4university.export/manifest.draft.json
 python3 scripts/sf4_wizard_export_builder.py --manifest source/wizard/export-builder-example.json --force
-python3 scripts/sf4_wizard_audit.py --site-root /Users/rim/Sites/university.test --master /absolute/path/to/source/output/wizard-export-builder/simai.example.export/master/simai.example.export --json source/output/wizard-export-builder/simai.example.export/audit.json
+python3 scripts/sf4_wizard_audit.py --site-root ~/Sites/university.test --master /absolute/path/to/source/output/wizard-export-builder/simai.example.export/master/simai.example.export --json source/output/wizard-export-builder/simai.example.export/audit.json
 python3 scripts/sf4_wizard_readiness.py --audit source/output/wizard-export-builder/simai.example.export/audit.json --json source/output/wizard-export-builder/simai.example.export/readiness.json --markdown source/output/wizard-export-builder/simai.example.export/readiness.md
 python3 scripts/sf4_wizard_rollback_plan.py --readiness source/output/wizard-export-builder/simai.example.export/readiness.json --template-json source/output/wizard-rollback/simai.example.export/rollback-plan.example.json --check-json source/output/wizard-rollback/simai.example.export/rollback-check.example.json --fill-demo
 python3 scripts/sf4_wizard_readiness.py --audit source/output/wizard-export-builder/simai.example.export/audit.json --rollback-check source/output/wizard-rollback/simai.example.export/rollback-check.example.json --json source/output/wizard-rollback/simai.example.export/readiness-with-rollback.example.json --markdown source/output/wizard-rollback/simai.example.export/readiness-with-rollback.example.md
@@ -411,15 +411,15 @@ python3 scripts/sf4_wizard_acceptance.py --manifest source/wizard/acceptance-fix
 Acceptance package scope:
 
 - complete runtime master with visuals and action chain:
-  `/Users/rim/Sites/sf4.test/simai/wizard/master/simai.sveden`;
+  `~/Sites/sf4.test/simai/wizard/master/simai.sveden`;
 - missing config blocker:
-  `/Users/rim/Sites/university.test/simai/wizard/master/simai.sf4university`;
+  `~/Sites/university.test/simai/wizard/master/simai.sf4university`;
 - prebuilt module installer bridge:
-  `/Users/rim/Sites/test.test/bitrix/modules/simai.sf4biblio`;
+  `~/Sites/test.test/bitrix/modules/simai.sf4biblio`;
 - second prebuilt bridge variant:
-  `/Users/rim/Sites/test.test/bitrix/modules/simai.sf4med`;
+  `~/Sites/test.test/bitrix/modules/simai.sf4med`;
 - assembled module installer bridge:
-  `/Users/rim/Sites/test.test/bitrix/modules/simai.sf4university`.
+  `~/Sites/test.test/bitrix/modules/simai.sf4university`.
 
 Minimum acceptance evidence:
 
