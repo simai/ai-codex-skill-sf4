@@ -17,10 +17,13 @@ Use current federation/Mirai Graph context for substantial routing, gates and
 companions. Raw SF4 sources remain authoritative for platform methodology and
 judgement; graph-only runtime is forbidden.
 
-Load [FULL_RUNTIME_PLAYBOOK.md](./FULL_RUNTIME_PLAYBOOK.md) for detailed task
-routing, system-layer study, UI catalogs, wizard/package operations, backend
-risk rules, portal host-mode QA, migration or release work. For a narrow task,
-load only the directly relevant reference named below.
+Always obey [kernel/non-negotiable.md](./kernel/non-negotiable.md). Route
+detailed work through [references/task-routing.md](./references/task-routing.md)
+and commands through [references/scripts-catalog.md](./references/scripts-catalog.md).
+For a narrow task, load only the directly relevant reference named below.
+
+Executable technology: [technologies/project-layer-change.json](./technologies/project-layer-change.json)
+(scenarios `page_override`, `solution_customization`, `wizard_package`).
 
 ## Core Workflow
 
@@ -29,8 +32,8 @@ load only the directly relevant reference named below.
    tree is available.
 3. Classify the task: page composition, block/component, settings/inheritance,
    data schema, wizard/update, frontend interaction or linkage remediation.
-4. Load the matching reference from the full playbook; do not load the entire
-   catalog for a bounded change.
+4. Load the matching route from `references/task-routing.md`; do not load the
+   entire catalog for a bounded change.
 5. Modify project layer first, normally `{site_dir}/simai.data`.
 6. Validate syntax, required companion files, runtime markers and the touched
    regression surface; clear relevant cache and retest.
@@ -50,6 +53,14 @@ load only the directly relevant reference named below.
 - Schema/update work requires migration and rollback notes.
 - HTTP 200 alone is not portal/runtime acceptance.
 - Implement SEO/UX contracts through SF4 surfaces without redefining them.
+
+## Rules
+
+- [rules/project-layer-structure.md](./rules/project-layer-structure.md),
+  [rules/frontend-markup.md](./rules/frontend-markup.md),
+  [rules/backend-data.md](./rules/backend-data.md),
+  [rules/solution-acceptance-chain.md](./rules/solution-acceptance-chain.md),
+  [rules/when-to-ask.md](./rules/when-to-ask.md).
 
 ## Reference Selection
 

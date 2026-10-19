@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "id": "technology.sf4.project-layer-change",
+  "title": "Изменение SF4-проекта через project layer",
+  "owner": "skill.sf4",
+  "outcome": "Изменение SF4-сайта (страница, блок, view, настройки, данные или визард) внесено в project layer `simai.data` без правки системного слоя, проверено статически и в runtime, сопровождено заметками миграции/отката и доказательствами.",
+  "lifecycle": "reviewed",
+  "version": "1.0.0",
+  "source_refs": [
+    "repo://ai-codex-skill-sf4/skills/sf4/SKILL.md",
+    "repo://ai-codex-skill-sf4/skills/sf4/kernel/non-negotiable.md",
+    "repo://ai-codex-skill-sf4/skills/sf4/references/task-routing.md",
+    "repo://ai-codex-skill-sf4/skills/sf4/references/solution-customization-technology.md",
+    "repo://ai-codex-skill-sf4/skills/sf4/specialists/universal-wizard.md"
+  ],
+  "operations": [
+    {
+      "id": "operation.scope_intake",
+      "title": "Определить сайт, слой и тип задачи",
+      "summary": "Найти site root, site dir, активный слой и копии source/runtime; классифицировать задачу (композиция страницы, блок/компонент, настройки, схема данных, визард/обновление, фронтенд, связки view-block); определить компаньонов по skill-mesh-balance.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": [],
+      "input_refs": ["input.change_request", "input.site_root"], "output_refs": ["evidence.task_scope", "evidence.companion_route"],
+      "check_refs": ["check.single_site_root_and_dir", "check.task_class_declared"], "stop_condition_refs": ["stop.ambiguous_site_root", "stop.system_layer_edit_requested", "stop.undocumented_project_behavior"], "rollback_refs": [],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/SKILL.md", "repo://ai-codex-skill-sf4/skills/sf4/rules/when-to-ask.md", "repo://ai-codex-skill-sf4/skills/sf4/rules/skill-mesh-balance.md"], "instructional_refs": [],
+      "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": ["Портализация решения принадлежит $orgportal.", "SF5/Larena принадлежат $framework и $larena."]
+    },
+    {
+      "id": "operation.project_audit",
+      "title": "Снять аудит project layer",
+      "summary": "Запустить sf4_project_audit.py: найти simai.data, проверить критичные файлы и соответствие grid_view_* реальным папкам view; при необходимости снять карту маршрутов и шаблонов компонентов.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.scope_intake"],
+      "input_refs": ["evidence.task_scope"], "output_refs": ["evidence.project_audit", "evidence.route_map"],
+      "check_refs": ["check.simai_data_detected", "check.grid_view_mapping_valid"], "stop_condition_refs": ["stop.simai_data_missing"], "rollback_refs": [],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/scripts/sf4_project_audit.py", "repo://ai-codex-skill-sf4/skills/sf4/scripts/sf4_site_map.py", "repo://ai-codex-skill-sf4/skills/sf4/references/project-layout.md"], "instructional_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/scripts-catalog.md"],
+      "applicability": ["page_override", "solution_customization"], "negative_boundaries": []
+    },
+    {
+      "id": "operation.solution_acceptance_chain",
+      "title": "Пройти цепочку приёмки решения",
+      "summary": "Для адаптации существующего решения под дизайн клиента: базовые настройки сайта, свойства раздела/страницы, карта view/block, аналогия динамических данных, решение о функциональном разрыве или модуле — до написания кода.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.project_audit"],
+      "input_refs": ["evidence.project_audit", "input.client_design"], "output_refs": ["evidence.solution_primitive_map", "evidence.view_block_mapping"],
+      "check_refs": ["check.settings_baseline", "check.page_properties_plan", "check.dynamic_data_source_mapped"], "stop_condition_refs": ["stop.ad_hoc_page_without_chain"], "rollback_refs": [],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/rules/solution-acceptance-chain.md", "repo://ai-codex-skill-sf4/skills/sf4/references/solution-customization-technology.md"], "instructional_refs": [],
+      "applicability": ["solution_customization"], "negative_boundaries": ["Страница, работающая по smoke в обход цепочки, — только технический прототип."]
+    },
+    {
+      "id": "operation.project_layer_implement",
+      "title": "Внести изменение в project layer",
+      "summary": "Изменить только релевантный слой в {site_dir}/simai.data (view, area, block, config, свойства, компоненты) по маршруту task-routing; при наличии source и deployed копий синхронизировать обе.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.project_audit"],
+      "input_refs": ["evidence.task_scope", "evidence.project_audit"], "output_refs": ["evidence.changed_paths"],
+      "check_refs": ["check.system_layer_untouched", "check.companion_files_present", "check.source_and_deployed_copies_reconciled"], "stop_condition_refs": ["stop.system_layer_edit_requested"], "rollback_refs": ["procedure.revert_project_layer_files"],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/kernel/non-negotiable.md", "repo://ai-codex-skill-sf4/skills/sf4/rules/project-layer-structure.md", "repo://ai-codex-skill-sf4/skills/sf4/references/task-routing.md", "repo://ai-codex-skill-sf4/skills/sf4/references/grid-and-block-workflow.md"], "instructional_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/task-playbooks.md"],
+      "applicability": ["page_override", "solution_customization"], "negative_boundaries": ["Не править /bitrix/cache/js/* — только источник JS."]
+    },
+    {
+      "id": "operation.static_checks",
+      "title": "Статические проверки",
+      "summary": "Синтаксис PHP затронутых файлов, обязательные файлы (template.php, .parameters.php, .description.php, lang), инвентарь классов и интерактивных маркеров, backend risk scan для backend-задач.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.project_layer_implement"],
+      "input_refs": ["evidence.changed_paths"], "output_refs": ["evidence.static_check_report"],
+      "check_refs": ["check.php_syntax", "check.required_block_files", "check.backend_risk_scan_no_critical"], "stop_condition_refs": ["stop.critical_backend_risk"], "rollback_refs": ["procedure.revert_project_layer_files"],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/scripts/sf4_backend_risk_scan.py", "repo://ai-codex-skill-sf4/skills/sf4/scripts/sf4_markup_inventory.py", "repo://ai-codex-skill-sf4/skills/sf4/scripts/sf4_interactive_audit.py", "repo://ai-codex-skill-sf4/skills/sf4/rules/frontend-markup.md", "repo://ai-codex-skill-sf4/skills/sf4/rules/backend-data.md"], "instructional_refs": [],
+      "applicability": ["page_override", "solution_customization"], "negative_boundaries": []
+    },
+    {
+      "id": "operation.runtime_verification",
+      "title": "Проверка в runtime и регресс",
+      "summary": "Сбросить релевантный кэш и проверить целевые страницы: smoke и регресс затронутой поверхности; в portal/host-mode — класс страницы, обязательные блоки и маркеры, источник организации, include-пути, редакторский контекст.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.static_checks"],
+      "input_refs": ["evidence.changed_paths", "evidence.static_check_report"], "output_refs": ["evidence.runtime_smoke", "evidence.regression_checklist"],
+      "check_refs": ["check.cache_cleared", "check.target_pages_render", "check.portal_markers_not_http_200_only"], "stop_condition_refs": ["stop.runtime_regression"], "rollback_refs": ["procedure.revert_project_layer_files"],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/qa-regression.md", "repo://ai-codex-skill-sf4/skills/sf4/references/portal-runtime-source-of-truth.md"], "instructional_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/artifacts/regression-checklist.md"],
+      "applicability": ["page_override", "solution_customization"], "negative_boundaries": ["HTTP 200 не является приёмкой."]
+    },
+    {
+      "id": "operation.update_artifacts",
+      "title": "Заметки миграции и отката",
+      "summary": "Для схемы, данных и обновлений подготовить migration notes, upgrade notes и план отката; явно указать «без изменений», если их нет.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.scope_intake"],
+      "input_refs": ["evidence.task_scope"], "output_refs": ["evidence.migration_notes", "evidence.rollback_plan"],
+      "check_refs": ["check.rollback_plan_present"], "stop_condition_refs": [], "rollback_refs": [],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/update-artifacts.md", "repo://ai-codex-skill-sf4/skills/sf4/references/artifacts/migration-notes.md", "repo://ai-codex-skill-sf4/skills/sf4/references/artifacts/upgrade-notes.md"], "instructional_refs": [],
+      "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": []
+    },
+    {
+      "id": "operation.wizard_audit",
+      "title": "Read-only аудит мастера визарда",
+      "summary": "Проверить мастер/пакет визарда без исполнения: модель entry -> master -> stage -> action -> property storage, сборку master/<wizard>/data/*, соответствие кода action имени папки.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.scope_intake"],
+      "input_refs": ["input.wizard_master"], "output_refs": ["evidence.wizard_audit"],
+      "check_refs": ["check.wizard_config_present", "check.action_code_matches_folder"], "stop_condition_refs": ["stop.wizard_config_missing"], "rollback_refs": [],
+      "source_refs": ["repo://ai-codex-skill-sf4/scripts/sf4_wizard_audit.py", "repo://ai-codex-skill-sf4/skills/sf4/specialists/universal-wizard.md", "repo://ai-codex-skill-sf4/skills/sf4/references/wizard-actions.md"], "instructional_refs": [],
+      "applicability": ["wizard_package"], "negative_boundaries": ["Аудит не исполняет Bitrix, действия визарда и записи в БД."]
+    },
+    {
+      "id": "operation.wizard_package_build",
+      "title": "Собрать propose-only пакет визарда",
+      "summary": "Сгенерировать скелет мастера или export-мастер по манифесту (inventory, iblock/HL allowlist) в source/output, не трогая runtime.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.wizard_audit"],
+      "input_refs": ["evidence.wizard_audit", "input.wizard_manifest"], "output_refs": ["artifact.wizard_master_proposal"],
+      "check_refs": ["check.propose_only_output", "check.iblock_codes_site_aware"], "stop_condition_refs": ["stop.wizard_config_missing"], "rollback_refs": ["procedure.discard_proposal_output"],
+      "source_refs": ["repo://ai-codex-skill-sf4/scripts/sf4_wizard_skeleton.py", "repo://ai-codex-skill-sf4/scripts/sf4_wizard_export_builder.py", "repo://ai-codex-skill-sf4/scripts/sf4_wizard_export_inventory.py", "repo://ai-codex-skill-sf4/scripts/sf4_wizard_iblock_manifest.py", "repo://ai-codex-skill-sf4/skills/sf4/rules/backend-data.md"], "instructional_refs": [],
+      "applicability": ["wizard_package"], "negative_boundaries": []
+    },
+    {
+      "id": "operation.wizard_readiness",
+      "title": "Готовность и план отката визарда",
+      "summary": "Построить readiness board по аудиту, план отката и прогнать read-only acceptance runner мастера.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.wizard_package_build", "operation.update_artifacts"],
+      "input_refs": ["evidence.wizard_audit", "artifact.wizard_master_proposal", "evidence.rollback_plan"], "output_refs": ["evidence.wizard_readiness", "evidence.wizard_rollback_check"],
+      "check_refs": ["check.readiness_board_no_blockers", "check.rollback_plan_checked", "check.wizard_acceptance_invariants"], "stop_condition_refs": ["stop.readiness_blocker"], "rollback_refs": ["procedure.discard_proposal_output"],
+      "source_refs": ["repo://ai-codex-skill-sf4/scripts/sf4_wizard_readiness.py", "repo://ai-codex-skill-sf4/scripts/sf4_wizard_rollback_plan.py", "repo://ai-codex-skill-sf4/scripts/sf4_wizard_acceptance.py"], "instructional_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/scripts-catalog.md"],
+      "applicability": ["wizard_package"], "negative_boundaries": ["Готовность не равна исполнению визарда на live."]
+    },
+    {
+      "id": "operation.handoff",
+      "title": "Передать результат",
+      "summary": "Вернуть целевой слой, изменённые пути, загруженные references, влияние на миграцию/откат, проверки и runtime-доказательства, блокеры и следующий минимальный шаг; назвать компаньона на ревью.",
+      "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.update_artifacts"],
+      "input_refs": ["evidence.migration_notes", "evidence.rollback_plan"], "output_refs": ["evidence.sf4_handoff"],
+      "check_refs": ["check.evidence_listed", "check.companion_named"], "stop_condition_refs": [], "rollback_refs": [],
+      "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/SKILL.md", "repo://ai-codex-skill-sf4/skills/sf4/rules/skill-mesh-balance.md"], "instructional_refs": [],
+      "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": ["QA-вердикт принадлежит $tester."]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "scenario.page_override",
+      "title": "Точечное изменение страницы, блока, view или настроек",
+      "outcome": "Изменение внесено в simai.data, проверено статически и в runtime, есть заметки миграции/отката и доказательства.",
+      "operation_ids": [
+        "operation.scope_intake",
+        "operation.project_audit",
+        "operation.project_layer_implement",
+        "operation.static_checks",
+        "operation.runtime_verification",
+        "operation.update_artifacts",
+        "operation.handoff"
+      ],
+      "required_inputs": ["input.change_request", "input.site_root"],
+      "audience": ["developer", "tester"]
+    },
+    {
+      "id": "scenario.solution_customization",
+      "title": "Адаптация существующего решения под дизайн клиента",
+      "outcome": "Дизайн переведён в настройки, свойства, view/block и динамические источники решения до кода и реализован через project layer с доказательствами.",
+      "operation_ids": [
+        "operation.scope_intake",
+        "operation.project_audit",
+        "operation.solution_acceptance_chain",
+        "operation.project_layer_implement",
+        "operation.static_checks",
+        "operation.runtime_verification",
+        "operation.update_artifacts",
+        "operation.handoff"
+      ],
+      "required_inputs": ["input.change_request", "input.site_root", "input.client_design"],
+      "audience": ["developer", "tester", "owner"]
+    },
+    {
+      "id": "scenario.wizard_package",
+      "title": "Мастер визарда: аудит, сборка пакета, готовность",
+      "outcome": "Мастер или пакет визарда проверен read-only, предложение собрано в source/output, есть readiness board и проверенный план отката без исполнения на live.",
+      "operation_ids": [
+        "operation.scope_intake",
+        "operation.wizard_audit",
+        "operation.wizard_package_build",
+        "operation.update_artifacts",
+        "operation.wizard_readiness",
+        "operation.handoff"
+      ],
+      "required_inputs": ["input.change_request", "input.wizard_master"],
+      "audience": ["developer", "owner"]
+    }
+  ]
+}

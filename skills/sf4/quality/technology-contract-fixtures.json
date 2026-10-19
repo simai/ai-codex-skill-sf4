@@ -6,12 +6,32 @@
     {
       "id": "sf4.paraphrase.ru",
       "task": "Используй $sf4. Выполни типовую задачу владельца sf4 в синтетическом проекте.",
-      "expected_process_model_id": "sf4_project_layer_override"
+      "expected_process_model_id": "sf4_project_layer_override",
+      "expected_executable_technology_scenario_id": "scenario.page_override"
     },
     {
       "id": "sf4.paraphrase.en",
       "task": "Use $sf4 to complete the owner's representative task in a synthetic project.",
-      "expected_process_model_id": "sf4_project_layer_override"
+      "expected_process_model_id": "sf4_project_layer_override",
+      "expected_executable_technology_scenario_id": "scenario.page_override"
+    },
+    {
+      "id": "sf4.page_override.ru",
+      "task": "Используй $sf4. Добавь на главную SF4-сайта новый блок новостей через simai.data без правки системного слоя.",
+      "expected_process_model_id": "sf4_project_layer_override",
+      "expected_executable_technology_scenario_id": "scenario.page_override"
+    },
+    {
+      "id": "sf4.solution_customization.ru",
+      "task": "Используй $sf4. Адаптируй существующее SF4-решение под макет клиента: настройки сайта, свойства страниц, view и блоки.",
+      "expected_process_model_id": "sf4_project_layer_override",
+      "expected_executable_technology_scenario_id": "scenario.solution_customization"
+    },
+    {
+      "id": "sf4.wizard_package.ru",
+      "task": "Используй $sf4. Проведи read-only аудит мастера визарда SF4 и подготовь пакет экспорта решения с планом отката.",
+      "expected_process_model_id": "sf4_project_layer_override",
+      "expected_executable_technology_scenario_id": "scenario.wizard_package"
     }
   ],
   "negative_cases": [
