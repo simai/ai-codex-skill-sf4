@@ -12,11 +12,10 @@
       "tester"
     ],
     "evidence_refs": [
-      "graph/generated/mirai-graph/gga10-owner-approved-apply-plans/sf4-owner-approved-apply-plan-20260530/owner-approved-apply-plan.json",
-      "graph/generated/mirai-graph/gga10-apply-verdicts/sf4-owner-approved-gga10-apply-validated-20260530/apply-verdict.json"
+      "repo://ai-codex-skill-sf4/skills/sf4/quality/capability-map.json"
     ],
     "gga_status": "GGA10",
-    "graph_context_ref": "/Users/rim/Documents/GitHub/ai-codex-skill-sf4/graph",
+    "graph_context_ref": "repo://ai-codex-skill-sf4/graph",
     "keywords": [
       "sf4",
       "simai.data",
