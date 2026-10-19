@@ -3,7 +3,7 @@
 Generated from:
 
 ```bash
-python3 scripts/sf4_site_map.py --site-root <project_root> --site-dir /ru --json-out references/artifacts/university-ru-site-map.json --json
+python3 scripts/sf4_site_map.py --site-root <project_root> --site-dir /ru --json-out ~/.simai/storage/skill-data/sf4/university-ru/university-ru-site-map.json --json
 ```
 
 ## Active `grid_view_*`

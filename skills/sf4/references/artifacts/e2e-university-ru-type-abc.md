@@ -43,7 +43,7 @@ Result:
 
 Command:
 
-- `python3 scripts/sf4_project_audit.py --site-root <project_root> --site-dir /ru --show-summary --link-report-json skills/sf4/references/artifacts/university-ru-link-report.json`
+- `python3 scripts/sf4_project_audit.py --site-root <project_root> --site-dir /ru --show-summary --link-report-json ~/.simai/storage/skill-data/sf4/university-ru/university-ru-link-report.json`
 
 Result:
 
@@ -57,12 +57,12 @@ Result:
 
 Markup inventory result:
 
-- PASS: report generated (`university-ru-markup-inventory.json`).
+- PASS: report generated (`~/.simai/storage/skill-data/sf4/university-ru/university-ru-markup-inventory.json`).
 - PASS: expected base classes detected (`sf-title`, `btn-primary`, utilities).
 
 Interactive audit result:
 
-- PASS: report generated (`university-ru-interactive-audit.json`).
+- PASS: report generated (`~/.simai/storage/skill-data/sf4/university-ru/university-ru-interactive-audit.json`).
 - PASS: known markers present (`sf_modal_attr`, `aria_attr`, `sf_src_attr`).
 - INFO: no `dropdown_toggle` and `inputmask_attr` markers found in scanned SF4 templates.
 
@@ -70,7 +70,7 @@ Interactive audit result:
 
 Command:
 
-- `python3 scripts/sf4_backend_risk_scan.py --site-root <project_root> --site-dir /ru --json-out skills/sf4/references/artifacts/university-ru-backend-risk.json`
+- `python3 scripts/sf4_backend_risk_scan.py --site-root <project_root> --site-dir /ru --json-out ~/.simai/storage/skill-data/sf4/university-ru/university-ru-backend-risk.json`
 
 Result:
 

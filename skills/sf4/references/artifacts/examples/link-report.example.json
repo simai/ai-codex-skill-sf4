@@ -1,0 +1,24 @@
+[
+  {
+    "simai_data": "ru/simai.data",
+    "view_template": "ru/simai.data/grid/view/footer/010/template.php",
+    "block_section": "footer",
+    "block_code": "banner.single",
+    "project_template": "ru/simai.data/grid/block/footer/banner.single/template.php",
+    "system_template": "simai/block/footer/banner.single/template.php",
+    "project_exists": true,
+    "system_exists": true,
+    "status": "ok"
+  },
+  {
+    "simai_data": "ru/simai.data",
+    "view_template": "ru/simai.data/grid/view/header/010/template.php",
+    "block_section": "header",
+    "block_code": "empty",
+    "project_template": "ru/simai.data/grid/block/header/empty/template.php",
+    "system_template": "simai/block/header/empty/template.php",
+    "project_exists": false,
+    "system_exists": false,
+    "status": "missing"
+  }
+]

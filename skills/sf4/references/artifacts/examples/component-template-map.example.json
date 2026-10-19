@@ -1,0 +1,86 @@
+{
+  "_note": "Обезличенный пример формата sf4_component_template_map.py; полный снимок проекта хранится вне навыка.",
+  "site_root": "<project_root>",
+  "site_dir": "/ru",
+  "scan_mode": "page_php_excluding_simai_data",
+  "scanned_files_count": 5,
+  "pages_with_components_count": 5,
+  "records_count": 5,
+  "records": [
+    {
+      "page": "ru/section-1/index.php",
+      "component": "simai:sf.menu.sections",
+      "template": ".default",
+      "template_is_dynamic": false,
+      "template_expr": "",
+      "resolved_source": "unresolved",
+      "resolved_template_path": null,
+      "fallback_template_path": null
+    },
+    {
+      "page": "ru/section-2/index.php",
+      "component": "simai:sf.iblock.detail",
+      "template": ".default",
+      "template_is_dynamic": false,
+      "template_expr": "",
+      "resolved_source": "local_component_source",
+      "resolved_template_path": "local/components/simai/sf.iblock.detail/templates/.default/template.php",
+      "fallback_template_path": null
+    },
+    {
+      "page": "ru/section-3/index.php",
+      "component": "simai:sf.iblock.list",
+      "template": "faq",
+      "template_is_dynamic": false,
+      "template_expr": "",
+      "resolved_source": "local_override",
+      "resolved_template_path": "local/templates/simai.framework/components/simai/sf.iblock.list/faq/template.php",
+      "fallback_template_path": null
+    },
+    {
+      "page": "ru/section-4/index.php",
+      "component": "simai:sf.iblock.list",
+      "template": "abitur",
+      "template_is_dynamic": false,
+      "template_expr": "",
+      "resolved_source": "unresolved_with_default_fallback",
+      "resolved_template_path": null,
+      "fallback_template_path": "local/components/simai/sf.iblock.list/templates/.default/template.php"
+    },
+    {
+      "page": "ru/section-5/index.php",
+      "component": "bitrix:main.include",
+      "template": ".default",
+      "template_is_dynamic": false,
+      "template_expr": "",
+      "resolved_source": "bitrix_component_source",
+      "resolved_template_path": "bitrix/components/bitrix/main.include/templates/.default/template.php",
+      "fallback_template_path": null
+    }
+  ],
+  "summary": {
+    "component_counts": {
+      "simai:sf.menu.sections": 1,
+      "simai:sf.iblock.detail": 1,
+      "simai:sf.iblock.list": 2,
+      "bitrix:main.include": 1
+    },
+    "component_template_counts": {
+      "simai:sf.menu.sections::.default": 1,
+      "simai:sf.iblock.detail::.default": 1,
+      "simai:sf.iblock.list::faq": 1,
+      "simai:sf.iblock.list::abitur": 1,
+      "bitrix:main.include::.default": 1
+    },
+    "resolved_source_counts": {
+      "unresolved": 1,
+      "local_component_source": 1,
+      "local_override": 1,
+      "unresolved_with_default_fallback": 1,
+      "bitrix_component_source": 1
+    },
+    "unresolved_component_templates": {
+      "simai:sf.menu.sections::.default": 1
+    }
+  }
+}

@@ -172,7 +172,8 @@ Sample E2E checklist artifact for Type A/B/C route verification:
 Sample component-template mapping artifacts:
 
 - `references/artifacts/university-ru-component-template-map.md`
-- `references/artifacts/university-ru-component-template-map.json`
+- `references/artifacts/examples/component-template-map.example.json` (обезличенный формат; полный снимок проекта — `~/.simai/storage/skill-data/sf4/university-ru/`)
+- `references/artifacts/examples/link-report.example.json`
 
 Sample system-layer study artifact:
 

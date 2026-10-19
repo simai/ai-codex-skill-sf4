@@ -3,8 +3,11 @@
 Generated from:
 
 ```bash
-python3 scripts/sf4_component_template_map.py --site-root <project_root> --site-dir /ru --json-out references/artifacts/university-ru-component-template-map.json
+python3 scripts/sf4_component_template_map.py --site-root <project_root> --site-dir /ru --json-out ~/.simai/storage/skill-data/sf4/university-ru/university-ru-component-template-map.json
 ```
+
+Полный снимок проекта хранится вне навыка: `~/.simai/storage/skill-data/sf4/university-ru/university-ru-component-template-map.json`.
+Обезличенный пример формата: `references/artifacts/examples/component-template-map.example.json`.
 
 ## Metrics
 
