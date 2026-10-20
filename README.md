@@ -30,7 +30,7 @@ Install target:
 Copy:
 
 ```bash
-SRC="/path/to/ai-codex-skill-sf4/skills/sf4"
+SRC="/path/to/ai-skill-sf4/skills/sf4"
 DST="$HOME/.codex/skills/sf4"
 mkdir -p "$HOME/.codex/skills"
 rm -rf "$DST"
@@ -40,7 +40,7 @@ cp -R "$SRC" "$DST"
 Symlink (recommended for active development):
 
 ```bash
-SRC="/path/to/ai-codex-skill-sf4/skills/sf4"
+SRC="/path/to/ai-skill-sf4/skills/sf4"
 DST="$HOME/.codex/skills/sf4"
 mkdir -p "$HOME/.codex/skills"
 rm -rf "$DST"
@@ -52,7 +52,7 @@ ln -s "$SRC" "$DST"
 Copy:
 
 ```powershell
-$src = "C:\path\to\ai-codex-skill-sf4\skills\sf4"
+$src = "C:\path\to\ai-skill-sf4\skills\sf4"
 $dstRoot = "$env:USERPROFILE\.codex\skills"
 $dst = "$dstRoot\sf4"
 New-Item -ItemType Directory -Force $dstRoot | Out-Null
@@ -63,7 +63,7 @@ Copy-Item -Recurse -Force $src $dst
 Symlink (recommended for active development, may require admin/developer mode):
 
 ```powershell
-$src = "C:\path\to\ai-codex-skill-sf4\skills\sf4"
+$src = "C:\path\to\ai-skill-sf4\skills\sf4"
 $dstRoot = "$env:USERPROFILE\.codex\skills"
 $dst = "$dstRoot\sf4"
 New-Item -ItemType Directory -Force $dstRoot | Out-Null

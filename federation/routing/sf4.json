@@ -12,10 +12,10 @@
       "tester"
     ],
     "evidence_refs": [
-      "repo://ai-codex-skill-sf4/skills/sf4/quality/capability-map.json"
+      "repo://ai-skill-sf4/skills/sf4/quality/capability-map.json"
     ],
     "gga_status": "GGA10",
-    "graph_context_ref": "repo://ai-codex-skill-sf4/graph",
+    "graph_context_ref": "repo://ai-skill-sf4/graph",
     "keywords": [
       "sf4",
       "simai.data",
