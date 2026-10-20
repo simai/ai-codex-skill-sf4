@@ -820,12 +820,12 @@ ROW_<row>_COL_<col>_AREA_<area>__<BLOCK_CODE_WITH_DOTS_REPLACED_BY_UNDERSCORES>_
 Example:
 
 ```php
-"ROW_4_COL_0_AREA_0__BUDDYDINNER_STORIES__TITLE" => "Выберите способ помощи",
+"ROW_4_COL_0_AREA_0__PROJECT_STORIES__TITLE" => "Выберите способ помощи",
 ```
 
 Do not pass block params as
-`ROW_4_COL_0_AREA_0_BUDDYDINNER.STORIES__TITLE` or
-`ROW_4_COL_0_AREA_0__BUDDYDINNER.STORIES__TITLE`: those keys are ignored and
+`ROW_4_COL_0_AREA_0_PROJECT.STORIES__TITLE` or
+`ROW_4_COL_0_AREA_0__PROJECT.STORIES__TITLE`: those keys are ignored and
 the block silently falls back to `.parameters.php` defaults.
 
 When a custom component template emits a `row` wrapper but the intended layout
@@ -845,16 +845,16 @@ the arrow changes the active slide, the media aspect ratio matches the design,
 and the fallback still renders a readable grid if the slider script does not
 initialize.
 
-## BuddyDinner Lesson
+## Lesson: Working Flow Is Not Solution Acceptance
 
-The `/ru/donate/` payment flow worked technically, but the first implementation
-was too ad-hoc: it created a standalone page with inline layout instead of first
-using site settings, page properties, and the existing SF4 view/block model.
-
-For similar projects, `sf4` must stop before coding and produce:
+A route that works technically (for example a payment flow) but is built as a
+standalone page with inline layout is a prototype, not an accepted result. On a
+solution-based project, `sf4` stops before coding and produces:
 
 - source solution primitive map;
 - site settings baseline;
 - section/page property plan;
 - view/block/component mapping;
 - acceptance checks.
+
+The concrete case lives in the client project repository, not in the skill.

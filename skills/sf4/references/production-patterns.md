@@ -4,9 +4,8 @@
 
 Capture real-world SF4 patterns observed on live project templates so implementation choices match production usage.
 
-Companion field-study baseline:
-
-- `references/field-study-university-local.md`
+Project-specific field-study baselines live in the project repository, not in
+the skill.
 
 ## Extended Template Areas
 

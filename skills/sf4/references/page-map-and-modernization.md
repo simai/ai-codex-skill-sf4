@@ -21,7 +21,6 @@ Use a repeatable method to map real SF4 pages to:
 
 Then modernize pages safely with minimal regressions.
 
-For concrete route-specific examples, also read `references/page-modernization-cases.md`.
 For component-heavy pages, also read `references/component-template-resolution.md`.
 
 ## 2) Build Page Map Automatically
@@ -48,7 +47,7 @@ What it returns:
 
 ## 3) Baseline Snapshot (`/ru`)
 
-Observed on the university baseline:
+Example from a reference production baseline:
 
 - active views:
   - `grid_view_header=005`
@@ -107,7 +106,7 @@ Page is mostly component orchestration (`simai:sf.iblock.*`, `bitrix:*`).
 Typical examples:
 
 - `ru/contacts/index.php`
-- `ru/natsionalnyy-proekt-nauka-i-universitety/index.php`
+- `ru/<section>/index.php`
 
 Change surface:
 

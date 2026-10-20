@@ -26,7 +26,9 @@ Goal:
 Steps:
 
 1. Determine active area and `grid_view_*` code.
-2. If this is a full legacy site, read `references/field-study-university-local.md` first.
+2. If this is a full legacy site, first build the project's own baseline
+   (`sf4_site_map.py`, `sf4_markup_inventory.py`); keep it in the project
+   repository, not in the skill.
 3. Open `{site_dir}/simai.data/grid/view/<area>/<code>/template.php`.
 4. Modify:
    - row count/order
@@ -253,7 +255,7 @@ Steps:
    - `references/ui-modifier-strategy.md`
    - `references/ui-markup-recipes.md`
    - `references/component-template-resolution.md` (when page is component-heavy)
-2. For large existing projects, add `references/field-study-university-local.md`.
+2. For large existing projects, build the project's own baseline first (step 3); keep it in the project repository.
 3. Inspect current project class baseline:
    - `python3 scripts/sf4_markup_inventory.py --site-root <root> --site-dir <site_dir> --top 80`
 4. Select the target pattern source:
@@ -317,7 +319,7 @@ Steps:
    - `references/property-editor-playbook.md`
    - `references/sfgrid-editor-features.md`
    - `references/backend-critical-guides.md`
-2. For full existing projects, add `references/field-study-university-local.md` as baseline context.
+2. For full existing projects, build the project's own baseline (`sf4_site_map.py`, `sf4_backend_risk_scan.py`) and keep it in the project repository.
 3. Identify target backend scope:
    - storage CRUD/events/search,
    - property editor schema/persistence,
@@ -346,7 +348,7 @@ Goal:
 Steps:
 
 1. Read `references/page-map-and-modernization.md`.
-2. Read `references/page-modernization-cases.md`.
+2. Use the Type A/B/C classification from that file; route-specific case notes belong to the project repository.
 3. For component-heavy route (Type C), read `references/component-template-resolution.md`.
 4. Build route map snapshot:
    - `python3 scripts/sf4_site_map.py --site-root <root> --site-dir <site_dir> --json-out <map.json> --json`

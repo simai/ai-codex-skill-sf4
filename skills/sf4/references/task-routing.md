@@ -18,9 +18,9 @@ Rules per area: `../rules/`.
   behavior.
 - `system-layer-simai.md` when framework-level block/property/wizard context
   from `/simai` is needed.
-- Full existing site: `field-study-university-local.md`,
-  `page-map-and-modernization.md` (classify route type first),
-  `page-modernization-cases.md` (Type A/B/C examples).
+- Full existing site: `page-map-and-modernization.md` (classify route type
+  A/B/C first); the project's own baseline and case notes live in the project
+  repository.
 - `ui-catalog.md` when markup changes too.
 - Playbooks: sections 1, 2, 9, 16. Rules: `../rules/project-layer-structure.md`.
 
