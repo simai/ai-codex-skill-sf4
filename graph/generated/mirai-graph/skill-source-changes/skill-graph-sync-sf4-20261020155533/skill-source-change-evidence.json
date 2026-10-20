@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-20T15:55:33.406755+00:00",
+  "skill": "sf4",
+  "repo": "repo://ai-skill-sf4",
+  "base": "5abadf99b7ae3b781f1a0c5c7956d7560918b278",
+  "base_commit": "5abadf99b7ae3b781f1a0c5c7956d7560918b278",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "3c2fe287ebe3e0c0f91a316b5612320ac29a9ec28fa003f159ecc84818766526",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20261020155533/detector-report.json",
+  "changed_files": [
+    {
+      "path": "README.md",
+      "source_path": "README.md",
+      "change_types": [
+        "documentation",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "2b3394ef3f24099516d2c8eb0672377093542f0c860acaaf02bdca66404e4291",
+      "source_bytes": 6653,
+      "baseline_path": "README.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "634728b7175f9541f8f0c0de6d59eefa3ff2ef63e00badf7bdf66f4e7a56135f",
+      "baseline_bytes": 6677
+    },
+    {
+      "path": "skills/sf4/technologies/project-layer-change.json",
+      "source_path": "technologies/project-layer-change.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "7afb2c9b4cb5acab4960c6cf7a1801fe59f068b16c59ecf0b470582a38f40298",
+      "source_bytes": 17766,
+      "baseline_path": "skills/sf4/technologies/project-layer-change.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "c7070b2b396d3d87e919892a863e337e92c41741a9526b10d90bf4ac6ffe743e",
+      "baseline_bytes": 18030
+    }
+  ],
+  "change_types": [
+    "capability",
+    "documentation",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "README.md",
+    "skills/sf4/technologies/project-layer-change.json"
+  ],
+  "canonical_write_allowed": false
+}
