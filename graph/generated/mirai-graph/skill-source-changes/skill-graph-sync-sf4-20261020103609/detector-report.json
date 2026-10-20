@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-10-20T10:36:09.988852+00:00",
+  "repo": "repo://ai-codex-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "928408285dc42bac4ecbee800fbd92a8b366491f",
+  "base_commit": "928408285dc42bac4ecbee800fbd92a8b366491f",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 1,
+    "head": "221ee0d"
+  },
+  "changed_files": [
+    {
+      "path": "skills/sf4/technologies/project-layer-change.json",
+      "source_path": "technologies/project-layer-change.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "c7070b2b396d3d87e919892a863e337e92c41741a9526b10d90bf4ac6ffe743e",
+      "source_bytes": 18030,
+      "baseline_path": "skills/sf4/technologies/project-layer-change.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "46489759ffa9c09907682f33e8e298af83e0b286df32694ea5b0771fcfb98da3",
+      "baseline_bytes": 17987
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "2dde30841ab4595e821b3649a6b0fa9d4261d1cf3747007e8ad974db12362583"
+}
