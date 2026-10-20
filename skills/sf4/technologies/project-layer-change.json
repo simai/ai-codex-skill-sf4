@@ -4,7 +4,7 @@
   "title": "Изменение SF4-проекта через project layer",
   "owner": "skill.sf4",
   "outcome": "Изменение SF4-сайта (страница, блок, view, настройки, данные или визард) внесено в project layer `simai.data` без правки системного слоя, проверено статически и в runtime, сопровождено заметками миграции/отката и доказательствами.",
-  "lifecycle": "reviewed",
+  "lifecycle": "accepted",
   "version": "1.0.0",
   "source_refs": [
     "repo://ai-codex-skill-sf4/skills/sf4/SKILL.md",
@@ -80,7 +80,7 @@
       "summary": "Для схемы, данных и обновлений подготовить migration notes, upgrade notes и план отката; явно указать «без изменений», если их нет.",
       "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.scope_intake"],
       "input_refs": ["evidence.task_scope"], "output_refs": ["evidence.migration_notes", "evidence.rollback_plan"],
-      "check_refs": ["check.rollback_plan_present"], "stop_condition_refs": [], "rollback_refs": [],
+      "check_refs": ["check.rollback_plan_present"], "stop_condition_refs": ["stop.irreversible_change_without_rollback"], "rollback_refs": [],
       "source_refs": ["repo://ai-codex-skill-sf4/skills/sf4/references/update-artifacts.md", "repo://ai-codex-skill-sf4/skills/sf4/references/artifacts/migration-notes.md", "repo://ai-codex-skill-sf4/skills/sf4/references/artifacts/upgrade-notes.md"], "instructional_refs": [],
       "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": []
     },
