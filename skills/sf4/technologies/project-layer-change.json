@@ -5,6 +5,18 @@
   "owner": "skill.sf4",
   "outcome": "Изменение SF4-сайта (страница, блок, view, настройки, данные или визард) внесено в project layer `simai.data` без правки системного слоя, проверено статически и в runtime, сопровождено заметками миграции/отката и доказательствами.",
   "lifecycle": "accepted",
+  "acceptance": {
+    "accepted_by": "AI review by Federation thread task-9654a45bb3c7477ab26c on the owner's decision",
+    "accepted_at": "2026-10-23",
+    "decision_ref": "owner decision 2026-10-23: re-accept technologies of 20.10 with a record",
+    "evidence": [
+      "контрактная проверка federation-skill-technology-contracts.py: структура навыка, маршрутизация примеров и пакеты технологии без замечаний; отметки outcome_evidence_* снимаются после Skill Sync",
+      "сводный прогон владельца: storage/outcome-runs/2026-10-20b/sf4.json — ready, 4/4 PASS",
+      "источники: все 40 ссылок source_refs существуют; у каждой операции есть входы, выходы, проверки и условия остановки; сценарии ссылаются только на существующие операции",
+      "сверка с правилами навыка: operation.project_layer_implement (rules/non-negotiable.md, references/project-layer-structure.md), operation.wizard_audit (scripts/sf4_wizard_audit.py) — совпадают",
+      "при приёмке добавлены условия остановки для operation.handoff по правилам навыка (SKILL.md)"
+    ]
+  },
   "version": "1.0.0",
   "source_refs": [
     "repo://ai-skill-sf4/skills/sf4/SKILL.md",
@@ -120,7 +132,7 @@
       "summary": "Вернуть целевой слой, изменённые пути, загруженные references, влияние на миграцию/откат, проверки и runtime-доказательства, блокеры и следующий минимальный шаг; назвать компаньона на ревью.",
       "owner": "skill.sf4", "capability_ref": "sf4.project_layer_override", "prerequisites": ["operation.update_artifacts"],
       "input_refs": ["evidence.migration_notes", "evidence.rollback_plan"], "output_refs": ["evidence.sf4_handoff"],
-      "check_refs": ["check.evidence_listed", "check.companion_named"], "stop_condition_refs": [], "rollback_refs": [],
+      "check_refs": ["check.evidence_listed", "check.companion_named"], "stop_condition_refs": ["stop.readiness_blocker"], "rollback_refs": [],
       "source_refs": ["repo://ai-skill-sf4/skills/sf4/SKILL.md", "repo://ai-skill-sf4/skills/sf4/rules/skill-mesh-balance.md"], "instructional_refs": [],
       "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": ["QA-вердикт принадлежит $tester."]
     }
