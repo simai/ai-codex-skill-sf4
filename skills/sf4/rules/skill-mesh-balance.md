@@ -9,7 +9,11 @@ actions, SF4 migration/update workflows, and safe project-layer overrides.
 
 - Generic Bitrix platform facts and marketplace/module policy owned by
   `$bitrix`.
-- SF5/Larena implementation contracts owned by `$framework` and `$larena`.
+- SIMAI Framework (`simai/ui-source`) contracts owned by `$framework`; Larena
+  contracts owned by `$larena`.
+- Portal-level shared blocks and sections of `simai.portal` solutions and the
+  individual-to-portal migration owned by `$orgportal`; `$sf4` implements the
+  SF4 surfaces (`simai.data`, views, blocks) inside them on request.
 - Portalization strategy owned by `$orgportal`.
 - Documentation methodology/content owned by `$docs`.
 - SEO Contract decisions owned by `$seo`.

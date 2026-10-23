@@ -80,3 +80,15 @@ Executable technology: [technologies/project-layer-change.json](./technologies/p
 
 Return target layer, changed paths, loaded references, migration/rollback
 impact, checks and runtime evidence, blockers and the smallest next action.
+`changed paths` lists every surface the work touched, including service files
+(`.simai/`, `work/`, caches cleared, generated files) — not only the target
+code.
+
+## Чем навык не занимается
+
+- Общие факты платформы Bitrix, модули и marketplace — `bitrix`.
+- SIMAI Framework (`ui-source`) — `framework`; Larena — `larena`.
+- Портальные решения `simai.portal`, общие блоки решений и перевод в
+  портальное — `orgportal`.
+- Серверы, деплой и production — `ops`; приёмка — `tester`.
+- SEO- и UX-контракты задают `seo` и `ux`; `sf4` их только реализует.

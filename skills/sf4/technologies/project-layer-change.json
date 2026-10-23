@@ -22,7 +22,7 @@
       "input_refs": ["input.change_request", "input.site_root"], "output_refs": ["evidence.task_scope", "evidence.companion_route"],
       "check_refs": ["check.single_site_root_and_dir", "check.task_class_declared"], "stop_condition_refs": ["stop.ambiguous_site_root", "stop.system_layer_edit_requested", "stop.undocumented_project_behavior"], "rollback_refs": [],
       "source_refs": ["repo://ai-skill-sf4/skills/sf4/SKILL.md", "repo://ai-skill-sf4/skills/sf4/rules/when-to-ask.md", "repo://ai-skill-sf4/skills/sf4/rules/skill-mesh-balance.md"], "instructional_refs": [],
-      "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": ["Портализация решения принадлежит $orgportal.", "SF5/Larena принадлежат $framework и $larena."]
+      "applicability": ["page_override", "solution_customization", "wizard_package"], "negative_boundaries": ["Портализация решения принадлежит $orgportal.", "SIMAI Framework принадлежит $framework, Larena — $larena."]
     },
     {
       "id": "operation.project_audit",

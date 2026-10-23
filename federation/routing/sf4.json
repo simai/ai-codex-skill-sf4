@@ -18,12 +18,15 @@
     "graph_context_ref": "repo://ai-skill-sf4/mirai/graph",
     "keywords": [
       "sf4",
+      "сф4",
+      "simai framework 4",
       "simai.data",
-      "grid",
-      "view",
-      "block"
+      "simai:sf.",
+      "grid_view_",
+      "визард sf4",
+      "project-layer sf4"
     ],
-    "owner_boundary": "sf4 owns its domain methodology and judgement; federation graph owns routing/contracts/readiness/evidence only.",
+    "owner_boundary": "sf4 owns the SF4 project layer on Bitrix: simai.data, grid/view/block page assembly, template areas, simai:sf.* components, section and page properties, iblock/HL patterns and the wizard; generic Bitrix is bitrix, portal solutions are orgportal, SIMAI Framework is framework; Federation governance belongs to federation, graph structure to graph.",
     "raw_fallback_required": true,
     "required_gates": [
       "platform_contract"

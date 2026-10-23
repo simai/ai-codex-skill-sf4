@@ -24,7 +24,7 @@
       "bitrix.module",
       "larena.application",
       "larena.package",
-      "sf5.project",
+      "framework.project",
       "orgportal.solution",
       "docara.project"
     ]

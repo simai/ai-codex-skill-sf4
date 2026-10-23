@@ -39,6 +39,16 @@
       "id": "sf4.owner_boundary",
       "task": "Используй $dev для точечного backend bugfix в существующем API.",
       "expected_primary_skill": "dev"
+    },
+    {
+      "id": "sf4.generic_view_word",
+      "task": "Добавь view в Laravel-контроллер и вынеси block шаблона.",
+      "expected_primary_skill": "dev"
+    },
+    {
+      "id": "sf4.portal_shared_blocks",
+      "task": "Унифицируй общие блоки решений через simai.portal для всех сайтов организаций.",
+      "expected_primary_skill": "orgportal"
     }
   ],
   "outcome_cases": [
