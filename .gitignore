@@ -37,3 +37,10 @@ site
 
 # Mirai Graph local Project Technology state
 .mirai-graph/project-technology/
+
+
+# Mirai 2 local state: migration backups, staging, runtime
+.mirai/
+
+# the Mirai 2 capsule graph is tracked, whatever the rules above say
+!/mirai/graph/docs/

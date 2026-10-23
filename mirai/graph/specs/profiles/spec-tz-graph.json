@@ -151,7 +151,7 @@
     "developer handoff lists owner, next batch and verification commands"
   ],
   "safety_policy": "No canonical write from AI extraction without review; generated TZ is projection, not source of truth.",
-  "retention_policy": "Raw sources and extraction candidates stay in graph/source; generated documents can be rebuilt from canonical specs.",
+  "retention_policy": "Raw sources and extraction candidates stay in mirai/graph/source; generated documents can be rebuilt from canonical specs.",
   "federation_policy": "Specification graphs may export bounded readiness, impact and contract summaries without exposing private raw sources.",
   "migration_policy": "Legacy text specifications are mapped into candidates, reviewed, accepted into canonical specs and kept as transitional projections or archived.",
   "owner_skill": "graph",

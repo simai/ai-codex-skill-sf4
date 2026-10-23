@@ -1,0 +1,83 @@
+boundaries:
+  canonical_writes: owner_approval_required
+  evidence_authority: false
+  generated_authority: false
+  source_of_truth: hybrid_sot
+compatibility:
+  legacy_facade: required_2_x
+contract_version: 1.0.0
+documentation:
+  owner_notes: mirai/owner-notes.md
+  start: mirai/START.md
+entrypoints:
+  components: mirai/components
+  context: mirai/context
+  graph:
+    objects:
+      - mirai/graph/specs/objects/capability-map-capability-sf4-project-layer-override.json
+      - mirai/graph/specs/objects/capability-map-constraint-sf4-capability-map-boundary.json
+      - mirai/graph/specs/objects/capability-map-gate-sf4-capability-map-conformance.json
+      - mirai/graph/specs/objects/capability-map-source-sf4-solution-customization-technology-md-cc300e9e5760.json
+      - mirai/graph/specs/objects/capability-sf4-config-data.json
+      - mirai/graph/specs/objects/capability-sf4-page-assembly.json
+      - mirai/graph/specs/objects/capability-sf4-qa-regression.json
+      - mirai/graph/specs/objects/capability-sf4-ui-modernization.json
+      - mirai/graph/specs/objects/capability-sf4-universal-wizard-specialist.json
+      - mirai/graph/specs/objects/capability-sf4-wizard-actions.json
+      - mirai/graph/specs/objects/example-capability.json
+      - mirai/graph/specs/objects/example-policy.json
+      - mirai/graph/specs/objects/gate-sf4-regression-readiness.json
+      - mirai/graph/specs/objects/policy-sf4-backend-risk-gate.json
+      - mirai/graph/specs/objects/policy-sf4-project-layer-boundary.json
+      - mirai/graph/specs/objects/skill-sf4-core.json
+    relations:
+      - mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-documented-by-source-sf4-solution-customization-technology-md-cc300e9e5760.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-governed-by-constraint-sf4-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-validated-by-gate-sf4-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-sf4-core-contains-capability-sf4-project-layer-override.json
+      - mirai/graph/specs/relations/example-relation.json
+      - mirai/graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-backend-risk-gate.json
+      - mirai/graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-project-layer-boundary.json
+      - mirai/graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-backend-risk-gate.json
+      - mirai/graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-project-layer-boundary.json
+      - mirai/graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-backend-risk-gate.json
+      - mirai/graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-project-layer-boundary.json
+      - mirai/graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate.json
+      - mirai/graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-project-layer-boundary.json
+      - mirai/graph/specs/relations/relation-capability-sf4-universal-wizard-specialist-specializes-capability-sf4-wizard-actions.json
+      - mirai/graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-backend-risk-gate.json
+      - mirai/graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-project-layer-boundary.json
+      - mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-config-data.json
+      - mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-page-assembly.json
+      - mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression.json
+      - mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-ui-modernization.json
+      - mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-wizard-actions.json
+      - mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-config-data.json
+      - mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-page-assembly.json
+      - mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-qa-regression.json
+      - mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-ui-modernization.json
+      - mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-universal-wizard-specialist.json
+      - mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-wizard-actions.json
+    root: mirai/graph
+  interfaces: mirai/interfaces
+  policies: mirai/policies
+  programs: mirai/programs
+  sources: mirai/sources.yaml
+features:
+  - project_self_description
+  - graph_core
+  - proposal_first_learning
+  - legacy_graph_v2_compatibility
+profiles:
+  - skill_runtime
+project:
+  id: ai-codex-skill-sf4.graph
+  kind: project
+  owner: sf4
+  scope: skill
+  title: Example Graph
+requires:
+  graph_contract: 2.0.0
+  mirai: ">=2.1.0-alpha <3.0.0"
+  program_contract: 1.0.0
+  runtime_contract: 1.0.0

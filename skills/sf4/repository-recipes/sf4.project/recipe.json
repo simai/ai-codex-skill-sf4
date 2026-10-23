@@ -56,7 +56,7 @@
       "skills/sf4/references/grid-and-block-workflow.md"
     ],
     "processes": [
-      "graph/specs/index.json"
+      "mirai/graph/specs/index.json"
     ],
     "checks": [
       "skills/sf4/scripts/sf4_project_audit.py"

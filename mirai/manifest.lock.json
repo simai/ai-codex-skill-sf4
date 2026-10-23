@@ -1,0 +1,160 @@
+{
+  "contract_version": "1.0.0",
+  "manifest": {
+    "boundaries": {
+      "canonical_writes": "owner_approval_required",
+      "evidence_authority": false,
+      "generated_authority": false,
+      "source_of_truth": "hybrid_sot"
+    },
+    "compatibility": {
+      "legacy_facade": "required_2_x"
+    },
+    "contract_version": "1.0.0",
+    "documentation": {
+      "owner_notes": "mirai/owner-notes.md",
+      "start": "mirai/START.md"
+    },
+    "entrypoints": {
+      "components": "mirai/components",
+      "context": "mirai/context",
+      "graph": {
+        "objects": [
+          "mirai/graph/specs/objects/capability-map-capability-sf4-project-layer-override.json",
+          "mirai/graph/specs/objects/capability-map-constraint-sf4-capability-map-boundary.json",
+          "mirai/graph/specs/objects/capability-map-gate-sf4-capability-map-conformance.json",
+          "mirai/graph/specs/objects/capability-map-source-sf4-solution-customization-technology-md-cc300e9e5760.json",
+          "mirai/graph/specs/objects/capability-sf4-config-data.json",
+          "mirai/graph/specs/objects/capability-sf4-page-assembly.json",
+          "mirai/graph/specs/objects/capability-sf4-qa-regression.json",
+          "mirai/graph/specs/objects/capability-sf4-ui-modernization.json",
+          "mirai/graph/specs/objects/capability-sf4-universal-wizard-specialist.json",
+          "mirai/graph/specs/objects/capability-sf4-wizard-actions.json",
+          "mirai/graph/specs/objects/example-capability.json",
+          "mirai/graph/specs/objects/example-policy.json",
+          "mirai/graph/specs/objects/gate-sf4-regression-readiness.json",
+          "mirai/graph/specs/objects/policy-sf4-backend-risk-gate.json",
+          "mirai/graph/specs/objects/policy-sf4-project-layer-boundary.json",
+          "mirai/graph/specs/objects/skill-sf4-core.json"
+        ],
+        "relations": [
+          "mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-documented-by-source-sf4-solution-customization-technology-md-cc300e9e5760.json",
+          "mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-governed-by-constraint-sf4-capability-map-boundary.json",
+          "mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-validated-by-gate-sf4-capability-map-conformance.json",
+          "mirai/graph/specs/relations/capability-map-relation-skill-sf4-core-contains-capability-sf4-project-layer-override.json",
+          "mirai/graph/specs/relations/example-relation.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-backend-risk-gate.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-project-layer-boundary.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-backend-risk-gate.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-project-layer-boundary.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-backend-risk-gate.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-project-layer-boundary.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-project-layer-boundary.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-universal-wizard-specialist-specializes-capability-sf4-wizard-actions.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-backend-risk-gate.json",
+          "mirai/graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-project-layer-boundary.json",
+          "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-config-data.json",
+          "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-page-assembly.json",
+          "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression.json",
+          "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-ui-modernization.json",
+          "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-wizard-actions.json",
+          "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-config-data.json",
+          "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-page-assembly.json",
+          "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-qa-regression.json",
+          "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-ui-modernization.json",
+          "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-universal-wizard-specialist.json",
+          "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-wizard-actions.json"
+        ],
+        "root": "mirai/graph"
+      },
+      "interfaces": "mirai/interfaces",
+      "policies": "mirai/policies",
+      "programs": "mirai/programs",
+      "sources": "mirai/sources.yaml"
+    },
+    "features": [
+      "project_self_description",
+      "graph_core",
+      "proposal_first_learning",
+      "legacy_graph_v2_compatibility"
+    ],
+    "profiles": [
+      "skill_runtime"
+    ],
+    "project": {
+      "id": "ai-codex-skill-sf4.graph",
+      "kind": "project",
+      "owner": "sf4",
+      "scope": "skill",
+      "title": "Example Graph"
+    },
+    "requires": {
+      "graph_contract": "2.0.0",
+      "mirai": ">=2.1.0-alpha <3.0.0",
+      "program_contract": "1.0.0",
+      "runtime_contract": "1.0.0"
+    }
+  },
+  "resolved_contracts": {
+    "graph_contract": "2.0.0",
+    "mirai": ">=2.1.0-alpha <3.0.0",
+    "program_contract": "1.0.0",
+    "runtime_contract": "1.0.0"
+  },
+  "entrypoint_digests": {
+    "mirai/components": "sha256:0bcdf2e80057f6348dd29d4c6378308d1c60f894d6f3759694a2906d90f5e547",
+    "mirai/context": "sha256:21df775001eec7208a9710460d39ff3d8c5afb6385b89e66b9211f4154242e50",
+    "mirai/graph": "sha256:bd1c298261f822257d9f1b2f7d3ad5f7f8962076487b7ff07035931badcb338c",
+    "mirai/graph/specs/objects/capability-map-capability-sf4-project-layer-override.json": "sha256:97ece8359c6dcb778d17324b06e268d12ae3b7be609e805b72b6b0563ee8bf04",
+    "mirai/graph/specs/objects/capability-map-constraint-sf4-capability-map-boundary.json": "sha256:109d731d94f17d6f26f4452494bb26ef604b107a637a591e09fb4e14b83517ab",
+    "mirai/graph/specs/objects/capability-map-gate-sf4-capability-map-conformance.json": "sha256:84f67f0182d782168f2d198515bbe0eba33b646bdbeffeffa714c34d2791dc06",
+    "mirai/graph/specs/objects/capability-map-source-sf4-solution-customization-technology-md-cc300e9e5760.json": "sha256:9183f0b71f693593c73436c315c9af451155460480b0c984be6ab6f73c734a6a",
+    "mirai/graph/specs/objects/capability-sf4-config-data.json": "sha256:e1c935a7eb7fa19699d4257a78593776baa44eac93ef92c49ff2ec230a65cbaf",
+    "mirai/graph/specs/objects/capability-sf4-page-assembly.json": "sha256:0cf7d4f959020245cf3dab3d92566355629f904fb9bf1f49bf71f9231a779832",
+    "mirai/graph/specs/objects/capability-sf4-qa-regression.json": "sha256:26cbe9f5dc7e7ccd3e4a07f15984b1dc00002ddde082072ac06b82f4cb5d9a79",
+    "mirai/graph/specs/objects/capability-sf4-ui-modernization.json": "sha256:36ee15b557938bb07ac240864488f2b1b5f61644fc49fc890205e0d8a1a2b7f6",
+    "mirai/graph/specs/objects/capability-sf4-universal-wizard-specialist.json": "sha256:d49e5a5a4837eb3fba5fa6a0a686dea5d9bf7e7c1bd4d868819cbac25f167d77",
+    "mirai/graph/specs/objects/capability-sf4-wizard-actions.json": "sha256:1daea57687bd76e8ae4d58d702e28f8660adc13d7948f7fa3155c287a85dae33",
+    "mirai/graph/specs/objects/example-capability.json": "sha256:d2f0f4b8150c184c3426c3a827b606bf805a9190946c651b19196625595a491f",
+    "mirai/graph/specs/objects/example-policy.json": "sha256:92a61a253a8151ecd79531c506c452d200edf1f1b4a0884e043bc7c900790eab",
+    "mirai/graph/specs/objects/gate-sf4-regression-readiness.json": "sha256:cc49022511d7e436ca579aab7fced217923e1590e7649e47ad0c78b01db4455b",
+    "mirai/graph/specs/objects/policy-sf4-backend-risk-gate.json": "sha256:d70f4c79787eac51d0027f55a60dad140f0a36785de4513c4af87f5a77eae413",
+    "mirai/graph/specs/objects/policy-sf4-project-layer-boundary.json": "sha256:b404a2d97a227c13901f1eb64a56277ec6c8257abf0339c951157cf04028fcfc",
+    "mirai/graph/specs/objects/skill-sf4-core.json": "sha256:3852750d8f091b1c9417f65667303f72f775792056d7e7e0097275fdfae284aa",
+    "mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-documented-by-source-sf4-solution-customization-technology-md-cc300e9e5760.json": "sha256:156f29cf10450be543b75102e2f0a73763e1b0ee3479b6ac8789c1ef527c3092",
+    "mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-governed-by-constraint-sf4-capability-map-boundary.json": "sha256:cab9a54bbb2a3c0985643acde4dfa5b45760dd8c75601f6a92840dfd8aa5cb15",
+    "mirai/graph/specs/relations/capability-map-relation-capability-sf4-project-layer-override-validated-by-gate-sf4-capability-map-conformance.json": "sha256:da55b6a4e77bf5544a6fbe9714b3b4c2799365808eb4f1f25468900325977d67",
+    "mirai/graph/specs/relations/capability-map-relation-skill-sf4-core-contains-capability-sf4-project-layer-override.json": "sha256:0ce91f9460b598851ca7bb8c69e31e5904e1636d7b0a33d6409fda28652bfaf7",
+    "mirai/graph/specs/relations/example-relation.json": "sha256:48a640f1800a1bf7b86255345b4ae1db62dfdc71c1ba9dc29e880212a6ced399",
+    "mirai/graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-backend-risk-gate.json": "sha256:d4c9a72d561f4ded51ff3c29f4f29e549be181a063ed31dfcbcdf131b4060a57",
+    "mirai/graph/specs/relations/relation-capability-sf4-config-data-governed-by-policy-sf4-project-layer-boundary.json": "sha256:75c690b33c947e97953a4d3651685bbdf5d6a234d0f7c065112447bddce7184c",
+    "mirai/graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-backend-risk-gate.json": "sha256:4dee44223aa8805c65d79c74e630a90b3a36d30691ec98ce2aa05e0c33fd99ad",
+    "mirai/graph/specs/relations/relation-capability-sf4-page-assembly-governed-by-policy-sf4-project-layer-boundary.json": "sha256:cb0e289b0548ab16485fd6835cd37042ad1c3c365a5769f88483d1c870daa773",
+    "mirai/graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-backend-risk-gate.json": "sha256:f0c6a5833794fc6269ec3c8cc7ed4df3dbdf9d4af1c98136b1e566259cca94b8",
+    "mirai/graph/specs/relations/relation-capability-sf4-qa-regression-governed-by-policy-sf4-project-layer-boundary.json": "sha256:caa3820f72fbef6d4ae9264525e1508ec2fc34f92b04150bcacd9eb25f622982",
+    "mirai/graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-backend-risk-gate.json": "sha256:7c81b251baf5ac045df852e0e99e536c5e2078b5261ccac0a670d30636fffb2d",
+    "mirai/graph/specs/relations/relation-capability-sf4-ui-modernization-governed-by-policy-sf4-project-layer-boundary.json": "sha256:eda8aaa9e7dcd35184f640f84d7c2b8ab634b2ba03489cc4a6fff6535f8b7a9d",
+    "mirai/graph/specs/relations/relation-capability-sf4-universal-wizard-specialist-specializes-capability-sf4-wizard-actions.json": "sha256:3a13a05f5e6f159a01f635fc8c9df6a85a62dd491ce503264c4fdd0ab7aafbab",
+    "mirai/graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-backend-risk-gate.json": "sha256:6b481926604e0bf86296da68f87fe3c7e3be2aacca2a252e5f6e3799146a9bb1",
+    "mirai/graph/specs/relations/relation-capability-sf4-wizard-actions-governed-by-policy-sf4-project-layer-boundary.json": "sha256:5731cc7a759d3d3ab0bd107731d107826e8c211200167a72e5f8bed33e1782c0",
+    "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-config-data.json": "sha256:ab9662a7fb8f2b2c89ed4e91ad8e88798bb031f88bff1e2b3b8bd41d5054c30d",
+    "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-page-assembly.json": "sha256:764face9d222caa830dfab2510d2a753241533a2896834d4156e782ea2f4c4c7",
+    "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-qa-regression.json": "sha256:07416a09a0d5267136588acd2c764a289b5c51a7625622646d9d2cb5ae1c8022",
+    "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-ui-modernization.json": "sha256:bf2abc4394aea49ec33ca6f9778fde44c842f6e28f98b45123c86adc6bddee31",
+    "mirai/graph/specs/relations/relation-gate-sf4-regression-readiness-validates-capability-sf4-wizard-actions.json": "sha256:f0baaa1e9293b9c002581fb9b6b68315cc9662d215c71e0621df21feefb9f4b3",
+    "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-config-data.json": "sha256:2f2d009cda28d599c6e9e54f17c35fdf920a97fc1ad173b0ae712738f3ea5546",
+    "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-page-assembly.json": "sha256:2117fbafe52c5311a94c0a8c85057232819b39d7e2cd474e23cdac8abbc6453d",
+    "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-qa-regression.json": "sha256:94cbd986b51cfa3e5cc1fc78eebaf06954d0b81ecb14832857a4d6eb56d91553",
+    "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-ui-modernization.json": "sha256:07d54098b3785089ce5b3451c797b0b6d98542f3e4ce6f2e9e534d7bd358e430",
+    "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-universal-wizard-specialist.json": "sha256:2dd6547b77a09d13e1c5871fed7766e8d36983f6bfe3cf63b68ffb05a269543c",
+    "mirai/graph/specs/relations/relation-skill-sf4-core-implements-capability-sf4-wizard-actions.json": "sha256:2509472235e8b41b11a9f1e4c0f183f685647669fa144da421b6b65156a1b792",
+    "mirai/interfaces": "sha256:837b7ed929cc27bf432396e4a0e57112c35531e73214f9459d0919b08ebf7ea4",
+    "mirai/policies": "sha256:6b0d5b4e361387cc9f548f302fc5a6bbbc3b187136e3b268632681d0bbddc42a",
+    "mirai/programs": "sha256:59716889c97e2a0461f1a005e11fc00ce5aab42cabaeb566838213511939b0f7",
+    "mirai/sources.yaml": "sha256:38e2a55a701b83a73ffafb7ea501aa3bb8e9b2ea8eeca71157798822f7804bfc"
+  },
+  "source_reference_digest": "sha256:38e2a55a701b83a73ffafb7ea501aa3bb8e9b2ea8eeca71157798822f7804bfc",
+  "canonical_write_allowed": false,
+  "digest": "sha256:4183c2e3b39b476e579fefd05fdd3d8a32b0dd54787f954fb5d661261ac381f6"
+}
