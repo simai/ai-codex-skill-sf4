@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-23T12:01:34.550720+00:00",
+  "skill": "sf4",
+  "repo": "repo://ai-skill-sf4",
+  "base": "d60d8696336ce4784b14868a2105ef74b3b4887e",
+  "base_commit": "d60d8696336ce4784b14868a2105ef74b3b4887e",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "26f47a2a44ca0e5d7e4d42ffc08aba40a6ae135d6eed6c51c6c8cb32ca4803b7",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20261023120134/detector-report.json",
+  "changed_files": [
+    {
+      "path": "scripts/mirai_graph_contract_gate.py",
+      "source_path": "scripts/mirai_graph_contract_gate.py",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "d1586d62794749f0d40ba7b9d580d6b6964848e178d9c2e56dbdedb0a99e97fd",
+      "source_bytes": 3399,
+      "baseline_path": "scripts/mirai_graph_contract_gate.py",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b2700af5fe0b96f13f1073505fa89cec16917cc24dddeb499507a8c4a00205fd",
+      "baseline_bytes": 3369
+    },
+    {
+      "path": "skills/sf4/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "3c405172da1f01928292dffa80d5dadb7f95b39a812c543be4fe514abc923c21",
+      "source_bytes": 4656,
+      "baseline_path": "skills/sf4/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "6ee043893923949c913a4655b12744966d52ef22e44130ce7357f63d0f95b585",
+      "baseline_bytes": 3941
+    },
+    {
+      "path": "skills/sf4/quality/technology-contract-fixtures.json",
+      "source_path": "quality/technology-contract-fixtures.json",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "3670f6713a87300aff62eac73054cf3bfba91bf9e3d627d695aec1cefb4ab18a",
+      "source_bytes": 3342,
+      "baseline_path": "skills/sf4/quality/technology-contract-fixtures.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "17cdff57eabcac2383f23c6da69658655c3cf461e186a96b7d03f1494c2cb64d",
+      "baseline_bytes": 2900
+    },
+    {
+      "path": "skills/sf4/repository-recipes/sf4.project/recipe.json",
+      "source_path": "repository-recipes/sf4.project/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "cd616a30926e6fe5b63116dc4e2734c33d3175b86bfe2f51d2f5790dc4d1e5c2",
+      "source_bytes": 3186,
+      "baseline_path": "skills/sf4/repository-recipes/sf4.project/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "87e3f30ca6e526beedada526df5fc6162d695a911b3ca4cf1a51d13bdb24bcfd",
+      "baseline_bytes": 3174
+    },
+    {
+      "path": "skills/sf4/repository-recipes/technology-overlay/recipe.json",
+      "source_path": "repository-recipes/technology-overlay/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "13a43e38b886f67af4eeebd59ce7e204ec8f95a8794287fa9ba8b699b425a9b5",
+      "source_bytes": 1307,
+      "baseline_path": "skills/sf4/repository-recipes/technology-overlay/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "625f3843a9c60d01da3bbd93ea83b3a53c83fcebd9f9afdb9bc453883627991e",
+      "baseline_bytes": 1289
+    },
+    {
+      "path": "skills/sf4/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "d5edaecd6137c9507894ac3db36a4864b8dfc9d11ce865eff1a8059adbb28fc3",
+      "source_bytes": 2192,
+      "baseline_path": "skills/sf4/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "7e2e7fdb0704650195495094d16b5fbbb90b8eee2c3ee3b9270c03c639ec6e40",
+      "baseline_bytes": 1932
+    },
+    {
+      "path": "skills/sf4/technologies/project-layer-change.json",
+      "source_path": "technologies/project-layer-change.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "7ae8c69ab58ecc1633d5c25c8771415869bc2d2ac5ae51dc5e560fbf41aa84f0",
+      "source_bytes": 17780,
+      "baseline_path": "skills/sf4/technologies/project-layer-change.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "7afb2c9b4cb5acab4960c6cf7a1801fe59f068b16c59ecf0b470582a38f40298",
+      "baseline_bytes": 17766
+    }
+  ],
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "scripts/mirai_graph_contract_gate.py",
+    "skills/sf4/SKILL.md",
+    "skills/sf4/quality/technology-contract-fixtures.json",
+    "skills/sf4/repository-recipes/sf4.project/recipe.json",
+    "skills/sf4/repository-recipes/technology-overlay/recipe.json",
+    "skills/sf4/rules/skill-mesh-balance.md",
+    "skills/sf4/technologies/project-layer-change.json"
+  ],
+  "canonical_write_allowed": false
+}

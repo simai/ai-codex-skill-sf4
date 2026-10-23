@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.report",
+  "created_at": "2026-10-23T12:01:34.924462+00:00",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "d60d8696336ce4784b14868a2105ef74b3b4887e",
+  "base_commit": "d60d8696336ce4784b14868a2105ef74b3b4887e",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "26f47a2a44ca0e5d7e4d42ffc08aba40a6ae135d6eed6c51c6c8cb32ca4803b7",
+  "status": "success",
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20261023120134/skill-source-change-evidence.json",
+  "runtime_verify_ref": "mirai/manifest.lock.json",
+  "runtime_context_ref": "skills/sf4/SKILL.md",
+  "federation_change_proposal_ref": "repo://ai-skill-graph/graph/generated/mirai-graph/federation-change/skill-graph-sync-sf4-20261023120134-federation-proposal/federation-change-proposal.json",
+  "specialist_promotion_proposal_refs": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "blockers": [],
+  "canonical_write_allowed": false,
+  "sync_fingerprint": "1825ae549b9edf272e14b0db90c93afc82eba36f80c05b9f3331ac9f6d36f1fe",
+  "task_sha256": "db3ea513c99eaa072c6cb5149b29143018febdb98c43358f2bcb0ff04c9460a9",
+  "task_bytes": 104
+}
