@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-23T12:52:55.545139+00:00",
+  "skill": "sf4",
+  "repo": "repo://ai-skill-sf4",
+  "base": "56ae8a4b3b37501a053553f74ab7c1d9c2c7626f",
+  "base_commit": "56ae8a4b3b37501a053553f74ab7c1d9c2c7626f",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "1948202dcfc87dd146e9e2da9602b9449535b966f2b1097bd6f10234802de4f6",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-sf4-20261023125255/detector-report.json",
+  "changed_files": [
+    {
+      "path": "skills/sf4/technologies/project-layer-change.json",
+      "source_path": "technologies/project-layer-change.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "0f4cda3f2d14f50829524c3d99a92881b1b0a5c5d592cb705d29ed7e126c0bbc",
+      "source_bytes": 19202,
+      "baseline_path": "skills/sf4/technologies/project-layer-change.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "7ae8c69ab58ecc1633d5c25c8771415869bc2d2ac5ae51dc5e560fbf41aa84f0",
+      "baseline_bytes": 17780
+    }
+  ],
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/sf4/technologies/project-layer-change.json"
+  ],
+  "canonical_write_allowed": false
+}
