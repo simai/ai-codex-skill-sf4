@@ -41,12 +41,12 @@ These rules apply to every `sf4` task. Detailed per-area rules live in
 
 ## Contract Boundaries
 
-- When implementing an SEO Contract from `$seo`, do not redesign SEO decisions
+- When implementing an SEO Contract from `$marketing`, do not redesign SEO decisions
   inside `$sf4`. Implement it through SF4 surfaces: grids, views, blocks,
   `simai.data`, template areas, page/section properties, `simai:sf.*`
   components, visible content blocks, headings, breadcrumbs, internal links,
   media/alt and public route behavior. If SF4 constraints conflict with the
-  contract, report a blocker to `$seo` instead of silently changing
+  contract, report a blocker to `$marketing` instead of silently changing
   URL/canonical/meta/content decisions.
 - A `$ux` handoff is mapped explicitly to SF4 area/view/block/component
   structure before markup is edited.

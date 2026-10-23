@@ -16,7 +16,7 @@ actions, SF4 migration/update workflows, and safe project-layer overrides.
   SF4 surfaces (`simai.data`, views, blocks) inside them on request.
 - Portalization strategy owned by `$orgportal`.
 - Documentation methodology/content owned by `$docs`.
-- SEO Contract decisions owned by `$seo`.
+- SEO Contract decisions owned by `$marketing`.
 - UX acceptance owned by `$ux`.
 - QA evidence owned by `$tester`.
 - Runtime/deploy mitigation owned by `$ops`.
@@ -27,7 +27,7 @@ actions, SF4 migration/update workflows, and safe project-layer overrides.
   safe-write facts beyond SF4 project-layer rules.
 - Use `$orgportal` when converting individual SF4 solutions into organization
   portals.
-- Use `$seo` and `$ux` as contract owners for public/search and UI changes.
+- Use `$marketing` and `$ux` as contract owners for public/search and UI changes.
 - Use `$tester` for smoke/regression evidence and `$ops` for runtime issues.
 - Use `$docs` for substantial documentation structure and content.
 - For SF4 -> SF5 or other reference-adaptive checks, `$sf4` owns the source
