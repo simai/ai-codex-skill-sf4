@@ -105,7 +105,7 @@
   "entrypoint_digests": {
     "mirai/components": "sha256:0bcdf2e80057f6348dd29d4c6378308d1c60f894d6f3759694a2906d90f5e547",
     "mirai/context": "sha256:21df775001eec7208a9710460d39ff3d8c5afb6385b89e66b9211f4154242e50",
-    "mirai/graph": "sha256:0c1d29769e1f2f98090c4893636642601bfa09809550cda5ffb4b6b5aeb7c444",
+    "mirai/graph": "sha256:9f5049e31e2ee3cdc2056c985fd0bcb36bc236bdced3be65f30b689bdca9fe5f",
     "mirai/graph/specs/objects/capability-map-capability-sf4-project-layer-override.json": "sha256:97ece8359c6dcb778d17324b06e268d12ae3b7be609e805b72b6b0563ee8bf04",
     "mirai/graph/specs/objects/capability-map-constraint-sf4-capability-map-boundary.json": "sha256:109d731d94f17d6f26f4452494bb26ef604b107a637a591e09fb4e14b83517ab",
     "mirai/graph/specs/objects/capability-map-gate-sf4-capability-map-conformance.json": "sha256:84f67f0182d782168f2d198515bbe0eba33b646bdbeffeffa714c34d2791dc06",
@@ -156,5 +156,5 @@
   },
   "source_reference_digest": "sha256:38e2a55a701b83a73ffafb7ea501aa3bb8e9b2ea8eeca71157798822f7804bfc",
   "canonical_write_allowed": false,
-  "digest": "sha256:f3c56d3a8472c6bc23b3cc71611124204c548cd33ea5cea4400387fdce3326e8"
+  "digest": "sha256:c1950e1a3509ce5a0995d40b2867a4c2e5aedbf7c6b6a6835802abdfab669c41"
 }

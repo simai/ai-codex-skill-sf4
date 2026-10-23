@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-10-23T13:31:23.756815+00:00",
+  "repo": "repo://ai-skill-sf4",
+  "skill": "sf4",
+  "owner": "sf4",
+  "federation_control_plane": false,
+  "base": "9ebaef987722916ed09043b8102d029311d45796",
+  "base_commit": "9ebaef987722916ed09043b8102d029311d45796",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 2,
+    "head": "e72bc5a"
+  },
+  "changed_files": [
+    {
+      "path": "skills/sf4/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "cf30be27b0edf3a09e20730a7d6b5644b746a466612e3de428edc9f1dda78773",
+      "source_bytes": 4662,
+      "baseline_path": "skills/sf4/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "3c405172da1f01928292dffa80d5dadb7f95b39a812c543be4fe514abc923c21",
+      "baseline_bytes": 4656
+    },
+    {
+      "path": "skills/sf4/kernel/non-negotiable.md",
+      "source_path": "kernel/non-negotiable.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "e696f80018afddc71ab017297a05cefa80c5976a664d8b3091587bdfdb978e63",
+      "source_bytes": 2661,
+      "baseline_path": "skills/sf4/kernel/non-negotiable.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "9d746a5a6699707a1ab80536acb238748dc007dc92325202beb1085ada245bd0",
+      "baseline_bytes": 2649
+    },
+    {
+      "path": "skills/sf4/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b1efab55c0eb82f2b7468a6df0e3e064ba51d8031ab66ce5fe58f35e5e5b12bc",
+      "source_bytes": 2204,
+      "baseline_path": "skills/sf4/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "d5edaecd6137c9507894ac3db36a4864b8dfc9d11ce865eff1a8059adbb28fc3",
+      "baseline_bytes": 2192
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "162a54fd76da04b63de19a254fbecb060a20d7ee35a6da36a3823156dacf9da4"
+}
